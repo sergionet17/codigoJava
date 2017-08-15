@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2017-07-13T14:28:02 -->
+<jasperReport xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xmlns="http://jasperreports.sourceforge.net/jasperreports"
+              xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd"
+              name="CertificadoAisitenciaCurso" pageWidth="612" pageHeight="792" columnWidth="572" leftMargin="20"
+              rightMargin="20" topMargin="20" bottomMargin="20" uuid="1292af23-dfb9-4f15-bab7-818a8c024c25">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="SIPA Oracle"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w1" value="172"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w2" value="821"/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w1" value="495"/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w2" value="491"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<subDataset name="Empty Dataset1" uuid="b4ca8448-b3a8-40d8-932d-c6df5b9174db"/>
+	<parameter name="nombre_usuario" class="java.lang.String">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+	</parameter>
+    <parameter name="firma" class="java.io.InputStream"/>
+    <parameter name="cantidad_horas" class="java.lang.Integer"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="curso" class="co.gov.movilidadbogota.sipa.data.biz.comp.Curso">
+		<fieldDescription><![CDATA[curso]]></fieldDescription>
+	</field>
+	<field name="comparendo" class="co.gov.movilidadbogota.sipa.data.biz.comp.Comparendo">
+		<fieldDescription><![CDATA[comparendo]]></fieldDescription>
+	</field>
+	<field name="id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[id]]></fieldDescription>
+	</field>
+	<background>
+        <band height="38" splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="198" splitType="Stretch">
+			<staticText>
+				<reportElement x="189" y="138" width="90" height="20" uuid="0101cb7d-a1c5-414b-a205-e4a4df7df476"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[No. Consecutivo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="60" y="108" width="450" height="20" uuid="60f6d2e5-5109-4847-94fd-1308f9f42b1e"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[SUBSECRETARIA DE SERVICIOS DE LA MOVILIDAD - DIRECCIÓN SERVICIO AL CIUDADANO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="190" y="178" width="160" height="20" uuid="aeaf6260-768e-41f6-8d68-c624619acb60"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[CERTIFICADO DE ASISTENCIA]]></text>
+			</staticText>
+			<line>
+				<reportElement x="431" y="0" width="1" height="90" uuid="77548fad-68a5-42fb-aa03-8910ad0ff7b2">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="145" y="0" width="1" height="90" uuid="5ddcbfce-0c33-4062-a8e6-e90069b25a53">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="148" y="0" width="278" height="20" uuid="33b89f69-c741-4d6b-b784-f4216069f6f5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[SISTEMA INTEGRADO DE GESTION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="147" y="20" width="279" height="20" uuid="5eecd86f-10c2-4d51-9d8a-4d741befe129"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[PROCESO SERVICIO AL CIUDADANO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="148" y="40" width="278" height="30" uuid="124bc8e4-03be-4a40-b597-5ff65e42eb7d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Certificado de asistencia al curso de pedagogía por infracción a las normas de tránsito y transporte ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="147" y="70" width="135" height="20" uuid="ac56af28-580f-48e3-9394-a6848a0e0548"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Código: PM05-PR05-F02]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="282" y="70" width="144" height="20" uuid="17660935-1393-4b1c-b372-a4ce3af9f9ca"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Versión: 3.0]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="90" width="570" height="1" uuid="b4efebdc-deb5-4985-9ccb-a128408437ca">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="145" y="70" width="286" height="1" uuid="d80a9093-8faf-41d6-bf1e-84822ede7f4b"/>
+			</line>
+			<line>
+				<reportElement x="146" y="41" width="286" height="1" uuid="f66902ee-bd19-4e30-a34f-fbf0f7278d2f"/>
+			</line>
+			<line>
+				<reportElement x="146" y="20" width="286" height="1" uuid="918530a6-3041-462e-8cd1-811acc7e0765"/>
+			</line>
+			<line>
+				<reportElement x="145" y="0" width="286" height="1" uuid="cd66d9ff-2806-4f1d-8783-5df8c3cc18b5"/>
+			</line>
+			<line>
+				<reportElement x="284" y="70" width="1" height="20" uuid="742a4e6a-f4de-4f33-812b-0d09b66233c0">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+			</line>
+			<textField>
+				<reportElement x="284" y="138" width="75" height="20" uuid="1c721fa5-7798-45df-a23e-5683844ebdb2"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="570" y="0" width="1" height="90" uuid="143a3bd9-60d0-4411-ab1e-9a480ae5eb9e">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="-1" y="0" width="1" height="90" uuid="7214943d-aee5-42f3-842e-dbd38161f6b4">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="-1" y="0" width="570" height="1" uuid="673ab9e5-8d4c-434e-be88-bcb8464e2bda">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+			</line>
+            <image>
+                <reportElement x="18" y="5" width="99" height="77" uuid="1fa0f532-9754-4d94-a421-12698909b302"/>
+                <imageExpression><![CDATA["C:/Users/Admin/Pictures/logo.png"]]></imageExpression>
+            </image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="139" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="64" width="569" height="75" uuid="e2c73401-f444-4f06-b66f-1a5973baab03"/>
+				<textElement textAlignment="Justified"/>
+                <textFieldExpression>
+                    <![CDATA["Asistio al curso de pedagogia por infracción a las normas de tránsito y transporte, dando cumplimiento en el Código Nacional de Transito -  Ley 769 de 2002, artículo 24 de la Ley 1383 de 2010; modificado por el artículo 205 del Decreto Ley 019 de 2012, el día " + $F{curso}.getFecha() + " en el horario de "+ $F{curso}.getHoraInicial() + " a " + $F{curso}.getHoraFinal() + " con una duracion de "+$P{cantidad_horas}+" hora(s), para obtener el beneficio del descuento por el comparendo No. " + $F{comparendo}.getNumero().getNumeroComparendoId(). getNumero()+ " de fecha " + $F{comparendo}.getFechaImposicion() +"."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="253" y="30" width="158" height="23" uuid="c698278a-333f-497b-ab89-3052e622175c"/>
+				<textElement textAlignment="Left"/>
+				<text><![CDATA[con el documento de identidad No.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="412" y="30" width="159" height="23" uuid="c360fdae-2148-4b37-bee9-df8c37a5d0e8"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[$F{comparendo}.getInfractor().getDocumentoIdentidad().getNumero()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="75" y="30" width="178" height="23" uuid="3c93a664-c973-4349-ac38-a35a8183beba"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[$F{comparendo}.getInfractor().obtenerNombreCompleto()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="30" width="74" height="23" uuid="d84230ae-f57c-4e1a-a817-82e0196c3aa8"/>
+				<textElement textAlignment="Left"/>
+				<text><![CDATA[El(a) señor(a) ]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+        <band height="322" splitType="Stretch">
+			<staticText>
+				<reportElement x="4" y="131" width="551" height="39" uuid="c8d19d75-a4b3-44c5-be28-3b68fc014596"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SI NO REALIZA EL PAGO Y EL CURSO DE PEDAGOGÍA DENTRO DEL PLAZO ESTIPULADO POR LA LEY, PERDERÁ EL DERECHO AL DESCUENTO. LA ADULTERACIÓN O ALTERACIÓN DE ESTE DOCUMENTO ACARREARÁ LA SANCIONES LEGALES RESPECTIVAS.]]></text>
+			</staticText>
+			<staticText>
+                <reportElement x="4" y="173" width="551" height="37" uuid="5f893f45-da0a-4750-be29-4918f9e0132c"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[SI AL TECER DÍA HÁBIL DE HABER REALIZADO EL PAGO Y EL CURSO DE PEDAGOGÍA, EL COMPARENDO SE VE REFLEJADO EN LA PÁGINA www.movilidadbogota.gov.co, COMUNIQUESE CON LA LINEA 195.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="234" y="110" width="93" height="19" uuid="7f21f560-29b7-4aa1-971a-b532eb9bf395"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[INSTRUCTOR(A)]]></text>
+			</staticText>
+			<line>
+				<reportElement x="179" y="80" width="200" height="1" uuid="ba8ce3db-ad5e-4988-b529-0b88736759d5">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="0" y="10" width="60" height="20" uuid="07f33b94-3922-42b1-943d-146f9777c818"/>
+				<text><![CDATA[Elaboró:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="160" y="86" width="239" height="14" uuid="35f1a16d-e2af-471b-96ca-bfc575cea3d8"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{curso}.getInstructor().getPersona().obtenerNombreCompleto()]]></textFieldExpression>
+			</textField>
+            <textField>
+                <reportElement x="60" y="10" width="100" height="20" uuid="3cf871a0-27db-4129-a17b-ebc16d8c2c2f"/>
+                <textFieldExpression><![CDATA[$P{nombre_usuario}]]></textFieldExpression>
+            </textField>
+            <image>
+                <reportElement x="200" y="0" width="141" height="77" uuid="a77a7143-a3e3-4593-b465-c2830fc74568"/>
+                <imageExpression><![CDATA[$P{firma}]]></imageExpression>
+            </image>
+            <textField evaluationTime="Report">
+                <reportElement x="480" y="302" width="100" height="20" uuid="6ce575d8-2a47-4de8-952c-c5d5f7cb6aaf"/>
+                <textElement textAlignment="Right" verticalAlignment="Bottom"/>
+                <textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+            </textField>
+        </band>
+    </pageFooter>
+    <summary>
+        <band height="65" splitType="Stretch"/>
+	</summary>
+</jasperReport>

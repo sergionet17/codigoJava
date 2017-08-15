@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:ssbp="www.sparxsystems.com.au/bpmn20" id="EAPK_8CCCAD93_F3EF_417d_B680_9D501E691987" name="Resolucion automatica abandono" targetNamespace="www.sparxsystems.com.au/bpmn20" exporter="Camunda Modeler" exporterVersion="1.7.2">
+  <bpmn:collaboration id="Collaboration_1adrkfa">
+    <bpmn:participant id="Participant_0z6c4co" name="SDM" processRef="EAID_FFD21CED_ABC3_4295_AF0B_8988793A9C0D" />
+    <bpmn:participant id="Participant_1x836cb" name="SIPA WEB" processRef="Process_02v5uri" />
+    <bpmn:messageFlow id="MessageFlow_11tbbxk" sourceRef="Participant_1x836cb" targetRef="EAID_DF63CBB5_2A4B_4f56_98CD_D4A1B8EE46CF" />
+  </bpmn:collaboration>
+  <bpmn:process id="EAID_FFD21CED_ABC3_4295_AF0B_8988793A9C0D" name="Resolucion automatica abandono" processType="None" isClosed="false" isExecutable="false">
+    <bpmn:dataObjectReference id="EAID_C9457CA1_0AD8_4a45_818B_65A0E4CAA150" name="Plantilla acto decretar caducidad y/o archivo del expediente" dataObjectRef="EAID_DOb000000_0AD8_4a45_818B_65A0E4CAA150">
+      <bpmn:documentation>La plantilla que se debe usar es la correspondiente al acto decretar caducidad y/o archivo del expediente</bpmn:documentation>
+    </bpmn:dataObjectReference>
+    <bpmn:dataObject id="EAID_DOb000000_0AD8_4a45_818B_65A0E4CAA150" name="Plantilla acto decretar caducidad y/o archivo del expediente" />
+    <bpmn:startEvent id="EAID_DF63CBB5_2A4B_4f56_98CD_D4A1B8EE46CF" name="StartEvent1">
+      <bpmn:outgoing>EAID_D05AA7CA_D249_4940_AF49_4E9C10CB5935</bpmn:outgoing>
+      <bpmn:messageEventDefinition />
+    </bpmn:startEvent>
+    <bpmn:endEvent id="EAID_A9DFC2DF_BEF5_4321_A746_33AF96F40E1B" name="EndEvent1">
+      <bpmn:incoming>EAID_89CA06C5_6DD8_4924_87D6_9ECC12FB3F68</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:serviceTask id="EAID_F4544DCA_1040_4b3d_9100_C21004941E98" name="Registrar financiera" implementation="##unspecified">
+      <bpmn:incoming>EAID_81F88B6E_7624_4613_AA6E_48A9282CB4C1</bpmn:incoming>
+      <bpmn:outgoing>EAID_89CA06C5_6DD8_4924_87D6_9ECC12FB3F68</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:callActivity id="EAID_14824F63_B874_4df4_B1DE_FB5C5344EB93" name="Acto Decretar caducidad y/o archivo del expediente">
+      <bpmn:incoming>EAID_D05AA7CA_D249_4940_AF49_4E9C10CB5935</bpmn:incoming>
+      <bpmn:outgoing>EAID_81F88B6E_7624_4613_AA6E_48A9282CB4C1</bpmn:outgoing>
+      <bpmn:ioSpecification>
+        <bpmn:dataInput id="EAID_DDIO000000_B874_4df4_B1DE_FB5C5344EB93" />
+        <bpmn:inputSet>
+          <bpmn:dataInputRefs>EAID_DDIO000000_B874_4df4_B1DE_FB5C5344EB93</bpmn:dataInputRefs>
+        </bpmn:inputSet>
+        <bpmn:outputSet />
+      </bpmn:ioSpecification>
+      <bpmn:property id="Property_0n5uujr" name="__targetRef_placeholder" />
+      <bpmn:dataInputAssociation id="EAID_6BEF7B63_F56E_461c_8BCF_8ACCB16471CA">
+        <bpmn:sourceRef>EAID_C9457CA1_0AD8_4a45_818B_65A0E4CAA150</bpmn:sourceRef>
+        <bpmn:targetRef>Property_0n5uujr</bpmn:targetRef>
+      </bpmn:dataInputAssociation>
+    </bpmn:callActivity>
+    <bpmn:sequenceFlow id="EAID_D05AA7CA_D249_4940_AF49_4E9C10CB5935" sourceRef="EAID_DF63CBB5_2A4B_4f56_98CD_D4A1B8EE46CF" targetRef="EAID_14824F63_B874_4df4_B1DE_FB5C5344EB93" />
+    <bpmn:sequenceFlow id="EAID_89CA06C5_6DD8_4924_87D6_9ECC12FB3F68" sourceRef="EAID_F4544DCA_1040_4b3d_9100_C21004941E98" targetRef="EAID_A9DFC2DF_BEF5_4321_A746_33AF96F40E1B" />
+    <bpmn:sequenceFlow id="EAID_81F88B6E_7624_4613_AA6E_48A9282CB4C1" sourceRef="EAID_14824F63_B874_4df4_B1DE_FB5C5344EB93" targetRef="EAID_F4544DCA_1040_4b3d_9100_C21004941E98" />
+    <bpmn:textAnnotation id="EAID_A4C33BFE_E413_4ba5_89E4_ED68B18D9C07">    <bpmn:text><![CDATA[No se ha emitido fallo
+Transporte publico son 3 anhos
+Transito son 6 meses]]></bpmn:text>
+</bpmn:textAnnotation>
+  </bpmn:process>
+  <bpmn:process id="Process_02v5uri" isExecutable="false" />
+  <bpmndi:BPMNDiagram id="EAID_67F9A685_7BB5_4597_AAA7_367E0727A75E" name="Resolucion automatica abandono">
+    <bpmndi:BPMNPlane id="EAID_PL000000_7BB5_4597_AAA7_367E0727A75E" bpmnElement="Collaboration_1adrkfa">
+      <bpmndi:BPMNShape id="Participant_0z6c4co_di" bpmnElement="Participant_0z6c4co">
+        <dc:Bounds x="8" y="66" width="620" height="255" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000005_7BB5_4597_AAA7_367E0727A75E" bpmnElement="EAID_C9457CA1_0AD8_4a45_818B_65A0E4CAA150">
+        <dc:Bounds x="146" y="91" width="35" height="50" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_0AD8_4a45_818B_65A0E4CAA150" labelStyle="EAID_LS000000_7BB5_4597_AAA7_367E0727A75E">
+          <dc:Bounds x="212" y="86" width="68" height="60" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000000_7BB5_4597_AAA7_367E0727A75E" bpmnElement="EAID_DF63CBB5_2A4B_4f56_98CD_D4A1B8EE46CF">
+        <dc:Bounds x="77" y="158" width="30" height="30" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_2A4B_4f56_98CD_D4A1B8EE46CF" labelStyle="EAID_LS000000_7BB5_4597_AAA7_367E0727A75E">
+          <dc:Bounds x="74" y="198" width="57" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000004_7BB5_4597_AAA7_367E0727A75E" bpmnElement="EAID_A9DFC2DF_BEF5_4321_A746_33AF96F40E1B">
+        <dc:Bounds x="558" y="158" width="30" height="30" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_BEF5_4321_A746_33AF96F40E1B" labelStyle="EAID_LS000000_7BB5_4597_AAA7_367E0727A75E">
+          <dc:Bounds x="555" y="198" width="53" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000002_7BB5_4597_AAA7_367E0727A75E" bpmnElement="EAID_F4544DCA_1040_4b3d_9100_C21004941E98">
+        <dc:Bounds x="387" y="143" width="110" height="60" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_1040_4b3d_9100_C21004941E98" labelStyle="EAID_LS000000_7BB5_4597_AAA7_367E0727A75E" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000001_7BB5_4597_AAA7_367E0727A75E" bpmnElement="EAID_14824F63_B874_4df4_B1DE_FB5C5344EB93" isExpanded="false">
+        <dc:Bounds x="186" y="141" width="120" height="65" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_B874_4df4_B1DE_FB5C5344EB93" labelStyle="EAID_LS000000_7BB5_4597_AAA7_367E0727A75E" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000003_7BB5_4597_AAA7_367E0727A75E" bpmnElement="EAID_A4C33BFE_E413_4ba5_89E4_ED68B18D9C07">
+        <dc:Bounds x="179" y="225" width="261" height="57" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="EAID_DL000003_7BB5_4597_AAA7_367E0727A75E" bpmnElement="EAID_6BEF7B63_F56E_461c_8BCF_8ACCB16471CA" targetElement="EAID_DO000001_7BB5_4597_AAA7_367E0727A75E">
+        <di:waypoint xsi:type="dc:Point" x="181" y="119" />
+        <di:waypoint xsi:type="dc:Point" x="209" y="119" />
+        <di:waypoint xsi:type="dc:Point" x="209" y="141" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="EAID_DL000000_7BB5_4597_AAA7_367E0727A75E" bpmnElement="EAID_D05AA7CA_D249_4940_AF49_4E9C10CB5935">
+        <di:waypoint xsi:type="dc:Point" x="107" y="173" />
+        <di:waypoint xsi:type="dc:Point" x="186" y="173" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="102" y="148" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="EAID_DL000002_7BB5_4597_AAA7_367E0727A75E" bpmnElement="EAID_89CA06C5_6DD8_4924_87D6_9ECC12FB3F68">
+        <di:waypoint xsi:type="dc:Point" x="497" y="171" />
+        <di:waypoint xsi:type="dc:Point" x="558" y="171" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="483" y="146" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="EAID_DL000001_7BB5_4597_AAA7_367E0727A75E" bpmnElement="EAID_81F88B6E_7624_4613_AA6E_48A9282CB4C1">
+        <di:waypoint xsi:type="dc:Point" x="306" y="172" />
+        <di:waypoint xsi:type="dc:Point" x="387" y="172" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="302" y="147" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Participant_1x836cb_di" bpmnElement="Participant_1x836cb">
+        <dc:Bounds x="8" y="5" width="585" height="61" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="MessageFlow_11tbbxk_di" bpmnElement="MessageFlow_11tbbxk">
+        <di:waypoint xsi:type="dc:Point" x="92" y="66" />
+        <di:waypoint xsi:type="dc:Point" x="92" y="156" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="107" y="105" width="0" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+    <bpmndi:BPMNLabelStyle id="EAID_LS000000_7BB5_4597_AAA7_367E0727A75E">
+      <dc:Font name="Calibri" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+    </bpmndi:BPMNLabelStyle>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:ssbp="www.sparxsystems.com.au/bpmn20" id="EAPK_FEEED16E_F60B_434a_A231_DD08E4465A8B" name="Resolucion automatica fallo" targetNamespace="www.sparxsystems.com.au/bpmn20" exporter="Camunda Modeler" exporterVersion="1.8.0">
+  <bpmn:collaboration id="Collaboration_06t68m5">
+    <bpmn:participant id="Participant_1hypvrq" name="SDM" processRef="Process_0fwyos3" />
+    <bpmn:participant id="Participant_1s85l0b" name="SIPA WEB" processRef="Process_15le61l" />
+    <bpmn:messageFlow id="MessageFlow_0wj6sn6" sourceRef="Participant_1s85l0b" targetRef="StartEvent_1wrr3ch" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_0fwyos3" name="Resolucion automatica fallo" isExecutable="true">
+    <bpmn:laneSet>
+      <bpmn:lane id="Lane_0p8tkfq" name="AT4.5.3 (Funcionario registrador títulos ejecutivos).">
+        <bpmn:flowNodeRef>Task_0hp6agl</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_0k3bhis">
+        <bpmn:flowNodeRef>Task_1m85tzv</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_1m6ctii</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_1lzjctk</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_05kp1ke</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>StartEvent_1wrr3ch</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>IntermediateThrowEvent_1wz7wam</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>ExclusiveGateway_1ry2g7o</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EndEvent_1dpdlgv</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="StartEvent_1wrr3ch" name="Inicio">
+      <bpmn:outgoing>SequenceFlow_1tkdhuj</bpmn:outgoing>
+      <bpmn:messageEventDefinition messageRef="Message_1b1zxpw" />
+    </bpmn:startEvent>
+    <bpmn:intermediateCatchEvent id="IntermediateThrowEvent_1wz7wam" name="Termino del tipo de notificacion">
+      <bpmn:incoming>SequenceFlow_1tkdhuj</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0iziish</bpmn:outgoing>
+      <bpmn:timerEventDefinition>
+        <bpmn:timeDuration xsi:type="bpmn:tFormalExpression">30</bpmn:timeDuration>
+      </bpmn:timerEventDefinition>
+    </bpmn:intermediateCatchEvent>
+    <bpmn:serviceTask id="Task_1m85tzv" name="Verificar impugnacion o pago" camunda:class="co.gov.movilidadbogota.sipa.bpm.DummyTask">
+      <bpmn:incoming>SequenceFlow_0iziish</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1oauusa</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:exclusiveGateway id="ExclusiveGateway_1ry2g7o" name="El proceso fue impugnado, aceptado o pagado?">
+      <bpmn:incoming>SequenceFlow_1oauusa</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_07efpwq</bpmn:outgoing>
+      <bpmn:outgoing>SequenceFlow_0rp1f4n</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:serviceTask id="Task_1m6ctii" name="Resolucion de fallo" camunda:class="co.gov.movilidadbogota.sipa.bpm.DummyTask">
+      <bpmn:incoming>SequenceFlow_07efpwq</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1g4hahw</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:serviceTask id="Task_1lzjctk" name="Crear constancia ejecutoria" camunda:class="co.gov.movilidadbogota.sipa.bpm.DummyTask">
+      <bpmn:incoming>SequenceFlow_1g4hahw</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0mofutd</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:serviceTask id="Task_05kp1ke" name="Registrar en cartera" camunda:class="co.gov.movilidadbogota.sipa.bpm.DummyTask">
+      <bpmn:incoming>SequenceFlow_0mofutd</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0ix62g9</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:callActivity id="Task_0hp6agl" name="Coactiva" calledElement="Coactiva">
+      <bpmn:incoming>SequenceFlow_0ix62g9</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0s7a1gc</bpmn:outgoing>
+    </bpmn:callActivity>
+    <bpmn:endEvent id="EndEvent_1dpdlgv">
+      <bpmn:incoming>SequenceFlow_0s7a1gc</bpmn:incoming>
+      <bpmn:incoming>SequenceFlow_0rp1f4n</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_1tkdhuj" sourceRef="StartEvent_1wrr3ch" targetRef="IntermediateThrowEvent_1wz7wam" />
+    <bpmn:sequenceFlow id="SequenceFlow_0iziish" sourceRef="IntermediateThrowEvent_1wz7wam" targetRef="Task_1m85tzv" />
+    <bpmn:sequenceFlow id="SequenceFlow_1oauusa" sourceRef="Task_1m85tzv" targetRef="ExclusiveGateway_1ry2g7o" />
+    <bpmn:sequenceFlow id="SequenceFlow_07efpwq" name="No" sourceRef="ExclusiveGateway_1ry2g7o" targetRef="Task_1m6ctii">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">No</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="SequenceFlow_0rp1f4n" name="Si" sourceRef="ExclusiveGateway_1ry2g7o" targetRef="EndEvent_1dpdlgv">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">Si</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="SequenceFlow_1g4hahw" sourceRef="Task_1m6ctii" targetRef="Task_1lzjctk" />
+    <bpmn:sequenceFlow id="SequenceFlow_0mofutd" sourceRef="Task_1lzjctk" targetRef="Task_05kp1ke" />
+    <bpmn:sequenceFlow id="SequenceFlow_0ix62g9" sourceRef="Task_05kp1ke" targetRef="Task_0hp6agl" />
+    <bpmn:sequenceFlow id="SequenceFlow_0s7a1gc" sourceRef="Task_0hp6agl" targetRef="EndEvent_1dpdlgv" />
+    <bpmn:textAnnotation id="EAID_89095220_8D2E_40cc_8A40_1C7FD3A98DBB">    <bpmn:text>El tiempo depende del tipo de notificacion en electronicos o 30 dias calendario para manuales</bpmn:text>
+</bpmn:textAnnotation>
+  </bpmn:process>
+  <bpmn:message id="Message_1b1zxpw" name="Message_22766hi" />
+  <bpmn:process id="Process_15le61l" isExecutable="false" />
+  <bpmndi:BPMNDiagram id="EAID_9D8678D3_5D33_4526_A893_573C9020AACD" name="Resolucion automatica fallo">
+    <bpmndi:BPMNPlane id="EAID_PL000000_5D33_4526_A893_573C9020AACD" bpmnElement="Collaboration_06t68m5">
+      <bpmndi:BPMNShape id="EAID_DO000009_5D33_4526_A893_573C9020AACD" bpmnElement="EAID_89095220_8D2E_40cc_8A40_1C7FD3A98DBB">
+        <dc:Bounds x="56" y="252" width="189" height="52" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Participant_1hypvrq_di" bpmnElement="Participant_1hypvrq">
+        <dc:Bounds x="0" y="108" width="1154" height="351" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_0p8tkfq_di" bpmnElement="Lane_0p8tkfq">
+        <dc:Bounds x="30" y="319" width="1124" height="140" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_0k3bhis_di" bpmnElement="Lane_0k3bhis">
+        <dc:Bounds x="30" y="108" width="1124" height="211" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="StartEvent_1j5nrgn_di" bpmnElement="StartEvent_1wrr3ch">
+        <dc:Bounds x="64" y="177" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="69" y="216" width="26" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_1tkdhuj_di" bpmnElement="SequenceFlow_1tkdhuj">
+        <di:waypoint xsi:type="dc:Point" x="100" y="195" />
+        <di:waypoint xsi:type="dc:Point" x="133" y="195" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="116.5" y="173.5" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="IntermediateCatchEvent_1av32ja_di" bpmnElement="IntermediateThrowEvent_1wz7wam">
+        <dc:Bounds x="133" y="177" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="112" y="216" width="78" height="25" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0iziish_di" bpmnElement="SequenceFlow_0iziish">
+        <di:waypoint xsi:type="dc:Point" x="169" y="195" />
+        <di:waypoint xsi:type="dc:Point" x="209" y="195" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="189" y="173.5" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="ServiceTask_1ej8bj2_di" bpmnElement="Task_1m85tzv">
+        <dc:Bounds x="209" y="155" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ExclusiveGateway_1ry2g7o_di" bpmnElement="ExclusiveGateway_1ry2g7o" isMarkerVisible="true">
+        <dc:Bounds x="356.4778761061947" y="170" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="346" y="223" width="71" height="50" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_1oauusa_di" bpmnElement="SequenceFlow_1oauusa">
+        <di:waypoint xsi:type="dc:Point" x="309" y="195" />
+        <di:waypoint xsi:type="dc:Point" x="356" y="195" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="332.5" y="173" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_07efpwq_di" bpmnElement="SequenceFlow_07efpwq">
+        <di:waypoint xsi:type="dc:Point" x="406" y="195" />
+        <di:waypoint xsi:type="dc:Point" x="459" y="195" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="425" y="174" width="15" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="ServiceTask_0lp4nze_di" bpmnElement="Task_1m6ctii">
+        <dc:Bounds x="459" y="155" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_1g4hahw_di" bpmnElement="SequenceFlow_1g4hahw">
+        <di:waypoint xsi:type="dc:Point" x="559" y="195" />
+        <di:waypoint xsi:type="dc:Point" x="615" y="195" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="587" y="173.5" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="ServiceTask_0u9p2oq_di" bpmnElement="Task_1lzjctk">
+        <dc:Bounds x="615" y="155" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0mofutd_di" bpmnElement="SequenceFlow_0mofutd">
+        <di:waypoint xsi:type="dc:Point" x="715" y="195" />
+        <di:waypoint xsi:type="dc:Point" x="761" y="195" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="738" y="173.5" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="ServiceTask_00rcjna_di" bpmnElement="Task_05kp1ke">
+        <dc:Bounds x="761" y="155" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0ix62g9_di" bpmnElement="SequenceFlow_0ix62g9">
+        <di:waypoint xsi:type="dc:Point" x="861" y="195" />
+        <di:waypoint xsi:type="dc:Point" x="883" y="195" />
+        <di:waypoint xsi:type="dc:Point" x="883" y="382" />
+        <di:waypoint xsi:type="dc:Point" x="906" y="382" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="898" y="282" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="CallActivity_1m6vjpb_di" bpmnElement="Task_0hp6agl">
+        <dc:Bounds x="906" y="343" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_1dpdlgv_di" bpmnElement="EndEvent_1dpdlgv">
+        <dc:Bounds x="1050.2136536030341" y="177" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1068.2136536030341" y="216" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0s7a1gc_di" bpmnElement="SequenceFlow_0s7a1gc">
+        <di:waypoint xsi:type="dc:Point" x="1006" y="383" />
+        <di:waypoint xsi:type="dc:Point" x="1028" y="383" />
+        <di:waypoint xsi:type="dc:Point" x="1028" y="195" />
+        <di:waypoint xsi:type="dc:Point" x="1050" y="195" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1043" y="282" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0rp1f4n_di" bpmnElement="SequenceFlow_0rp1f4n">
+        <di:waypoint xsi:type="dc:Point" x="381" y="170" />
+        <di:waypoint xsi:type="dc:Point" x="381" y="131" />
+        <di:waypoint xsi:type="dc:Point" x="1068" y="131" />
+        <di:waypoint xsi:type="dc:Point" x="1068" y="177" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="720" y="110" width="10" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Participant_1s85l0b_di" bpmnElement="Participant_1s85l0b">
+        <dc:Bounds x="0" y="0" width="646" height="84" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="MessageFlow_0wj6sn6_di" bpmnElement="MessageFlow_0wj6sn6">
+        <di:waypoint xsi:type="dc:Point" x="77" y="84" />
+        <di:waypoint xsi:type="dc:Point" x="77" y="178" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="92" y="124.5" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+    <bpmndi:BPMNLabelStyle id="EAID_LS000000_5D33_4526_A893_573C9020AACD">
+      <dc:Font name="Calibri" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+    </bpmndi:BPMNLabelStyle>
+    <bpmndi:BPMNLabelStyle id="EAID_LS000001_5D33_4526_A893_573C9020AACD">
+      <dc:Font name="Calibri" size="8.5" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+    </bpmndi:BPMNLabelStyle>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

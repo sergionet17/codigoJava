@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:ssbp="www.sparxsystems.com.au/bpmn20" id="EAPK_464EE702_9F3C_40d9_A76D_72B227F86828" name="Resolucion anulacion numeros" targetNamespace="www.sparxsystems.com.au/bpmn20" exporter="Camunda Modeler" exporterVersion="1.8.0">
+  <bpmn:collaboration id="Collaboration_0xhors3">
+    <bpmn:participant id="Participant_02ziney" name="SDM" processRef="Process_0u0499n" />
+    <bpmn:participant id="Participant_0xcid5h" name="SIPA WEB" processRef="Process_0up5bhy" />
+    <bpmn:messageFlow id="MessageFlow_02i2acn" sourceRef="Participant_0xcid5h" targetRef="StartEvent_1ef24vi" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_0u0499n" name="Resolucion anulacion numeros" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1ef24vi" name="Inicio">
+      <bpmn:outgoing>SequenceFlow_07mrygt</bpmn:outgoing>
+      <bpmn:messageEventDefinition messageRef="Message_02pigd6" />
+    </bpmn:startEvent>
+    <bpmn:callActivity id="Task_1fgqv56" name="Oficio automatico de resolucion de anulacion de rangos" calledElement="Oficio memorando automatico">
+      <bpmn:incoming>SequenceFlow_07mrygt</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_10bekfd</bpmn:outgoing>
+    </bpmn:callActivity>
+    <bpmn:endEvent id="EndEvent_0tqlhru">
+      <bpmn:incoming>SequenceFlow_10bekfd</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_07mrygt" sourceRef="StartEvent_1ef24vi" targetRef="Task_1fgqv56" />
+    <bpmn:sequenceFlow id="SequenceFlow_10bekfd" sourceRef="Task_1fgqv56" targetRef="EndEvent_0tqlhru" />
+    <bpmn:textAnnotation id="EAID_65995DBE_D94D_4ef9_92D8_A2D7A6DEAF05">    <bpmn:text>No se comunica, Junto a la plantilla debe esatr el indicador NO SE COMUNICA</bpmn:text>
+</bpmn:textAnnotation>
+  </bpmn:process>
+  <bpmn:message id="Message_02pigd6" name="Message_3n5k3t5" />
+  <bpmn:process id="Process_0up5bhy" isExecutable="false" />
+  <bpmndi:BPMNDiagram id="EAID_0E11D30E_5EF6_4d6a_BE92_81052FBE2BAD" name="Resolucion anulacion numeros">
+    <bpmndi:BPMNPlane id="EAID_PL000000_5EF6_4d6a_BE92_81052FBE2BAD" bpmnElement="Collaboration_0xhors3">
+      <bpmndi:BPMNShape id="EAID_DO000001_5EF6_4d6a_BE92_81052FBE2BAD" bpmnElement="EAID_65995DBE_D94D_4ef9_92D8_A2D7A6DEAF05">
+        <dc:Bounds x="88" y="192" width="167" height="57" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Participant_02ziney_di" bpmnElement="Participant_02ziney">
+        <dc:Bounds x="0" y="74" width="356" height="195" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="StartEvent_1il59zg_di" bpmnElement="StartEvent_1ef24vi">
+        <dc:Bounds x="62" y="120" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="68" y="158" width="26" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_07mrygt_di" bpmnElement="SequenceFlow_07mrygt">
+        <di:waypoint xsi:type="dc:Point" x="98" y="138" />
+        <di:waypoint xsi:type="dc:Point" x="146" y="138" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="122" y="116.5" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="CallActivity_1x0syl8_di" bpmnElement="Task_1fgqv56">
+        <dc:Bounds x="146" y="98" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_0tqlhru_di" bpmnElement="EndEvent_0tqlhru">
+        <dc:Bounds x="294.673" y="120" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="312.673" y="159" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_10bekfd_di" bpmnElement="SequenceFlow_10bekfd">
+        <di:waypoint xsi:type="dc:Point" x="246" y="138" />
+        <di:waypoint xsi:type="dc:Point" x="295" y="138" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="270.5" y="116" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Participant_0xcid5h_di" bpmnElement="Participant_0xcid5h">
+        <dc:Bounds x="0" y="0" width="330" height="60" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="MessageFlow_02i2acn_di" bpmnElement="MessageFlow_02i2acn">
+        <di:waypoint xsi:type="dc:Point" x="80" y="60" />
+        <di:waypoint xsi:type="dc:Point" x="80" y="120" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="95" y="83.5" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+    <bpmndi:BPMNLabelStyle id="EAID_LS000000_5EF6_4d6a_BE92_81052FBE2BAD">
+      <dc:Font name="Calibri" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+    </bpmndi:BPMNLabelStyle>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

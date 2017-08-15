@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<XMI xmi.version="1.1" xmlns:UML="omg.org/UML1.3">
+	<XMI.header>
+		<XMI.documentation>
+			<XMI.exporter>Enterprise Architect</XMI.exporter>
+			<XMI.exporterVersion>2.5</XMI.exporterVersion>
+		</XMI.documentation>
+	</XMI.header>
+	<XMI.content>
+		<UML:Model name="EA Model" xmi.id="MX_EAID_69F184A1_0EAD_42df_A417_B387130D88D8">
+			<UML:Namespace.ownedElement>
+				<UML:Class name="EARootClass" xmi.id="EAID_11111111_5487_4080_A7F4_41526CB0AA00" isRoot="true" isLeaf="false" isAbstract="false"/>
+				<UML:Package name="003-Comparendos inconsistentes" xmi.id="EAPK_69F184A1_0EAD_42df_A417_B387130D88D8" isRoot="false" isLeaf="false" isAbstract="false" visibility="public">
+					<UML:ModelElement.taggedValue>
+						<UML:TaggedValue tag="parent" value="EAPK_212FFB6B_8338_48a8_B093_5D0DBEDD150F"/>
+						<UML:TaggedValue tag="created" value="2017-02-14 18:06:56"/>
+						<UML:TaggedValue tag="modified" value="2017-04-25 07:24:51"/>
+						<UML:TaggedValue tag="iscontrolled" value="TRUE"/>
+						<UML:TaggedValue tag="xmlpath" value="ucm-contravenciones-comparendos-inconsistentes-2.xml"/>
+						<UML:TaggedValue tag="lastloaddate" value="2017-04-25 07:24:52"/>
+						<UML:TaggedValue tag="lastsavedate" value="2017-02-16 11:01:08"/>
+						<UML:TaggedValue tag="version" value="1.0"/>
+						<UML:TaggedValue tag="isprotected" value="FALSE"/>
+						<UML:TaggedValue tag="usedtd" value="FALSE"/>
+						<UML:TaggedValue tag="xmiver" value="Enterprise Architect XMI/UML 1.3"/>
+						<UML:TaggedValue tag="logxml" value="FALSE"/>
+						<UML:TaggedValue tag="packageFlags" value="Recurse=0;VCCFG=secmov-sipa;CRC=0;"/>
+						<UML:TaggedValue tag="batchsave" value="0"/>
+						<UML:TaggedValue tag="batchload" value="0"/>
+						<UML:TaggedValue tag="phase" value="1.0"/>
+						<UML:TaggedValue tag="status" value="Proposed"/>
+						<UML:TaggedValue tag="author" value="dev"/>
+						<UML:TaggedValue tag="complexity" value="1"/>
+						<UML:TaggedValue tag="ea_stype" value="Public"/>
+						<UML:TaggedValue tag="tpos" value="0"/>
+						<UML:TaggedValue tag="gentype" value="Java"/>
+					</UML:ModelElement.taggedValue>
+					<UML:Namespace.ownedElement>
+						<UML:UseCase name="001-CU040.1 Identificar comparendos de tránsito o infracciones de transporte inconsistentes." xmi.id="EAID_267E294B_4B3E_4a49_9895_D2173BDAD338" visibility="public" namespace="EAPK_69F184A1_0EAD_42df_A417_B387130D88D8" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="documentation" value="Criterios de inconsistencia:&#xA;a. Fecha: Verificar que la fecha sea válida, no futura y no anterior a dos (2) días contados desde la imposición.&#xA;b. Tipo y número de documento: Verificar que se encuentre dentro de la base de datos de DUUPS y Registraduría.&#xA;c. Número de comparendo: Corresponde a un rango asignado, que no esté duplicado y que esté en un estado distinto a impuesto.&#xA;d. Código de infracción: Validar que el código de infracción exista.&#xA;e. Información incompleta: El comparendo cargado no tiene la información completa a excepción que sea por abandono de vehículo C02.&#xA;&#xA;Los comparendos son identificados como inconsistentes por el sistema cuando ingresan desde SIMUR o en audiencias de impugnación o aceptación.&#xA;Cuando un comparendo es identificado como inconsistente porque ya se había realizado el registro del mismo y el número de cédula del contraventor tiene diferencias, se debe identificar ambos comparendos como inconsistentes. "/>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="UseCase"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_69F184A1_0EAD_42df_A417_B387130D88D8"/>
+								<UML:TaggedValue tag="date_created" value="2017-02-15 10:29:34"/>
+								<UML:TaggedValue tag="date_modified" value="2017-03-27 23:32:31"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="003-Comparendos inconsistentes"/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="dev"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Validated"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="249"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:UseCase>
+						<UML:Dependency client="EAID_60FFA8C3_EBE0_4638_B15C_DA1A1C8BD4D5" supplier="EAID_267E294B_4B3E_4a49_9895_D2173BDAD338" xmi.id="EAID_2CF37FFE_5A4B_40bb_BE90_77F959CEBD77" visibility="public">
+							<UML:ModelElement.stereotype>
+								<UML:Stereotype name="invokes"/>
+							</UML:ModelElement.stereotype>
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="Dependency"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="stereotype" value="invokes"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="conditional" value=" &#xA;«invokes»"/>
+								<UML:TaggedValue tag="ea_localid" value="265"/>
+								<UML:TaggedValue tag="ea_sourceName" value="CU002.1 Carga de comparendos de tránsito o informe de infracciones de transporte público "/>
+								<UML:TaggedValue tag="ea_targetName" value="001-CU040.1 Identificar comparendos de tránsito o infracciones de transporte inconsistentes."/>
+								<UML:TaggedValue tag="ea_sourceType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="405"/>
+								<UML:TaggedValue tag="ea_targetID" value="249"/>
+								<UML:TaggedValue tag="src_visibility" value="Public"/>
+								<UML:TaggedValue tag="src_aggregation" value="0"/>
+								<UML:TaggedValue tag="src_isOrdered" value="false"/>
+								<UML:TaggedValue tag="src_targetScope" value="instance"/>
+								<UML:TaggedValue tag="src_changeable" value="none"/>
+								<UML:TaggedValue tag="src_isNavigable" value="false"/>
+								<UML:TaggedValue tag="src_containment" value="Unspecified"/>
+								<UML:TaggedValue tag="src_style" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+								<UML:TaggedValue tag="dst_visibility" value="Public"/>
+								<UML:TaggedValue tag="dst_aggregation" value="0"/>
+								<UML:TaggedValue tag="dst_isOrdered" value="false"/>
+								<UML:TaggedValue tag="dst_targetScope" value="instance"/>
+								<UML:TaggedValue tag="dst_changeable" value="none"/>
+								<UML:TaggedValue tag="dst_isNavigable" value="true"/>
+								<UML:TaggedValue tag="dst_containment" value="Unspecified"/>
+								<UML:TaggedValue tag="dst_style" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+								<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={D97F21CC-AE17-4e6f-80A3-F5E24E86BA68}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=invokes;GUID={304F9429-2AC5-4991-A4A3-7C5F1CACEC03};@ENDSTEREO;$DES;$CLT={2CF37FFE-5A4B-40bb-BE90-77F959CEBD77}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+								<UML:TaggedValue tag="privatedata5" value="SX=0;SY=0;EX=0;EY=0;EDGE=3;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+								<UML:TaggedValue tag="mb" value=" &#xA;«invokes»"/>
+							</UML:ModelElement.taggedValue>
+						</UML:Dependency>
+						<UML:Association xmi.id="EAID_35DBA9E9_5A36_460b_B28A_129C50B5C387" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Unspecified"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="293"/>
+								<UML:TaggedValue tag="ea_sourceName" value="001-CU040.1 Identificar comparendos de tránsito o infracciones de transporte inconsistentes."/>
+								<UML:TaggedValue tag="ea_targetName" value="DUUPS"/>
+								<UML:TaggedValue tag="ea_sourceType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_targetType" value="Actor"/>
+								<UML:TaggedValue tag="ea_sourceID" value="249"/>
+								<UML:TaggedValue tag="ea_targetID" value="520"/>
+								<UML:TaggedValue tag="privatedata5" value="SX=0;SY=0;EX=0;EY=0;EDGE=2;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_267E294B_4B3E_4a49_9895_D2173BDAD338">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_74D87CF2_CAF3_4f29_8F96_71414B9FE29D">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Unspecified;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:Dependency client="EAID_267E294B_4B3E_4a49_9895_D2173BDAD338" supplier="EAID_9EA09ECA_3BB5_4262_99F0_6CB610E3D88E" xmi.id="EAID_9ED7DF24_632E_4042_B8B0_DB5AD22C0D29" visibility="public">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="Dependency"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="49"/>
+								<UML:TaggedValue tag="ea_sourceName" value="001-CU040.1 Identificar comparendos de tránsito o infracciones de transporte inconsistentes."/>
+								<UML:TaggedValue tag="ea_targetName" value="Comparendo inconsistente"/>
+								<UML:TaggedValue tag="ea_sourceType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_targetType" value="Requirement"/>
+								<UML:TaggedValue tag="ea_sourceID" value="249"/>
+								<UML:TaggedValue tag="ea_targetID" value="252"/>
+								<UML:TaggedValue tag="src_visibility" value="Public"/>
+								<UML:TaggedValue tag="src_aggregation" value="0"/>
+								<UML:TaggedValue tag="src_isOrdered" value="false"/>
+								<UML:TaggedValue tag="src_targetScope" value="instance"/>
+								<UML:TaggedValue tag="src_changeable" value="none"/>
+								<UML:TaggedValue tag="src_isNavigable" value="false"/>
+								<UML:TaggedValue tag="src_containment" value="Unspecified"/>
+								<UML:TaggedValue tag="src_style" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+								<UML:TaggedValue tag="dst_visibility" value="Public"/>
+								<UML:TaggedValue tag="dst_aggregation" value="0"/>
+								<UML:TaggedValue tag="dst_isOrdered" value="false"/>
+								<UML:TaggedValue tag="dst_targetScope" value="instance"/>
+								<UML:TaggedValue tag="dst_changeable" value="none"/>
+								<UML:TaggedValue tag="dst_isNavigable" value="true"/>
+								<UML:TaggedValue tag="dst_containment" value="Unspecified"/>
+								<UML:TaggedValue tag="dst_style" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+								<UML:TaggedValue tag="privatedata5" value="SX=0;SY=0;EX=0;EY=0;EDGE=2;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+							</UML:ModelElement.taggedValue>
+						</UML:Dependency>
+						<UML:Association xmi.id="EAID_B4F52C38_0B34_4609_8882_B119C336A8F8" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Unspecified"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="285"/>
+								<UML:TaggedValue tag="ea_sourceName" value="001-CU040.1 Identificar comparendos de tránsito o infracciones de transporte inconsistentes."/>
+								<UML:TaggedValue tag="ea_targetName" value="Registraduría"/>
+								<UML:TaggedValue tag="ea_sourceType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_targetType" value="Actor"/>
+								<UML:TaggedValue tag="ea_sourceID" value="249"/>
+								<UML:TaggedValue tag="ea_targetID" value="524"/>
+								<UML:TaggedValue tag="privatedata5" value="SX=0;SY=0;EX=0;EY=0;EDGE=2;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_267E294B_4B3E_4a49_9895_D2173BDAD338">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_FEC533D0_857C_40ac_BBC8_D95B6D2B745A">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Unspecified;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:UseCase name="002-CU041.1 Realizar las correcciones a los comparendos de tránsito o infracciones de transporte inconsistentes." xmi.id="EAID_5CC1F76F_AFCF_4ee8_9880_BC7607D3BBB8" visibility="public" namespace="EAPK_69F184A1_0EAD_42df_A417_B387130D88D8" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="UseCase"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_69F184A1_0EAD_42df_A417_B387130D88D8"/>
+								<UML:TaggedValue tag="date_created" value="2017-02-14 18:21:07"/>
+								<UML:TaggedValue tag="date_modified" value="2017-03-27 23:32:34"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="003-Comparendos inconsistentes"/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="dev"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Validated"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="250"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:UseCase>
+						<UML:Association xmi.id="EAID_FCB30011_B8C8_45a0_AC91_83681C3BEAFB" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="346"/>
+								<UML:TaggedValue tag="ea_sourceName" value="AT4.1.4 Funcionario inconsistencias"/>
+								<UML:TaggedValue tag="ea_targetName" value="002-CU041.1 Realizar las correcciones a los comparendos de tránsito o infracciones de transporte inconsistentes."/>
+								<UML:TaggedValue tag="ea_sourceType" value="Actor"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="564"/>
+								<UML:TaggedValue tag="ea_targetID" value="250"/>
+								<UML:TaggedValue tag="privatedata5" value="SX=0;SY=0;EX=0;EY=0;EDGE=2;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_CD930463_1F93_4fa5_BF6A_C3C9F9F1162C">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_5CC1F76F_AFCF_4ee8_9880_BC7607D3BBB8">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:UseCase name="003-CU042.1 Informar que el comparendo de tránsito o infracción de transporte se encuentra dentro del grupo de inconsistentes." xmi.id="EAID_815BD628_1C39_4da6_A5D4_01DA4BB72B8E" visibility="public" namespace="EAPK_69F184A1_0EAD_42df_A417_B387130D88D8" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="UseCase"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_69F184A1_0EAD_42df_A417_B387130D88D8"/>
+								<UML:TaggedValue tag="date_created" value="2017-02-15 10:49:22"/>
+								<UML:TaggedValue tag="date_modified" value="2017-03-27 23:32:41"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="003-Comparendos inconsistentes"/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="Hermes Puentes"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Deprecated"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="251"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:UseCase>
+						<UML:Collaboration xmi.id="EAID_69F184A1_0EAD_42df_A417_B387130D88D8_Collaboration" name="Collaborations">
+							<UML:Namespace.ownedElement>
+								<UML:ClassifierRole name="Comparendo inconsistente" xmi.id="EAID_9EA09ECA_3BB5_4262_99F0_6CB610E3D88E" visibility="public" base="EAID_11111111_5487_4080_A7F4_41526CB0AA00">
+									<UML:ModelElement.stereotype>
+										<UML:Stereotype name="BusinessRequirement"/>
+									</UML:ModelElement.stereotype>
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="documentation" value="Criterios de inconsistencia:&#xA;a. Fecha: Verificar que la fecha sea válida, no futura y no anterior a dos (2) días contados desde la imposición.&#xA;b. Tipo y número de documento: Verificar que se encuentre dentro de la base de datos de DUUPS y Registraduría.&#xA;c. Número de comparendo: Corresponde a un rango asignado, que no esté duplicado y que esté en un estado distinto a impuesto.&#xA;d. Código de infracción: Validar que el código de infracción exista.&#xA;e. Información incompleta: El comparendo cargado no tiene la información completa a excepción que sea por abandono de vehículo C02.&#xA;"/>
+										<UML:TaggedValue tag="isAbstract" value="false"/>
+										<UML:TaggedValue tag="isSpecification" value="false"/>
+										<UML:TaggedValue tag="ea_stype" value="Requirement"/>
+										<UML:TaggedValue tag="ea_ntype" value="0"/>
+										<UML:TaggedValue tag="version" value="1.0"/>
+										<UML:TaggedValue tag="isActive" value="false"/>
+										<UML:TaggedValue tag="package" value="EAPK_69F184A1_0EAD_42df_A417_B387130D88D8"/>
+										<UML:TaggedValue tag="date_created" value="2017-03-26 17:38:27"/>
+										<UML:TaggedValue tag="date_modified" value="2017-03-26 17:38:52"/>
+										<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+										<UML:TaggedValue tag="tagged" value="0"/>
+										<UML:TaggedValue tag="package_name" value="003-Comparendos inconsistentes"/>
+										<UML:TaggedValue tag="phase" value="1.0"/>
+										<UML:TaggedValue tag="author" value="dev"/>
+										<UML:TaggedValue tag="complexity" value="1"/>
+										<UML:TaggedValue tag="status" value="Proposed"/>
+										<UML:TaggedValue tag="stereotype" value="BusinessRequirement"/>
+										<UML:TaggedValue tag="tpos" value="0"/>
+										<UML:TaggedValue tag="ea_localid" value="252"/>
+										<UML:TaggedValue tag="ea_eleType" value="element"/>
+										<UML:TaggedValue tag="difficulty" value="Medium"/>
+										<UML:TaggedValue tag="priority" value="Medium"/>
+										<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+										<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={5D0398ED-DCD5-4d5a-9659-AFF19A923A8E}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=BusinessRequirement;FQName=EAREQ::BusinessRequirement;@ENDSTEREO;$DES;$CLT={9EA09ECA-3BB5-4262-99F0-6CB610E3D88E}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+									</UML:ModelElement.taggedValue>
+								</UML:ClassifierRole>
+							</UML:Namespace.ownedElement>
+							<UML:Collaboration.interaction/>
+						</UML:Collaboration>
+					</UML:Namespace.ownedElement>
+				</UML:Package>
+			</UML:Namespace.ownedElement>
+		</UML:Model>
+		<UML:TaggedValue tag="constraint" xmi.id="EAID_419A3305_DA98_adda_8D48_71DB971E3C4B" value="&lt;memo&gt;" modelElement="EAID_9EA09ECA_3BB5_4262_99F0_6CB610E3D88E"/>
+		<UML:TaggedValue tag="context" xmi.id="EAID_CFB9FD65_95D8_1595_9B9D_A03A4DA7D702" value="&lt;memo&gt;" modelElement="EAID_9EA09ECA_3BB5_4262_99F0_6CB610E3D88E"/>
+		<UML:TaggedValue tag="objective" xmi.id="EAID_C59F911B_124E_4312_ACBC_66D4E36000C7" value="&lt;memo&gt;" modelElement="EAID_9EA09ECA_3BB5_4262_99F0_6CB610E3D88E"/>
+		<UML:TaggedValue tag="priority" xmi.id="EAID_A142CBA2_7275_1172_AE69_11ACC63F662B" value="#NOTES#Values: High,Medium,Low,Essential,Conditional,Optional&#xA;" modelElement="EAID_9EA09ECA_3BB5_4262_99F0_6CB610E3D88E"/>
+		<UML:TaggedValue tag="rules" xmi.id="EAID_0850EAAB_CA5E_f5ca_B142_A687B7A9AD8F" value="&lt;memo&gt;" modelElement="EAID_9EA09ECA_3BB5_4262_99F0_6CB610E3D88E"/>
+		<UML:TaggedValue tag="scope" xmi.id="EAID_0859327A_122D_fe12_971A_672C17B7508D" value="&lt;memo&gt;" modelElement="EAID_9EA09ECA_3BB5_4262_99F0_6CB610E3D88E"/>
+		<UML:Diagram name="Comparendos inconsistentes" xmi.id="EAID_E56AC5DC_A847_4a42_AA30_8F2DF5289450" diagramType="UseCaseDiagram" owner="EAPK_69F184A1_0EAD_42df_A417_B387130D88D8" toolName="Enterprise Architect 2.5">
+			<UML:ModelElement.taggedValue>
+				<UML:TaggedValue tag="version" value="1.0"/>
+				<UML:TaggedValue tag="author" value="dev"/>
+				<UML:TaggedValue tag="created_date" value="2017-02-14 18:07:52"/>
+				<UML:TaggedValue tag="modified_date" value="2017-03-26 18:10:32"/>
+				<UML:TaggedValue tag="package" value="EAPK_69F184A1_0EAD_42df_A417_B387130D88D8"/>
+				<UML:TaggedValue tag="type" value="Use Case"/>
+				<UML:TaggedValue tag="swimlanes" value="locked=false;orientation=0;width=0;inbar=false;names=false;color=0;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;cls=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;"/>
+				<UML:TaggedValue tag="matrixitems" value="locked=false;matrixactive=false;swimlanesactive=true;kanbanactive=false;width=1;clrLine=0;"/>
+				<UML:TaggedValue tag="ea_localid" value="9"/>
+				<UML:TaggedValue tag="EAStyle" value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=1;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=1;PPgs.cy=1;DocSize.cx=826;DocSize.cy=1169;ShowDetails=0;Orientation=P;Zoom=100;ShowTags=0;OpParams=1;VisibleAttributeDetail=0;ShowOpRetType=1;ShowIcons=1;CollabNums=0;HideProps=0;ShowReqs=0;ShowCons=0;PaperSize=9;HideParents=0;UseAlias=0;HideAtts=0;HideOps=0;HideStereo=0;HideElemStereo=0;ShowTests=0;ShowMaint=0;ConnectorNotation=UML 2.1;ExplicitNavigability=0;ShowShape=1;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;ShowNotes=0;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;"/>
+				<UML:TaggedValue tag="styleex" value="SaveTag=FA2F153C;ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=1;MatrixActive=0;SwimlanesActive=1;KanbanActive=0;MatrixLineWidth=1;MatrixLineClr=0;MatrixLocked=0;TConnectorNotation=UML 2.1;TExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;ProfileData=;MDGDgm=;STBLDgm=;ShowNotes=0;VisibleAttributeDetail=0;ShowOpRetType=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;SuppressedCompartments=;Theme=:119;"/>
+			</UML:ModelElement.taggedValue>
+			<UML:Diagram.element>
+				<UML:DiagramElement geometry="Left=194;Top=23;Right=341;Bottom=121;" subject="EAID_815BD628_1C39_4da6_A5D4_01DA4BB72B8E" seqno="1" style="DUID=18D2F20A;BCol=6008319;"/>
+				<UML:DiagramElement geometry="Left=485;Top=235;Right=530;Bottom=325;" subject="EAID_FEC533D0_857C_40ac_BBC8_D95B6D2B745A" seqno="2" style="DUID=23E84A9E;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;"/>
+				<UML:DiagramElement geometry="Left=198;Top=139;Right=339;Bottom=233;" subject="EAID_267E294B_4B3E_4a49_9895_D2173BDAD338" seqno="3" style="DUID=AEA33EE6;"/>
+				<UML:DiagramElement geometry="Left=483;Top=102;Right=528;Bottom=192;" subject="EAID_74D87CF2_CAF3_4f29_8F96_71414B9FE29D" seqno="4" style="DUID=02D1F267;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;"/>
+				<UML:DiagramElement geometry="Left=194;Top=254;Right=348;Bottom=357;" subject="EAID_5CC1F76F_AFCF_4ee8_9880_BC7607D3BBB8" seqno="5" style="DUID=D85FE64C;"/>
+				<UML:DiagramElement geometry="Left=80;Top=252;Right=125;Bottom=342;" subject="EAID_CD930463_1F93_4fa5_BF6A_C3C9F9F1162C" seqno="6" style="DUID=DB15C7B4;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;"/>
+				<UML:DiagramElement geometry="Left=76;Top=754;Right=121;Bottom=844;" subject="EAID_5A95B9B4_9C7B_4e55_9497_BAFCEB240A2E" seqno="7" style="DUID=4974040A;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;Path=;" subject="EAID_B4F52C38_0B34_4609_8882_B119C336A8F8" style="Mode=3;EOID=23E84A9E;SOID=AEA33EE6;Color=-1;LWidth=0;Hidden=0;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;Path=;" subject="EAID_35DBA9E9_5A36_460b_B28A_129C50B5C387" style="Mode=3;EOID=02D1F267;SOID=AEA33EE6;Color=-1;LWidth=0;Hidden=0;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;Path=;" subject="EAID_FCB30011_B8C8_45a0_AC91_83681C3BEAFB" style="Mode=3;EOID=D85FE64C;SOID=DB15C7B4;Color=-1;LWidth=0;Hidden=0;Hidden=0;"/>
+			</UML:Diagram.element>
+		</UML:Diagram>
+		<UML:Diagram name="Reglas de negocio" xmi.id="EAID_87DDFD7A_0F6A_43d2_832C_257BA29CFE09" diagramType="CustomDiagram" owner="EAPK_69F184A1_0EAD_42df_A417_B387130D88D8" toolName="Enterprise Architect 2.5">
+			<UML:ModelElement.taggedValue>
+				<UML:TaggedValue tag="version" value="1.0"/>
+				<UML:TaggedValue tag="author" value="dev"/>
+				<UML:TaggedValue tag="created_date" value="2017-03-26 17:38:11"/>
+				<UML:TaggedValue tag="modified_date" value="2017-03-26 17:41:36"/>
+				<UML:TaggedValue tag="package" value="EAPK_69F184A1_0EAD_42df_A417_B387130D88D8"/>
+				<UML:TaggedValue tag="type" value="Custom"/>
+				<UML:TaggedValue tag="swimlanes" value="locked=false;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;cls=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;"/>
+				<UML:TaggedValue tag="matrixitems" value="locked=false;matrixactive=false;swimlanesactive=true;kanbanactive=false;width=1;clrLine=0;"/>
+				<UML:TaggedValue tag="ea_localid" value="10"/>
+				<UML:TaggedValue tag="EAStyle" value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=1;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=1;PPgs.cy=1;DocSize.cx=850;DocSize.cy=1098;ShowDetails=0;Orientation=P;Zoom=100;ShowTags=0;OpParams=1;VisibleAttributeDetail=0;ShowOpRetType=1;ShowIcons=1;CollabNums=0;HideProps=0;ShowReqs=0;ShowCons=0;PaperSize=1;HideParents=0;UseAlias=0;HideAtts=0;HideOps=0;HideStereo=0;HideElemStereo=0;ShowTests=0;ShowMaint=0;ConnectorNotation=UML 2.1;ExplicitNavigability=0;ShowShape=1;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;ShowNotes=0;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;"/>
+				<UML:TaggedValue tag="styleex" value="SaveTag=CA1BDBE4;ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=1;MatrixActive=0;SwimlanesActive=1;KanbanActive=0;MatrixLineWidth=1;MatrixLineClr=0;MatrixLocked=0;TConnectorNotation=UML 2.1;TExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;ProfileData=;MDGDgm=Extended::Requirements;STBLDgm=;ShowNotes=0;VisibleAttributeDetail=0;ShowOpRetType=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;SuppressedCompartments=;Theme=:119;"/>
+			</UML:ModelElement.taggedValue>
+			<UML:Diagram.element>
+				<UML:DiagramElement geometry="Left=447;Top=155;Right=587;Bottom=199;" subject="EAID_9EA09ECA_3BB5_4262_99F0_6CB610E3D88E" seqno="1" style="DUID=43FE028B;HideIcon=0;"/>
+				<UML:DiagramElement geometry="Left=192;Top=129;Right=339;Bottom=227;" subject="EAID_267E294B_4B3E_4a49_9895_D2173BDAD338" seqno="2" style="DUID=05B846BF;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_9ED7DF24_632E_4042_B8B0_DB5AD22C0D29" style="Mode=3;EOID=43FE028B;SOID=05B846BF;Color=-1;LWidth=0;Hidden=0;"/>
+			</UML:Diagram.element>
+		</UML:Diagram>
+		<UML:DiagramElement geometry="Left=311;Top=114;Right=429;Bottom=193;" subject="EAID_267E294B_4B3E_4a49_9895_D2173BDAD338" seqno="12" style="DUID=EFD2C051;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;">
+			<UML:ModelElement.taggedValue>
+				<UML:TaggedValue tag="diagram_guid" value="EAID_E9D6F922_741C_48e0_A565_53024746F08C"/>
+			</UML:ModelElement.taggedValue>
+		</UML:DiagramElement>
+		<UML:DiagramElement geometry="Left=422;Top=199;Right=537;Bottom=276;" subject="EAID_267E294B_4B3E_4a49_9895_D2173BDAD338" seqno="7" style="DUID=1DBC8BB5;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;">
+			<UML:ModelElement.taggedValue>
+				<UML:TaggedValue tag="diagram_guid" value="EAID_2747605B_3E0E_4e2e_A561_5E0CB36C3EE3"/>
+			</UML:ModelElement.taggedValue>
+		</UML:DiagramElement>
+		<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=3;$LLB=;LLT=;LMT=;LMB=CX=41:CY=13:OX=32:OY=-11:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LRT=;LRB=;IRHS=;ILHS=;" subject="EAID_2CF37FFE_5A4B_40bb_BE90_77F959CEBD77" style="Mode=3;EOID=1DBC8BB5;SOID=D1C1D464;Color=-1;LWidth=0;">
+			<UML:ModelElement.taggedValue>
+				<UML:TaggedValue tag="diagram_guid" value="EAID_2747605B_3E0E_4e2e_A561_5E0CB36C3EE3"/>
+				<UML:TaggedValue tag="hidden" value="0"/>
+			</UML:ModelElement.taggedValue>
+		</UML:DiagramElement>
+		<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=3;$LLB=;LLT=;LMT=;LMB=CX=41:CY=13:OX=32:OY=-11:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LRT=;LRB=;IRHS=;ILHS=;" subject="EAID_2CF37FFE_5A4B_40bb_BE90_77F959CEBD77" style="Mode=3;EOID=1DBC8BB5;SOID=D1C1D464;Color=-1;LWidth=0;">
+			<UML:ModelElement.taggedValue>
+				<UML:TaggedValue tag="diagram_guid" value="EAID_2747605B_3E0E_4e2e_A561_5E0CB36C3EE3"/>
+				<UML:TaggedValue tag="hidden" value="0"/>
+			</UML:ModelElement.taggedValue>
+		</UML:DiagramElement>
+	</XMI.content>
+	<XMI.difference/>
+	<XMI.extensions xmi.extender="Enterprise Architect 2.5">
+		<EAModel.scenario>
+			<EAScenario name="Basic Path" type="Basic Path" weight="0,00" subject="EAID_267E294B_4B3E_4a49_9895_D2173BDAD338" xmi.id="EAID_E6FC2C91_B4D4_47c6_AFB4_9AA337CA92FF">
+				<EAScenarioContent>
+					<path>
+						<step name="El sistema identifica un comparendo o infracción inconsistente con base en Comparendo inconsistente" guid="{57A3CDE1-BAF7-48b5-920C-549D60B3E3C2}" level="1" uses="" useslist="" result="Verificar el criterio de fecha de comparendos o infracción.&#xA;&#xA;Verificar el criterio de tipo y número de documento.&#xA;&#xA;Verificar el criterio de número de comparendo o infracción.&#xA;&#xA;Verificar el criterio de código de infracción.&#xA;&#xA;Verificar el criterio de información incompleta.&#xA;" state="" trigger="1" link=""/>
+						<step name="El sistema marca el comparendo o infracción como inconsistente para que sea corregido indicando por qué criterios fue declarado en ese estado." guid="{913CB647-2894-4282-AE10-5A9B80162186}" level="2" uses="" useslist="" result="Verificar el registro del estado inválido  del comparendo o código de infracción." state="" trigger="0" link=""/>
+						<step name="El sistema identifica si hay varios registros en conflicto y los asocia para su respectiva revisión. (Cuando se tienen información muy similar pero con código de diferente)." guid="{7E38B20D-91A9-49af-9136-2A6B799627FE}" level="3" uses="" useslist="" result="Verificar el registro del estado en conflicto de los comparendos o códigos de infracción.&#xA;&#xA;" state="" trigger="0" link=""/>
+						<step name="Cuando el comparendo es llevado al módulo de inconsistentes se debe realizar el registro en cartera donde se reversa la operación en cuenta de orden de expectativa de comparendos mientras se solucionan las inconsistencias." guid="{C3923DF4-2D4D-4e45-B50C-292FA602FDE9}" level="4" uses="" useslist="" result="Verificar el registro en cartera reversando la operación en cuenta de orden por inconsistencia de comparendo." state="" trigger="0" link=""/>
+						<context>
+							<item oldname="DUUPS" guid="{74D87CF2-CAF3-4f29-8F96-71414B9FE29D}"/>
+							<item oldname="Comparendo inconsistente" guid="{9EA09ECA-3BB5-4262-99F0-6CB610E3D88E}"/>
+							<item oldname="CU002.1 Carga de comparendo de tránsito" guid="{60FFA8C3-EBE0-4638-B15C-DA1A1C8BD4D5}"/>
+							<item oldname="Registraduría" guid="{FEC533D0-857C-40ac-BBC8-D95B6D2B745A}"/>
+						</context>
+					</path>
+				</EAScenarioContent>
+			</EAScenario>
+			<EAScenario name="Basic Path" type="Basic Path" weight="0,00" subject="EAID_5CC1F76F_AFCF_4ee8_9880_BC7607D3BBB8" xmi.id="EAID_5829907D_DE66_4df3_8ADF_C5C25490EEF3">
+				<EAScenarioContent>
+					<path>
+						<step name="El usuario selecciona la opción &quot;Listado de inconsistencias&quot;" guid="{C07F6B45-FB02-43a6-A43C-B562BE51C7FE}" level="1" uses="" useslist="" result="" state="" trigger="1" link=""/>
+						<step name="El sistema lista los comparendos o infracciones inconsistentes" guid="{6A007391-D998-4d63-81EF-1E0C57196F4A}" level="2" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="El usuario selecciona el comparendo o infracción a corregir." guid="{2C6398F6-9F3C-46ef-8503-7369E7DF481C}" level="3" uses="" useslist="" result="" state="" trigger="1" link=""/>
+						<step name="El sistema muestra un formulario con la información de comparendo en modo editable" guid="{B0BB4ED6-E5A2-44cc-808B-9774FC1D66D9}" level="4" uses="" useslist="" result="Verificar que los datos corregidos del comparendo o infracción han sido registrados." state="" trigger="0" link=""/>
+						<step name="EL usaurio ingresa la información a modificar y pulsa el botón guardar" guid="{C34FA61B-E133-4c60-BAB9-E9B4F2862E37}" level="5" uses="" useslist="" result="" state="" trigger="1" link=""/>
+						<step name="EL sistema guarda los cambios en el comparendo y la información del usuario, fecha y hora de modificación." guid="{A3B87ADB-0D98-4786-A546-F7300528A9D0}" level="6" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<context>
+							<item oldname="AT4.1.4 Funcionario inconsistencias" guid="{CD930463-1F93-4fa5-BF6A-C3C9F9F1162C}"/>
+							<item oldname="Consulta por número de cédula" guid="{1966DFFC-8302-459d-A936-EAF1D454E180}"/>
+							<item oldname="Realizar las correcciones a los comparendos de tránsito o infracciones de transporte inconsistentes ( Consulta por comparendo)" guid="{61138B35-A7CC-4743-9B61-A440031F8889}"/>
+						</context>
+					</path>
+				</EAScenarioContent>
+			</EAScenario>
+			<EAScenario name="Basic Path" type="Basic Path" weight="0,00" subject="EAID_815BD628_1C39_4da6_A5D4_01DA4BB72B8E" xmi.id="EAID_6C78FE71_39D9_4b46_B33F_CD28FD075101">
+				<EAScenarioContent>
+					<path>
+						<step name="El usuario selecciona un comparendo o infracción inconsistente para iniciar algún proceso." guid="{06DA528A-B1EE-45b2-BD4F-557D07D29416}" level="1" uses="" useslist="" result="" state="" trigger="1" link=""/>
+						<step name="El sistema genera un aviso donde indica que el comparendo o infracción se encuentra en revisión porque ha sido identificada como inconsistente." guid="{4E2602FF-C722-4557-B7FB-9A2A206D2888}" level="2" uses="" useslist="" result="Verificar que el comparendo o infracción se encuentra dentro del grupo de inconsistentes." state="" trigger="0" link=""/>
+						<step name="El sistema no permite iniciar el proceso que se pretendía realizar con el comparendo." guid="{700712E9-6DF6-4b35-B174-F5717F2EDCB8}" level="3" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<context>
+							<item oldname="AT-SIPA" guid="{C1BFCF04-964A-4957-9418-BCC89EFC0A67}"/>
+						</context>
+					</path>
+				</EAScenarioContent>
+			</EAScenario>
+		</EAModel.scenario>
+		<EAStub xmi.id="EAID_60FFA8C3_EBE0_4638_B15C_DA1A1C8BD4D5" name="CU002.1 Carga de comparendos de tránsito o informe de infracciones de transporte público " UMLType="UseCase"/>
+		<EAStub xmi.id="EAID_74D87CF2_CAF3_4f29_8F96_71414B9FE29D" name="DUUPS" UMLType="Actor"/>
+		<EAStub xmi.id="EAID_FEC533D0_857C_40ac_BBC8_D95B6D2B745A" name="Registraduría" UMLType="Actor"/>
+		<EAStub xmi.id="EAID_CD930463_1F93_4fa5_BF6A_C3C9F9F1162C" name="AT4.1.4 Funcionario inconsistencias" UMLType="Actor"/>
+	</XMI.extensions>
+</XMI>

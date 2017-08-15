@@ -1,0 +1,296 @@
+databaseChangeLog:
+- changeSet:
+    id: 1500578833524-132
+    author: acpreda (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: SESSION_ID
+            type: CHAR(36 BYTE)
+        - column:
+            name: CREATION_TIME
+            type: NUMBER(19, 0)
+        - column:
+            name: LAST_ACCESS_TIME
+            type: NUMBER(19, 0)
+        - column:
+            name: MAX_INACTIVE_INTERVAL
+            type: NUMBER(10, 0)
+        - column:
+            name: PRINCIPAL_NAME
+            type: VARCHAR2(100 BYTE)
+        tableName: SPRING_SESSION
+- changeSet:
+    id: 1500578833524-133
+    author: acpreda (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: SESSION_ID
+            type: CHAR(36 BYTE)
+        - column:
+            constraints:
+              nullable: false
+            name: ATTRIBUTE_NAME
+            type: VARCHAR2(200 BYTE)
+        - column:
+            name: ATTRIBUTE_BYTES
+            type: BLOB
+        tableName: SPRING_SESSION_ATTRIBUTES
+- changeSet:
+    id: 1500578833524-175
+    author: acpreda (generated)
+    changes:
+    - createIndex:
+        columns:
+        - column:
+            name: SESSION_ID
+        indexName: PK_SPRING_SESSION
+        tableName: SPRING_SESSION
+        unique: true
+    - addPrimaryKey:
+        columnNames: SESSION_ID
+        constraintName: PK_SPRING_SESSION
+        forIndexName: PK_SPRING_SESSION
+        tableName: SPRING_SESSION
+- changeSet:
+    id: 1500578833524-176
+    author: acpreda (generated)
+    changes:
+    - createIndex:
+        columns:
+        - column:
+            name: SESSION_ID
+        - column:
+            name: ATTRIBUTE_NAME
+        indexName: PK_SPRING_SESSION_ATTRIBUTES
+        tableName: SPRING_SESSION_ATTRIBUTES
+        unique: true
+    - addPrimaryKey:
+        columnNames: SESSION_ID, ATTRIBUTE_NAME
+        constraintName: PK_SPRING_SESSION_ATTRIBUTES
+        forIndexName: PK_SPRING_SESSION_ATTRIBUTES
+        tableName: SPRING_SESSION_ATTRIBUTES
+- changeSet:
+    id: 1500578833524-583
+    author: acpreda (generated)
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: SESSION_ID
+        baseTableName: SPRING_SESSION_ATTRIBUTES
+        constraintName: SPRING_SESSION_ATTRIBUTES_FK
+        deferrable: true
+        initiallyDeferred: true
+        onDelete: CASCADE
+        onUpdate: RESTRICT
+        referencedColumnNames: SESSION_ID
+        referencedTableName: SPRING_SESSION
+- changeSet:
+    id: 1500578833524-92
+    author: acpreda (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            name: TOKEN_ID
+            type: VARCHAR2(256 BYTE)
+        - column:
+            name: TOKEN
+            type: BLOB
+        - column:
+            constraints:
+              nullable: false
+            name: AUTHENTICATION_ID
+            type: VARCHAR2(256 BYTE)
+        - column:
+            name: USER_NAME
+            type: VARCHAR2(256 BYTE)
+        - column:
+            name: CLIENT_ID
+            type: VARCHAR2(256 BYTE)
+        - column:
+            name: AUTHENTICATION
+            type: BLOB
+        - column:
+            name: REFRESH_TOKEN
+            type: VARCHAR2(256 BYTE)
+        tableName: OAUTH_ACCESS_TOKEN
+- changeSet:
+    id: 1500578833524-93
+    author: acpreda (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            name: USERID
+            type: VARCHAR2(256 BYTE)
+        - column:
+            name: CLIENTID
+            type: VARCHAR2(256 BYTE)
+        - column:
+            name: SCOPE
+            type: VARCHAR2(256 BYTE)
+        - column:
+            name: STATUS
+            type: VARCHAR2(256 BYTE)
+        - column:
+            name: EXPIRESAT
+            type: TIMESTAMP(6)
+        - column:
+            name: LASTMODIFIEDAT
+            type: TIMESTAMP(6)
+        tableName: OAUTH_APPROVALS
+- changeSet:
+    id: 1500578833524-94
+    author: acpreda (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: CLIENT_ID
+            type: VARCHAR2(256 BYTE)
+        - column:
+            name: RESOURCE_IDS
+            type: VARCHAR2(256 BYTE)
+        - column:
+            name: CLIENT_SECRET
+            type: VARCHAR2(256 BYTE)
+        - column:
+            name: SCOPE
+            type: VARCHAR2(256 BYTE)
+        - column:
+            name: AUTHORIZED_GRANT_TYPES
+            type: VARCHAR2(256 BYTE)
+        - column:
+            name: WEB_SERVER_REDIRECT_URI
+            type: VARCHAR2(256 BYTE)
+        - column:
+            name: AUTHORITIES
+            type: VARCHAR2(256 BYTE)
+        - column:
+            name: ACCESS_TOKEN_VALIDITY
+            type: NUMBER(*, 0)
+        - column:
+            name: REFRESH_TOKEN_VALIDITY
+            type: NUMBER(*, 0)
+        - column:
+            name: ADDITIONAL_INFORMATION
+            type: VARCHAR2(4000 BYTE)
+        - column:
+            name: AUTOAPPROVE
+            type: VARCHAR2(256 BYTE)
+        tableName: OAUTH_CLIENT_DETAILS
+- changeSet:
+    id: 1500578833524-95
+    author: acpreda (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            name: TOKEN_ID
+            type: VARCHAR2(256 BYTE)
+        - column:
+            name: TOKEN
+            type: BLOB
+        - column:
+            constraints:
+              nullable: false
+            name: AUTHENTICATION_ID
+            type: VARCHAR2(256 BYTE)
+        - column:
+            name: USER_NAME
+            type: VARCHAR2(256 BYTE)
+        - column:
+            name: CLIENT_ID
+            type: VARCHAR2(256 BYTE)
+        tableName: OAUTH_CLIENT_TOKEN
+- changeSet:
+    id: 1500578833524-96
+    author: acpreda (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            name: CODE
+            type: VARCHAR2(256 BYTE)
+        - column:
+            name: AUTHENTICATION
+            type: BLOB
+        tableName: OAUTH_CODE
+- changeSet:
+    id: 1500578833524-97
+    author: acpreda (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            name: TOKEN_ID
+            type: VARCHAR2(256 BYTE)
+        - column:
+            name: TOKEN
+            type: BLOB
+        - column:
+            name: AUTHENTICATION
+            type: BLOB
+        tableName: OAUTH_REFRESH_TOKEN
+- changeSet:
+    id: 7
+    author: lorenzo.pinango
+    changes:
+    - insert:
+        tableName: oauth_client_details
+        columns:
+        - column:
+            name: client_id
+            value: sipaweb
+        - column:
+            name: client_secret
+            value: sipawebsecret
+        - column:
+            name: scope
+            value: read,write
+        - column:
+            name: authorized_grant_types
+            value: password,refresh_token,client_credentials,authorization_code
+        - column:
+            name: refresh_token_validity
+            value: 0
+        - column:
+            name: autoapprove
+            value: true
+- changeSet:
+    id: 8
+    author: lorenzo.pinango
+    changes:
+    - insert:
+        tableName: oauth_client_details
+        columns:
+        - column:
+            name: client_id
+            value: sipapostman
+        - column:
+            name: client_secret
+            value: secret
+        - column:
+            name: scope
+            value: read,write
+        - column:
+            name: authorized_grant_types
+            value: password,refresh_token,client_credentials,authorization_code
+        - column:
+            name: web_server_redirect_uri
+            value: https://www.getpostman.com/oauth2/callback
+        - column:
+            name: refresh_token_validity
+            value: 0
+        - column:
+            name: autoapprove
+            value: true

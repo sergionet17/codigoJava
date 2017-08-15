@@ -1,0 +1,1021 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<XMI xmi.version="1.1" xmlns:UML="omg.org/UML1.3">
+	<XMI.header>
+		<XMI.documentation>
+			<XMI.exporter>Enterprise Architect</XMI.exporter>
+			<XMI.exporterVersion>2.5</XMI.exporterVersion>
+		</XMI.documentation>
+	</XMI.header>
+	<XMI.content>
+		<UML:Model name="EA Model" xmi.id="MX_EAID_24D5F49B_1753_4240_90DE_2C885D3128DC">
+			<UML:Namespace.ownedElement>
+				<UML:Class name="EARootClass" xmi.id="EAID_11111111_5487_4080_A7F4_41526CB0AA00" isRoot="true" isLeaf="false" isAbstract="false"/>
+				<UML:Package name="005-Impugnación de comparendos" xmi.id="EAPK_24D5F49B_1753_4240_90DE_2C885D3128DC" isRoot="false" isLeaf="false" isAbstract="false" visibility="public">
+					<UML:ModelElement.taggedValue>
+						<UML:TaggedValue tag="parent" value="EAPK_212FFB6B_8338_48a8_B093_5D0DBEDD150F"/>
+						<UML:TaggedValue tag="created" value="2017-02-16 09:47:22"/>
+						<UML:TaggedValue tag="modified" value="2017-04-25 07:25:05"/>
+						<UML:TaggedValue tag="iscontrolled" value="TRUE"/>
+						<UML:TaggedValue tag="xmlpath" value="ucm-contravenciones-impugnacion-de-comparendos.xml"/>
+						<UML:TaggedValue tag="lastloaddate" value="2017-04-25 07:25:06"/>
+						<UML:TaggedValue tag="lastsavedate" value="2017-02-16 09:47:22"/>
+						<UML:TaggedValue tag="isprotected" value="FALSE"/>
+						<UML:TaggedValue tag="usedtd" value="FALSE"/>
+						<UML:TaggedValue tag="xmiver" value="Enterprise Architect XMI/UML 1.3"/>
+						<UML:TaggedValue tag="logxml" value="FALSE"/>
+						<UML:TaggedValue tag="tpos" value="3"/>
+						<UML:TaggedValue tag="packageFlags" value="isModel=1;VICON=1;Recurse=0;VCCFG=secmov-sipa;CRC=0;"/>
+						<UML:TaggedValue tag="batchsave" value="0"/>
+						<UML:TaggedValue tag="batchload" value="0"/>
+						<UML:TaggedValue tag="phase" value="1.0"/>
+						<UML:TaggedValue tag="status" value="Proposed"/>
+						<UML:TaggedValue tag="author" value="dev"/>
+						<UML:TaggedValue tag="complexity" value="1"/>
+						<UML:TaggedValue tag="ea_stype" value="Public"/>
+						<UML:TaggedValue tag="tpos" value="3"/>
+					</UML:ModelElement.taggedValue>
+					<UML:Namespace.ownedElement>
+						<UML:Collaboration xmi.id="EAID_24D5F49B_1753_4240_90DE_2C885D3128DC_Collaboration" name="Collaborations">
+							<UML:Namespace.ownedElement>
+								<UML:ClassifierRole name="Condiciones de recurso de reposición" xmi.id="EAID_052781E9_F7FD_4c29_AAA5_1D2BD0A461D1" visibility="public" base="EAID_11111111_5487_4080_A7F4_41526CB0AA00">
+									<UML:ModelElement.stereotype>
+										<UML:Stereotype name="BusinessRequirement"/>
+									</UML:ModelElement.stereotype>
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="documentation" value="El recurso de reposición para fallos de &quot;Contraventor&quot; sólo se habilita en el caso de infracciones con multa menor a 20 salarios mínimos mensual vigente legal."/>
+										<UML:TaggedValue tag="isAbstract" value="false"/>
+										<UML:TaggedValue tag="isSpecification" value="false"/>
+										<UML:TaggedValue tag="ea_stype" value="Requirement"/>
+										<UML:TaggedValue tag="ea_ntype" value="0"/>
+										<UML:TaggedValue tag="version" value="1.0"/>
+										<UML:TaggedValue tag="isActive" value="false"/>
+										<UML:TaggedValue tag="package" value="EAPK_24D5F49B_1753_4240_90DE_2C885D3128DC"/>
+										<UML:TaggedValue tag="date_created" value="2017-03-26 21:34:54"/>
+										<UML:TaggedValue tag="date_modified" value="2017-03-26 21:36:49"/>
+										<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+										<UML:TaggedValue tag="tagged" value="0"/>
+										<UML:TaggedValue tag="package_name" value="005-Impugnación de comparendos"/>
+										<UML:TaggedValue tag="phase" value="1.0"/>
+										<UML:TaggedValue tag="author" value="dev"/>
+										<UML:TaggedValue tag="complexity" value="1"/>
+										<UML:TaggedValue tag="status" value="Proposed"/>
+										<UML:TaggedValue tag="stereotype" value="BusinessRequirement"/>
+										<UML:TaggedValue tag="tpos" value="0"/>
+										<UML:TaggedValue tag="ea_localid" value="430"/>
+										<UML:TaggedValue tag="ea_eleType" value="element"/>
+										<UML:TaggedValue tag="difficulty" value="Medium"/>
+										<UML:TaggedValue tag="priority" value="Medium"/>
+										<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+										<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={3F713A03-E828-48ac-B959-5C7D8EEE21CC}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=BusinessRequirement;FQName=EAREQ::BusinessRequirement;@ENDSTEREO;$DES;$CLT={052781E9-F7FD-4c29-AAA5-1D2BD0A461D1}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+									</UML:ModelElement.taggedValue>
+								</UML:ClassifierRole>
+								<UML:ClassifierRole name="Tiempo permitido para impugnación" xmi.id="EAID_A3517585_3C5A_40df_BEB9_C8B8B98CE9DB" visibility="public" base="EAID_11111111_5487_4080_A7F4_41526CB0AA00">
+									<UML:ModelElement.stereotype>
+										<UML:Stereotype name="BusinessRequirement"/>
+									</UML:ModelElement.stereotype>
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="documentation" value="Las audiencias de impugnación sólo se pueden iniciar dentro de los primeros cinco (5) días a partir de la imposición del comparendo."/>
+										<UML:TaggedValue tag="isAbstract" value="false"/>
+										<UML:TaggedValue tag="isSpecification" value="false"/>
+										<UML:TaggedValue tag="ea_stype" value="Requirement"/>
+										<UML:TaggedValue tag="ea_ntype" value="0"/>
+										<UML:TaggedValue tag="version" value="1.0"/>
+										<UML:TaggedValue tag="isActive" value="false"/>
+										<UML:TaggedValue tag="package" value="EAPK_24D5F49B_1753_4240_90DE_2C885D3128DC"/>
+										<UML:TaggedValue tag="date_created" value="2017-03-26 21:19:45"/>
+										<UML:TaggedValue tag="date_modified" value="2017-03-26 21:20:54"/>
+										<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+										<UML:TaggedValue tag="tagged" value="0"/>
+										<UML:TaggedValue tag="package_name" value="005-Impugnación de comparendos"/>
+										<UML:TaggedValue tag="phase" value="1.0"/>
+										<UML:TaggedValue tag="author" value="dev"/>
+										<UML:TaggedValue tag="complexity" value="1"/>
+										<UML:TaggedValue tag="status" value="Proposed"/>
+										<UML:TaggedValue tag="stereotype" value="BusinessRequirement"/>
+										<UML:TaggedValue tag="tpos" value="0"/>
+										<UML:TaggedValue tag="ea_localid" value="431"/>
+										<UML:TaggedValue tag="ea_eleType" value="element"/>
+										<UML:TaggedValue tag="difficulty" value="Medium"/>
+										<UML:TaggedValue tag="priority" value="Medium"/>
+										<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+										<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={383A41D7-8E57-4a27-BEF8-3C90689DF6DE}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=BusinessRequirement;FQName=EAREQ::BusinessRequirement;@ENDSTEREO;$DES;$CLT={A3517585-3C5A-40df-BEB9-C8B8B98CE9DB}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+									</UML:ModelElement.taggedValue>
+								</UML:ClassifierRole>
+							</UML:Namespace.ownedElement>
+							<UML:Collaboration.interaction/>
+						</UML:Collaboration>
+						<UML:Dependency client="EAID_B0EFBC1A_CFEB_4e01_AB9F_C8631572714C" supplier="EAID_052781E9_F7FD_4c29_AAA5_1D2BD0A461D1" xmi.id="EAID_44C8FE18_6271_4de9_AC04_10F8370960B7" visibility="public">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="Dependency"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="276"/>
+								<UML:TaggedValue tag="ea_sourceName" value="002-CU049.2  Crear acto adimistrativo de Audiencia de impugnación"/>
+								<UML:TaggedValue tag="ea_targetName" value="Condiciones de recurso de reposición"/>
+								<UML:TaggedValue tag="ea_sourceType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_targetType" value="Requirement"/>
+								<UML:TaggedValue tag="ea_sourceID" value="426"/>
+								<UML:TaggedValue tag="ea_targetID" value="430"/>
+								<UML:TaggedValue tag="src_visibility" value="Public"/>
+								<UML:TaggedValue tag="src_aggregation" value="0"/>
+								<UML:TaggedValue tag="src_isOrdered" value="false"/>
+								<UML:TaggedValue tag="src_targetScope" value="instance"/>
+								<UML:TaggedValue tag="src_changeable" value="none"/>
+								<UML:TaggedValue tag="src_isNavigable" value="false"/>
+								<UML:TaggedValue tag="src_containment" value="Unspecified"/>
+								<UML:TaggedValue tag="src_style" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+								<UML:TaggedValue tag="dst_visibility" value="Public"/>
+								<UML:TaggedValue tag="dst_aggregation" value="0"/>
+								<UML:TaggedValue tag="dst_isOrdered" value="false"/>
+								<UML:TaggedValue tag="dst_targetScope" value="instance"/>
+								<UML:TaggedValue tag="dst_changeable" value="none"/>
+								<UML:TaggedValue tag="dst_isNavigable" value="true"/>
+								<UML:TaggedValue tag="dst_containment" value="Unspecified"/>
+								<UML:TaggedValue tag="dst_style" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+								<UML:TaggedValue tag="privatedata5" value="SX=0;SY=0;EX=0;EY=0;EDGE=2;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+							</UML:ModelElement.taggedValue>
+						</UML:Dependency>
+						<UML:UseCase name="005-CU055.1 Cargar pruebas del proceso contravencional." xmi.id="EAID_73010EFE_BACA_4b22_BC44_6623B178E335" visibility="public" namespace="EAPK_24D5F49B_1753_4240_90DE_2C885D3128DC" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="UseCase"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_24D5F49B_1753_4240_90DE_2C885D3128DC"/>
+								<UML:TaggedValue tag="date_created" value="2017-02-17 08:50:15"/>
+								<UML:TaggedValue tag="date_modified" value="2017-03-27 23:37:30"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="005-Impugnación de comparendos"/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="dev"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Proposed"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="423"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:UseCase>
+						<UML:Association xmi.id="EAID_D4DEB3FE_03A8_4b4b_BD7C_4B1987BED1EB" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="522"/>
+								<UML:TaggedValue tag="ea_sourceName" value="AT4.1.2 Abogado de audiencias contravencionales"/>
+								<UML:TaggedValue tag="ea_targetName" value="005-CU055.1 Cargar pruebas del proceso contravencional."/>
+								<UML:TaggedValue tag="ea_sourceType" value="Actor"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="533"/>
+								<UML:TaggedValue tag="ea_targetID" value="423"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_31F08BCE_6C60_4298_89B5_6A3A1517318A">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_73010EFE_BACA_4b22_BC44_6623B178E335">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:UseCase name="007-CU056.2 Generar constancia ejecutoria proceso contravencional." xmi.id="EAID_7F895474_07CC_4470_8185_5E2D243382BF" visibility="public" namespace="EAPK_24D5F49B_1753_4240_90DE_2C885D3128DC" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="UseCase"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_24D5F49B_1753_4240_90DE_2C885D3128DC"/>
+								<UML:TaggedValue tag="date_created" value="2017-02-17 09:00:26"/>
+								<UML:TaggedValue tag="date_modified" value="2017-03-27 23:37:40"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="005-Impugnación de comparendos"/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="dev"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Validated"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="424"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:UseCase>
+						<UML:Dependency client="EAID_BD6C150D_630A_4504_B373_ECFC3FFEAB17" supplier="EAID_7F895474_07CC_4470_8185_5E2D243382BF" xmi.id="EAID_900DD3C6_9260_43c2_87D6_DE41D5952555" visibility="public">
+							<UML:ModelElement.stereotype>
+								<UML:Stereotype name="invokes"/>
+							</UML:ModelElement.stereotype>
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="Dependency"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="stereotype" value="invokes"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="conditional" value=" &#xA;«invokes»"/>
+								<UML:TaggedValue tag="ea_localid" value="275"/>
+								<UML:TaggedValue tag="ea_sourceName" value="003-CU048.1 Generar constancia ejecutoria del proceso de aceptación de comparendo."/>
+								<UML:TaggedValue tag="ea_targetName" value="007-CU056.2 Generar constancia ejecutoria proceso contravencional."/>
+								<UML:TaggedValue tag="ea_sourceType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="358"/>
+								<UML:TaggedValue tag="ea_targetID" value="424"/>
+								<UML:TaggedValue tag="src_visibility" value="Public"/>
+								<UML:TaggedValue tag="src_aggregation" value="0"/>
+								<UML:TaggedValue tag="src_isOrdered" value="false"/>
+								<UML:TaggedValue tag="src_targetScope" value="instance"/>
+								<UML:TaggedValue tag="src_changeable" value="none"/>
+								<UML:TaggedValue tag="src_isNavigable" value="false"/>
+								<UML:TaggedValue tag="src_containment" value="Unspecified"/>
+								<UML:TaggedValue tag="src_style" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+								<UML:TaggedValue tag="dst_visibility" value="Public"/>
+								<UML:TaggedValue tag="dst_aggregation" value="0"/>
+								<UML:TaggedValue tag="dst_isOrdered" value="false"/>
+								<UML:TaggedValue tag="dst_targetScope" value="instance"/>
+								<UML:TaggedValue tag="dst_changeable" value="none"/>
+								<UML:TaggedValue tag="dst_isNavigable" value="true"/>
+								<UML:TaggedValue tag="dst_containment" value="Unspecified"/>
+								<UML:TaggedValue tag="dst_style" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+								<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={0326934D-CF21-4070-9D95-DF80CB6177E4}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=invokes;GUID={1777081C-D04F-4576-98D2-AEE6A6388DBB};@ENDSTEREO;$DES;$CLT={900DD3C6-9260-43c2-87D6-DE41D5952555}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+								<UML:TaggedValue tag="privatedata5" value="SX=0;SY=0;EX=0;EY=0;EDGE=2;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+								<UML:TaggedValue tag="mb" value=" &#xA;«invokes»"/>
+							</UML:ModelElement.taggedValue>
+						</UML:Dependency>
+						<UML:Dependency client="EAID_B0EFBC1A_CFEB_4e01_AB9F_C8631572714C" supplier="EAID_7F895474_07CC_4470_8185_5E2D243382BF" xmi.id="EAID_F4263F6E_E1D4_41df_8F15_ACFB93DDBDDF" visibility="public">
+							<UML:ModelElement.stereotype>
+								<UML:Stereotype name="invokes"/>
+							</UML:ModelElement.stereotype>
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="Dependency"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="stereotype" value="invokes"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="conditional" value=" &#xA;«invokes»"/>
+								<UML:TaggedValue tag="ea_localid" value="274"/>
+								<UML:TaggedValue tag="ea_sourceName" value="002-CU049.2  Crear acto adimistrativo de Audiencia de impugnación"/>
+								<UML:TaggedValue tag="ea_targetName" value="007-CU056.2 Generar constancia ejecutoria proceso contravencional."/>
+								<UML:TaggedValue tag="ea_sourceType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="426"/>
+								<UML:TaggedValue tag="ea_targetID" value="424"/>
+								<UML:TaggedValue tag="src_visibility" value="Public"/>
+								<UML:TaggedValue tag="src_aggregation" value="0"/>
+								<UML:TaggedValue tag="src_isOrdered" value="false"/>
+								<UML:TaggedValue tag="src_targetScope" value="instance"/>
+								<UML:TaggedValue tag="src_changeable" value="none"/>
+								<UML:TaggedValue tag="src_isNavigable" value="false"/>
+								<UML:TaggedValue tag="src_containment" value="Unspecified"/>
+								<UML:TaggedValue tag="src_style" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+								<UML:TaggedValue tag="dst_visibility" value="Public"/>
+								<UML:TaggedValue tag="dst_aggregation" value="0"/>
+								<UML:TaggedValue tag="dst_isOrdered" value="false"/>
+								<UML:TaggedValue tag="dst_targetScope" value="instance"/>
+								<UML:TaggedValue tag="dst_changeable" value="none"/>
+								<UML:TaggedValue tag="dst_isNavigable" value="true"/>
+								<UML:TaggedValue tag="dst_containment" value="Unspecified"/>
+								<UML:TaggedValue tag="dst_style" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+								<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={112181CC-EB3A-4591-BD50-BC558DEFA68F}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=invokes;GUID={1777081C-D04F-4576-98D2-AEE6A6388DBB};@ENDSTEREO;$DES;$CLT={F4263F6E-E1D4-41df-8F15-ACFB93DDBDDF}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+								<UML:TaggedValue tag="privatedata5" value="SX=0;SY=0;EX=0;EY=0;EDGE=2;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+								<UML:TaggedValue tag="mb" value=" &#xA;«invokes»"/>
+							</UML:ModelElement.taggedValue>
+						</UML:Dependency>
+						<UML:UseCase name="003-CU050.1 Seleccionar o registrar comparendo." xmi.id="EAID_9A5C837A_3882_4e79_BF81_3D214F506787" visibility="public" namespace="EAPK_24D5F49B_1753_4240_90DE_2C885D3128DC" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="documentation" value="Seleccionar el comparendo sobre el cual se va a iniciar audiencias o registrarlo en caso que no lo encuentre en el sistema (No ha sido cargado desde Simur o el sistema destinado para tal fin)."/>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="UseCase"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_24D5F49B_1753_4240_90DE_2C885D3128DC"/>
+								<UML:TaggedValue tag="date_created" value="2017-02-17 08:39:17"/>
+								<UML:TaggedValue tag="date_modified" value="2017-03-27 23:37:21"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="005-Impugnación de comparendos"/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="dev"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Deprecated"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="425"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:UseCase>
+						<UML:Dependency client="EAID_C3B3176B_DF43_4694_A5ED_C1634439A8B5" supplier="EAID_A3517585_3C5A_40df_BEB9_C8B8B98CE9DB" xmi.id="EAID_C2CA44B8_8AAF_479a_BBFC_7A27EC86036A" visibility="public">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="Dependency"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="273"/>
+								<UML:TaggedValue tag="ea_sourceName" value="001-CU049.1 Apertura de audiencia de impugnación"/>
+								<UML:TaggedValue tag="ea_targetName" value="Tiempo permitido para impugnación"/>
+								<UML:TaggedValue tag="ea_sourceType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_targetType" value="Requirement"/>
+								<UML:TaggedValue tag="ea_sourceID" value="428"/>
+								<UML:TaggedValue tag="ea_targetID" value="431"/>
+								<UML:TaggedValue tag="src_visibility" value="Public"/>
+								<UML:TaggedValue tag="src_aggregation" value="0"/>
+								<UML:TaggedValue tag="src_isOrdered" value="false"/>
+								<UML:TaggedValue tag="src_targetScope" value="instance"/>
+								<UML:TaggedValue tag="src_changeable" value="none"/>
+								<UML:TaggedValue tag="src_isNavigable" value="false"/>
+								<UML:TaggedValue tag="src_containment" value="Unspecified"/>
+								<UML:TaggedValue tag="src_style" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+								<UML:TaggedValue tag="dst_visibility" value="Public"/>
+								<UML:TaggedValue tag="dst_aggregation" value="0"/>
+								<UML:TaggedValue tag="dst_isOrdered" value="false"/>
+								<UML:TaggedValue tag="dst_targetScope" value="instance"/>
+								<UML:TaggedValue tag="dst_changeable" value="none"/>
+								<UML:TaggedValue tag="dst_isNavigable" value="true"/>
+								<UML:TaggedValue tag="dst_containment" value="Unspecified"/>
+								<UML:TaggedValue tag="dst_style" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+								<UML:TaggedValue tag="privatedata5" value="SX=0;SY=0;EX=0;EY=0;EDGE=2;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+							</UML:ModelElement.taggedValue>
+						</UML:Dependency>
+						<UML:UseCase name="002-CU049.2  Crear acto adimistrativo de Audiencia de impugnación" xmi.id="EAID_B0EFBC1A_CFEB_4e01_AB9F_C8631572714C" visibility="public" namespace="EAPK_24D5F49B_1753_4240_90DE_2C885D3128DC" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="UseCase"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_24D5F49B_1753_4240_90DE_2C885D3128DC"/>
+								<UML:TaggedValue tag="date_created" value="2017-03-26 21:24:39"/>
+								<UML:TaggedValue tag="date_modified" value="2017-04-23 07:55:04"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="005-Impugnación de comparendos"/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="dev"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Validated"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="426"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:UseCase>
+						<UML:Association xmi.id="EAID_CF7BC018_FD22_4ccd_8C16_DCF9C4418DB7" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="523"/>
+								<UML:TaggedValue tag="ea_sourceName" value="AT4.1.2 Abogado de audiencias contravencionales"/>
+								<UML:TaggedValue tag="ea_targetName" value="002-CU049.2  Crear acto adimistrativo de Audiencia de impugnación"/>
+								<UML:TaggedValue tag="ea_sourceType" value="Actor"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="533"/>
+								<UML:TaggedValue tag="ea_targetID" value="426"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_31F08BCE_6C60_4298_89B5_6A3A1517318A">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_B0EFBC1A_CFEB_4e01_AB9F_C8631572714C">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:Dependency client="EAID_C3B3176B_DF43_4694_A5ED_C1634439A8B5" supplier="EAID_B0EFBC1A_CFEB_4e01_AB9F_C8631572714C" xmi.id="EAID_D6F34DC0_9B10_4814_BFD8_34559B66C794" visibility="public">
+							<UML:ModelElement.stereotype>
+								<UML:Stereotype name="invokes"/>
+							</UML:ModelElement.stereotype>
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="Dependency"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="stereotype" value="invokes"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="conditional" value=" &#xA;«invokes»"/>
+								<UML:TaggedValue tag="ea_localid" value="272"/>
+								<UML:TaggedValue tag="ea_sourceName" value="001-CU049.1 Apertura de audiencia de impugnación"/>
+								<UML:TaggedValue tag="ea_targetName" value="002-CU049.2  Crear acto adimistrativo de Audiencia de impugnación"/>
+								<UML:TaggedValue tag="ea_sourceType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="428"/>
+								<UML:TaggedValue tag="ea_targetID" value="426"/>
+								<UML:TaggedValue tag="src_visibility" value="Public"/>
+								<UML:TaggedValue tag="src_aggregation" value="0"/>
+								<UML:TaggedValue tag="src_isOrdered" value="false"/>
+								<UML:TaggedValue tag="src_targetScope" value="instance"/>
+								<UML:TaggedValue tag="src_changeable" value="none"/>
+								<UML:TaggedValue tag="src_isNavigable" value="false"/>
+								<UML:TaggedValue tag="src_containment" value="Unspecified"/>
+								<UML:TaggedValue tag="src_style" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+								<UML:TaggedValue tag="dst_visibility" value="Public"/>
+								<UML:TaggedValue tag="dst_aggregation" value="0"/>
+								<UML:TaggedValue tag="dst_isOrdered" value="false"/>
+								<UML:TaggedValue tag="dst_targetScope" value="instance"/>
+								<UML:TaggedValue tag="dst_changeable" value="none"/>
+								<UML:TaggedValue tag="dst_isNavigable" value="true"/>
+								<UML:TaggedValue tag="dst_containment" value="Unspecified"/>
+								<UML:TaggedValue tag="dst_style" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+								<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={93C6400B-AD83-4620-BBD9-BCE3661A4FD6}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=invokes;GUID={1777081C-D04F-4576-98D2-AEE6A6388DBB};@ENDSTEREO;$DES;$CLT={D6F34DC0-9B10-4814-BFD8-34559B66C794}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+								<UML:TaggedValue tag="privatedata5" value="SX=0;SY=0;EX=0;EY=0;EDGE=3;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+								<UML:TaggedValue tag="mb" value=" &#xA;«invokes»"/>
+							</UML:ModelElement.taggedValue>
+						</UML:Dependency>
+						<UML:UseCase name="004-CU054.1 Crear el acto administrativo de audiencia de impugnación." xmi.id="EAID_BC115626_4A43_490d_9682_6ECEC7B6C19B" visibility="public" namespace="EAPK_24D5F49B_1753_4240_90DE_2C885D3128DC" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="documentation" value="En esta audiencia se puede declarar contraventor o exonerar a través de un fallo, o continuar con una nueva audiencia de impugnación."/>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="UseCase"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_24D5F49B_1753_4240_90DE_2C885D3128DC"/>
+								<UML:TaggedValue tag="date_created" value="2017-02-17 08:42:42"/>
+								<UML:TaggedValue tag="date_modified" value="2017-03-27 23:37:24"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="005-Impugnación de comparendos"/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="dev"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Proposed"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="427"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:UseCase>
+						<UML:UseCase name="001-CU049.1 Apertura de audiencia de impugnación" xmi.id="EAID_C3B3176B_DF43_4694_A5ED_C1634439A8B5" visibility="public" namespace="EAPK_24D5F49B_1753_4240_90DE_2C885D3128DC" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="documentation" value="El ciudadano se presenta en el Supercade a realizar una audiencia de impugnación dentro de los cinco (5) días siguientes a su notificación (electrónicos) o imposición (Manuales)."/>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="UseCase"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_24D5F49B_1753_4240_90DE_2C885D3128DC"/>
+								<UML:TaggedValue tag="date_created" value="2017-02-17 08:37:11"/>
+								<UML:TaggedValue tag="date_modified" value="2017-03-27 23:37:12"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="005-Impugnación de comparendos"/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="dev"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Validated"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="428"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:UseCase>
+						<UML:Association xmi.id="EAID_21146998_B111_4bb2_93F5_6CBC832D209C" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="529"/>
+								<UML:TaggedValue tag="ea_sourceName" value="AT4.1.2 Abogado de audiencias contravencionales"/>
+								<UML:TaggedValue tag="ea_targetName" value="001-CU049.1 Apertura de audiencia de impugnación"/>
+								<UML:TaggedValue tag="ea_sourceType" value="Actor"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="533"/>
+								<UML:TaggedValue tag="ea_targetID" value="428"/>
+								<UML:TaggedValue tag="privatedata5" value="SX=0;SY=0;EX=0;EY=0;EDGE=4;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_31F08BCE_6C60_4298_89B5_6A3A1517318A">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_C3B3176B_DF43_4694_A5ED_C1634439A8B5">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:UseCase name="006-CU056.1 Interponer recurso de apelación." xmi.id="EAID_DD43445F_FD7E_46d2_9432_F33778DB6310" visibility="public" namespace="EAPK_24D5F49B_1753_4240_90DE_2C885D3128DC" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="UseCase"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_24D5F49B_1753_4240_90DE_2C885D3128DC"/>
+								<UML:TaggedValue tag="date_created" value="2017-02-17 08:51:45"/>
+								<UML:TaggedValue tag="date_modified" value="2017-03-27 23:37:35"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="005-Impugnación de comparendos"/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="dev"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Proposed"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="429"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:UseCase>
+						<UML:Association xmi.id="EAID_67B31796_E1BE_4131_A9CF_ACB67A177947" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="525"/>
+								<UML:TaggedValue tag="ea_sourceName" value="AT4.1.2 Abogado de audiencias contravencionales"/>
+								<UML:TaggedValue tag="ea_targetName" value="006-CU056.1 Interponer recurso de apelación."/>
+								<UML:TaggedValue tag="ea_sourceType" value="Actor"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="533"/>
+								<UML:TaggedValue tag="ea_targetID" value="429"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_31F08BCE_6C60_4298_89B5_6A3A1517318A">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_DD43445F_FD7E_46d2_9432_F33778DB6310">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+					</UML:Namespace.ownedElement>
+				</UML:Package>
+			</UML:Namespace.ownedElement>
+		</UML:Model>
+		<UML:TaggedValue tag="constraint" xmi.id="EAID_419A3305_DA98_adda_8765_CA2C3252DE19" value="&lt;memo&gt;" modelElement="EAID_052781E9_F7FD_4c29_AAA5_1D2BD0A461D1"/>
+		<UML:TaggedValue tag="context" xmi.id="EAID_CFB9FD65_95D8_1595_8530_5C54DBD7FBF3" value="&lt;memo&gt;" modelElement="EAID_052781E9_F7FD_4c29_AAA5_1D2BD0A461D1"/>
+		<UML:TaggedValue tag="objective" xmi.id="EAID_C59F911B_124E_4312_AC86_2165B0253B37" value="&lt;memo&gt;" modelElement="EAID_052781E9_F7FD_4c29_AAA5_1D2BD0A461D1"/>
+		<UML:TaggedValue tag="priority" xmi.id="EAID_A142CBA2_7275_1172_B07B_7B925B37F111" value="#NOTES#Values: High,Medium,Low,Essential,Conditional,Optional&#xA;" modelElement="EAID_052781E9_F7FD_4c29_AAA5_1D2BD0A461D1"/>
+		<UML:TaggedValue tag="rules" xmi.id="EAID_0850EAAB_CA5E_f5ca_AD3E_752DE4D36424" value="&lt;memo&gt;" modelElement="EAID_052781E9_F7FD_4c29_AAA5_1D2BD0A461D1"/>
+		<UML:TaggedValue tag="scope" xmi.id="EAID_0859327A_122D_fe12_B0D2_DEC379BCB71D" value="&lt;memo&gt;" modelElement="EAID_052781E9_F7FD_4c29_AAA5_1D2BD0A461D1"/>
+		<UML:TaggedValue tag="constraint" xmi.id="EAID_419A3305_DA98_adda_8B58_F001172A14F0" value="&lt;memo&gt;" modelElement="EAID_A3517585_3C5A_40df_BEB9_C8B8B98CE9DB"/>
+		<UML:TaggedValue tag="context" xmi.id="EAID_CFB9FD65_95D8_1595_97F7_BC19AB2E2C92" value="&lt;memo&gt;" modelElement="EAID_A3517585_3C5A_40df_BEB9_C8B8B98CE9DB"/>
+		<UML:TaggedValue tag="objective" xmi.id="EAID_C59F911B_124E_4312_9BC0_0F10664B7D82" value="&lt;memo&gt;" modelElement="EAID_A3517585_3C5A_40df_BEB9_C8B8B98CE9DB"/>
+		<UML:TaggedValue tag="priority" xmi.id="EAID_A142CBA2_7275_1172_A056_5415F23E4C7F" value="#NOTES#Values: High,Medium,Low,Essential,Conditional,Optional&#xA;" modelElement="EAID_A3517585_3C5A_40df_BEB9_C8B8B98CE9DB"/>
+		<UML:TaggedValue tag="rules" xmi.id="EAID_0850EAAB_CA5E_f5ca_8EF3_2A6B186715FC" value="&lt;memo&gt;" modelElement="EAID_A3517585_3C5A_40df_BEB9_C8B8B98CE9DB"/>
+		<UML:TaggedValue tag="scope" xmi.id="EAID_0859327A_122D_fe12_9659_73FC0AE3D9F7" value="&lt;memo&gt;" modelElement="EAID_A3517585_3C5A_40df_BEB9_C8B8B98CE9DB"/>
+		<UML:Diagram name="Impugnación de comparendos" xmi.id="EAID_2EBEB79B_7A6F_4767_9B7E_9C6D2CC413BE" diagramType="UseCaseDiagram" owner="EAPK_24D5F49B_1753_4240_90DE_2C885D3128DC" toolName="Enterprise Architect 2.5">
+			<UML:ModelElement.taggedValue>
+				<UML:TaggedValue tag="version" value="1.0"/>
+				<UML:TaggedValue tag="author" value="dev"/>
+				<UML:TaggedValue tag="created_date" value="2017-02-16 09:47:22"/>
+				<UML:TaggedValue tag="modified_date" value="2017-03-27 17:42:51"/>
+				<UML:TaggedValue tag="package" value="EAPK_24D5F49B_1753_4240_90DE_2C885D3128DC"/>
+				<UML:TaggedValue tag="type" value="Use Case"/>
+				<UML:TaggedValue tag="swimlanes" value="locked=false;orientation=0;width=0;inbar=false;names=false;color=0;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;cls=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;"/>
+				<UML:TaggedValue tag="matrixitems" value="locked=false;matrixactive=false;swimlanesactive=true;kanbanactive=false;width=1;clrLine=0;"/>
+				<UML:TaggedValue tag="ea_localid" value="36"/>
+				<UML:TaggedValue tag="EAStyle" value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=0;HighlightForeign=0;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=0;PPgs.cy=0;DocSize.cx=827;DocSize.cy=1169;ShowDetails=0;Orientation=P;Zoom=100;ShowTags=0;OpParams=1;VisibleAttributeDetail=0;ShowOpRetType=1;ShowIcons=1;CollabNums=0;HideProps=0;ShowReqs=0;ShowCons=0;PaperSize=9;HideParents=0;UseAlias=0;HideAtts=0;HideOps=0;HideStereo=0;HideElemStereo=0;ShowTests=0;ShowMaint=0;ConnectorNotation=UML 2.0;ExplicitNavigability=0;ShowShape=1;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;ShowNotes=0;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;"/>
+				<UML:TaggedValue tag="styleex" value="SaveTag=54D007C7;ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=1;MatrixActive=0;SwimlanesActive=1;KanbanActive=0;MatrixLineWidth=1;MatrixLineClr=0;MatrixLocked=0;TConnectorNotation=UML 2.0;TExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;ProfileData=;MDGDgm=;STBLDgm=;ShowNotes=0;VisibleAttributeDetail=0;ShowOpRetType=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;SuppressedCompartments=;Theme=:119;"/>
+			</UML:ModelElement.taggedValue>
+			<UML:Diagram.element>
+				<UML:DiagramElement geometry="Left=204;Top=130;Right=309;Bottom=200;" subject="EAID_B0EFBC1A_CFEB_4e01_AB9F_C8631572714C" seqno="1" style="DUID=5A27C4DD;"/>
+				<UML:DiagramElement geometry="Left=633;Top=28;Right=738;Bottom=98;" subject="EAID_9A5C837A_3882_4e79_BF81_3D214F506787" seqno="2" style="DUID=96002B63;NSL=0;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;BCol=6008319;"/>
+				<UML:DiagramElement geometry="Left=395;Top=130;Right=500;Bottom=200;" subject="EAID_7F895474_07CC_4470_8185_5E2D243382BF" seqno="3" style="DUID=2F06F268;"/>
+				<UML:DiagramElement geometry="Left=634;Top=207;Right=739;Bottom=277;" subject="EAID_DD43445F_FD7E_46d2_9432_F33778DB6310" seqno="4" style="DUID=A396026D;BCol=6008319;"/>
+				<UML:DiagramElement geometry="Left=205;Top=224;Right=310;Bottom=294;" subject="EAID_73010EFE_BACA_4b22_BC44_6623B178E335" seqno="5" style="DUID=687CDC96;"/>
+				<UML:DiagramElement geometry="Left=631;Top=123;Right=736;Bottom=193;" subject="EAID_BC115626_4A43_490d_9682_6ECEC7B6C19B" seqno="6" style="DUID=781FBEF2;BCol=6008319;"/>
+				<UML:DiagramElement geometry="Left=197;Top=20;Right=312;Bottom=97;" subject="EAID_C3B3176B_DF43_4694_A5ED_C1634439A8B5" seqno="7" style="DUID=6DBCE767;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=CX=46:CY=13:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_F4263F6E_E1D4_41df_8F15_ACFB93DDBDDF" style="Mode=3;EOID=2F06F268;SOID=5A27C4DD;Color=-1;LWidth=0;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=3;$LLB=;LLT=;LMT=;LMB=CX=46:CY=13:OX=39:OY=-10:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_D6F34DC0_9B10_4814_BFD8_34559B66C794" style="Mode=3;EOID=5A27C4DD;SOID=6DBCE767;Color=-1;LWidth=0;Hidden=0;"/>
+			</UML:Diagram.element>
+		</UML:Diagram>
+		<UML:Diagram name="Impugnación de comparendos" xmi.id="EAID_50960D88_C58F_408b_92A2_F051AF2F77E3" diagramType="CustomDiagram" owner="EAPK_24D5F49B_1753_4240_90DE_2C885D3128DC" toolName="Enterprise Architect 2.5">
+			<UML:ModelElement.taggedValue>
+				<UML:TaggedValue tag="version" value="1.0"/>
+				<UML:TaggedValue tag="author" value="dev"/>
+				<UML:TaggedValue tag="created_date" value="2017-03-26 21:19:35"/>
+				<UML:TaggedValue tag="modified_date" value="2017-03-26 21:36:54"/>
+				<UML:TaggedValue tag="package" value="EAPK_24D5F49B_1753_4240_90DE_2C885D3128DC"/>
+				<UML:TaggedValue tag="type" value="Custom"/>
+				<UML:TaggedValue tag="swimlanes" value="locked=false;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;cls=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;"/>
+				<UML:TaggedValue tag="matrixitems" value="locked=false;matrixactive=false;swimlanesactive=true;kanbanactive=false;width=1;clrLine=0;"/>
+				<UML:TaggedValue tag="ea_localid" value="37"/>
+				<UML:TaggedValue tag="EAStyle" value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=1;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=1;PPgs.cy=1;DocSize.cx=850;DocSize.cy=1098;ShowDetails=0;Orientation=P;Zoom=100;ShowTags=0;OpParams=1;VisibleAttributeDetail=0;ShowOpRetType=1;ShowIcons=1;CollabNums=0;HideProps=0;ShowReqs=0;ShowCons=0;PaperSize=1;HideParents=0;UseAlias=0;HideAtts=0;HideOps=0;HideStereo=0;HideElemStereo=0;ShowTests=0;ShowMaint=0;ConnectorNotation=UML 2.1;ExplicitNavigability=0;ShowShape=1;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;ShowNotes=0;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;"/>
+				<UML:TaggedValue tag="styleex" value="SaveTag=1039A18F;ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=1;MatrixActive=0;SwimlanesActive=1;KanbanActive=0;MatrixLineWidth=1;MatrixLineClr=0;MatrixLocked=0;TConnectorNotation=UML 2.1;TExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;ProfileData=;MDGDgm=Extended::Requirements;STBLDgm=;ShowNotes=0;VisibleAttributeDetail=0;ShowOpRetType=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;SuppressedCompartments=;Theme=:119;"/>
+			</UML:ModelElement.taggedValue>
+			<UML:Diagram.element>
+				<UML:DiagramElement geometry="Left=516;Top=282;Right=656;Bottom=326;" subject="EAID_052781E9_F7FD_4c29_AAA5_1D2BD0A461D1" seqno="1" style="DUID=5CFDB10C;HideIcon=0;"/>
+				<UML:DiagramElement geometry="Left=304;Top=286;Right=409;Bottom=356;" subject="EAID_B0EFBC1A_CFEB_4e01_AB9F_C8631572714C" seqno="2" style="DUID=A7061AF3;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;"/>
+				<UML:DiagramElement geometry="Left=512;Top=159;Right=652;Bottom=203;" subject="EAID_A3517585_3C5A_40df_BEB9_C8B8B98CE9DB" seqno="3" style="DUID=12069093;HideIcon=0;"/>
+				<UML:DiagramElement geometry="Left=304;Top=159;Right=409;Bottom=229;" subject="EAID_C3B3176B_DF43_4694_A5ED_C1634439A8B5" seqno="4" style="DUID=CBF15924;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_C2CA44B8_8AAF_479a_BBFC_7A27EC86036A" style="Mode=3;EOID=12069093;SOID=CBF15924;Color=-1;LWidth=0;Hidden=0;"/>
+				<UML:DiagramElement geometry="EDGE=3;$LLB=;LLT=;LMT=;LMB=CX=46:CY=13:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_D6F34DC0_9B10_4814_BFD8_34559B66C794" style="Mode=3;EOID=A7061AF3;SOID=CBF15924;Color=-1;LWidth=0;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_44C8FE18_6271_4de9_AC04_10F8370960B7" style="Mode=3;EOID=5CFDB10C;SOID=A7061AF3;Color=-1;LWidth=0;Hidden=0;"/>
+			</UML:Diagram.element>
+		</UML:Diagram>
+		<UML:DiagramElement geometry="Left=406;Top=129;Right=511;Bottom=199;" subject="EAID_7F895474_07CC_4470_8185_5E2D243382BF" seqno="1" style="DUID=F17A8DC3;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;">
+			<UML:ModelElement.taggedValue>
+				<UML:TaggedValue tag="diagram_guid" value="EAID_E83D7444_93FC_4378_AE37_42102F5BA3FF"/>
+			</UML:ModelElement.taggedValue>
+		</UML:DiagramElement>
+		<UML:DiagramElement geometry="Left=456;Top=225;Right=561;Bottom=295;" subject="EAID_7F895474_07CC_4470_8185_5E2D243382BF" seqno="1" style="DUID=69665EA6;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;">
+			<UML:ModelElement.taggedValue>
+				<UML:TaggedValue tag="diagram_guid" value="EAID_15101822_7DD5_4040_A6DB_D96329CAD448"/>
+			</UML:ModelElement.taggedValue>
+		</UML:DiagramElement>
+		<UML:DiagramElement geometry="Left=184;Top=493;Right=289;Bottom=563;" subject="EAID_7F895474_07CC_4470_8185_5E2D243382BF" seqno="0" style="DUID=491EFDD1;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;">
+			<UML:ModelElement.taggedValue>
+				<UML:TaggedValue tag="diagram_guid" value="EAID_E9D6F922_741C_48e0_A565_53024746F08C"/>
+			</UML:ModelElement.taggedValue>
+		</UML:DiagramElement>
+		<UML:DiagramElement geometry="Left=477;Top=485;Right=582;Bottom=555;" subject="EAID_BC115626_4A43_490d_9682_6ECEC7B6C19B" seqno="0" style="DUID=670BD0DB;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;">
+			<UML:ModelElement.taggedValue>
+				<UML:TaggedValue tag="diagram_guid" value="EAID_E9D6F922_741C_48e0_A565_53024746F08C"/>
+			</UML:ModelElement.taggedValue>
+		</UML:DiagramElement>
+		<UML:DiagramElement geometry="Left=472;Top=343;Right=577;Bottom=413;" subject="EAID_C3B3176B_DF43_4694_A5ED_C1634439A8B5" seqno="0" style="DUID=A4908CC5;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;">
+			<UML:ModelElement.taggedValue>
+				<UML:TaggedValue tag="diagram_guid" value="EAID_E9D6F922_741C_48e0_A565_53024746F08C"/>
+			</UML:ModelElement.taggedValue>
+		</UML:DiagramElement>
+		<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=CX=46:CY=13:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LRT=;LRB=;IRHS=;ILHS=;Path=;Path=;Path=;" subject="EAID_900DD3C6_9260_43c2_87D6_DE41D5952555" style="Mode=3;EOID=69665EA6;SOID=C2E657EF;Color=-1;LWidth=0;Hidden=0;Hidden=0;Hidden=0;">
+			<UML:ModelElement.taggedValue>
+				<UML:TaggedValue tag="diagram_guid" value="EAID_15101822_7DD5_4040_A6DB_D96329CAD448"/>
+				<UML:TaggedValue tag="hidden" value="0"/>
+			</UML:ModelElement.taggedValue>
+		</UML:DiagramElement>
+		<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=CX=46:CY=13:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LRT=;LRB=;IRHS=;ILHS=;Path=;Path=;Path=;" subject="EAID_900DD3C6_9260_43c2_87D6_DE41D5952555" style="Mode=3;EOID=69665EA6;SOID=C2E657EF;Color=-1;LWidth=0;Hidden=0;Hidden=0;Hidden=0;">
+			<UML:ModelElement.taggedValue>
+				<UML:TaggedValue tag="diagram_guid" value="EAID_15101822_7DD5_4040_A6DB_D96329CAD448"/>
+				<UML:TaggedValue tag="hidden" value="0"/>
+			</UML:ModelElement.taggedValue>
+		</UML:DiagramElement>
+		<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=4;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_21146998_B111_4bb2_93F5_6CBC832D209C" style="Mode=3;EOID=A4908CC5;SOID=EE508261;Color=-1;LWidth=0;Hidden=0;">
+			<UML:ModelElement.taggedValue>
+				<UML:TaggedValue tag="diagram_guid" value="EAID_E9D6F922_741C_48e0_A565_53024746F08C"/>
+				<UML:TaggedValue tag="hidden" value="0"/>
+			</UML:ModelElement.taggedValue>
+		</UML:DiagramElement>
+		<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=4;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_21146998_B111_4bb2_93F5_6CBC832D209C" style="Mode=3;EOID=A4908CC5;SOID=EE508261;Color=-1;LWidth=0;Hidden=0;">
+			<UML:ModelElement.taggedValue>
+				<UML:TaggedValue tag="diagram_guid" value="EAID_E9D6F922_741C_48e0_A565_53024746F08C"/>
+				<UML:TaggedValue tag="hidden" value="0"/>
+			</UML:ModelElement.taggedValue>
+		</UML:DiagramElement>
+	</XMI.content>
+	<XMI.difference/>
+	<XMI.extensions xmi.extender="Enterprise Architect 2.5">
+		<EAModel.scenario>
+			<EAScenario name="Basic Path" type="Basic Path" weight="0,00" subject="EAID_73010EFE_BACA_4b22_BC44_6623B178E335" xmi.id="EAID_F14B3EC9_B278_4bfb_A573_43B4D85BD823">
+				<EAScenarioContent>
+					<path>
+						<step name="El usuario selecciona desde CU901.1 Vista de comparendo la opoción &quot;Cargar prueba&quot;" guid="{5DF4FB74-55E7-4f52-A7A7-3101527C5717}" level="1" uses="" useslist="" result="" state="" trigger="1" link=""/>
+						<step name="El sistema muestra un formulario para capturar la información de la prueba" guid="{1DCB6C54-BA62-4ba0-BE41-6E58BDDD6076}" level="2" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="El usuario carga la información de la prueba al formulario y pulsa &quot;Continuar&quot;" guid="{58061F4A-ED1C-416f-9B88-88DD29A0762B}" level="3" uses="" useslist="" result="" state="" trigger="1" link=""/>
+						<step name="El sistema adjunta la prueba al expediente y vuelve a CU901.1 Vista de comparendo" guid="{B25FC4B1-FF70-4aef-94DF-D49D1B933874}" level="4" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<context>
+							<item oldname="AT4.1.2 Abogado de audiencias contravencionales" guid="{31F08BCE-6C60-4298-89B5-6A3A1517318A}"/>
+							<item oldname="CU901.1 Vista de comparendo" guid="{A73E4BE5-FCE6-47fe-B549-E6C365E23FB3}"/>
+							<item oldname="Cargar pruebas del proceso contravencional." guid="{D1A3BEA2-FDF2-4df7-A7D9-FF1AE1A22532}"/>
+						</context>
+					</path>
+				</EAScenarioContent>
+			</EAScenario>
+			<EAScenario name="Basic Path" type="Basic Path" weight="0,00" subject="EAID_7F895474_07CC_4470_8185_5E2D243382BF" xmi.id="EAID_90D17C3F_FBF1_4e61_A8DB_2221F86669D6">
+				<EAScenarioContent>
+					<path>
+						<step name="El sistema carga la plantilla de constancia de ejecutoria." guid="{0DF8D2B2-0009-45fb-824A-02A4424F0681}" level="1" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="El sistema genera la constancia ejecutoria con base en las decisiones de primera y segunda instancia, la firma digitalmente y la carga en el sistema." guid="{5D2D4D2B-0609-4de0-9A6C-97A830670024}" level="2" uses="" useslist="" result="Cargar documento de constancia ejecutoria dentro del expediente del proceso." state="" trigger="0" link=""/>
+						<context>
+							<item oldname="CU098.6 Crear constancia ejecutoria de proceso por embriaguez." guid="{140900AE-477F-45bc-BDC3-EC3ED106460A}"/>
+							<item oldname="CU070.1 Crear constancia de ejecutoria de reincidencia." guid="{67989429-FFC7-4d73-B456-797BDF49CA2B}"/>
+							<item oldname="CU048.1 Generar constancia ejecutoria del proceso de aceptación de comparendo." guid="{BD6C150D-630A-4504-B373-ECFC3FFEAB17}"/>
+							<item oldname="CU049.2 Audiencia de impugnación" guid="{B0EFBC1A-CFEB-4e01-AB9F-C8631572714C}"/>
+						</context>
+					</path>
+				</EAScenarioContent>
+			</EAScenario>
+			<EAScenario name="El implicado es exonerado." type="Alternate" weight="1,00" subject="EAID_7F895474_07CC_4470_8185_5E2D243382BF" xmi.id="EAID_DC179347_6B7A_4927_A69D_8B513E04407C">
+				<EAScenarioContent>
+					<path>
+						<step name="El proceso finaliza en caso que el implicado es exonerado" guid="{F1595E4C-2B76-47a8-8621-28F2CE53CC23}" level="1" uses="" useslist="" result="Verificar el registro de la decisión de exonerar al implicado." state="" trigger="0" link=""/>
+						<context/>
+					</path>
+				</EAScenarioContent>
+			</EAScenario>
+			<EAScenario name="Basic Path" type="Basic Path" weight="0,00" subject="EAID_9A5C837A_3882_4e79_BF81_3D214F506787" xmi.id="EAID_56B58B36_6089_4bad_933C_FE6728CADE20">
+				<EAScenarioContent>
+					<path>
+						<step name="El usuario abogado de audiencia busca el comparendo sobre el cual se va a realizar la audiencia." guid="{84C63E11-D797-41d6-98E9-DF5B50479A62}" level="1" uses="" useslist="" result="Buscar comparendo en el sistema." state="" trigger="1" link=""/>
+						<step name="El sistema presenta la información del comparendo: Número de comparendo, fecha de comparendo, código de infracción, nombre del infractor, tipo y número de documento, placa del vehículo." guid="{15A8D3E1-E2C7-4f66-9C17-9B1864194C4B}" level="2" uses="" useslist="" result="" state="" trigger="0" link="">
+							<extension level="2a" guid="{5690814F-D2F8-48d2-BE8B-A524157F2D17}" join="End"/>
+						</step>
+						<context/>
+					</path>
+				</EAScenarioContent>
+			</EAScenario>
+			<EAScenario name="No encontro el comparendo" type="Alternate" weight="1,00" subject="EAID_9A5C837A_3882_4e79_BF81_3D214F506787" xmi.id="EAID_5690814F_D2F8_48d2_BE8B_A524157F2D17">
+				<EAScenarioContent>
+					<path>
+						<step name="El sistema no encontró el comparendo y presenta un formulario para ingresar la información del comparendo." guid="{22A7ACF9-E342-4f7b-83CA-DCF5DAD9919C}" level="1" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="El usuario abogado ingresa la información del comparendo: Número de comparendo, fecha de comparendo, código de infracción, nombre del infractor, tipo y número de documento, placa del vehículo" guid="{D4C07295-9441-4583-B5C5-EB6D5A10B104}" level="2" uses="" useslist="" result="Registrar comparendo en el sistema" state="" trigger="1" link=""/>
+						<step name="El sistema realiza el registro del comparendo." guid="{1325D78E-C3F7-4149-A3B1-1C6C64259100}" level="3" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="El sistema encontró el comparendo pero no tiene la información del tercero contraventor (Caso C02 por abandono del vehículo)." guid="{51C6B2C9-A4EB-4f18-8635-AFCA6EE62069}" level="4" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="El usuario abogado ingresa la información del tercero contraventor y los espacios relacionados con el número de comparendo e identificación del vehículo no pueden ser editados." guid="{684E4FED-89C8-42ba-81ED-3E5C8839838F}" level="5" uses="" useslist="" result="" state="" trigger="1" link=""/>
+						<step name="El sistema realiza el registro del tercero contraventor asociado al comparendo." guid="{432FEEF3-9E1A-49d8-8EE7-9A17D8B7AB7B}" level="6" uses="" useslist="" result="Registrar tercero contraventor en el sistema" state="" trigger="0" link=""/>
+						<context/>
+					</path>
+				</EAScenarioContent>
+			</EAScenario>
+			<EAScenario name="Basic Path" type="Basic Path" weight="0,00" subject="EAID_B0EFBC1A_CFEB_4e01_AB9F_C8631572714C" xmi.id="EAID_E9473FCF_EA58_43a0_891A_49CB27CEA789">
+				<EAScenarioContent>
+					<path>
+						<step name="El sistema muestra un formulario en el que se solicita, agrupado por pasos,  (1) la información del apoderado y del representante del menor de edad. (2) En el caso de los C02 (abandono de vehículo) también se pide la información del contraventor." guid="{DE137ADD-BECD-409b-A39C-FA4B55A8B81D}" level="1" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="El usuario completa el formulario y oprime el botón &quot;Continuar&quot;" guid="{CABFE6F9-043B-42c5-8672-21E3D4FDBBB9}" level="2" uses="" useslist="" result="" state="" trigger="1" link=""/>
+						<step name="El sistema determina la plantilla correspondiente al acto administrativo de audiencia de impugnación e inicia CUT-1 Realizar un acto administrativo " guid="{820A0230-4E1C-48d8-BE5B-21526C1F27D2}" level="3" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="El sistema muestra un formulario en el que se solicita (a) la decisión tomada: Contraventor, Exonerado, Suspensión de audiencia (b) Resuelve el recurso de reposición y concede o no el de apelación en caso de ser interpuestos " guid="{B890513E-113B-4696-907D-F148B8064E4D}" level="4" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="El usuario ingresa la decisión tomada, resuelve el recurso de reposición y concede el de apelación en caso de ser interpuestos. Luego oprime el botón &quot;continuar&quot;." guid="{27416D48-F4BE-4adb-A3A4-09492D45DBA8}" level="5" uses="" useslist="" result="" state="" trigger="1" link=""/>
+						<step name="El sistema determina que la decisión es &quot;Contraventor&quot; sin recurso de apelación ni recurso de queja." guid="{590F990A-655D-4642-B393-7DAD8FC0ADD5}" level="6" uses="" useslist="" result="" state="" trigger="0" link="">
+							<extension level="6a" guid="{F39EC54C-E8FC-4e9c-958E-22161D291762}" join="End"/>
+							<extension level="6b" guid="{0710B5B8-5437-4231-BB55-962F3805A823}" join="{C3D1FBA5-09E4-4566-AC2B-762B154EF955}"/>
+							<extension level="6c" guid="{5DCD6A2A-5B7E-4a70-A035-C295366DB8D6}" join="{C3D1FBA5-09E4-4566-AC2B-762B154EF955}"/>
+							<extension level="6d" guid="{D7AF9F3F-7F0A-4f51-8DD7-F10E1D8392AA}" join="End"/>
+						</step>
+						<step name="El sistema invoca 007-CU056.2 Generar constancia ejecutoria proceso contravencional." guid="{C3D1FBA5-09E4-4566-AC2B-762B154EF955}" level="7" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="El sistema liquida la cartera en cuentas de orden y causa la cartera en cuentas de balance" guid="{D653AF28-7B02-4e6b-AD1C-5DC89E7373F6}" level="8" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="En el caso de comparendos por embriaguez o cambio de servicio se realiza la suspensión automática de licencia invocando 002-CU070.2 Suspender licencia. " guid="{6FCA8287-6111-4cb5-AF3A-DBF30AB33DF0}" level="9" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="El sistema inicia el cobro coactivo mediante CU295.1 Registrar títulos ejecutivos para gestión persuasiva. en caso que la cartera sea positiva" guid="{7C0DA140-AF25-4001-BFF7-C8E08AE661DA}" level="10" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<context>
+							<item oldname="AT4.1.2 Abogado de audiencias contravencionales" guid="{31F08BCE-6C60-4298-89B5-6A3A1517318A}"/>
+							<item oldname="CU295.1 Registrar títulos ejecutivos para gestión persuasiva." guid="{C253B008-B245-4318-ACED-8298E619601E}"/>
+							<item oldname="002-CU070.2 Suspender licencia." guid="{E6FE6233-2EAA-4ba4-AB4C-173062514C5F}"/>
+							<item oldname="002-CU059.1 Programar audiencia de continuación" guid="{5BBF8352-12C7-4e10-B1B4-BA31171D6E51}"/>
+							<item oldname="003-CU059.2 Generar oficio automático para comunicar la programación de la audiencia." guid="{9CF98D85-2F0F-4755-8F85-77E8F2727649}"/>
+							<item oldname="007-CU056.2 Generar constancia ejecutoria proceso contravencional." guid="{7F895474-07CC-4470-8185-5E2D243382BF}"/>
+							<item oldname="001-CU049.1 Apertura de audiencia de impugnación" guid="{C3B3176B-DF43-4694-A5ED-C1634439A8B5}"/>
+							<item oldname="Condiciones de recurso de reposición" guid="{052781E9-F7FD-4c29-AAA5-1D2BD0A461D1}"/>
+						</context>
+					</path>
+				</EAScenarioContent>
+			</EAScenario>
+			<EAScenario name="Contraventor con recurso de apelación CON fallo en segunda instancia" type="Alternate" weight="2,00" subject="EAID_B0EFBC1A_CFEB_4e01_AB9F_C8631572714C" xmi.id="EAID_0710B5B8_5437_4231_BB55_962F3805A823">
+				<EAScenarioContent>
+					<path>
+						<step name="El sistema inicia un proceso de segunda instancia invocando CU229.1 Enrutar proceso de recurso de apelación" guid="{E58D3520-38CF-4b45-AFE4-016FFDFD3DA3}" level="1" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="El sistema espera hasta 10 días para contabilizar términos" guid="{EC57AEF9-CB75-43e5-9930-A2A8D8D1C950}" level="2" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<context>
+							<item oldname="AT4.1.2 Abogado de audiencias contravencionales" guid="{31F08BCE-6C60-4298-89B5-6A3A1517318A}"/>
+							<item oldname="CU059.1 Programar audiencia de continuación" guid="{5BBF8352-12C7-4e10-B1B4-BA31171D6E51}"/>
+							<item oldname="CU295.1 Registrar títulos ejecutivos para gestión persuasiva." guid="{C253B008-B245-4318-ACED-8298E619601E}"/>
+							<item oldname="CU229.1 Enrutar proceso de recurso de apelación" guid="{9183B199-DFDF-47fc-83F3-605CAB100845}"/>
+							<item oldname="CUT-2 Generar un oficio automático" guid="{9E2E6515-E895-4b5f-85F2-F6EE8E32D8A0}"/>
+							<item oldname="CUT-1 Realizar un acto administrativo" guid="{E853B6CE-8383-459d-868A-D22A15C3F1EA}"/>
+							<item oldname="CU056.2 Generar constancia ejecutoria proceso contravencional." guid="{7F895474-07CC-4470-8185-5E2D243382BF}"/>
+							<item oldname="CU049.1 Apertura de audiencia de impugnación" guid="{C3B3176B-DF43-4694-A5ED-C1634439A8B5}"/>
+							<item oldname="Condiciones de recurso de reposición" guid="{052781E9-F7FD-4c29-AAA5-1D2BD0A461D1}"/>
+							<item oldname="CU070.2 Suspender licencia." guid="{E6FE6233-2EAA-4ba4-AB4C-173062514C5F}"/>
+						</context>
+					</path>
+				</EAScenarioContent>
+			</EAScenario>
+			<EAScenario name="Contraventor con recurso de apelación SIN fallo en segunda instancia" type="Alternate" weight="4,00" subject="EAID_B0EFBC1A_CFEB_4e01_AB9F_C8631572714C" xmi.id="EAID_D7AF9F3F_7F0A_4f51_8DD7_F10E1D8392AA">
+				<EAScenarioContent>
+					<path>
+						<step name="El sistema inicia un proceso de segunda instancia invocando CU229.1 Enrutar proceso de recurso de apelación" guid="{0F87EE7F-0409-4269-B473-0B658154FACC}" level="1" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="El sistema espera hasta 10 días para contabilizar términos" guid="{C423E2A5-2E0B-4bf2-83D2-35EDCB95768B}" level="2" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="El sistema invoca CU059.1 Programar audiencia de continuación" guid="{AE78B35A-B272-407b-98CF-550DF4C6E476}" level="3" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<context>
+							<item oldname="AT4.1.2 Abogado de audiencias contravencionales" guid="{31F08BCE-6C60-4298-89B5-6A3A1517318A}"/>
+							<item oldname="CU059.1 Programar audiencia de continuación" guid="{5BBF8352-12C7-4e10-B1B4-BA31171D6E51}"/>
+							<item oldname="CU295.1 Registrar títulos ejecutivos para gestión persuasiva." guid="{C253B008-B245-4318-ACED-8298E619601E}"/>
+							<item oldname="CU229.1 Enrutar proceso de recurso de apelación" guid="{9183B199-DFDF-47fc-83F3-605CAB100845}"/>
+							<item oldname="CUT-2 Generar un oficio automático" guid="{9E2E6515-E895-4b5f-85F2-F6EE8E32D8A0}"/>
+							<item oldname="CUT-1 Realizar un acto administrativo" guid="{E853B6CE-8383-459d-868A-D22A15C3F1EA}"/>
+							<item oldname="CU056.2 Generar constancia ejecutoria proceso contravencional." guid="{7F895474-07CC-4470-8185-5E2D243382BF}"/>
+							<item oldname="CU049.1 Apertura de audiencia de impugnación" guid="{C3B3176B-DF43-4694-A5ED-C1634439A8B5}"/>
+							<item oldname="Condiciones de recurso de reposición" guid="{052781E9-F7FD-4c29-AAA5-1D2BD0A461D1}"/>
+							<item oldname="CU070.2 Suspender licencia." guid="{E6FE6233-2EAA-4ba4-AB4C-173062514C5F}"/>
+						</context>
+					</path>
+				</EAScenarioContent>
+			</EAScenario>
+			<EAScenario name="Contraventor con recurso de queja" type="Alternate" weight="3,00" subject="EAID_B0EFBC1A_CFEB_4e01_AB9F_C8631572714C" xmi.id="EAID_5DCD6A2A_5B7E_4a70_A035_C295366DB8D6">
+				<EAScenarioContent>
+					<path>
+						<step name="El sistema identifica que la decisión es &quot;Contraventor&quot; con recurso de queja " guid="{3EB5189B-0D46-47be-812F-0248EC3873C0}" level="1" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="El sistema muestra un formulario para que se registre la solicitud del recurso de queja" guid="{7A45E12A-5CE3-4060-979E-54F2499F4161}" level="2" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="El usuario completa el formulario y pulsa &quot;Continuar&quot;" guid="{B54F55D2-9CAC-445e-95E8-DADC4457BA27}" level="3" uses="" useslist="" result="" state="" trigger="1" link=""/>
+						<step name="El sistema guarda la información e invoca el proceso de Recurso de queja" guid="{F3AF2D03-5DEC-43d3-9DF0-FC3D0A6A569A}" level="4" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<context>
+							<item oldname="AT4.1.2 Abogado de audiencias contravencionales" guid="{31F08BCE-6C60-4298-89B5-6A3A1517318A}"/>
+							<item oldname="CU059.1 Programar audiencia de continuación" guid="{5BBF8352-12C7-4e10-B1B4-BA31171D6E51}"/>
+							<item oldname="CU295.1 Registrar títulos ejecutivos para gestión persuasiva." guid="{C253B008-B245-4318-ACED-8298E619601E}"/>
+							<item oldname="CU229.1 Enrutar proceso de recurso de apelación" guid="{9183B199-DFDF-47fc-83F3-605CAB100845}"/>
+							<item oldname="CUT-2 Generar un oficio automático" guid="{9E2E6515-E895-4b5f-85F2-F6EE8E32D8A0}"/>
+							<item oldname="CUT-1 Realizar un acto administrativo" guid="{E853B6CE-8383-459d-868A-D22A15C3F1EA}"/>
+							<item oldname="CU056.2 Generar constancia ejecutoria proceso contravencional." guid="{7F895474-07CC-4470-8185-5E2D243382BF}"/>
+							<item oldname="CU049.1 Apertura de audiencia de impugnación" guid="{C3B3176B-DF43-4694-A5ED-C1634439A8B5}"/>
+							<item oldname="Condiciones de recurso de reposición" guid="{052781E9-F7FD-4c29-AAA5-1D2BD0A461D1}"/>
+							<item oldname="CU070.2 Suspender licencia." guid="{E6FE6233-2EAA-4ba4-AB4C-173062514C5F}"/>
+						</context>
+					</path>
+				</EAScenarioContent>
+			</EAScenario>
+			<EAScenario name="Suspensión de audiencia" type="Alternate" weight="1,00" subject="EAID_B0EFBC1A_CFEB_4e01_AB9F_C8631572714C" xmi.id="EAID_F39EC54C_E8FC_4e9c_958E_22161D291762">
+				<EAScenarioContent>
+					<path>
+						<step name="El sistema determina que la decisión es &quot;Suspensión de audiencia&quot;" guid="{5326147F-AA51-419d-914F-E21972149D7D}" level="1" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="El sistema invoca 002-CU059.1 Programar audiencia de continuación" guid="{78C179A9-33BA-4b00-8282-64242E7F4498}" level="2" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="El sistema invoca 003-CU059.2 Generar oficio automático para comunicar la programación de la audiencia." guid="{59A5B069-F270-4134-AAA1-5E9979746D60}" level="3" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<context>
+							<item oldname="AT4.1.2 Abogado de audiencias contravencionales" guid="{31F08BCE-6C60-4298-89B5-6A3A1517318A}"/>
+							<item oldname="CU295.1 Registrar títulos ejecutivos para gestión persuasiva." guid="{C253B008-B245-4318-ACED-8298E619601E}"/>
+							<item oldname="002-CU070.2 Suspender licencia." guid="{E6FE6233-2EAA-4ba4-AB4C-173062514C5F}"/>
+							<item oldname="002-CU059.1 Programar audiencia de continuación" guid="{5BBF8352-12C7-4e10-B1B4-BA31171D6E51}"/>
+							<item oldname="003-CU059.2 Generar oficio automático para comunicar la programación de la audiencia." guid="{9CF98D85-2F0F-4755-8F85-77E8F2727649}"/>
+							<item oldname="007-CU056.2 Generar constancia ejecutoria proceso contravencional." guid="{7F895474-07CC-4470-8185-5E2D243382BF}"/>
+							<item oldname="001-CU049.1 Apertura de audiencia de impugnación" guid="{C3B3176B-DF43-4694-A5ED-C1634439A8B5}"/>
+							<item oldname="Condiciones de recurso de reposición" guid="{052781E9-F7FD-4c29-AAA5-1D2BD0A461D1}"/>
+						</context>
+					</path>
+				</EAScenarioContent>
+			</EAScenario>
+			<EAScenario name="Basic Path" type="Basic Path" weight="0,00" subject="EAID_BC115626_4A43_490d_9682_6ECEC7B6C19B" xmi.id="EAID_1E6594C1_F113_4c9b_8EAD_2E902F24A3A6">
+				<EAScenarioContent>
+					<path>
+						<step name="El sistema determina la plantilla del acto administrativo de audiencia de impugnación e inicia " guid="{AE9E6F33-EEF0-4934-94B4-B6649B05B631}" level="1" uses="" useslist="" result="" state="" trigger="1" link=""/>
+						<step name="El sistema carga la plantilla,  despliega el recurso para cargar el documento, la información del comparendo y le solicita al usuario ingresar la información de la decisión tomada durante el acto." guid="{404F9E26-4974-4b52-AD44-3B8DD883A126}" level="2" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="El usuario sube selecciona el documento y " guid="{4E2A91D3-7BA0-452b-993A-AA9772B26E17}" level="3" uses="" useslist="" result="Crear el documento de acto administrativo de audiencia de impugnación a partir de la última versión del documento." state="" trigger="1" link=""/>
+						<step name="El sistema  realiza el registro de la decisión tomada (Contraventor, exonerado, nueva audiencia de impugnación)." guid="{EBBE3125-58AD-47a7-A89C-35E7F64F3E5E}" level="4" uses="" useslist="" result="" state="" trigger="0" link="">
+							<extension level="4a" guid="{38C51823-864E-4387-BB2C-5A33084CC547}" join="End"/>
+						</step>
+						<step name="El abogado resuelve el recurso de reposición y concede el de apelación en caso que sean interpuestos." guid="{3E15BF56-17E2-45c3-A5A4-9A85ED891D8C}" level="5" uses="" useslist="" result="" state="" trigger="1" link="">
+							<extension level="5a" guid="{DE2C899C-32CB-4e1b-A557-C5843DD2084A}" join="End"/>
+						</step>
+						<step name="El abogado notifica de forma presencial al implicado." guid="{BE009ED4-F97F-4b98-9A21-CA2BCBBF8225}" level="6" uses="" useslist="" result="" state="" trigger="1" link=""/>
+						<context>
+							<item oldname="CU102.1 Realizar las audiencias de aceptación o impugnación de proceso por abandono de vehículo." guid="{0EE7AF27-E812-440a-BF39-96077DC19247}"/>
+							<item oldname="CU098.2 Realizar las audiencias de impugnación o aceptación del proceso de embriaguez." guid="{9F07391C-2591-4f02-BD20-40ECE7770000}"/>
+							<item oldname="Crear el acto administrativo de audiencia de impugnación" guid="{11475A26-C231-4e20-9609-2AB07B7FFED6}"/>
+						</context>
+					</path>
+				</EAScenarioContent>
+			</EAScenario>
+			<EAScenario name="No concede recurso de apelacion" type="Alternate" weight="2,00" subject="EAID_BC115626_4A43_490d_9682_6ECEC7B6C19B" xmi.id="EAID_DE2C899C_32CB_4e1b_A557_C5843DD2084A">
+				<EAScenarioContent>
+					<path>
+						<step name="El abogado no concede el recurso de apelación y el implicado solicita el recurso de queja." guid="{DD1168C7-9028-4bb7-A3D1-251989826645}" level="1" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="El abogado registra la solicitud de recurso de queja." guid="{FDBF849D-CAD8-4630-BB5F-0605D197B35A}" level="2" uses="" useslist="" result="Verificar el registro del recurso de queja." state="" trigger="1" link=""/>
+						<context/>
+					</path>
+				</EAScenarioContent>
+			</EAScenario>
+			<EAScenario name="Registro de la decision" type="Alternate" weight="1,00" subject="EAID_BC115626_4A43_490d_9682_6ECEC7B6C19B" xmi.id="EAID_38C51823_864E_4387_BB2C_5A33084CC547">
+				<EAScenarioContent>
+					<path>
+						<step name="El sistema  realiza el registro de la decisión de contraventor o exonerado." guid="{5C9EA394-2F37-4f17-A0AA-9BF14821C6E2}" level="1" uses="" useslist="" result="Verificar el registro de la decisión tomada en el proceso contravencional" state="" trigger="0" link=""/>
+						<step name="El sistema inicia la tarea de programar nueva audiencia." guid="{82FEAB39-40E9-476c-8D3C-64C15AC4AB8E}" level="2" uses="" useslist="" result="Verificar que la siguiente tarea del proceso sea programar una nueva audiencia." state="" trigger="0" link=""/>
+						<context/>
+					</path>
+				</EAScenarioContent>
+			</EAScenario>
+			<EAScenario name="Basic Path" type="Basic Path" weight="0,00" subject="EAID_C3B3176B_DF43_4694_A5ED_C1634439A8B5" xmi.id="EAID_BFDA3971_8D14_41f5_9371_E7C479E19033">
+				<EAScenarioContent>
+					<path>
+						<step name="El usuario, desde CU901.1 Vista de comparendo selecciona la opción &quot;Apertura de audiencia de impugnación&quot;" guid="{49D5CA3C-B765-4d0c-9106-4F13978A87AA}" level="1" uses="" useslist="" result="" state="" trigger="1" link=""/>
+						<step name="El sistema verifica la regla Tiempo permitido para impugnación e inicia una CU049.2 Audiencia de impugnación" guid="{BA5021AC-75A9-4266-8C4B-7F2590684A42}" level="2" uses="" useslist="" result="" state="" trigger="0" link="">
+							<extension level="2a" guid="{041D3661-9970-4bd5-9390-01EFAD386EF0}" join="End"/>
+						</step>
+						<context>
+							<item oldname="AT4.1.2 Abogado de audiencias contravencionales" guid="{31F08BCE-6C60-4298-89B5-6A3A1517318A}"/>
+							<item oldname="CU102.1 Realizar las audiencias de aceptación o impugnación de proceso por abandono de vehículo." guid="{0EE7AF27-E812-440a-BF39-96077DC19247}"/>
+							<item oldname="CU901.1 Vista de comparendo" guid="{A73E4BE5-FCE6-47fe-B549-E6C365E23FB3}"/>
+							<item oldname="CU060.1 Identificar reincidencia" guid="{2A21C440-09C5-4411-94E7-0EB3770586E0}"/>
+							<item oldname="CU098.2 Realizar las audiencias de impugnación o aceptación del proceso de embriaguez." guid="{9F07391C-2591-4f02-BD20-40ECE7770000}"/>
+							<item oldname="CU049.2 Audiencia de impugnación" guid="{B0EFBC1A-CFEB-4e01-AB9F-C8631572714C}"/>
+							<item oldname="Tiempo permitido para impugnación" guid="{A3517585-3C5A-40df-BEB9-C8B8B98CE9DB}"/>
+							<item oldname="Realizar apertura a una audiencia de impugnación" guid="{451AC475-6316-4a15-A86D-DD1489344A44}"/>
+						</context>
+					</path>
+				</EAScenarioContent>
+			</EAScenario>
+			<EAScenario name="Por fuera de tiempo" type="Alternate" weight="1,00" subject="EAID_C3B3176B_DF43_4694_A5ED_C1634439A8B5" xmi.id="EAID_041D3661_9970_4bd5_9390_01EFAD386EF0">
+				<EAScenarioContent>
+					<path>
+						<step name="El sistema establece que no se cumple Tiempo permitido para impugnación y muestra un mensaje de lo ocurrido" guid="{0DC67192-7106-4e89-80A4-2B9210EC8474}" level="1" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<context>
+							<item oldname="AT4.1.2 Abogado de audiencias contravencionales" guid="{31F08BCE-6C60-4298-89B5-6A3A1517318A}"/>
+							<item oldname="CU102.1 Realizar las audiencias de aceptación o impugnación de proceso por abandono de vehículo." guid="{0EE7AF27-E812-440a-BF39-96077DC19247}"/>
+							<item oldname="CU901.1 Vista de comparendo" guid="{A73E4BE5-FCE6-47fe-B549-E6C365E23FB3}"/>
+							<item oldname="CU060.1 Identificar reincidencia" guid="{2A21C440-09C5-4411-94E7-0EB3770586E0}"/>
+							<item oldname="CU098.2 Realizar las audiencias de impugnación o aceptación del proceso de embriaguez." guid="{9F07391C-2591-4f02-BD20-40ECE7770000}"/>
+							<item oldname="Tiempo permitido para impugnación" guid="{A3517585-3C5A-40df-BEB9-C8B8B98CE9DB}"/>
+							<item oldname="Realizar apertura a una audiencia de impugnación" guid="{451AC475-6316-4a15-A86D-DD1489344A44}"/>
+						</context>
+					</path>
+				</EAScenarioContent>
+			</EAScenario>
+			<EAScenario name="Basic Path" type="Basic Path" weight="0,00" subject="EAID_DD43445F_FD7E_46d2_9432_F33778DB6310" xmi.id="EAID_84D03FE4_BB14_4735_A4C5_4284CFB6D987">
+				<EAScenarioContent>
+					<path>
+						<step name="El abogado resuelve el recurso de apelación y si hubo fallo el sistema debe esperar 10 días antes de generar la constancia ejecutoria." guid="{7CD9FEBE-4EE5-4164-A38D-F252F721D119}" level="1" uses="" useslist="" result="Verificar que inicia el conteo de 10 días." state="" trigger="1" link="">
+							<extension level="1a" guid="{7CF8EE65-2BCC-45bd-8EBA-96BDF42D97BC}" join="End"/>
+						</step>
+						<context/>
+					</path>
+				</EAScenarioContent>
+			</EAScenario>
+			<EAScenario name="Decide que el fallo se debe modificar" type="Alternate" weight="1,00" subject="EAID_DD43445F_FD7E_46d2_9432_F33778DB6310" xmi.id="EAID_7CF8EE65_2BCC_45bd_8EBA_96BDF42D97BC">
+				<EAScenarioContent>
+					<path>
+						<step name="En segunda instancia se decide que el fallo se debe modificar y se debe citar a una nueva audiencia de primera instancia al implicado." guid="{418C9B32-E978-4824-A68D-0E0094AAAE1C}" level="1" uses="" useslist="" result="Verificar que se ha iniciado la tarea de programar audiencia." state="" trigger="0" link=""/>
+						<context/>
+					</path>
+				</EAScenarioContent>
+			</EAScenario>
+		</EAModel.scenario>
+		<EAStub xmi.id="EAID_31F08BCE_6C60_4298_89B5_6A3A1517318A" name="AT4.1.2 Abogado de audiencias contravencionales" UMLType="Actor"/>
+		<EAStub xmi.id="EAID_BD6C150D_630A_4504_B373_ECFC3FFEAB17" name="003-CU048.1 Generar constancia ejecutoria del proceso de aceptación de comparendo." UMLType="UseCase"/>
+	</XMI.extensions>
+</XMI>

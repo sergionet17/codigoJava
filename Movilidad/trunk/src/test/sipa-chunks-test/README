@@ -1,0 +1,12 @@
+start-test.bat
+
+# Mongodb client connection
+mongo.exe --host 127.0.0.1 --port 27017
+use mydb
+db.createCollection("repoBinDocument")
+db.createCollection("repoBinChunk")  
+#Check collections creation  
+db.getCollectionNames()
+#Remove collections content
+db.repoBinDocument.remove({})
+db.repoBinChunk.remove({})

@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<XMI xmi.version="1.1" xmlns:UML="omg.org/UML1.3">
+	<XMI.header>
+		<XMI.documentation>
+			<XMI.exporter>Enterprise Architect</XMI.exporter>
+			<XMI.exporterVersion>2.5</XMI.exporterVersion>
+		</XMI.documentation>
+	</XMI.header>
+	<XMI.content>
+		<UML:Model name="EA Model" xmi.id="MX_EAID_77A088A1_7CC6_450f_AF9B_F8029F58B98A">
+			<UML:Namespace.ownedElement>
+				<UML:Class name="EARootClass" xmi.id="EAID_11111111_5487_4080_A7F4_41526CB0AA00" isRoot="true" isLeaf="false" isAbstract="false"/>
+				<UML:Package name="006-Agendamiento de audiencias" xmi.id="EAPK_77A088A1_7CC6_450f_AF9B_F8029F58B98A" isRoot="false" isLeaf="false" isAbstract="false" visibility="public">
+					<UML:ModelElement.taggedValue>
+						<UML:TaggedValue tag="parent" value="EAPK_212FFB6B_8338_48a8_B093_5D0DBEDD150F"/>
+						<UML:TaggedValue tag="created" value="2017-02-17 09:08:25"/>
+						<UML:TaggedValue tag="modified" value="2017-04-13 11:56:17"/>
+						<UML:TaggedValue tag="iscontrolled" value="TRUE"/>
+						<UML:TaggedValue tag="xmlpath" value="ucm-contravenciones-agendamiento-de-audiencias.xml"/>
+						<UML:TaggedValue tag="lastloaddate" value="2017-04-13 11:56:17"/>
+						<UML:TaggedValue tag="lastsavedate" value="2017-02-18 13:58:13"/>
+						<UML:TaggedValue tag="version" value="1.0"/>
+						<UML:TaggedValue tag="isprotected" value="FALSE"/>
+						<UML:TaggedValue tag="usedtd" value="FALSE"/>
+						<UML:TaggedValue tag="xmiver" value="Enterprise Architect XMI/UML 1.3"/>
+						<UML:TaggedValue tag="logxml" value="FALSE"/>
+						<UML:TaggedValue tag="packageFlags" value="Recurse=0;VCCFG=secmov-sipa;CRC=0;"/>
+						<UML:TaggedValue tag="batchsave" value="0"/>
+						<UML:TaggedValue tag="batchload" value="0"/>
+						<UML:TaggedValue tag="phase" value="1.0"/>
+						<UML:TaggedValue tag="status" value="Proposed"/>
+						<UML:TaggedValue tag="author" value="dev"/>
+						<UML:TaggedValue tag="complexity" value="1"/>
+						<UML:TaggedValue tag="ea_stype" value="Public"/>
+						<UML:TaggedValue tag="tpos" value="0"/>
+						<UML:TaggedValue tag="gentype" value="Java"/>
+					</UML:ModelElement.taggedValue>
+					<UML:Namespace.ownedElement>
+						<UML:UseCase name="002-CU059.1 Programar audiencia de continuación" xmi.id="EAID_5BBF8352_12C7_4e10_B1B4_BA31171D6E51" visibility="public" namespace="EAPK_77A088A1_7CC6_450f_AF9B_F8029F58B98A" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="documentation" value="Se registra la fecha y hora para realizar la audiencia de continuación, basado en un calendario que tiene habilitado los días disponibles dependiendo de:&#xA;&lt;ul&gt;&#xA;	&lt;li&gt;Turno del abogado con el cual se está realizando la audiencia.&lt;/li&gt;&#xA;	&lt;li&gt;Rango de tiempo permitido dependiendo de la ocupación de los turnos de audiencias.&lt;/li&gt;&#xA;	&lt;li&gt;Rango de tiempo permitido dependiendo de la naturaleza del proceso contravencional y del tipo de audiencia.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;ol&gt;&#xA;	&lt;li&gt;&lt;ol&gt;&#xA;	&lt;li&gt;&amp;lt;h5 align=&quot;justify&quot;&amp;gt;El registro de la audiencia se debe hacer dentro del mismo turno (mañana: 7am-12pm o tarde: 2pm-5pm) del abogado que la esta agendando.&amp;lt;/h5&amp;gt;&lt;/li&gt;&#xA;	&lt;li&gt;&amp;lt;h5 align=&quot;justify&quot;&amp;gt;El periodo de tiempo (Días hábiles) donde se hace el registro de la audiencia se define:&amp;lt;/h5&amp;gt;&lt;ol&gt;&#xA;	&lt;li&gt;&amp;lt;h5 align=&quot;justify&quot;&amp;gt;Del día 0 (Día en que compareció) al 15 para comparecer con abogado, práctica de pruebas con inmovilización de vehículo.&amp;lt;/h5&amp;gt;&lt;/li&gt;&#xA;	&lt;li&gt;&amp;lt;h5 align=&quot;justify&quot;&amp;gt;Del día 0 (Día en que compareció) al 20 para práctica de pruebas o notificación de fallo.&amp;lt;/h5&amp;gt;&lt;/li&gt;&#xA;	&lt;li&gt;&amp;lt;h5 align=&quot;justify&quot;&amp;gt;Cuando no encuentre cupo dentro del rango de fecha debe habilitar el cupo desde el día 15 al día 20 en cualquier horario (mañana o tarde)&amp;lt;/h5&amp;gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;ol&gt;&#xA;	&lt;li&gt;&lt;ol&gt;&#xA;	&lt;li&gt;&lt;ol&gt;&#xA;	&lt;li&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/li&gt;&#xA;	&lt;li&gt;&lt;ol&gt;&#xA;	&lt;li&gt;&lt;/li&gt;&#xA;	&lt;li&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;ol&gt;&#xA;	&lt;li&gt;&lt;ol&gt;&#xA;	&lt;li&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;ol&gt;&#xA;	&lt;li&gt;&lt;ol&gt;&#xA;	&lt;li&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;ol&gt;&#xA;	&lt;li&gt;&lt;ol&gt;&#xA;	&lt;li&gt;&amp;lt;h5 align=&quot;justify&quot;&amp;gt;Los cupos de la audiencia de los abogados en audiencia se definen:&amp;lt;/h5&amp;gt;&lt;ol&gt;&#xA;	&lt;li&gt;&amp;lt;h5 align=&quot;justify&quot;&amp;gt;Los cupos de la audiencia no debe ocupar más del 45% de los abogados disponibles en el horario específico.&amp;lt;/h5&amp;gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;ol&gt;&#xA;	&lt;li&gt;&lt;ol&gt;&#xA;	&lt;li&gt;&lt;ol&gt;&#xA;	&lt;li&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/li&gt;&#xA;	&lt;li&gt;&lt;ol&gt;&#xA;	&lt;li&gt;&lt;/li&gt;&#xA;	&lt;li&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/li&gt;&#xA;	&lt;li&gt;&lt;/li&gt;&#xA;	&lt;li&gt;&lt;/li&gt;&#xA;	&lt;li&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;i&gt;El sistema debe permitir reasignar a otro abogado una audiencia de continuación e incrementar en un 10% el cupo máximo de abogados para atención de audiencias&lt;/i&gt;"/>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="UseCase"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_77A088A1_7CC6_450f_AF9B_F8029F58B98A"/>
+								<UML:TaggedValue tag="date_created" value="2017-02-17 09:15:26"/>
+								<UML:TaggedValue tag="date_modified" value="2017-03-27 23:38:46"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="006-Agendamiento de audiencias"/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="dev"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Validated"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="653"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:UseCase>
+						<UML:Dependency client="EAID_B0EFBC1A_CFEB_4e01_AB9F_C8631572714C" supplier="EAID_5BBF8352_12C7_4e10_B1B4_BA31171D6E51" xmi.id="EAID_5FC5C617_A241_4f5d_B532_4B8805158BF0" visibility="public">
+							<UML:ModelElement.stereotype>
+								<UML:Stereotype name="invokes"/>
+							</UML:ModelElement.stereotype>
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="Dependency"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="stereotype" value="invokes"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="conditional" value=" &#xA;«invokes»"/>
+								<UML:TaggedValue tag="ea_localid" value="996"/>
+								<UML:TaggedValue tag="ea_sourceName" value="002-CU049.2 Audiencia de impugnación"/>
+								<UML:TaggedValue tag="ea_targetName" value="002-CU059.1 Programar audiencia de continuación"/>
+								<UML:TaggedValue tag="ea_sourceType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="832"/>
+								<UML:TaggedValue tag="ea_targetID" value="653"/>
+								<UML:TaggedValue tag="src_visibility" value="Public"/>
+								<UML:TaggedValue tag="src_aggregation" value="0"/>
+								<UML:TaggedValue tag="src_isOrdered" value="false"/>
+								<UML:TaggedValue tag="src_targetScope" value="instance"/>
+								<UML:TaggedValue tag="src_changeable" value="none"/>
+								<UML:TaggedValue tag="src_isNavigable" value="false"/>
+								<UML:TaggedValue tag="src_containment" value="Unspecified"/>
+								<UML:TaggedValue tag="src_style" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+								<UML:TaggedValue tag="dst_visibility" value="Public"/>
+								<UML:TaggedValue tag="dst_aggregation" value="0"/>
+								<UML:TaggedValue tag="dst_isOrdered" value="false"/>
+								<UML:TaggedValue tag="dst_targetScope" value="instance"/>
+								<UML:TaggedValue tag="dst_changeable" value="none"/>
+								<UML:TaggedValue tag="dst_isNavigable" value="true"/>
+								<UML:TaggedValue tag="dst_containment" value="Unspecified"/>
+								<UML:TaggedValue tag="dst_style" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+								<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={4B6EB016-823C-4d04-A62D-3849E171BCD6}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=invokes;GUID={1777081C-D04F-4576-98D2-AEE6A6388DBB};@ENDSTEREO;$DES;$CLT={5FC5C617-A241-4f5d-B532-4B8805158BF0}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+								<UML:TaggedValue tag="mb" value=" &#xA;«invokes»"/>
+							</UML:ModelElement.taggedValue>
+						</UML:Dependency>
+						<UML:Association xmi.id="EAID_C50383B2_F96A_47c5_BDFF_81FDFB2624D6" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="702"/>
+								<UML:TaggedValue tag="ea_sourceName" value="AT4.1.2 Abogado de audiencias contravencionales"/>
+								<UML:TaggedValue tag="ea_targetName" value="002-CU059.1 Programar audiencia de continuación"/>
+								<UML:TaggedValue tag="ea_sourceType" value="Actor"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="446"/>
+								<UML:TaggedValue tag="ea_targetID" value="653"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_31F08BCE_6C60_4298_89B5_6A3A1517318A">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_5BBF8352_12C7_4e10_B1B4_BA31171D6E51">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:UseCase name="001-CU058.1 Parametrizar los periodos de tiempo dentro de los cuales se pueden hacer audiencias de continuación." xmi.id="EAID_8E2C64EF_F9D0_47b0_B3D6_BE6F1D0A18B2" visibility="public" namespace="EAPK_77A088A1_7CC6_450f_AF9B_F8029F58B98A" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="documentation" value="Parametrizar los rangos de tiempos dentro de los cuales se puede realizar audiencias de continuación: &#xA;Para audiencia en que se comparece con abogado o practica de pruebas sobre inmovilización de vehículo (día 0 al 15 por defecto).&#xA;Para audiencia de práctica de pruebas o notificación de fallo (día 0 al 20 por defecto).&#xA;Cuando no encuentre cupo dentro del rango de fecha debe habilitar fechas adicionales después de la fecha límite en cualquier horario (día 15 al 20 por defecto).&#xA;"/>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="UseCase"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_77A088A1_7CC6_450f_AF9B_F8029F58B98A"/>
+								<UML:TaggedValue tag="date_created" value="2017-02-17 09:09:34"/>
+								<UML:TaggedValue tag="date_modified" value="2017-03-27 23:38:40"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="006-Agendamiento de audiencias"/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="dev"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Validated"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="654"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:UseCase>
+						<UML:Association xmi.id="EAID_4CC9EFF9_2F9F_4b34_AF22_E035770A74DC" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="701"/>
+								<UML:TaggedValue tag="ea_sourceName" value="AT4.1.1 Subdirector de contravenciones"/>
+								<UML:TaggedValue tag="ea_targetName" value="001-CU058.1 Parametrizar los periodos de tiempo dentro de los cuales se pueden hacer audiencias de continuación."/>
+								<UML:TaggedValue tag="ea_sourceType" value="Actor"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="451"/>
+								<UML:TaggedValue tag="ea_targetID" value="654"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_521906A2_7546_4894_ABAE_AFA9E034D2BA">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_8E2C64EF_F9D0_47b0_B3D6_BE6F1D0A18B2">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:Dependency client="EAID_8E2C64EF_F9D0_47b0_B3D6_BE6F1D0A18B2" supplier="EAID_B912F74F_D558_401b_8945_A11F0D98875E" xmi.id="EAID_9945D952_6B41_425c_AEC3_49175DEAC6B8" visibility="public">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="Dependency"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="700"/>
+								<UML:TaggedValue tag="ea_sourceName" value="001-CU058.1 Parametrizar los periodos de tiempo dentro de los cuales se pueden hacer audiencias de continuación."/>
+								<UML:TaggedValue tag="ea_targetName" value="Valores por defecto para rangos de tiempo de audiencias de continuación"/>
+								<UML:TaggedValue tag="ea_sourceType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_targetType" value="Requirement"/>
+								<UML:TaggedValue tag="ea_sourceID" value="654"/>
+								<UML:TaggedValue tag="ea_targetID" value="656"/>
+								<UML:TaggedValue tag="src_visibility" value="Public"/>
+								<UML:TaggedValue tag="src_aggregation" value="0"/>
+								<UML:TaggedValue tag="src_isOrdered" value="false"/>
+								<UML:TaggedValue tag="src_targetScope" value="instance"/>
+								<UML:TaggedValue tag="src_changeable" value="none"/>
+								<UML:TaggedValue tag="src_isNavigable" value="false"/>
+								<UML:TaggedValue tag="src_containment" value="Unspecified"/>
+								<UML:TaggedValue tag="src_style" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+								<UML:TaggedValue tag="dst_visibility" value="Public"/>
+								<UML:TaggedValue tag="dst_aggregation" value="0"/>
+								<UML:TaggedValue tag="dst_isOrdered" value="false"/>
+								<UML:TaggedValue tag="dst_targetScope" value="instance"/>
+								<UML:TaggedValue tag="dst_changeable" value="none"/>
+								<UML:TaggedValue tag="dst_isNavigable" value="true"/>
+								<UML:TaggedValue tag="dst_containment" value="Unspecified"/>
+								<UML:TaggedValue tag="dst_style" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+								<UML:TaggedValue tag="privatedata5" value="SX=0;SY=0;EX=0;EY=0;EDGE=2;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+							</UML:ModelElement.taggedValue>
+						</UML:Dependency>
+						<UML:UseCase name="003-CU059.2 Generar oficio automático para comunicar la programación de la audiencia." xmi.id="EAID_9CF98D85_2F0F_4755_8F85_77E8F2727649" visibility="public" namespace="EAPK_77A088A1_7CC6_450f_AF9B_F8029F58B98A" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="documentation" value="Generar un oficio automático informando la fecha y hora de la audiencia de continuación cuando el implicado no se presentó a la actual audiencia. "/>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="UseCase"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_77A088A1_7CC6_450f_AF9B_F8029F58B98A"/>
+								<UML:TaggedValue tag="date_created" value="2017-02-17 09:22:11"/>
+								<UML:TaggedValue tag="date_modified" value="2017-03-27 23:38:48"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="006-Agendamiento de audiencias"/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="dev"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Validated"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="655"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:UseCase>
+						<UML:Dependency client="EAID_B0EFBC1A_CFEB_4e01_AB9F_C8631572714C" supplier="EAID_9CF98D85_2F0F_4755_8F85_77E8F2727649" xmi.id="EAID_931153C7_B337_4fef_B284_5D6CFEB847F0" visibility="public">
+							<UML:ModelElement.stereotype>
+								<UML:Stereotype name="invokes"/>
+							</UML:ModelElement.stereotype>
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="Dependency"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="stereotype" value="invokes"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="conditional" value=" &#xA;«invokes»"/>
+								<UML:TaggedValue tag="ea_localid" value="995"/>
+								<UML:TaggedValue tag="ea_sourceName" value="002-CU049.2 Audiencia de impugnación"/>
+								<UML:TaggedValue tag="ea_targetName" value="003-CU059.2 Generar oficio automático para comunicar la programación de la audiencia."/>
+								<UML:TaggedValue tag="ea_sourceType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="832"/>
+								<UML:TaggedValue tag="ea_targetID" value="655"/>
+								<UML:TaggedValue tag="src_visibility" value="Public"/>
+								<UML:TaggedValue tag="src_aggregation" value="0"/>
+								<UML:TaggedValue tag="src_isOrdered" value="false"/>
+								<UML:TaggedValue tag="src_targetScope" value="instance"/>
+								<UML:TaggedValue tag="src_changeable" value="none"/>
+								<UML:TaggedValue tag="src_isNavigable" value="false"/>
+								<UML:TaggedValue tag="src_containment" value="Unspecified"/>
+								<UML:TaggedValue tag="src_style" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+								<UML:TaggedValue tag="dst_visibility" value="Public"/>
+								<UML:TaggedValue tag="dst_aggregation" value="0"/>
+								<UML:TaggedValue tag="dst_isOrdered" value="false"/>
+								<UML:TaggedValue tag="dst_targetScope" value="instance"/>
+								<UML:TaggedValue tag="dst_changeable" value="none"/>
+								<UML:TaggedValue tag="dst_isNavigable" value="true"/>
+								<UML:TaggedValue tag="dst_containment" value="Unspecified"/>
+								<UML:TaggedValue tag="dst_style" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+								<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={C8C1F967-4FF7-44fd-9A93-18F70EB754AC}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=invokes;GUID={1777081C-D04F-4576-98D2-AEE6A6388DBB};@ENDSTEREO;$DES;$CLT={931153C7-B337-4fef-B284-5D6CFEB847F0}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+								<UML:TaggedValue tag="mb" value=" &#xA;«invokes»"/>
+							</UML:ModelElement.taggedValue>
+						</UML:Dependency>
+						<UML:Collaboration xmi.id="EAID_77A088A1_7CC6_450f_AF9B_F8029F58B98A_Collaboration" name="Collaborations">
+							<UML:Namespace.ownedElement>
+								<UML:ClassifierRole name="Valores por defecto para rangos de tiempo de audiencias de continuación" xmi.id="EAID_B912F74F_D558_401b_8945_A11F0D98875E" visibility="public" base="EAID_11111111_5487_4080_A7F4_41526CB0AA00">
+									<UML:ModelElement.stereotype>
+										<UML:Stereotype name="BusinessRequirement"/>
+									</UML:ModelElement.stereotype>
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="documentation" value="Para audiencia en que se comparece con abogado o practica de pruebas sobre inmovilización de vehículo (día 0 al 15 por defecto).&#xA;&#xA;Para audiencia de práctica de pruebas o notificación de fallo (día 0 al 20 por defecto).&#xA;&#xA;Cuando no encuentre cupo dentro del rango de fecha debe habilitar fechas adicionales después de la fecha límite en cualquier horario (día 15 al 20 por defecto).&#xA;"/>
+										<UML:TaggedValue tag="isAbstract" value="false"/>
+										<UML:TaggedValue tag="isSpecification" value="false"/>
+										<UML:TaggedValue tag="ea_stype" value="Requirement"/>
+										<UML:TaggedValue tag="ea_ntype" value="0"/>
+										<UML:TaggedValue tag="version" value="1.0"/>
+										<UML:TaggedValue tag="isActive" value="false"/>
+										<UML:TaggedValue tag="package" value="EAPK_77A088A1_7CC6_450f_AF9B_F8029F58B98A"/>
+										<UML:TaggedValue tag="date_created" value="2017-03-27 17:32:07"/>
+										<UML:TaggedValue tag="date_modified" value="2017-03-27 17:33:01"/>
+										<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+										<UML:TaggedValue tag="tagged" value="0"/>
+										<UML:TaggedValue tag="package_name" value="006-Agendamiento de audiencias"/>
+										<UML:TaggedValue tag="phase" value="1.0"/>
+										<UML:TaggedValue tag="author" value="dev"/>
+										<UML:TaggedValue tag="complexity" value="1"/>
+										<UML:TaggedValue tag="status" value="Proposed"/>
+										<UML:TaggedValue tag="stereotype" value="BusinessRequirement"/>
+										<UML:TaggedValue tag="tpos" value="0"/>
+										<UML:TaggedValue tag="ea_localid" value="656"/>
+										<UML:TaggedValue tag="ea_eleType" value="element"/>
+										<UML:TaggedValue tag="difficulty" value="Medium"/>
+										<UML:TaggedValue tag="priority" value="Medium"/>
+										<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+										<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={8A49AEE0-633B-4cb7-848D-1514D4A4A690}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=BusinessRequirement;FQName=EAREQ::BusinessRequirement;@ENDSTEREO;$DES;$CLT={B912F74F-D558-401b-8945-A11F0D98875E}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+									</UML:ModelElement.taggedValue>
+								</UML:ClassifierRole>
+							</UML:Namespace.ownedElement>
+							<UML:Collaboration.interaction/>
+						</UML:Collaboration>
+					</UML:Namespace.ownedElement>
+				</UML:Package>
+			</UML:Namespace.ownedElement>
+		</UML:Model>
+		<UML:TaggedValue tag="constraint" xmi.id="EAID_419A3305_DA98_adda_9BF8_FFA0158B0FB0" value="&lt;memo&gt;" modelElement="EAID_B912F74F_D558_401b_8945_A11F0D98875E"/>
+		<UML:TaggedValue tag="context" xmi.id="EAID_CFB9FD65_95D8_1595_94E8_89B411D928B6" value="&lt;memo&gt;" modelElement="EAID_B912F74F_D558_401b_8945_A11F0D98875E"/>
+		<UML:TaggedValue tag="objective" xmi.id="EAID_C59F911B_124E_4312_91F8_8A728C28DF84" value="&lt;memo&gt;" modelElement="EAID_B912F74F_D558_401b_8945_A11F0D98875E"/>
+		<UML:TaggedValue tag="priority" xmi.id="EAID_A142CBA2_7275_1172_BD1B_60878136972F" value="#NOTES#Values: High,Medium,Low,Essential,Conditional,Optional&#xA;" modelElement="EAID_B912F74F_D558_401b_8945_A11F0D98875E"/>
+		<UML:TaggedValue tag="rules" xmi.id="EAID_0850EAAB_CA5E_f5ca_B178_5E881C1B80D9" value="&lt;memo&gt;" modelElement="EAID_B912F74F_D558_401b_8945_A11F0D98875E"/>
+		<UML:TaggedValue tag="scope" xmi.id="EAID_0859327A_122D_fe12_8DD0_C4A7F40D3726" value="&lt;memo&gt;" modelElement="EAID_B912F74F_D558_401b_8945_A11F0D98875E"/>
+		<UML:Diagram name="Agendamiento de audiencias" xmi.id="EAID_2184E63F_9EB2_4812_9538_F49598FAEA58" diagramType="UseCaseDiagram" owner="EAPK_77A088A1_7CC6_450f_AF9B_F8029F58B98A" toolName="Enterprise Architect 2.5">
+			<UML:ModelElement.taggedValue>
+				<UML:TaggedValue tag="version" value="1.0"/>
+				<UML:TaggedValue tag="author" value="dev"/>
+				<UML:TaggedValue tag="created_date" value="2017-02-17 09:08:51"/>
+				<UML:TaggedValue tag="modified_date" value="2017-03-27 17:44:56"/>
+				<UML:TaggedValue tag="package" value="EAPK_77A088A1_7CC6_450f_AF9B_F8029F58B98A"/>
+				<UML:TaggedValue tag="type" value="Use Case"/>
+				<UML:TaggedValue tag="swimlanes" value="locked=false;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;cls=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;"/>
+				<UML:TaggedValue tag="matrixitems" value="locked=false;matrixactive=false;swimlanesactive=true;kanbanactive=false;width=1;clrLine=0;"/>
+				<UML:TaggedValue tag="ea_localid" value="29"/>
+				<UML:TaggedValue tag="EAStyle" value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=1;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=1;PPgs.cy=1;DocSize.cx=850;DocSize.cy=1098;ShowDetails=0;Orientation=P;Zoom=100;ShowTags=0;OpParams=1;VisibleAttributeDetail=0;ShowOpRetType=1;ShowIcons=1;CollabNums=0;HideProps=0;ShowReqs=0;ShowCons=0;PaperSize=1;HideParents=0;UseAlias=0;HideAtts=0;HideOps=0;HideStereo=0;HideElemStereo=0;ShowTests=0;ShowMaint=0;ConnectorNotation=UML 2.1;ExplicitNavigability=0;ShowShape=1;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;ShowNotes=0;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;"/>
+				<UML:TaggedValue tag="styleex" value="SaveTag=675024B4;ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=1;MatrixActive=0;SwimlanesActive=1;KanbanActive=0;MatrixLineWidth=1;MatrixLineClr=0;MatrixLocked=0;TConnectorNotation=UML 2.1;TExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;ProfileData=;MDGDgm=;STBLDgm=;ShowNotes=0;VisibleAttributeDetail=0;ShowOpRetType=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;SuppressedCompartments=;Theme=:119;"/>
+			</UML:ModelElement.taggedValue>
+			<UML:Diagram.element>
+				<UML:DiagramElement geometry="Left=75;Top=197;Right=120;Bottom=287;" subject="EAID_31F08BCE_6C60_4298_89B5_6A3A1517318A" seqno="1" style="DUID=42085357;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;"/>
+				<UML:DiagramElement geometry="Left=80;Top=42;Right=125;Bottom=132;" subject="EAID_521906A2_7546_4894_ABAE_AFA9E034D2BA" seqno="2" style="DUID=0BD6FC73;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;"/>
+				<UML:DiagramElement geometry="Left=391;Top=155;Right=496;Bottom=225;" subject="EAID_9CF98D85_2F0F_4755_8F85_77E8F2727649" seqno="3" style="DUID=D15382E7;"/>
+				<UML:DiagramElement geometry="Left=211;Top=224;Right=316;Bottom=294;" subject="EAID_5BBF8352_12C7_4e10_B1B4_BA31171D6E51" seqno="4" style="DUID=EE351355;"/>
+				<UML:DiagramElement geometry="Left=208;Top=58;Right=355;Bottom=156;" subject="EAID_8E2C64EF_F9D0_47b0_B3D6_BE6F1D0A18B2" seqno="5" style="DUID=AF03A95D;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_4CC9EFF9_2F9F_4b34_AF22_E035770A74DC" style="Mode=3;EOID=AF03A95D;SOID=0BD6FC73;Color=-1;LWidth=0;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=-2;SY=5;EX=-2;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_C50383B2_F96A_47c5_BDFF_81FDFB2624D6" style="Mode=3;EOID=EE351355;SOID=42085357;Color=-1;LWidth=0;Hidden=0;"/>
+			</UML:Diagram.element>
+		</UML:Diagram>
+		<UML:Diagram name="Reglas de negocio" xmi.id="EAID_CF2A6B10_3EB4_4bfa_8BB9_7D03C273BF0E" diagramType="CustomDiagram" owner="EAPK_77A088A1_7CC6_450f_AF9B_F8029F58B98A" toolName="Enterprise Architect 2.5">
+			<UML:ModelElement.taggedValue>
+				<UML:TaggedValue tag="version" value="1.0"/>
+				<UML:TaggedValue tag="author" value="dev"/>
+				<UML:TaggedValue tag="created_date" value="2017-03-27 17:31:57"/>
+				<UML:TaggedValue tag="modified_date" value="2017-03-27 17:33:11"/>
+				<UML:TaggedValue tag="package" value="EAPK_77A088A1_7CC6_450f_AF9B_F8029F58B98A"/>
+				<UML:TaggedValue tag="type" value="Custom"/>
+				<UML:TaggedValue tag="swimlanes" value="locked=false;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;cls=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;"/>
+				<UML:TaggedValue tag="matrixitems" value="locked=false;matrixactive=false;swimlanesactive=true;kanbanactive=false;width=1;clrLine=0;"/>
+				<UML:TaggedValue tag="ea_localid" value="30"/>
+				<UML:TaggedValue tag="EAStyle" value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=1;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=1;PPgs.cy=1;DocSize.cx=850;DocSize.cy=1098;ShowDetails=0;Orientation=P;Zoom=100;ShowTags=0;OpParams=1;VisibleAttributeDetail=0;ShowOpRetType=1;ShowIcons=1;CollabNums=0;HideProps=0;ShowReqs=0;ShowCons=0;PaperSize=1;HideParents=0;UseAlias=0;HideAtts=0;HideOps=0;HideStereo=0;HideElemStereo=0;ShowTests=0;ShowMaint=0;ConnectorNotation=UML 2.1;ExplicitNavigability=0;ShowShape=1;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;ShowNotes=0;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;"/>
+				<UML:TaggedValue tag="styleex" value="SaveTag=A9449ED7;ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=1;MatrixActive=0;SwimlanesActive=1;KanbanActive=0;MatrixLineWidth=1;MatrixLineClr=0;MatrixLocked=0;TConnectorNotation=UML 2.1;TExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;ProfileData=;MDGDgm=Extended::Requirements;STBLDgm=;ShowNotes=0;VisibleAttributeDetail=0;ShowOpRetType=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;SuppressedCompartments=;Theme=:119;"/>
+			</UML:ModelElement.taggedValue>
+			<UML:Diagram.element>
+				<UML:DiagramElement geometry="Left=374;Top=79;Right=514;Bottom=151;" subject="EAID_B912F74F_D558_401b_8945_A11F0D98875E" seqno="1" style="DUID=780ACFF1;HideIcon=0;"/>
+				<UML:DiagramElement geometry="Left=118;Top=61;Right=284;Bottom=172;" subject="EAID_8E2C64EF_F9D0_47b0_B3D6_BE6F1D0A18B2" seqno="2" style="DUID=097CC793;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_9945D952_6B41_425c_AEC3_49175DEAC6B8" style="Mode=3;EOID=780ACFF1;SOID=097CC793;Color=-1;LWidth=0;Hidden=0;"/>
+			</UML:Diagram.element>
+		</UML:Diagram>
+	</XMI.content>
+	<XMI.difference/>
+	<XMI.extensions xmi.extender="Enterprise Architect 2.5">
+		<EAModel.scenario>
+			<EAScenario name="Basic Path" type="Basic Path" weight="0,00" subject="EAID_5BBF8352_12C7_4e10_B1B4_BA31171D6E51" xmi.id="EAID_10E4C467_AF32_467d_80F0_B186CDAC3CF2">
+				<EAScenarioContent>
+					<path>
+						<step name="El sistema muestra el calendario con fechas y horas disponibles para audiencias según el tipo de audiencia y el horario de atención que tiene el abogado asociado al caso" guid="{0FE037CB-ECDF-4fad-9062-D88BDEBFA7DB}" level="1" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="El usuario selecciona la fecha y la hora para la audiencia y pulsa &quot;Continuar&quot;" guid="{18EE58D8-11B5-42eb-A4DB-8D3758A574FE}" level="2" uses="" useslist="" result="" state="" trigger="1" link=""/>
+						<step name="El sistema guarda la información de la programación para la audiencia" guid="{C84E56F8-D308-4b2f-B19C-FE74A00B6085}" level="3" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<context>
+							<item oldname="AT4.1.2 Abogado de audiencias contravencionales" guid="{31F08BCE-6C60-4298-89B5-6A3A1517318A}"/>
+							<item oldname="CU049.2 Audiencia de impugnación" guid="{B0EFBC1A-CFEB-4e01-AB9F-C8631572714C}"/>
+							<item oldname="Programar audiencia de continuación" guid="{B6A53124-A33D-431f-9743-F2C748FE093E}"/>
+						</context>
+					</path>
+				</EAScenarioContent>
+			</EAScenario>
+			<EAScenario name="Basic Path" type="Basic Path" weight="0,00" subject="EAID_8E2C64EF_F9D0_47b0_B3D6_BE6F1D0A18B2" xmi.id="EAID_E37A0B00_890E_4b4a_B0C6_7D1698D388D9">
+				<EAScenarioContent>
+					<path>
+						<step name="El usuario ingresa en la opción Parametrizar los periodos de tiempo dentro de los cuales se pueden hacer audiencias de continuación." guid="{F81123C8-002A-4474-91D7-CD05641F1A10}" level="1" uses="" useslist="" result="" state="" trigger="1" link=""/>
+						<step name="El sistema muestra una pantalla en la que le solicita al usuario ingresar los rangos de días para cada tipo de audiencia según " guid="{B57E7A72-C72F-470e-9B7E-F4A5C4E5FBC6}" level="2" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="El usuario ingresa la información al formulario y pulsa el botón guardar." guid="{C9B2E2FB-E46F-4283-BF59-D4AB7CA50F31}" level="3" uses="" useslist="" result="" state="" trigger="1" link=""/>
+						<step name="El sistema valida y guarda la información suministrada. En caso de error muestra los mensajes en pantalla de lo ocurrido" guid="{DC7894C0-DC0A-4b39-9ABB-5D452032B93C}" level="4" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<context>
+							<item oldname="AT4.1.1 Subdirector de contravenciones" guid="{521906A2-7546-4894-ABAE-AFA9E034D2BA}"/>
+							<item oldname="Parametrizar los periodos de tiempo dentro de los cuales se pueden hacer audiencias de continuación" guid="{07600813-AA06-453d-9828-D321E73F87DF}"/>
+						</context>
+					</path>
+				</EAScenarioContent>
+			</EAScenario>
+			<EAScenario name="Basic Path" type="Basic Path" weight="0,00" subject="EAID_9CF98D85_2F0F_4755_8F85_77E8F2727649" xmi.id="EAID_9C0C7447_6651_4076_A6C0_F399F67444D6">
+				<EAScenarioContent>
+					<path>
+						<step name="El sistema carga la fecha y hora de la audiencia programada." guid="{7873E1E0-169E-4eb0-A739-8D649E84C490}" level="1" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="El sistema identifica la plantilla para generar el oficio automático de citación a la audiencia de continuación." guid="{C61F0D36-62E0-4e98-B622-1D5DF5B95EDE}" level="2" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="CUT-2 (Caso de uso crear oficio automático)." guid="{3CAEB64A-AE8C-4814-BE12-F3294144F13D}" level="3" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="El sistema registra el documento de oficio automático de citación a la audiencia de continuación. " guid="{2F29246A-644C-4adf-B1AB-642CD10ADC8E}" level="4" uses="" useslist="" result="Crear el del documento de oficio automático de citación a la audiencia de continuación." state="" trigger="0" link=""/>
+						<step name="El sistema genera el proceso de comunicación al implicado en el proceso." guid="{FE4C3875-13E1-4784-AA7D-92F71ADF6EAA}" level="5" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<context/>
+					</path>
+				</EAScenarioContent>
+			</EAScenario>
+		</EAModel.scenario>
+		<EAStub xmi.id="EAID_B0EFBC1A_CFEB_4e01_AB9F_C8631572714C" name="002-CU049.2 Audiencia de impugnación" UMLType="UseCase"/>
+		<EAStub xmi.id="EAID_31F08BCE_6C60_4298_89B5_6A3A1517318A" name="AT4.1.2 Abogado de audiencias contravencionales" UMLType="Actor"/>
+		<EAStub xmi.id="EAID_521906A2_7546_4894_ABAE_AFA9E034D2BA" name="AT4.1.1 Subdirector de contravenciones" UMLType="Actor"/>
+	</XMI.extensions>
+</XMI>

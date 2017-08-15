@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:ssbp="www.sparxsystems.com.au/bpmn20" id="EAPK_C4942150_AF90_4a2c_8641_13199B29FD6D" name="Perdida Fuerza Ejecutoria" targetNamespace="www.sparxsystems.com.au/bpmn20" exporter="Camunda Modeler" exporterVersion="1.8.0">
+  <bpmn:collaboration id="Collaboration_0dkujq9">
+    <bpmn:participant id="Participant_1wxj05y" name="SDM" processRef="Process_1dtfy4z" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_1dtfy4z" name="Perdida fuerza ejecutoria" isExecutable="true">
+    <bpmn:laneSet>
+      <bpmn:lane id="Lane_0ml7fsy" name="AT4.3.1 (Abogado de dependencia)">
+        <bpmn:flowNodeRef>Task_0xf4e09</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_1nnampr</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>StartEvent_17248td</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EndEvent_0out1ld</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="StartEvent_17248td" name="Inicio">
+      <bpmn:outgoing>SequenceFlow_1le70zn</bpmn:outgoing>
+      <bpmn:messageEventDefinition messageRef="Message_0aituvv" />
+    </bpmn:startEvent>
+    <bpmn:callActivity id="Task_0xf4e09" name="Acto Decretar perdida fuerza ejecutoria" calledElement="Acto administrativo">
+      <bpmn:incoming>SequenceFlow_1le70zn</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1s109nt</bpmn:outgoing>
+    </bpmn:callActivity>
+    <bpmn:userTask id="Task_1nnampr" name="Registrar financiera" camunda:assignee="Financiero">
+      <bpmn:incoming>SequenceFlow_1s109nt</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0bonbkf</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:endEvent id="EndEvent_0out1ld">
+      <bpmn:incoming>SequenceFlow_0bonbkf</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_1le70zn" sourceRef="StartEvent_17248td" targetRef="Task_0xf4e09" />
+    <bpmn:sequenceFlow id="SequenceFlow_1s109nt" sourceRef="Task_0xf4e09" targetRef="Task_1nnampr" />
+    <bpmn:sequenceFlow id="SequenceFlow_0bonbkf" sourceRef="Task_1nnampr" targetRef="EndEvent_0out1ld" />
+  </bpmn:process>
+  <bpmn:message id="Message_0aituvv" name="Message_3urv6i3" />
+  <bpmndi:BPMNDiagram id="EAID_F3B418B8_C704_49b2_9664_2FCD3C5F0D5D" name="Perdida Fuerza Ejecutoria">
+    <bpmndi:BPMNPlane id="EAID_PL000000_C704_49b2_9664_2FCD3C5F0D5D" bpmnElement="Collaboration_0dkujq9">
+      <bpmndi:BPMNShape id="Participant_1wxj05y_di" bpmnElement="Participant_1wxj05y">
+        <dc:Bounds x="8" y="6" width="564" height="255" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_0ml7fsy_di" bpmnElement="Lane_0ml7fsy">
+        <dc:Bounds x="38" y="6" width="534" height="255" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="StartEvent_0mjiha0_di" bpmnElement="StartEvent_17248td">
+        <dc:Bounds x="82" y="117" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="87" y="155" width="26" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_1le70zn_di" bpmnElement="SequenceFlow_1le70zn">
+        <di:waypoint xsi:type="dc:Point" x="118" y="135" />
+        <di:waypoint xsi:type="dc:Point" x="170" y="135" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="144" y="113.5" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="CallActivity_1i3zx3g_di" bpmnElement="Task_0xf4e09">
+        <dc:Bounds x="170" y="95" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_1s109nt_di" bpmnElement="SequenceFlow_1s109nt">
+        <di:waypoint xsi:type="dc:Point" x="270" y="135" />
+        <di:waypoint xsi:type="dc:Point" x="323" y="135" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="296.5" y="113.5" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="UserTask_16hifm5_di" bpmnElement="Task_1nnampr">
+        <dc:Bounds x="323" y="95" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_0out1ld_di" bpmnElement="EndEvent_0out1ld">
+        <dc:Bounds x="474.73072060682676" y="117" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="492.73072060682676" y="156" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0bonbkf_di" bpmnElement="SequenceFlow_0bonbkf">
+        <di:waypoint xsi:type="dc:Point" x="423" y="135" />
+        <di:waypoint xsi:type="dc:Point" x="475" y="135" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="449" y="113" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+    <bpmndi:BPMNLabelStyle id="EAID_LS000000_C704_49b2_9664_2FCD3C5F0D5D">
+      <dc:Font name="Calibri" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+    </bpmndi:BPMNLabelStyle>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

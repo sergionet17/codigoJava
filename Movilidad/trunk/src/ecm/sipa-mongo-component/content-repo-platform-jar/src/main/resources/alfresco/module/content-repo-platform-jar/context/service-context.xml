@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+    <bean id="databaseProperties" class="co.gov.movilidadbogota.cmis.database.DatabaseProperties">
+        <property name="user" value="${content.mongo.user}"/>
+        <property name="password" value="${content.mongo.password}"/>
+        <property name="hostname" value="${content.mongo.hostname}"/>
+        <property name="databaseName" value="${content.mongo.databaseName}"/>
+    </bean>
+    <bean id="co.gov.movilidadbogota.cmis.database.databaseAdapter"
+          class="co.gov.movilidadbogota.cmis.database.MongoDatabaseAdapter" >
+            <property name="databaseProperties" ref="databaseProperties"/>
+    </bean>
+    <bean id="fileContentStore" class="co.gov.movilidadbogota.cmis.database.DbContentStore">
+        <property name="databaseAdapter" ref="co.gov.movilidadbogota.cmis.database.databaseAdapter" />
+    </bean>
+</beans>

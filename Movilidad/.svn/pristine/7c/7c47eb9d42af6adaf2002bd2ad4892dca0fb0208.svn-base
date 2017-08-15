@@ -1,0 +1,1071 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<XMI xmi.version="1.1" xmlns:UML="omg.org/UML1.3">
+	<XMI.header>
+		<XMI.documentation>
+			<XMI.exporter>Enterprise Architect</XMI.exporter>
+			<XMI.exporterVersion>2.5</XMI.exporterVersion>
+		</XMI.documentation>
+	</XMI.header>
+	<XMI.content>
+		<UML:Model name="EA Model" xmi.id="MX_EAID_546B7C6D_D3AF_4fa6_8F8A_E92642B5D829">
+			<UML:Namespace.ownedElement>
+				<UML:Class name="EARootClass" xmi.id="EAID_11111111_5487_4080_A7F4_41526CB0AA00" isRoot="true" isLeaf="false" isAbstract="false"/>
+				<UML:Package name="007-Reincidencia en comparendos" xmi.id="EAPK_546B7C6D_D3AF_4fa6_8F8A_E92642B5D829" isRoot="false" isLeaf="false" isAbstract="false" visibility="public">
+					<UML:ModelElement.taggedValue>
+						<UML:TaggedValue tag="parent" value="EAPK_212FFB6B_8338_48a8_B093_5D0DBEDD150F"/>
+						<UML:TaggedValue tag="created" value="2017-02-17 09:41:50"/>
+						<UML:TaggedValue tag="modified" value="2017-04-25 16:04:28"/>
+						<UML:TaggedValue tag="iscontrolled" value="TRUE"/>
+						<UML:TaggedValue tag="xmlpath" value="ucm-contravenciones-reincidencia-en-comparendos.xml"/>
+						<UML:TaggedValue tag="lastloaddate" value="2017-04-25 16:04:29"/>
+						<UML:TaggedValue tag="lastsavedate" value="2017-02-18 14:04:24"/>
+						<UML:TaggedValue tag="version" value="1.0"/>
+						<UML:TaggedValue tag="isprotected" value="FALSE"/>
+						<UML:TaggedValue tag="usedtd" value="FALSE"/>
+						<UML:TaggedValue tag="xmiver" value="Enterprise Architect XMI/UML 1.3"/>
+						<UML:TaggedValue tag="logxml" value="FALSE"/>
+						<UML:TaggedValue tag="packageFlags" value="Recurse=0;VCCFG=secmov-sipa;CRC=0;"/>
+						<UML:TaggedValue tag="batchsave" value="0"/>
+						<UML:TaggedValue tag="batchload" value="0"/>
+						<UML:TaggedValue tag="phase" value="1.0"/>
+						<UML:TaggedValue tag="status" value="Proposed"/>
+						<UML:TaggedValue tag="author" value="dev"/>
+						<UML:TaggedValue tag="complexity" value="1"/>
+						<UML:TaggedValue tag="ea_stype" value="Public"/>
+						<UML:TaggedValue tag="tpos" value="0"/>
+						<UML:TaggedValue tag="gentype" value="Java"/>
+					</UML:ModelElement.taggedValue>
+					<UML:Namespace.ownedElement>
+						<UML:UseCase name="001-CU060.1 Identificar reincidencia " xmi.id="EAID_2A21C440_09C5_4411_94E7_0EB3770586E0" visibility="public" namespace="EAPK_546B7C6D_D3AF_4fa6_8F8A_E92642B5D829" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="documentation" value="Se declara reincidencia cuando se han creado constancia ejecutoria de fallo contraventor o se ha recibido pago de al menos dos comparendos dentro del periodo de 6 meses.&#xA;&#xA;Se indica reincidencia cuando se identifica que hay 2 comparendos impuestos en un periodo menor a 6 meses y se notifica al implicado"/>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="UseCase"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_546B7C6D_D3AF_4fa6_8F8A_E92642B5D829"/>
+								<UML:TaggedValue tag="date_created" value="2017-02-17 09:42:19"/>
+								<UML:TaggedValue tag="date_modified" value="2017-03-27 23:39:58"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="007-Reincidencia en comparendos"/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="dev"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Validated"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="5621"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:UseCase>
+						<UML:Dependency client="EAID_2A21C440_09C5_4411_94E7_0EB3770586E0" supplier="EAID_E6FE6233_2EAA_4ba4_AB4C_173062514C5F" xmi.id="EAID_0F254787_A6F0_470a_863B_9052E906D86C" visibility="public">
+							<UML:ModelElement.stereotype>
+								<UML:Stereotype name="invokes"/>
+							</UML:ModelElement.stereotype>
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="Dependency"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="stereotype" value="invokes"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="conditional" value=" &#xA;«invokes»"/>
+								<UML:TaggedValue tag="ea_localid" value="2904"/>
+								<UML:TaggedValue tag="ea_sourceName" value="001-CU060.1 Identificar reincidencia "/>
+								<UML:TaggedValue tag="ea_targetName" value="002-CU070.2 Suspender licencia."/>
+								<UML:TaggedValue tag="ea_sourceType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="5621"/>
+								<UML:TaggedValue tag="ea_targetID" value="278"/>
+								<UML:TaggedValue tag="src_visibility" value="Public"/>
+								<UML:TaggedValue tag="src_aggregation" value="0"/>
+								<UML:TaggedValue tag="src_isOrdered" value="false"/>
+								<UML:TaggedValue tag="src_targetScope" value="instance"/>
+								<UML:TaggedValue tag="src_changeable" value="none"/>
+								<UML:TaggedValue tag="src_isNavigable" value="false"/>
+								<UML:TaggedValue tag="src_containment" value="Unspecified"/>
+								<UML:TaggedValue tag="src_style" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+								<UML:TaggedValue tag="dst_visibility" value="Public"/>
+								<UML:TaggedValue tag="dst_aggregation" value="0"/>
+								<UML:TaggedValue tag="dst_isOrdered" value="false"/>
+								<UML:TaggedValue tag="dst_targetScope" value="instance"/>
+								<UML:TaggedValue tag="dst_changeable" value="none"/>
+								<UML:TaggedValue tag="dst_isNavigable" value="true"/>
+								<UML:TaggedValue tag="dst_containment" value="Unspecified"/>
+								<UML:TaggedValue tag="dst_style" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+								<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={6F66DE2D-599D-4387-8309-298DA73D958E}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=invokes;GUID={1777081C-D04F-4576-98D2-AEE6A6388DBB};@ENDSTEREO;$DES;$CLT={0F254787-A6F0-470a-863B-9052E906D86C}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+								<UML:TaggedValue tag="mb" value=" &#xA;«invokes»"/>
+							</UML:ModelElement.taggedValue>
+						</UML:Dependency>
+						<UML:Dependency client="EAID_2A21C440_09C5_4411_94E7_0EB3770586E0" supplier="EAID_E9A340E2_D508_49e3_9385_806A19ADF90C" xmi.id="EAID_990B328F_4641_4704_AEDD_F6598B737F6E" visibility="public">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="Dependency"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="2903"/>
+								<UML:TaggedValue tag="ea_sourceName" value="001-CU060.1 Identificar reincidencia "/>
+								<UML:TaggedValue tag="ea_targetName" value="Condiciones de reincidencia"/>
+								<UML:TaggedValue tag="ea_sourceType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_targetType" value="Requirement"/>
+								<UML:TaggedValue tag="ea_sourceID" value="5621"/>
+								<UML:TaggedValue tag="ea_targetID" value="5630"/>
+								<UML:TaggedValue tag="src_visibility" value="Public"/>
+								<UML:TaggedValue tag="src_aggregation" value="0"/>
+								<UML:TaggedValue tag="src_isOrdered" value="false"/>
+								<UML:TaggedValue tag="src_targetScope" value="instance"/>
+								<UML:TaggedValue tag="src_changeable" value="none"/>
+								<UML:TaggedValue tag="src_isNavigable" value="false"/>
+								<UML:TaggedValue tag="src_containment" value="Unspecified"/>
+								<UML:TaggedValue tag="src_style" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+								<UML:TaggedValue tag="dst_visibility" value="Public"/>
+								<UML:TaggedValue tag="dst_aggregation" value="0"/>
+								<UML:TaggedValue tag="dst_isOrdered" value="false"/>
+								<UML:TaggedValue tag="dst_targetScope" value="instance"/>
+								<UML:TaggedValue tag="dst_changeable" value="none"/>
+								<UML:TaggedValue tag="dst_isNavigable" value="true"/>
+								<UML:TaggedValue tag="dst_containment" value="Unspecified"/>
+								<UML:TaggedValue tag="dst_style" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+								<UML:TaggedValue tag="privatedata5" value="SX=0;SY=0;EX=0;EY=0;EDGE=2;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+							</UML:ModelElement.taggedValue>
+						</UML:Dependency>
+						<UML:Dependency client="EAID_2A21C440_09C5_4411_94E7_0EB3770586E0" supplier="EAID_AEA89175_EAEA_432e_A2BE_C71036BF2ECD" xmi.id="EAID_DF452933_7194_4b72_B78D_376BFB543D9D" visibility="public">
+							<UML:ModelElement.stereotype>
+								<UML:Stereotype name="invokes"/>
+							</UML:ModelElement.stereotype>
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="Dependency"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="stereotype" value="invokes"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="conditional" value=" &#xA;«invokes»"/>
+								<UML:TaggedValue tag="ea_localid" value="2902"/>
+								<UML:TaggedValue tag="ea_sourceName" value="001-CU060.1 Identificar reincidencia "/>
+								<UML:TaggedValue tag="ea_targetName" value="003-CU062.1 Generar el acto administrativo que declara reincidencia."/>
+								<UML:TaggedValue tag="ea_sourceType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="5621"/>
+								<UML:TaggedValue tag="ea_targetID" value="5627"/>
+								<UML:TaggedValue tag="src_visibility" value="Public"/>
+								<UML:TaggedValue tag="src_aggregation" value="0"/>
+								<UML:TaggedValue tag="src_isOrdered" value="false"/>
+								<UML:TaggedValue tag="src_targetScope" value="instance"/>
+								<UML:TaggedValue tag="src_changeable" value="none"/>
+								<UML:TaggedValue tag="src_isNavigable" value="false"/>
+								<UML:TaggedValue tag="src_containment" value="Unspecified"/>
+								<UML:TaggedValue tag="src_style" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+								<UML:TaggedValue tag="dst_visibility" value="Public"/>
+								<UML:TaggedValue tag="dst_aggregation" value="0"/>
+								<UML:TaggedValue tag="dst_isOrdered" value="false"/>
+								<UML:TaggedValue tag="dst_targetScope" value="instance"/>
+								<UML:TaggedValue tag="dst_changeable" value="none"/>
+								<UML:TaggedValue tag="dst_isNavigable" value="true"/>
+								<UML:TaggedValue tag="dst_containment" value="Unspecified"/>
+								<UML:TaggedValue tag="dst_style" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+								<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={6ACE9671-CF94-4e41-A5EC-82C7A490333B}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=invokes;GUID={66F75B7B-9027-478c-8659-35AD5C40F8FA};@ENDSTEREO;$DES;$CLT={DF452933-7194-4b72-B78D-376BFB543D9D}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+								<UML:TaggedValue tag="mb" value=" &#xA;«invokes»"/>
+							</UML:ModelElement.taggedValue>
+						</UML:Dependency>
+						<UML:Dependency client="EAID_2A21C440_09C5_4411_94E7_0EB3770586E0" supplier="EAID_67989429_FFC7_4d73_B456_797BDF49CA2B" xmi.id="EAID_E23681E6_B065_4f63_A862_E0040166D906" visibility="public">
+							<UML:ModelElement.stereotype>
+								<UML:Stereotype name="invokes"/>
+							</UML:ModelElement.stereotype>
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="Dependency"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="stereotype" value="invokes"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="conditional" value=" &#xA;«invokes»"/>
+								<UML:TaggedValue tag="ea_localid" value="2901"/>
+								<UML:TaggedValue tag="ea_sourceName" value="001-CU060.1 Identificar reincidencia "/>
+								<UML:TaggedValue tag="ea_targetName" value="008-CU070.1 Crear constancia de ejecutoria de reincidencia."/>
+								<UML:TaggedValue tag="ea_sourceType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="5621"/>
+								<UML:TaggedValue tag="ea_targetID" value="5626"/>
+								<UML:TaggedValue tag="src_visibility" value="Public"/>
+								<UML:TaggedValue tag="src_aggregation" value="0"/>
+								<UML:TaggedValue tag="src_isOrdered" value="false"/>
+								<UML:TaggedValue tag="src_targetScope" value="instance"/>
+								<UML:TaggedValue tag="src_changeable" value="none"/>
+								<UML:TaggedValue tag="src_isNavigable" value="false"/>
+								<UML:TaggedValue tag="src_containment" value="Unspecified"/>
+								<UML:TaggedValue tag="src_style" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+								<UML:TaggedValue tag="dst_visibility" value="Public"/>
+								<UML:TaggedValue tag="dst_aggregation" value="0"/>
+								<UML:TaggedValue tag="dst_isOrdered" value="false"/>
+								<UML:TaggedValue tag="dst_targetScope" value="instance"/>
+								<UML:TaggedValue tag="dst_changeable" value="none"/>
+								<UML:TaggedValue tag="dst_isNavigable" value="true"/>
+								<UML:TaggedValue tag="dst_containment" value="Unspecified"/>
+								<UML:TaggedValue tag="dst_style" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+								<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={6CC0A504-FDC3-479f-9E74-CE99250CAB0A}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=invokes;GUID={1777081C-D04F-4576-98D2-AEE6A6388DBB};@ENDSTEREO;$DES;$CLT={E23681E6-B065-4f63-A862-E0040166D906}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+								<UML:TaggedValue tag="mb" value=" &#xA;«invokes»"/>
+							</UML:ModelElement.taggedValue>
+						</UML:Dependency>
+						<UML:Dependency client="EAID_2A21C440_09C5_4411_94E7_0EB3770586E0" supplier="EAID_B0F241C0_F218_4799_B159_7108C106B264" xmi.id="EAID_E439AA3E_280E_40c6_B1D3_CB1606B26DBD" visibility="public">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="Dependency"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="2900"/>
+								<UML:TaggedValue tag="ea_sourceName" value="001-CU060.1 Identificar reincidencia "/>
+								<UML:TaggedValue tag="ea_targetName" value="Condiciones de suspensión por reincidencia"/>
+								<UML:TaggedValue tag="ea_sourceType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_targetType" value="Requirement"/>
+								<UML:TaggedValue tag="ea_sourceID" value="5621"/>
+								<UML:TaggedValue tag="ea_targetID" value="5629"/>
+								<UML:TaggedValue tag="src_visibility" value="Public"/>
+								<UML:TaggedValue tag="src_aggregation" value="0"/>
+								<UML:TaggedValue tag="src_isOrdered" value="false"/>
+								<UML:TaggedValue tag="src_targetScope" value="instance"/>
+								<UML:TaggedValue tag="src_changeable" value="none"/>
+								<UML:TaggedValue tag="src_isNavigable" value="false"/>
+								<UML:TaggedValue tag="src_containment" value="Unspecified"/>
+								<UML:TaggedValue tag="src_style" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+								<UML:TaggedValue tag="dst_visibility" value="Public"/>
+								<UML:TaggedValue tag="dst_aggregation" value="0"/>
+								<UML:TaggedValue tag="dst_isOrdered" value="false"/>
+								<UML:TaggedValue tag="dst_targetScope" value="instance"/>
+								<UML:TaggedValue tag="dst_changeable" value="none"/>
+								<UML:TaggedValue tag="dst_isNavigable" value="true"/>
+								<UML:TaggedValue tag="dst_containment" value="Unspecified"/>
+								<UML:TaggedValue tag="dst_style" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+								<UML:TaggedValue tag="privatedata5" value="SX=0;SY=0;EX=0;EY=0;EDGE=2;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+							</UML:ModelElement.taggedValue>
+						</UML:Dependency>
+						<UML:Association xmi.id="EAID_F50E182E_E0E4_4c16_97DD_EB6125167745" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="2658"/>
+								<UML:TaggedValue tag="ea_sourceName" value="Timer"/>
+								<UML:TaggedValue tag="ea_targetName" value="001-CU060.1 Identificar reincidencia "/>
+								<UML:TaggedValue tag="ea_sourceType" value="Actor"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="5618"/>
+								<UML:TaggedValue tag="ea_targetID" value="5621"/>
+								<UML:TaggedValue tag="privatedata5" value="EDGE=2;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_C1BFCF04_964A_4957_9418_BCC89EFC0A67">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_2A21C440_09C5_4411_94E7_0EB3770586E0">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:UseCase name="004-CU064.1 Recibir descargos al proceso de audiencia" xmi.id="EAID_2AD8ACD5_B1FD_4847_8A00_F5A761910CE8" visibility="public" namespace="EAPK_546B7C6D_D3AF_4fa6_8F8A_E92642B5D829" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="documentation" value="El usuario abogado de dependencia selecciona los documentos de descargos que recibió por correspondencia de entrada para adjuntarlos al proceso de reincidencia.&#xA;&lt;font color=&quot;#ff4500&quot;&gt;&#xA;&lt;/font&gt;&lt;font color=&quot;#ff4500&quot;&gt;scenarios&lt;/font&gt;&#xA;&lt;font color=&quot;#ff4500&quot;&gt;ad: El usuario ingresa en la opción Recibir descargos al proceso de audiencia&lt;/font&gt;&#xA;&lt;font color=&quot;#ff4500&quot;&gt;sistema: El sistema muestra un formulario con datos que deben ser completados por el usuario, un recurso para adjuntar archivos y un botón para terminar, en caso de que el usuario ya haya subido todos los documentos.&lt;/font&gt;&#xA;&lt;font color=&quot;#ff4500&quot;&gt;ad: El usuario diligencia el formulario, sube el documento y pulsa terminar &lt;/font&gt;&#xA;&lt;font color=&quot;#ff4500&quot;&gt;&#xA;&lt;/font&gt;&lt;font color=&quot;#ff4500&quot;&gt;_________________________________________________________________&lt;/font&gt;&#xA;&lt;font color=&quot;#ff4500&quot;&gt;&#xA;&lt;/font&gt;&lt;font color=&quot;#ff4500&quot;&gt;Se modifica en reunión final con Ana (contravenciones)&lt;/font&gt;"/>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="UseCase"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_546B7C6D_D3AF_4fa6_8F8A_E92642B5D829"/>
+								<UML:TaggedValue tag="date_created" value="2017-02-17 09:58:16"/>
+								<UML:TaggedValue tag="date_modified" value="2017-04-25 15:32:27"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="007-Reincidencia en comparendos"/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="dev"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Proposed"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="5622"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:UseCase>
+						<UML:Association xmi.id="EAID_7E130CE6_7EF5_4c6b_9390_436A48CE8551" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="477"/>
+								<UML:TaggedValue tag="ea_sourceName" value="AT1 Abogado de dependencia"/>
+								<UML:TaggedValue tag="ea_targetName" value="004-CU064.1 Recibir descargos al proceso de audiencia"/>
+								<UML:TaggedValue tag="ea_sourceType" value="Actor"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="535"/>
+								<UML:TaggedValue tag="ea_targetID" value="5622"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_3DD5640D_94A5_4922_9D23_2B53F628C170">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_2AD8ACD5_B1FD_4847_8A00_F5A761910CE8">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:UseCase name="005-CU065.1 Realizar reparto de los procesos de reincidencia." xmi.id="EAID_3FFC76C3_98E8_40b6_B0A9_CD92CA706B7E" visibility="public" namespace="EAPK_546B7C6D_D3AF_4fa6_8F8A_E92642B5D829" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="documentation" value="&lt;font color=&quot;#ff0000&quot;&gt;Scenarios&lt;/font&gt;&#xA;&lt;font color=&quot;#ff0000&quot;&gt;frc: El usuario ingresa por la opción Realizar reparto de los procesos de reincidencia.&lt;/font&gt;&#xA;&lt;font color=&quot;#ff0000&quot;&gt;sistema:El sistema muestra un listado de procesos de reincidencia y un listado de abigados con sus correpondientes cargas y un botón asignar.&lt;/font&gt;&#xA;&lt;font color=&quot;#ff0000&quot;&gt;frc:El usuario selecciona de la lista el (los) procesos que quiera asignar y el abogado a quién quie asignar esos procesos seleccionados, para realisar la asignación debe pulsar el botón &quot;asignar&lt;/font&gt;&quot;&#xA;____________________________________________________________________&#xA;&#xA;Reactivado por Ana (Contravenciones) reunión final&#xA;&#xA;"/>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="UseCase"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_546B7C6D_D3AF_4fa6_8F8A_E92642B5D829"/>
+								<UML:TaggedValue tag="date_created" value="2017-02-17 10:00:09"/>
+								<UML:TaggedValue tag="date_modified" value="2017-04-25 16:11:53"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="007-Reincidencia en comparendos"/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="dev"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Proposed"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="5623"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:UseCase>
+						<UML:Association xmi.id="EAID_4A2C6967_A920_4792_8F21_DE2BACF00362" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="409"/>
+								<UML:TaggedValue tag="ea_sourceName" value="AT4.1.5  Funcionario reparto contravenciones "/>
+								<UML:TaggedValue tag="ea_targetName" value="005-CU065.1 Realizar reparto de los procesos de reincidencia."/>
+								<UML:TaggedValue tag="ea_sourceType" value="Actor"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="541"/>
+								<UML:TaggedValue tag="ea_targetID" value="5623"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_5A95B9B4_9C7B_4e55_9497_BAFCEB240A2E">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_3FFC76C3_98E8_40b6_B0A9_CD92CA706B7E">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:UseCase name="002-CU060.2 Dar apertura a un proceso por reincidencia." xmi.id="EAID_424BC696_59AC_45df_A7DA_0034B406E7F0" visibility="public" namespace="EAPK_546B7C6D_D3AF_4fa6_8F8A_E92642B5D829" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="documentation" value="Se le puede dar apertura a proceso de reincidencia al top de infractores o los que fueron identificados en los trámites de Supercade de audiencia de impugnación, aceptación o inmovilización de vehículo.&#xA;&#xA;El sistema presenta el listado de los infractores reincidentes, donde indica el número de comparendos impuestos, número de comparendos fallados, número de veces que ha sido identificado reincidente, número de veces que ha sido declarado reincidente, indicando si actualmente tiene un proceso de reincidencia en curso y si actualmente está identificado como reincidente.&#xA;&#xA;"/>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="UseCase"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_546B7C6D_D3AF_4fa6_8F8A_E92642B5D829"/>
+								<UML:TaggedValue tag="date_created" value="2017-02-17 09:44:49"/>
+								<UML:TaggedValue tag="date_modified" value="2017-03-27 23:40:01"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="007-Reincidencia en comparendos"/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="dev"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Proposed"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="5624"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:UseCase>
+						<UML:Association xmi.id="EAID_1E487933_7C66_46f3_A184_2DA8F0602D98" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="530"/>
+								<UML:TaggedValue tag="ea_sourceName" value="AT4.1.2 Abogado de audiencias contravencionales"/>
+								<UML:TaggedValue tag="ea_targetName" value="002-CU060.2 Dar apertura a un proceso por reincidencia."/>
+								<UML:TaggedValue tag="ea_sourceType" value="Actor"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="533"/>
+								<UML:TaggedValue tag="ea_targetID" value="5624"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_31F08BCE_6C60_4298_89B5_6A3A1517318A">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_424BC696_59AC_45df_A7DA_0034B406E7F0">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:Association xmi.id="EAID_3A401A22_B43E_4c06_8709_A58C6A414E06" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="500"/>
+								<UML:TaggedValue tag="ea_sourceName" value="AT1 Abogado de dependencia"/>
+								<UML:TaggedValue tag="ea_targetName" value="002-CU060.2 Dar apertura a un proceso por reincidencia."/>
+								<UML:TaggedValue tag="ea_sourceType" value="Actor"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="535"/>
+								<UML:TaggedValue tag="ea_targetID" value="5624"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_3DD5640D_94A5_4922_9D23_2B53F628C170">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_424BC696_59AC_45df_A7DA_0034B406E7F0">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:UseCase name="007-CU069.1 Crear acto administrativo de fallo de reincidencia." xmi.id="EAID_5B8BE7A3_0E25_4138_B9ED_DA78301095B2" visibility="public" namespace="EAPK_546B7C6D_D3AF_4fa6_8F8A_E92642B5D829" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="documentation" value="6 meses suspensión de licencia para primera reincidencia.&#xA;1 año suspensión de licencia para segunda reincidencia consecutiva.&#xA;25 años suspensión de licencia para tercera reincidencia consecutiva.&#xA;Cada vez que se vuelve a declarar reincidente vuelve a iniciar el término.&#xA;&lt;font color=&quot;#ff0000&quot;&gt;&#xA;&lt;/font&gt;&lt;font color=&quot;#ff0000&quot;&gt;r&lt;/font&gt;"/>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="UseCase"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_546B7C6D_D3AF_4fa6_8F8A_E92642B5D829"/>
+								<UML:TaggedValue tag="date_created" value="2017-02-17 10:03:11"/>
+								<UML:TaggedValue tag="date_modified" value="2017-03-27 23:40:17"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="007-Reincidencia en comparendos"/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="dev"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Proposed"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="5625"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:UseCase>
+						<UML:Association xmi.id="EAID_A68861C9_7D4F_4a73_8FC7_CD9075E52656" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="471"/>
+								<UML:TaggedValue tag="ea_sourceName" value="AT1 Abogado de dependencia"/>
+								<UML:TaggedValue tag="ea_targetName" value="007-CU069.1 Crear acto administrativo de fallo de reincidencia."/>
+								<UML:TaggedValue tag="ea_sourceType" value="Actor"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="535"/>
+								<UML:TaggedValue tag="ea_targetID" value="5625"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_3DD5640D_94A5_4922_9D23_2B53F628C170">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_5B8BE7A3_0E25_4138_B9ED_DA78301095B2">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:UseCase name="008-CU070.1 Crear constancia de ejecutoria de reincidencia." xmi.id="EAID_67989429_FFC7_4d73_B456_797BDF49CA2B" visibility="public" namespace="EAPK_546B7C6D_D3AF_4fa6_8F8A_E92642B5D829" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="UseCase"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_546B7C6D_D3AF_4fa6_8F8A_E92642B5D829"/>
+								<UML:TaggedValue tag="date_created" value="2017-02-17 10:04:54"/>
+								<UML:TaggedValue tag="date_modified" value="2017-03-27 23:40:20"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="007-Reincidencia en comparendos"/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="dev"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Proposed"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="5626"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:UseCase>
+						<UML:Association xmi.id="EAID_C4DC5B4B_15F7_4f87_BFCA_9A7DABAE8F87" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="2682"/>
+								<UML:TaggedValue tag="ea_sourceName" value="Timer"/>
+								<UML:TaggedValue tag="ea_targetName" value="008-CU070.1 Crear constancia de ejecutoria de reincidencia."/>
+								<UML:TaggedValue tag="ea_sourceType" value="Actor"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="5618"/>
+								<UML:TaggedValue tag="ea_targetID" value="5626"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_C1BFCF04_964A_4957_9418_BCC89EFC0A67">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_67989429_FFC7_4d73_B456_797BDF49CA2B">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:UseCase name="003-CU062.1 Generar el acto administrativo que declara reincidencia." xmi.id="EAID_AEA89175_EAEA_432e_A2BE_C71036BF2ECD" visibility="public" namespace="EAPK_546B7C6D_D3AF_4fa6_8F8A_E92642B5D829" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="UseCase"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_546B7C6D_D3AF_4fa6_8F8A_E92642B5D829"/>
+								<UML:TaggedValue tag="date_created" value="2017-02-17 09:56:54"/>
+								<UML:TaggedValue tag="date_modified" value="2017-03-27 23:40:04"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="007-Reincidencia en comparendos"/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="dev"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Proposed"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="5627"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:UseCase>
+						<UML:Association xmi.id="EAID_00D120AD_C409_42b4_8F09_03497BBA4D93" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="2777"/>
+								<UML:TaggedValue tag="ea_sourceName" value="Timer"/>
+								<UML:TaggedValue tag="ea_targetName" value="003-CU062.1 Generar el acto administrativo que declara reincidencia."/>
+								<UML:TaggedValue tag="ea_sourceType" value="Actor"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="5618"/>
+								<UML:TaggedValue tag="ea_targetID" value="5627"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_C1BFCF04_964A_4957_9418_BCC89EFC0A67">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_AEA89175_EAEA_432e_A2BE_C71036BF2ECD">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:Collaboration xmi.id="EAID_546B7C6D_D3AF_4fa6_8F8A_E92642B5D829_Collaboration" name="Collaborations">
+							<UML:Namespace.ownedElement>
+								<UML:ClassifierRole name="Condiciones de suspensión por reincidencia" xmi.id="EAID_B0F241C0_F218_4799_B159_7108C106B264" visibility="public" base="EAID_11111111_5487_4080_A7F4_41526CB0AA00">
+									<UML:ModelElement.stereotype>
+										<UML:Stereotype name="BusinessRequirement"/>
+									</UML:ModelElement.stereotype>
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="documentation" value="6 meses suspensión de licencia para primera reincidencia.&#xA;1 año suspensión de licencia para segunda reincidencia consecutiva.&#xA;25 años suspensión de licencia para tercera reincidencia consecutiva.&#xA;Cada vez que se vuelve a declarar reincidente vuelve a iniciar el término."/>
+										<UML:TaggedValue tag="isAbstract" value="false"/>
+										<UML:TaggedValue tag="isSpecification" value="false"/>
+										<UML:TaggedValue tag="ea_stype" value="Requirement"/>
+										<UML:TaggedValue tag="ea_ntype" value="0"/>
+										<UML:TaggedValue tag="version" value="1.0"/>
+										<UML:TaggedValue tag="isActive" value="false"/>
+										<UML:TaggedValue tag="package" value="EAPK_546B7C6D_D3AF_4fa6_8F8A_E92642B5D829"/>
+										<UML:TaggedValue tag="date_created" value="2017-03-27 18:05:05"/>
+										<UML:TaggedValue tag="date_modified" value="2017-03-27 18:05:31"/>
+										<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+										<UML:TaggedValue tag="tagged" value="0"/>
+										<UML:TaggedValue tag="package_name" value="007-Reincidencia en comparendos"/>
+										<UML:TaggedValue tag="phase" value="1.0"/>
+										<UML:TaggedValue tag="author" value="dev"/>
+										<UML:TaggedValue tag="complexity" value="1"/>
+										<UML:TaggedValue tag="status" value="Proposed"/>
+										<UML:TaggedValue tag="stereotype" value="BusinessRequirement"/>
+										<UML:TaggedValue tag="tpos" value="0"/>
+										<UML:TaggedValue tag="ea_localid" value="5629"/>
+										<UML:TaggedValue tag="ea_eleType" value="element"/>
+										<UML:TaggedValue tag="difficulty" value="Medium"/>
+										<UML:TaggedValue tag="priority" value="Medium"/>
+										<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+										<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={75AC5EED-8E10-4596-86D7-C25505FEC67C}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=BusinessRequirement;FQName=EAREQ::BusinessRequirement;@ENDSTEREO;$DES;$CLT={B0F241C0-F218-4799-B159-7108C106B264}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+									</UML:ModelElement.taggedValue>
+								</UML:ClassifierRole>
+								<UML:ClassifierRole name="Condiciones de reincidencia" xmi.id="EAID_E9A340E2_D508_49e3_9385_806A19ADF90C" visibility="public" base="EAID_11111111_5487_4080_A7F4_41526CB0AA00">
+									<UML:ModelElement.stereotype>
+										<UML:Stereotype name="BusinessRequirement"/>
+									</UML:ModelElement.stereotype>
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="documentation" value="Una persona se considera reincidente cuando tiene dos comparendos en firme (e.d. con constancia ejecutoria o pagados) en un período menor de seis meses"/>
+										<UML:TaggedValue tag="isAbstract" value="false"/>
+										<UML:TaggedValue tag="isSpecification" value="false"/>
+										<UML:TaggedValue tag="ea_stype" value="Requirement"/>
+										<UML:TaggedValue tag="ea_ntype" value="0"/>
+										<UML:TaggedValue tag="version" value="1.0"/>
+										<UML:TaggedValue tag="isActive" value="false"/>
+										<UML:TaggedValue tag="package" value="EAPK_546B7C6D_D3AF_4fa6_8F8A_E92642B5D829"/>
+										<UML:TaggedValue tag="date_created" value="2017-03-27 17:49:10"/>
+										<UML:TaggedValue tag="date_modified" value="2017-03-27 17:51:25"/>
+										<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+										<UML:TaggedValue tag="tagged" value="0"/>
+										<UML:TaggedValue tag="package_name" value="007-Reincidencia en comparendos"/>
+										<UML:TaggedValue tag="phase" value="1.0"/>
+										<UML:TaggedValue tag="author" value="dev"/>
+										<UML:TaggedValue tag="complexity" value="1"/>
+										<UML:TaggedValue tag="status" value="Proposed"/>
+										<UML:TaggedValue tag="stereotype" value="BusinessRequirement"/>
+										<UML:TaggedValue tag="tpos" value="0"/>
+										<UML:TaggedValue tag="ea_localid" value="5630"/>
+										<UML:TaggedValue tag="ea_eleType" value="element"/>
+										<UML:TaggedValue tag="difficulty" value="Medium"/>
+										<UML:TaggedValue tag="priority" value="Medium"/>
+										<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+										<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={C73E1510-4541-40ac-9372-668708ECDB9D}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=BusinessRequirement;FQName=EAREQ::BusinessRequirement;@ENDSTEREO;$DES;$CLT={E9A340E2-D508-49e3-9385-806A19ADF90C}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+									</UML:ModelElement.taggedValue>
+								</UML:ClassifierRole>
+							</UML:Namespace.ownedElement>
+							<UML:Collaboration.interaction/>
+						</UML:Collaboration>
+						<UML:UseCase name="006-CU066.1 Practicar pruebas al proceso de reincidencia" xmi.id="EAID_D91FDB5B_8CAB_422a_85CC_AB7F4FAA1C95" visibility="public" namespace="EAPK_546B7C6D_D3AF_4fa6_8F8A_E92642B5D829" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="UseCase"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_546B7C6D_D3AF_4fa6_8F8A_E92642B5D829"/>
+								<UML:TaggedValue tag="date_created" value="2017-02-17 10:02:05"/>
+								<UML:TaggedValue tag="date_modified" value="2017-03-27 23:40:14"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="007-Reincidencia en comparendos"/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="dev"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Proposed"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="5628"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:UseCase>
+						<UML:Association xmi.id="EAID_BF2C997E_CD27_48a3_A461_15239D1CF590" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="460"/>
+								<UML:TaggedValue tag="ea_sourceName" value="AT1 Abogado de dependencia"/>
+								<UML:TaggedValue tag="ea_targetName" value="006-CU066.1 Practicar pruebas al proceso de reincidencia"/>
+								<UML:TaggedValue tag="ea_sourceType" value="Actor"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="535"/>
+								<UML:TaggedValue tag="ea_targetID" value="5628"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_3DD5640D_94A5_4922_9D23_2B53F628C170">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_D91FDB5B_8CAB_422a_85CC_AB7F4FAA1C95">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+					</UML:Namespace.ownedElement>
+				</UML:Package>
+			</UML:Namespace.ownedElement>
+		</UML:Model>
+		<UML:TaggedValue tag="constraint" xmi.id="EAID_419A3305_DA98_adda_9EA0_37E854432A66" value="&lt;memo&gt;" modelElement="EAID_B0F241C0_F218_4799_B159_7108C106B264"/>
+		<UML:TaggedValue tag="context" xmi.id="EAID_CFB9FD65_95D8_1595_9DA0_6142CD0AC8BF" value="&lt;memo&gt;" modelElement="EAID_B0F241C0_F218_4799_B159_7108C106B264"/>
+		<UML:TaggedValue tag="objective" xmi.id="EAID_C59F911B_124E_4312_B571_71E1F5B083FA" value="&lt;memo&gt;" modelElement="EAID_B0F241C0_F218_4799_B159_7108C106B264"/>
+		<UML:TaggedValue tag="priority" xmi.id="EAID_A142CBA2_7275_1172_9991_C652BB8ED61E" value="#NOTES#Values: High,Medium,Low,Essential,Conditional,Optional&#xA;" modelElement="EAID_B0F241C0_F218_4799_B159_7108C106B264"/>
+		<UML:TaggedValue tag="rules" xmi.id="EAID_0850EAAB_CA5E_f5ca_9B9F_715066F72751" value="&lt;memo&gt;" modelElement="EAID_B0F241C0_F218_4799_B159_7108C106B264"/>
+		<UML:TaggedValue tag="scope" xmi.id="EAID_0859327A_122D_fe12_A19A_A2E892617626" value="&lt;memo&gt;" modelElement="EAID_B0F241C0_F218_4799_B159_7108C106B264"/>
+		<UML:TaggedValue tag="constraint" xmi.id="EAID_419A3305_DA98_adda_A023_37C06C8917D3" value="&lt;memo&gt;" modelElement="EAID_E9A340E2_D508_49e3_9385_806A19ADF90C"/>
+		<UML:TaggedValue tag="context" xmi.id="EAID_CFB9FD65_95D8_1595_BC22_870FE957435C" value="&lt;memo&gt;" modelElement="EAID_E9A340E2_D508_49e3_9385_806A19ADF90C"/>
+		<UML:TaggedValue tag="objective" xmi.id="EAID_C59F911B_124E_4312_91D9_6928F5C611B4" value="&lt;memo&gt;" modelElement="EAID_E9A340E2_D508_49e3_9385_806A19ADF90C"/>
+		<UML:TaggedValue tag="priority" xmi.id="EAID_A142CBA2_7275_1172_AA1F_0926A99D524D" value="#NOTES#Values: High,Medium,Low,Essential,Conditional,Optional&#xA;" modelElement="EAID_E9A340E2_D508_49e3_9385_806A19ADF90C"/>
+		<UML:TaggedValue tag="rules" xmi.id="EAID_0850EAAB_CA5E_f5ca_BFA4_D2B6C769DAD7" value="&lt;memo&gt;" modelElement="EAID_E9A340E2_D508_49e3_9385_806A19ADF90C"/>
+		<UML:TaggedValue tag="scope" xmi.id="EAID_0859327A_122D_fe12_B978_F3E026F8155B" value="&lt;memo&gt;" modelElement="EAID_E9A340E2_D508_49e3_9385_806A19ADF90C"/>
+		<UML:Diagram name="Reincidencia en comparendos" xmi.id="EAID_E83D7444_93FC_4378_AE37_42102F5BA3FF" diagramType="UseCaseDiagram" owner="EAPK_546B7C6D_D3AF_4fa6_8F8A_E92642B5D829" toolName="Enterprise Architect 2.5">
+			<UML:ModelElement.taggedValue>
+				<UML:TaggedValue tag="version" value="1.0"/>
+				<UML:TaggedValue tag="author" value="dev"/>
+				<UML:TaggedValue tag="created_date" value="2017-02-17 09:41:55"/>
+				<UML:TaggedValue tag="modified_date" value="2017-04-25 16:15:59"/>
+				<UML:TaggedValue tag="package" value="EAPK_546B7C6D_D3AF_4fa6_8F8A_E92642B5D829"/>
+				<UML:TaggedValue tag="type" value="Use Case"/>
+				<UML:TaggedValue tag="swimlanes" value="locked=false;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;cls=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;"/>
+				<UML:TaggedValue tag="matrixitems" value="locked=false;matrixactive=false;swimlanesactive=true;kanbanactive=false;width=1;clrLine=0;"/>
+				<UML:TaggedValue tag="ea_localid" value="317"/>
+				<UML:TaggedValue tag="EAStyle" value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=1;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=1;PPgs.cy=1;DocSize.cx=850;DocSize.cy=1098;ShowDetails=0;Orientation=P;Zoom=100;ShowTags=0;OpParams=1;VisibleAttributeDetail=0;ShowOpRetType=1;ShowIcons=1;CollabNums=0;HideProps=0;ShowReqs=0;ShowCons=0;PaperSize=1;HideParents=0;UseAlias=0;HideAtts=0;HideOps=0;HideStereo=0;HideElemStereo=0;ShowTests=0;ShowMaint=0;ConnectorNotation=UML 2.1;ExplicitNavigability=0;ShowShape=1;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;ShowNotes=0;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;"/>
+				<UML:TaggedValue tag="styleex" value="SaveTag=C2E55B4E;ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=1;MatrixActive=0;SwimlanesActive=1;KanbanActive=0;MatrixLineWidth=1;MatrixLineClr=0;MatrixLocked=0;TConnectorNotation=UML 2.1;TExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;ProfileData=;MDGDgm=;STBLDgm=;ShowNotes=0;VisibleAttributeDetail=0;ShowOpRetType=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;SuppressedCompartments=;Theme=:119;"/>
+			</UML:ModelElement.taggedValue>
+			<UML:Diagram.element>
+				<UML:DiagramElement geometry="Left=406;Top=129;Right=511;Bottom=199;" subject="EAID_7F895474_07CC_4470_8185_5E2D243382BF" seqno="1" style="DUID=F17A8DC3;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;"/>
+				<UML:DiagramElement geometry="Left=236;Top=129;Right=341;Bottom=199;" subject="EAID_67989429_FFC7_4d73_B456_797BDF49CA2B" seqno="2" style="DUID=B791D517;"/>
+				<UML:DiagramElement geometry="Left=593;Top=121;Right=713;Bottom=201;" subject="EAID_5B8BE7A3_0E25_4138_B9ED_DA78301095B2" seqno="3" style="DUID=AB9A1D9F;BCol=2124031;"/>
+				<UML:DiagramElement geometry="Left=601;Top=240;Right=706;Bottom=310;" subject="EAID_D91FDB5B_8CAB_422a_85CC_AB7F4FAA1C95" seqno="4" style="DUID=656DE343;BCol=2124031;"/>
+				<UML:DiagramElement geometry="Left=231;Top=321;Right=348;Bottom=399;" subject="EAID_3FFC76C3_98E8_40b6_B0A9_CD92CA706B7E" seqno="5" style="DUID=E42C6728;BCol=-1;"/>
+				<UML:DiagramElement geometry="Left=237;Top=228;Right=342;Bottom=298;" subject="EAID_2AD8ACD5_B1FD_4847_8A00_F5A761910CE8" seqno="6" style="DUID=5B988F4C;BCol=-1;"/>
+				<UML:DiagramElement geometry="Left=232;Top=26;Right=346;Bottom=102;" subject="EAID_AEA89175_EAEA_432e_A2BE_C71036BF2ECD" seqno="7" style="DUID=550148A4;BCol=-1;"/>
+				<UML:DiagramElement geometry="Left=596;Top=20;Right=701;Bottom=90;" subject="EAID_424BC696_59AC_45df_A7DA_0034B406E7F0" seqno="8" style="DUID=69861CB5;BCol=2124031;"/>
+				<UML:DiagramElement geometry="Left=66;Top=30;Right=171;Bottom=100;" subject="EAID_2A21C440_09C5_4411_94E7_0EB3770586E0" seqno="9" style="DUID=034C6CFF;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=CX=41:CY=13:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_DF452933_7194_4b72_B78D_376BFB543D9D" style="Mode=3;EOID=550148A4;SOID=034C6CFF;Color=-1;LWidth=0;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=CX=41:CY=13:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_E23681E6_B065_4f63_A862_E0040166D906" style="Mode=3;EOID=B791D517;SOID=034C6CFF;Color=-1;LWidth=0;Hidden=0;"/>
+			</UML:Diagram.element>
+		</UML:Diagram>
+		<UML:Diagram name="Reglas de negocio" xmi.id="EAID_4FA4D81F_4CC3_4222_A777_761D252B9E6E" diagramType="CustomDiagram" owner="EAPK_546B7C6D_D3AF_4fa6_8F8A_E92642B5D829" toolName="Enterprise Architect 2.5">
+			<UML:ModelElement.taggedValue>
+				<UML:TaggedValue tag="version" value="1.0"/>
+				<UML:TaggedValue tag="author" value="dev"/>
+				<UML:TaggedValue tag="created_date" value="2017-03-27 17:49:06"/>
+				<UML:TaggedValue tag="modified_date" value="2017-03-27 18:07:18"/>
+				<UML:TaggedValue tag="package" value="EAPK_546B7C6D_D3AF_4fa6_8F8A_E92642B5D829"/>
+				<UML:TaggedValue tag="type" value="Custom"/>
+				<UML:TaggedValue tag="swimlanes" value="locked=false;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;cls=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;"/>
+				<UML:TaggedValue tag="matrixitems" value="locked=false;matrixactive=false;swimlanesactive=true;kanbanactive=false;width=1;clrLine=0;"/>
+				<UML:TaggedValue tag="ea_localid" value="318"/>
+				<UML:TaggedValue tag="EAStyle" value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=1;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=1;PPgs.cy=1;DocSize.cx=850;DocSize.cy=1098;ShowDetails=0;Orientation=P;Zoom=100;ShowTags=0;OpParams=1;VisibleAttributeDetail=0;ShowOpRetType=1;ShowIcons=1;CollabNums=0;HideProps=0;ShowReqs=0;ShowCons=0;PaperSize=1;HideParents=0;UseAlias=0;HideAtts=0;HideOps=0;HideStereo=0;HideElemStereo=0;ShowTests=0;ShowMaint=0;ConnectorNotation=UML 2.1;ExplicitNavigability=0;ShowShape=1;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;ShowNotes=0;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;"/>
+				<UML:TaggedValue tag="styleex" value="SaveTag=3960C916;ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=1;MatrixActive=0;SwimlanesActive=1;KanbanActive=0;MatrixLineWidth=1;MatrixLineClr=0;MatrixLocked=0;TConnectorNotation=UML 2.1;TExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;ProfileData=;MDGDgm=Extended::Requirements;STBLDgm=;ShowNotes=0;VisibleAttributeDetail=0;ShowOpRetType=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;SuppressedCompartments=;Theme=:119;"/>
+			</UML:ModelElement.taggedValue>
+			<UML:Diagram.element>
+				<UML:DiagramElement geometry="Left=264;Top=129;Right=404;Bottom=175;" subject="EAID_B0F241C0_F218_4799_B159_7108C106B264" seqno="1" style="DUID=E9BF3F18;HideIcon=0;"/>
+				<UML:DiagramElement geometry="Left=68;Top=64;Right=173;Bottom=134;" subject="EAID_2A21C440_09C5_4411_94E7_0EB3770586E0" seqno="2" style="DUID=FADF3653;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;"/>
+				<UML:DiagramElement geometry="Left=261;Top=43;Right=401;Bottom=87;" subject="EAID_E9A340E2_D508_49e3_9385_806A19ADF90C" seqno="3" style="DUID=4869EDEA;HideIcon=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_990B328F_4641_4704_AEDD_F6598B737F6E" style="Mode=3;EOID=4869EDEA;SOID=FADF3653;Color=-1;LWidth=0;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_E439AA3E_280E_40c6_B1D3_CB1606B26DBD" style="Mode=3;EOID=E9BF3F18;SOID=FADF3653;Color=-1;LWidth=0;Hidden=0;"/>
+			</UML:Diagram.element>
+		</UML:Diagram>
+		<UML:DiagramElement geometry="Left=258;Top=385;Right=363;Bottom=455;" subject="EAID_2A21C440_09C5_4411_94E7_0EB3770586E0" seqno="0" style="DUID=EBBC170D;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;">
+			<UML:ModelElement.taggedValue>
+				<UML:TaggedValue tag="diagram_guid" value="EAID_E9D6F922_741C_48e0_A565_53024746F08C"/>
+			</UML:ModelElement.taggedValue>
+		</UML:DiagramElement>
+		<UML:DiagramElement geometry="EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_F50E182E_E0E4_4c16_97DD_EB6125167745" style="Mode=3;EOID=EBBC170D;SOID=971EAF39;Color=-1;LWidth=0;Hidden=0;">
+			<UML:ModelElement.taggedValue>
+				<UML:TaggedValue tag="diagram_guid" value="EAID_E9D6F922_741C_48e0_A565_53024746F08C"/>
+				<UML:TaggedValue tag="hidden" value="0"/>
+			</UML:ModelElement.taggedValue>
+		</UML:DiagramElement>
+		<UML:DiagramElement geometry="EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_F50E182E_E0E4_4c16_97DD_EB6125167745" style="Mode=3;EOID=EBBC170D;SOID=971EAF39;Color=-1;LWidth=0;Hidden=0;">
+			<UML:ModelElement.taggedValue>
+				<UML:TaggedValue tag="diagram_guid" value="EAID_E9D6F922_741C_48e0_A565_53024746F08C"/>
+				<UML:TaggedValue tag="hidden" value="0"/>
+			</UML:ModelElement.taggedValue>
+		</UML:DiagramElement>
+	</XMI.content>
+	<XMI.difference/>
+	<XMI.extensions xmi.extender="Enterprise Architect 2.5">
+		<EAModel.scenario>
+			<EAScenario name="Basic Path" type="Basic Path" weight="0,00" subject="EAID_2A21C440_09C5_4411_94E7_0EB3770586E0" xmi.id="EAID_FC5FF5F2_88F8_4b8d_A51A_27D728758532">
+				<EAScenarioContent>
+					<path>
+						<step name="Luego de cada constancia ejecutoria o pago, el sistema revisa Condiciones de reincidencia y determina que el contraventor es reincidente" guid="{EC2BF056-3FC3-41e8-93B8-1073DD23E26F}" level="1" uses="" useslist="" result="Verificar el registro de reincidencia al tercero." state="" trigger="0" link=""/>
+						<step name="El sistema genera el acto administrativo declarando reincidencia CU062.1 Generar el acto administrativo que declara reincidencia." guid="{961B9F45-7387-41cb-9F49-3F61B27ABBBA}" level="2" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="El sistema invoca CU070.1 Crear constancia de ejecutoria de reincidencia." guid="{5040A94A-58ED-42b4-B61C-7E8F8BC23C4C}" level="3" uses="" useslist="" result="" state="" trigger="1" link=""/>
+						<step name="El sistema verifica Condiciones de suspensión por reincidencia y según la regla invoca CU070.2 Suspender licencia." guid="{54AC418F-253C-4319-BEB3-6113BA09E60D}" level="4" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="El sistema realiza la notificación por correspondencia al contraventor" guid="{83439C0A-7A2C-48d9-83EF-F2E0E71E522B}" level="5" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<context>
+							<item oldname="CU070.1 Crear constancia de ejecutoria de reincidencia." guid="{67989429-FFC7-4d73-B456-797BDF49CA2B}"/>
+							<item oldname="CU062.1 Generar el acto administrativo que declara reincidencia." guid="{AEA89175-EAEA-432e-A2BE-C71036BF2ECD}"/>
+							<item oldname="CU049.1 Apertura de audiencia de impugnación" guid="{C3B3176B-DF43-4694-A5ED-C1634439A8B5}"/>
+							<item oldname="Condiciones de reincidencia" guid="{E9A340E2-D508-49e3-9385-806A19ADF90C}"/>
+							<item oldname="Condiciones de suspensión por reincidencia" guid="{B0F241C0-F218-4799-B159-7108C106B264}"/>
+							<item oldname="CU070.2 Suspender licencia." guid="{E6FE6233-2EAA-4ba4-AB4C-173062514C5F}"/>
+						</context>
+					</path>
+				</EAScenarioContent>
+			</EAScenario>
+			<EAScenario name="Elimina del registro de reincidentes." type="Alternate" weight="1,00" subject="EAID_2A21C440_09C5_4411_94E7_0EB3770586E0" xmi.id="EAID_047778CB_BEC8_473a_8E05_A92E0CAF5BFE">
+				<EAScenarioContent>
+					<path>
+						<step name="El sistema identifica que un tercero reincidente no procesado lleva 6 meses sin tener un nuevo comparendo y lo elimina del registro de reincidentes." guid="{5858D946-7BD9-4160-94D2-999B974ACFAE}" level="1" uses="" useslist="" result="Verificar la eliminación del registro de reincidencia al tercero." state="" trigger="0" link=""/>
+						<context>
+							<item oldname="CU062.1 Generar el acto administrativo que declara reincidencia." guid="{AEA89175-EAEA-432e-A2BE-C71036BF2ECD}"/>
+							<item oldname="CU049.1 Apertura de audiencia de impugnación" guid="{C3B3176B-DF43-4694-A5ED-C1634439A8B5}"/>
+							<item oldname="Condiciones de reincidencia" guid="{E9A340E2-D508-49e3-9385-806A19ADF90C}"/>
+						</context>
+					</path>
+				</EAScenarioContent>
+			</EAScenario>
+			<EAScenario name="Basic Path" type="Basic Path" weight="0,00" subject="EAID_2AD8ACD5_B1FD_4847_8A00_F5A761910CE8" xmi.id="EAID_FEE8759B_6E50_43cf_AF7A_9563EF048803">
+				<EAScenarioContent>
+					<path>
+						<context>
+							<item oldname="AT1 Abogado de dependencia" guid="{3DD5640D-94A5-4922-9D23-2B53F628C170}"/>
+							<item oldname="Recibir descargos al proceso de audiencia" guid="{30575F56-CEFD-468e-8D2A-4E7E4FE4EA68}"/>
+						</context>
+					</path>
+				</EAScenarioContent>
+			</EAScenario>
+			<EAScenario name="El tiempo para adjuntar los descargos ha finalizado" type="Alternate" weight="1,00" subject="EAID_2AD8ACD5_B1FD_4847_8A00_F5A761910CE8" xmi.id="EAID_30249270_BFA1_419a_86C6_D57CD1C6C76C">
+				<EAScenarioContent>
+					<path>
+						<step name="El tiempo para adjuntar los descargos ha finalizado y se pasa a la siguiente etapa del proceso para definir pruebas" guid="{605BF54B-E7FC-4f39-9C3D-AB153FD08CE4}" level="1" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<context/>
+					</path>
+				</EAScenarioContent>
+			</EAScenario>
+			<EAScenario name="Basic Path" type="Basic Path" weight="0,00" subject="EAID_3FFC76C3_98E8_40b6_B0A9_CD92CA706B7E" xmi.id="EAID_8A5172B5_D0F2_4b0e_B2D9_CC0D4CAFE975">
+				<EAScenarioContent>
+					<path>
+						<step name="El funcionario encargado del reparto recibe los procesos de reincidencia para hacer reparto de los mismos. " guid="{A42F80AB-6514-453c-9C0D-02ADEEE5B4EE}" level="1" uses="" useslist="" result="" state="" trigger="1" link=""/>
+						<step name="El funcionado encargado de reparto selecciona el abogado al cual le va a asignar el proceso de reincidencia." guid="{1A1565F0-8816-4251-B311-03C7686DCFE8}" level="2" uses="" useslist="" result="" state="" trigger="1" link=""/>
+						<step name="El sistema hace registro del abogado encargado del manejo del proceso de reincidencia." guid="{DF3A3EB4-293D-400f-AF0A-EE8FA887BF8B}" level="3" uses="" useslist="" result="Verificar que se hizo registro del abogado encargado del manejo del proceso de reincidencia." state="" trigger="0" link=""/>
+						<context/>
+					</path>
+				</EAScenarioContent>
+			</EAScenario>
+			<EAScenario name="Actuar sobre un proceso contravencional" type="Alternate" weight="1,00" subject="EAID_424BC696_59AC_45df_A7DA_0034B406E7F0" xmi.id="EAID_1249E2F6_6B46_482b_B8DA_BDF37A2CEE41">
+				<EAScenarioContent>
+					<path>
+						<step name="El abogado de audiencias recibe a un ciudadano que va a actuar sobre un proceso contravencional  y el sistema le informa que el tercero se encuentra actualmente identificado como reincidente." guid="{577DCCD7-4239-4714-9B36-5C7C18CBB864}" level="1" uses="" useslist="" result="Identificar reincidencia al realizar una actuación sobre un proceso contravencional." state="" trigger="1" link=""/>
+						<step name="El sistema le indica al abogado que se ha generado un proceso para declarar reincidente al tercero" guid="{C4ED0F45-04B8-4ecd-9107-7B6F5AFF51F9}" level="2" uses="" useslist="" result="Verificar que se ha iniciado un proceso para declararlo al tercero reincidente." state="" trigger="0" link=""/>
+						<context/>
+					</path>
+				</EAScenarioContent>
+			</EAScenario>
+			<EAScenario name="Basic Path" type="Basic Path" weight="0,00" subject="EAID_424BC696_59AC_45df_A7DA_0034B406E7F0" xmi.id="EAID_5FC3FF67_39D8_454b_A552_B21956E0C728">
+				<EAScenarioContent>
+					<path>
+						<step name="El usuario selecciona la opción Dar apertura a un proceso por reincidencia. " guid="{DA65F92C-9BE5-4462-AF38-C5DC7547D729}" level="1" uses="" useslist="" result="" state="" trigger="1" link=""/>
+						<step name="El sistema muestra el listado de procesos por reincidencia " guid="{B4A95AEB-DC2A-42c2-8F39-73947AB8560D}" level="2" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="El usuario (add) selecciona un proceso de la lista " guid="{9CFDA4B4-8DA4-4cdd-9E79-36FEAB0BA75D}" level="3" uses="" useslist="" result="" state="" trigger="1" link=""/>
+						<step name="El sistema carga la pantalla Generar el acto administrativo que declara reincidencia." guid="{954DF186-15CA-4535-913B-88AA65366960}" level="4" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<context>
+							<item oldname="AT4.1.2 Abogado de audiencias contravencionales" guid="{31F08BCE-6C60-4298-89B5-6A3A1517318A}"/>
+							<item oldname="AT1 Abogado de dependencia" guid="{3DD5640D-94A5-4922-9D23-2B53F628C170}"/>
+							<item oldname="Dar apertura a un proceso por reincidencia" guid="{B5E92A50-6859-4795-8B15-9818C68A794C}"/>
+							<item oldname="Crear acto administrativo de fallo de reincidencia" guid="{D91C553B-0DC9-4fb7-A9AA-0B3B618F445C}"/>
+						</context>
+					</path>
+				</EAScenarioContent>
+			</EAScenario>
+			<EAScenario name="Basic Path" type="Basic Path" weight="0,00" subject="EAID_5B8BE7A3_0E25_4138_B9ED_DA78301095B2" xmi.id="EAID_EB19A864_BB17_4e6f_A240_BC8CAF9B9A15">
+				<EAScenarioContent>
+					<path>
+						<step name="El sistema identifica la plantilla para generar el acto administrativo de fallo de reincidencia." guid="{61C7C1B7-67A6-4565-99F9-3A7AFB7E07A6}" level="1" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="CUT-1 (Caso de uso crear acto administrativo)." guid="{CF8F2B6B-AD82-44b8-B120-CC9EFACDBD49}" level="2" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="El sistema registra el documento de acto administrativo de fallo de reincidencia en su última versión." guid="{918335FC-E9E9-40f9-84A5-945158BCE72F}" level="3" uses="" useslist="" result="Crear el documento de acto administrativo de fallo de reincidencia a partir de la última versión del documento." state="" trigger="0" link=""/>
+						<step name="El abogado registra el fallo en el que indica si el implicado es reincidente o se archiva el proceso." guid="{BD178363-8157-48a3-88FB-0028A1239019}" level="4" uses="" useslist="" result="Verificar el registro del fallo al implicado en el proceso." state="" trigger="1" link=""/>
+						<step name="El sistema notifica al implicado en el proceso por reincidencia." guid="{06861F59-EAAC-4d4d-A176-2DB8DE15FE11}" level="5" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="(CU196.1, CU196.2, CU197.1, CU197.2) Recursos de reposición y apelación." guid="{FE7A413D-8B7A-4e27-A655-3BC8B16264D9}" level="6" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<context/>
+					</path>
+				</EAScenarioContent>
+			</EAScenario>
+			<EAScenario name="Basic Path" type="Basic Path" weight="0,00" subject="EAID_67989429_FFC7_4d73_B456_797BDF49CA2B" xmi.id="EAID_CDDA3DB8_4A2C_4e8f_8B07_371ABD1AB201">
+				<EAScenarioContent>
+					<path>
+						<step name="CU056.2 Generar constancia ejecutoria proceso contravencional." guid="{16291D57-9E65-4dc8-BC8B-22447197E396}" level="1" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="El sistema registra la declaratoria de reincidencia." guid="{5977FB3A-4236-4a31-95B7-E1FE20DE044E}" level="2" uses="" useslist="" result="Verificar registro de declaratoria de reincidencia." state="" trigger="0" link=""/>
+						<context>
+							<item oldname="CU060.1 Identificar reincidencia " guid="{2A21C440-09C5-4411-94E7-0EB3770586E0}"/>
+							<item oldname="CU056.2 Generar constancia ejecutoria proceso contravencional." guid="{7F895474-07CC-4470-8185-5E2D243382BF}"/>
+						</context>
+					</path>
+				</EAScenarioContent>
+			</EAScenario>
+			<EAScenario name="Basic Path" type="Basic Path" weight="0,00" subject="EAID_AEA89175_EAEA_432e_A2BE_C71036BF2ECD" xmi.id="EAID_38EAD350_50E2_4952_B7F6_9DD3D3F040F8">
+				<EAScenarioContent>
+					<path>
+						<step name="El sistema genera el acto administrativo declarando reincidencia" guid="{ABBEE71B-89DF-47ed-9960-967F4AA1B758}" level="1" uses="" useslist="" result="" state="" trigger="1" link=""/>
+						<step name="El sistema dispara una solicitud al módulo de notificación para el envío de correspondencia al implicado" guid="{B0697530-A7E2-411a-BDF9-D1CCBAD3871E}" level="2" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<context>
+							<item oldname="Crear acto administrativo de fallo de reincidencia" guid="{D91C553B-0DC9-4fb7-A9AA-0B3B618F445C}"/>
+						</context>
+					</path>
+				</EAScenarioContent>
+			</EAScenario>
+			<EAScenario name="No hay retención de licencia" type="Alternate" weight="1,00" subject="EAID_AEA89175_EAEA_432e_A2BE_C71036BF2ECD" xmi.id="EAID_B635111C_BDF9_4acd_AA7E_92914D8F83EB">
+				<EAScenarioContent>
+					<path>
+						<context>
+							<item oldname="AT-SIPA" guid="{C1BFCF04-964A-4957-9418-BCC89EFC0A67}"/>
+							<item oldname="Crear acto administrativo de fallo de reincidencia" guid="{D91C553B-0DC9-4fb7-A9AA-0B3B618F445C}"/>
+						</context>
+					</path>
+				</EAScenarioContent>
+			</EAScenario>
+			<EAScenario name="Basic Path" type="Basic Path" weight="0,00" subject="EAID_D91FDB5B_8CAB_422a_85CC_AB7F4FAA1C95" xmi.id="EAID_D8ED3651_AFA5_4d25_A55B_A2CF6059C680">
+				<EAScenarioContent>
+					<path>
+						<step name="(CU231.2, CU231.3, CU232.1, CU232.1, CU232.3, CU233.1) Casos de uso de pruebas y alegatos." guid="{BCC3FD36-8C33-4c43-81DC-01B92106613A}" level="1" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<context/>
+					</path>
+				</EAScenarioContent>
+			</EAScenario>
+		</EAModel.scenario>
+		<EAStub xmi.id="EAID_E6FE6233_2EAA_4ba4_AB4C_173062514C5F" name="002-CU070.2 Suspender licencia." UMLType="UseCase"/>
+		<EAStub xmi.id="EAID_C1BFCF04_964A_4957_9418_BCC89EFC0A67" name="Timer" UMLType="Actor"/>
+		<EAStub xmi.id="EAID_3DD5640D_94A5_4922_9D23_2B53F628C170" name="AT1 Abogado de dependencia" UMLType="Actor"/>
+		<EAStub xmi.id="EAID_5A95B9B4_9C7B_4e55_9497_BAFCEB240A2E" name="AT4.1.5  Funcionario reparto contravenciones " UMLType="Actor"/>
+		<EAStub xmi.id="EAID_31F08BCE_6C60_4298_89B5_6A3A1517318A" name="AT4.1.2 Abogado de audiencias contravencionales" UMLType="Actor"/>
+	</XMI.extensions>
+</XMI>

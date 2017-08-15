@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:ssbp="www.sparxsystems.com.au/bpmn20" id="EAPK_C4942150_AF90_4a2c_8641_13199B29FD6D" name="Perdida Fuerza Ejecutoria" targetNamespace="www.sparxsystems.com.au/bpmn20" exporter="Camunda Modeler" exporterVersion="1.7.2">
+  <bpmn:collaboration id="Collaboration_0dkujq9">
+    <bpmn:participant id="Participant_0juhrf7" name="SDM" processRef="EAID_9AA5184E_B3E3_4c13_B212_16E01F0FD482" />
+  </bpmn:collaboration>
+  <bpmn:process id="EAID_9AA5184E_B3E3_4c13_B212_16E01F0FD482" name="Perdida Fuerza Ejecutoria" processType="None" isClosed="false" isExecutable="false">
+    <bpmn:laneSet>
+      <bpmn:lane id="Lane_1qia98q" name="AT4.3.1 (Abogado de dependencia)">
+        <bpmn:flowNodeRef>EAID_87AAB043_E420_42d8_A058_6C8DAEDBD2DC</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EAID_837F5B5E_DD83_483f_87C5_BDACE5F89428</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EAID_88980224_4A63_4b12_B1E1_421611E8F131</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EAID_85509B70_DED4_46e4_BB5F_CE734DFD315E</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:dataObjectReference id="EAID_5E4CD1A9_8E54_49c5_AA25_A869F6AE9E98" name="Plantilla decretar perdida fuerza ejecutoria " dataObjectRef="EAID_DOb000000_8E54_49c5_AA25_A869F6AE9E98">
+      <bpmn:documentation>La plantilla que se debe usar es la correspondiente al acto decretar perdida fuerza ejecutoria</bpmn:documentation>
+    </bpmn:dataObjectReference>
+    <bpmn:dataObject id="EAID_DOb000000_8E54_49c5_AA25_A869F6AE9E98" name="Plantilla decretar perdida fuerza ejecutoria " />
+    <bpmn:startEvent id="EAID_88980224_4A63_4b12_B1E1_421611E8F131" name="Inicio">
+      <bpmn:outgoing>EAID_8F14D45E_EEBC_4395_8CCF_F28B6DF69523</bpmn:outgoing>
+      <bpmn:messageEventDefinition />
+    </bpmn:startEvent>
+    <bpmn:endEvent id="EAID_85509B70_DED4_46e4_BB5F_CE734DFD315E" name="EndEvent1">
+      <bpmn:incoming>EAID_BE02D27B_5B35_46d1_9D87_EC7C4B619D38</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:userTask id="EAID_87AAB043_E420_42d8_A058_6C8DAEDBD2DC" name="Registrar financiera" implementation="##unspecified">
+      <bpmn:incoming>EAID_44424A66_3793_444b_A8B8_A32EE75C06AD</bpmn:incoming>
+      <bpmn:outgoing>EAID_BE02D27B_5B35_46d1_9D87_EC7C4B619D38</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:callActivity id="EAID_837F5B5E_DD83_483f_87C5_BDACE5F89428" name="Acto Decretar perdida fuerza ejecutoria">
+      <bpmn:incoming>EAID_8F14D45E_EEBC_4395_8CCF_F28B6DF69523</bpmn:incoming>
+      <bpmn:outgoing>EAID_44424A66_3793_444b_A8B8_A32EE75C06AD</bpmn:outgoing>
+      <bpmn:ioSpecification>
+        <bpmn:dataInput id="EAID_DDIO000000_DD83_483f_87C5_BDACE5F89428" />
+        <bpmn:inputSet>
+          <bpmn:dataInputRefs>EAID_DDIO000000_DD83_483f_87C5_BDACE5F89428</bpmn:dataInputRefs>
+        </bpmn:inputSet>
+        <bpmn:outputSet />
+      </bpmn:ioSpecification>
+      <bpmn:property id="Property_1jscrs2" name="__targetRef_placeholder" />
+      <bpmn:dataInputAssociation id="EAID_659F70BF_8430_4fe3_96E8_870341D15263">
+        <bpmn:sourceRef>EAID_5E4CD1A9_8E54_49c5_AA25_A869F6AE9E98</bpmn:sourceRef>
+        <bpmn:targetRef>Property_1jscrs2</bpmn:targetRef>
+      </bpmn:dataInputAssociation>
+    </bpmn:callActivity>
+    <bpmn:sequenceFlow id="EAID_8F14D45E_EEBC_4395_8CCF_F28B6DF69523" sourceRef="EAID_88980224_4A63_4b12_B1E1_421611E8F131" targetRef="EAID_837F5B5E_DD83_483f_87C5_BDACE5F89428" />
+    <bpmn:sequenceFlow id="EAID_BE02D27B_5B35_46d1_9D87_EC7C4B619D38" sourceRef="EAID_87AAB043_E420_42d8_A058_6C8DAEDBD2DC" targetRef="EAID_85509B70_DED4_46e4_BB5F_CE734DFD315E" />
+    <bpmn:sequenceFlow id="EAID_44424A66_3793_444b_A8B8_A32EE75C06AD" sourceRef="EAID_837F5B5E_DD83_483f_87C5_BDACE5F89428" targetRef="EAID_87AAB043_E420_42d8_A058_6C8DAEDBD2DC" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="EAID_F3B418B8_C704_49b2_9664_2FCD3C5F0D5D" name="Perdida Fuerza Ejecutoria">
+    <bpmndi:BPMNPlane id="EAID_PL000000_C704_49b2_9664_2FCD3C5F0D5D" bpmnElement="Collaboration_0dkujq9">
+      <bpmndi:BPMNShape id="Participant_0juhrf7_di" bpmnElement="Participant_0juhrf7">
+        <dc:Bounds x="17" y="15" width="536" height="250" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000004_C704_49b2_9664_2FCD3C5F0D5D" bpmnElement="EAID_5E4CD1A9_8E54_49c5_AA25_A869F6AE9E98">
+        <dc:Bounds x="175" y="44" width="35" height="50" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_8E54_49c5_AA25_A869F6AE9E98" labelStyle="EAID_LS000000_C704_49b2_9664_2FCD3C5F0D5D">
+          <dc:Bounds x="87" y="51" width="80" height="36" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000000_C704_49b2_9664_2FCD3C5F0D5D" bpmnElement="EAID_88980224_4A63_4b12_B1E1_421611E8F131">
+        <dc:Bounds x="92" y="136" width="30" height="30" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_4A63_4b12_B1E1_421611E8F131" labelStyle="EAID_LS000000_C704_49b2_9664_2FCD3C5F0D5D">
+          <dc:Bounds x="92" y="176" width="25" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000002_C704_49b2_9664_2FCD3C5F0D5D" bpmnElement="EAID_85509B70_DED4_46e4_BB5F_CE734DFD315E">
+        <dc:Bounds x="503" y="136" width="30" height="30" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_DED4_46e4_BB5F_CE734DFD315E" labelStyle="EAID_LS000000_C704_49b2_9664_2FCD3C5F0D5D">
+          <dc:Bounds x="500" y="176" width="53" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000001_C704_49b2_9664_2FCD3C5F0D5D" bpmnElement="EAID_87AAB043_E420_42d8_A058_6C8DAEDBD2DC">
+        <dc:Bounds x="349" y="121" width="110" height="60" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_E420_42d8_A058_6C8DAEDBD2DC" labelStyle="EAID_LS000000_C704_49b2_9664_2FCD3C5F0D5D" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000003_C704_49b2_9664_2FCD3C5F0D5D" bpmnElement="EAID_837F5B5E_DD83_483f_87C5_BDACE5F89428" isExpanded="false">
+        <dc:Bounds x="180" y="116" width="110" height="69" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_DD83_483f_87C5_BDACE5F89428" labelStyle="EAID_LS000000_C704_49b2_9664_2FCD3C5F0D5D" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="EAID_DL000000_C704_49b2_9664_2FCD3C5F0D5D" bpmnElement="EAID_659F70BF_8430_4fe3_96E8_870341D15263" targetElement="EAID_DO000003_C704_49b2_9664_2FCD3C5F0D5D">
+        <di:waypoint xsi:type="dc:Point" x="210" y="79" />
+        <di:waypoint xsi:type="dc:Point" x="250" y="79" />
+        <di:waypoint xsi:type="dc:Point" x="250" y="116" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="EAID_DL000003_C704_49b2_9664_2FCD3C5F0D5D" bpmnElement="EAID_8F14D45E_EEBC_4395_8CCF_F28B6DF69523">
+        <di:waypoint xsi:type="dc:Point" x="122" y="150" />
+        <di:waypoint xsi:type="dc:Point" x="180" y="150" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="106" y="125" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="EAID_DL000002_C704_49b2_9664_2FCD3C5F0D5D" bpmnElement="EAID_BE02D27B_5B35_46d1_9D87_EC7C4B619D38">
+        <di:waypoint xsi:type="dc:Point" x="459" y="151" />
+        <di:waypoint xsi:type="dc:Point" x="503" y="151" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="436" y="126" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="EAID_DL000001_C704_49b2_9664_2FCD3C5F0D5D" bpmnElement="EAID_44424A66_3793_444b_A8B8_A32EE75C06AD">
+        <di:waypoint xsi:type="dc:Point" x="290" y="150" />
+        <di:waypoint xsi:type="dc:Point" x="349" y="150" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="275" y="125" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Lane_1qia98q_di" bpmnElement="Lane_1qia98q">
+        <dc:Bounds x="47" y="15" width="506" height="250" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+    <bpmndi:BPMNLabelStyle id="EAID_LS000000_C704_49b2_9664_2FCD3C5F0D5D">
+      <dc:Font name="Calibri" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+    </bpmndi:BPMNLabelStyle>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

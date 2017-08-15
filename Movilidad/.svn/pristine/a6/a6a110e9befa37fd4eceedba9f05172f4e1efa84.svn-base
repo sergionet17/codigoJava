@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:ssbp="www.sparxsystems.com.au/bpmn20" id="EAPK_DAF08BD3_46AF_4ee8_873E_491E46E5D348" name="Mora acuerdo pago" targetNamespace="www.sparxsystems.com.au/bpmn20" exporter="Camunda Modeler" exporterVersion="1.8.0">
+  <bpmn:collaboration id="Collaboration_0idqil5">
+    <bpmn:participant id="Participant_00f7azc" name="SDM" processRef="Process_1jpoygz" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_1jpoygz" name="Mora acuerdo pago" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1t07jeo" name="Inicio">
+      <bpmn:outgoing>SequenceFlow_0zm1xf8</bpmn:outgoing>
+      <bpmn:messageEventDefinition messageRef="Message_093axf9" />
+    </bpmn:startEvent>
+    <bpmn:serviceTask id="Task_08dlayy" name="Registrar acuerdo de pago en estado de mora" camunda:class="co.gov.movilidadbogota.sipa.bpm.DummyTask">
+      <bpmn:incoming>SequenceFlow_0zm1xf8</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0qcua0c</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:serviceTask id="Task_19m46bf" name="Registrar para gestion persuasiva por mora" camunda:class="co.gov.movilidadbogota.sipa.bpm.DummyTask">
+      <bpmn:incoming>SequenceFlow_0qcua0c</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1rf6p1p</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:endEvent id="EndEvent_0cno2da">
+      <bpmn:incoming>SequenceFlow_1rf6p1p</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_0zm1xf8" sourceRef="StartEvent_1t07jeo" targetRef="Task_08dlayy" />
+    <bpmn:sequenceFlow id="SequenceFlow_0qcua0c" sourceRef="Task_08dlayy" targetRef="Task_19m46bf" />
+    <bpmn:sequenceFlow id="SequenceFlow_1rf6p1p" sourceRef="Task_19m46bf" targetRef="EndEvent_0cno2da" />
+    <bpmn:textAnnotation id="EAID_35322218_544F_468f_88B2_283D89FFC741">    <bpmn:text>Se inicia este proceso (1) un dia despues del incumplimiento en el pago de una cuota del acuerdo de pago.</bpmn:text>
+</bpmn:textAnnotation>
+  </bpmn:process>
+  <bpmn:message id="Message_093axf9" name="Message_3rlmppk" />
+  <bpmndi:BPMNDiagram id="EAID_69D26505_C002_47c8_9973_2F49F5638C3F" name="Mora acuerdo pago">
+    <bpmndi:BPMNPlane id="EAID_PL000000_C002_47c8_9973_2F49F5638C3F" bpmnElement="Collaboration_0idqil5">
+      <bpmndi:BPMNShape id="EAID_DO000004_C002_47c8_9973_2F49F5638C3F" bpmnElement="EAID_35322218_544F_468f_88B2_283D89FFC741">
+        <dc:Bounds x="44" y="7" width="266" height="49" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Participant_00f7azc_di" bpmnElement="Participant_00f7azc">
+        <dc:Bounds x="0" y="0" width="459" height="172" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="StartEvent_0zuaeji_di" bpmnElement="StartEvent_1t07jeo">
+        <dc:Bounds x="39" y="90" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="43" y="128" width="26" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0zm1xf8_di" bpmnElement="SequenceFlow_0zm1xf8">
+        <di:waypoint xsi:type="dc:Point" x="75" y="108" />
+        <di:waypoint xsi:type="dc:Point" x="92" y="108" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="83.5" y="86.5" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="ServiceTask_1a3psyn_di" bpmnElement="Task_08dlayy">
+        <dc:Bounds x="92" y="68" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0qcua0c_di" bpmnElement="SequenceFlow_0qcua0c">
+        <di:waypoint xsi:type="dc:Point" x="192" y="108" />
+        <di:waypoint xsi:type="dc:Point" x="235" y="108" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="213.5" y="86.5" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="ServiceTask_1thbp2q_di" bpmnElement="Task_19m46bf">
+        <dc:Bounds x="235" y="68" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_0cno2da_di" bpmnElement="EndEvent_0cno2da">
+        <dc:Bounds x="356.063" y="90" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="374.063" y="129" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_1rf6p1p_di" bpmnElement="SequenceFlow_1rf6p1p">
+        <di:waypoint xsi:type="dc:Point" x="335" y="108" />
+        <di:waypoint xsi:type="dc:Point" x="356" y="108" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="345.5" y="86" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+    <bpmndi:BPMNLabelStyle id="EAID_LS000000_C002_47c8_9973_2F49F5638C3F">
+      <dc:Font name="Calibri" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+    </bpmndi:BPMNLabelStyle>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

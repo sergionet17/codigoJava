@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.0.final using JasperReports Library version 6.4.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="CU281_2" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="41b8288d-9c30-4621-8c14-2e761144a051">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="SIPA"/>
+	<property name="ireport.jasperserver.url" value="http://loa1.sipa/jasperserver/"/>
+	<property name="ireport.jasperserver.user" value="jasperadmin"/>
+	<property name="ireport.jasperserver.report.resource" value="/REPORTS/CU281_2_files/CU281_3"/>
+	<property name="ireport.jasperserver.reportUnit" value="/REPORTS/CU281_3"/>
+	<parameter name="fechaCorte" class="java.util.Date">
+		<defaultValueExpression><![CDATA[TODAY()]]></defaultValueExpression>
+	</parameter>
+	<queryString language="SQL">
+		<![CDATA[select e.valor as valor
+     , c.numero_numero as numero
+     , e.valor / c.valor_nominal as porcentaje
+     , primer_apellido || ' ' || segundo_apellido || ' ' || primer_nombre as infractor
+  from transaccion t
+  join entrada e on t.id = e.transaccion_id
+  join comparendo c on e.referencia = hextoraw(replace(c.id,'-',''))
+  join persona p on c.infractor_id = p.id
+ where codigo_evento = 'AplicarDescuento'
+   and e.cuenta_id = hextoraw('8d21356400174d1490d65a396e82d050')]]>
+	</queryString>
+	<field name="VALOR" class="java.math.BigDecimal"/>
+	<field name="NUMERO" class="java.math.BigDecimal"/>
+	<field name="PORCENTAJE" class="java.math.BigDecimal"/>
+	<field name="INFRACTOR" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="3" width="140" height="65" uuid="ad5a2773-7f83-4a1b-99eb-5f86243fe31d"/>
+				<imageExpression><![CDATA["repo:/IMAGES/LOGO"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="150" y="23" width="420" height="14" uuid="55ba1880-7174-4583-8fca-35d7ccd57141"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Fecha de extracción: " + NOW( ) + " Fecha de corte: " + $P{fechaCorte}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="150" y="3" width="420" height="20" uuid="ba1e3abf-6f27-4c9c-9e97-af96cecdd39c"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Detalle mensual de descuentos aplicados a comparendos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="37" width="419" height="12" uuid="7c4c3cdb-b48e-4eca-990d-c5dc1b946e0c"/>
+				<textElement verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[(Los Saldos de Cartera son corte a fin del mes. Los Pagos, Descuentos y Débitos son movimientos del mes)]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="1" width="572" height="19" backcolor="#7ABFF0" uuid="5bbdaec9-86f9-4240-99ce-691e8fc7a4a1"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="0" width="116" height="20" backcolor="#75C9EB" uuid="633ff52a-dc4b-42fe-b344-3554e6a85563"/>
+				<box padding="5"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NUMERO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="116" y="0" width="228" height="20" backcolor="#75C9EB" uuid="8ad3e220-7a3d-4aeb-a911-ab3f2c921ec4"/>
+				<box padding="5"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[INFRACTOR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="344" y="0" width="114" height="20" backcolor="#75C9EB" uuid="236d9bd9-82bd-4888-81a5-b65a82d844f0"/>
+				<box padding="5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PORCENTAJE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="458" y="0" width="114" height="20" backcolor="#75C9EB" uuid="38565915-baf5-4074-99a3-7d933976f4b2"/>
+				<box padding="5"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[VALOR]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="1" width="572" height="19" uuid="ce521b74-b849-4cb7-8390-5abe90246a0c"/>
+			</rectangle>
+			<textField>
+				<reportElement x="0" y="0" width="116" height="20" uuid="414171d0-92d1-449e-8cf7-7621032a4ff9"/>
+				<box padding="5"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NUMERO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="116" y="0" width="228" height="20" uuid="ef345a86-1a9d-40b5-bfed-7905d7f55c19"/>
+				<box padding="5"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{INFRACTOR}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="344" y="0" width="114" height="20" uuid="d466b109-f59e-4c1a-bc7e-d4360a418a83"/>
+				<box padding="5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PORCENTAJE}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0">
+				<reportElement x="458" y="0" width="114" height="20" uuid="fd4e0370-cc3b-43ce-b1c0-b73c15b1419b"/>
+				<box padding="5"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{VALOR}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="116" y="1" width="1" height="19" uuid="6cc9e6d3-15a6-4177-8d25-9a52d97fcff0"/>
+			</line>
+			<line>
+				<reportElement x="344" y="0" width="1" height="19" uuid="9311f4b2-9df3-4239-9e5e-9c4f8471cec2"/>
+			</line>
+			<line>
+				<reportElement x="458" y="0" width="1" height="19" uuid="e50b42bc-5dfa-4aff-972f-bead18c9fc1f"/>
+			</line>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="15" splitType="Stretch">
+			<textField>
+				<reportElement x="372" y="5" width="100" height="10" uuid="53aa2a4f-4ced-44c2-a6ca-7c6b38c36327"/>
+				<textElement textAlignment="Right">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Página " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="472" y="5" width="100" height="10" uuid="de3a0191-1e21-432a-9a78-c323c1b4d0a1"/>
+				<textElement textAlignment="Left">
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" de " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

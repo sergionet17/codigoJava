@@ -1,0 +1,295 @@
+databaseChangeLog:
+- changeSet:
+    id: 201707202209-1
+    author: arturo.cruz
+    changes:
+    - createTable:
+        columns:
+        - column:
+            name: session_id
+            type: CHAR(36)
+        - column:
+            name: creation_time
+            type: bigint
+            constraints:
+              nullable: false
+        - column:
+            name: last_access_time
+            type: bigint
+            constraints:
+              nullable: false
+        - column:
+            name: max_inactive_interval
+            type: int
+            constraints:
+              nullable: false
+        - column:
+            name: principal_name
+            type: VARCHAR(100)
+        tableName: spring_session
+    - addPrimaryKey:
+        tableName: spring_session
+        columnNames: session_id
+        constraintName: pk_spring_session
+    - createIndex:
+        columns:
+        - column:
+            name: last_access_time
+        indexName: spring_session_ix1
+        tableName: spring_session
+    - createTable:
+        columns:
+        - column:
+            name: session_id
+            type: char(36)
+        - column:
+            name: attribute_name
+            type: varchar(200)
+        - column:
+            name: attribute_bytes
+            type: bytea
+        tableName: spring_session_attributes
+    - addPrimaryKey:
+        tableName: spring_session_attributes
+        columnNames: session_id, attribute_name
+        constraintName: spring_session_attributes_pk
+    - addForeignKeyConstraint:
+        baseColumnNames: session_id
+        baseTableName: spring_session_attributes
+        constraintName: spring_session_attributes_fk
+        referencedColumnNames: session_id
+        referencedTableName: spring_session
+        onDelete: CASCADE
+    - createIndex:
+        columns:
+        - column:
+            name: session_id
+        indexName: spring_session_attributes_ix1
+        tableName: spring_session_attributes
+- changeSet:
+    id: 201707222209-1
+    author: lorenzo (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            name: TOKEN_ID
+            type: VARCHAR(256)
+        - column:
+            name: TOKEN
+            type: BYTEA
+        - column:
+            constraints:
+              nullable: false
+            name: AUTHENTICATION_ID
+            type: VARCHAR(256)
+        - column:
+            name: USER_NAME
+            type: VARCHAR(256)
+        - column:
+            name: CLIENT_ID
+            type: VARCHAR(256)
+        - column:
+            name: AUTHENTICATION
+            type: BYTEA
+        - column:
+            name: REFRESH_TOKEN
+            type: VARCHAR(256)
+        tableName: OAUTH_ACCESS_TOKEN
+- changeSet:
+    id: 201707222209-2
+    author: lorenzo (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            name: USERID
+            type: VARCHAR(256)
+        - column:
+            name: CLIENTID
+            type: VARCHAR(256)
+        - column:
+            name: SCOPE
+            type: VARCHAR(256)
+        - column:
+            name: STATUS
+            type: VARCHAR(256)
+        - column:
+            name: EXPIRESAT
+            type: TIMESTAMP(6)
+        - column:
+            name: LASTMODIFIEDAT
+            type: TIMESTAMP(6)
+        tableName: OAUTH_APPROVALS
+- changeSet:
+    id: 201707222209-3
+    author: lorenzo (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: CLIENT_ID
+            type: VARCHAR(256)
+        - column:
+            name: RESOURCE_IDS
+            type: VARCHAR(256)
+        - column:
+            name: CLIENT_SECRET
+            type: VARCHAR(256)
+        - column:
+            name: SCOPE
+            type: VARCHAR(256)
+        - column:
+            name: AUTHORIZED_GRANT_TYPES
+            type: VARCHAR(256)
+        - column:
+            name: WEB_SERVER_REDIRECT_URI
+            type: VARCHAR(256)
+        - column:
+            name: AUTHORITIES
+            type: VARCHAR(256)
+        - column:
+            name: ACCESS_TOKEN_VALIDITY
+            type: INTEGER
+        - column:
+            name: REFRESH_TOKEN_VALIDITY
+            type: INTEGER
+        - column:
+            name: ADDITIONAL_INFORMATION
+            type: VARCHAR(4000)
+        - column:
+            name: AUTOAPPROVE
+            type: VARCHAR(256)
+        tableName: OAUTH_CLIENT_DETAILS
+- changeSet:
+    id: 201707222209-4
+    author: lorenzo (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            name: TOKEN_ID
+            type: VARCHAR(256)
+        - column:
+            name: TOKEN
+            type: BYTEA
+        - column:
+            constraints:
+              nullable: false
+            name: AUTHENTICATION_ID
+            type: VARCHAR(256)
+        - column:
+            name: USER_NAME
+            type: VARCHAR(256)
+        - column:
+            name: CLIENT_ID
+            type: VARCHAR(256)
+        tableName: OAUTH_CLIENT_TOKEN
+- changeSet:
+    id: 201707222209-5
+    author: lorenzo (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            name: CODE
+            type: VARCHAR(256)
+        - column:
+            name: AUTHENTICATION
+            type: BYTEA
+        tableName: OAUTH_CODE
+- changeSet:
+    id: 201707222209-6
+    author: lorenzo (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            name: TOKEN_ID
+            type: VARCHAR(256)
+        - column:
+            name: TOKEN
+            type: BYTEA
+        - column:
+            name: AUTHENTICATION
+            type: BYTEA
+        tableName: OAUTH_REFRESH_TOKEN
+- changeSet:
+    id: 201707222209-7
+    author: lorenzo (generated)
+    changes:
+    - addPrimaryKey:
+        columnNames: AUTHENTICATION_ID
+        constraintName: PK_OAUTH_ACCESS_TOKEN
+        tableName: OAUTH_ACCESS_TOKEN
+- changeSet:
+    id: 201707222209-8
+    author: lorenzo (generated)
+    changes:
+    - addPrimaryKey:
+        columnNames: CLIENT_ID
+        constraintName: PK_OAUTH_CLIENT_DETAILS
+        tableName: OAUTH_CLIENT_DETAILS
+- changeSet:
+    id: 201707222209-9
+    author: lorenzo (generated)
+    changes:
+    - addPrimaryKey:
+        columnNames: AUTHENTICATION_ID
+        constraintName: PK_OAUTH_CLIENT_TOKEN
+        tableName: OAUTH_CLIENT_TOKEN
+- changeSet:
+    id: 201707222209-10
+    author: lorenzo.pinango
+    changes:
+    - insert:
+        tableName: oauth_client_details
+        columns:
+        - column:
+            name: client_id
+            value: sipaweb
+        - column:
+            name: client_secret
+            value: sipawebsecret
+        - column:
+            name: scope
+            value: read,write
+        - column:
+            name: authorized_grant_types
+            value: password,refresh_token,client_credentials,authorization_code
+        - column:
+            name: refresh_token_validity
+            value: 0
+        - column:
+            name: autoapprove
+            value: true
+- changeSet:
+    id: 201707222209-11
+    author: lorenzo.pinango
+    changes:
+    - insert:
+        tableName: oauth_client_details
+        columns:
+        - column:
+            name: client_id
+            value: sipapostman
+        - column:
+            name: client_secret
+            value: secret
+        - column:
+            name: scope
+            value: read,write
+        - column:
+            name: authorized_grant_types
+            value: password,refresh_token,client_credentials,authorization_code
+        - column:
+            name: web_server_redirect_uri
+            value: https://www.getpostman.com/oauth2/callback
+        - column:
+            name: refresh_token_validity
+            value: 0
+        - column:
+            name: autoapprove
+            value: true

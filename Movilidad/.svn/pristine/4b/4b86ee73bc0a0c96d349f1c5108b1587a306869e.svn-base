@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:ssbp="www.sparxsystems.com.au/bpmn20" id="EAPK_BF53BE0E_E477_4e09_9764_999D12896994" name="Cancelar mandamiento pago" targetNamespace="www.sparxsystems.com.au/bpmn20" exporter="Camunda Modeler" exporterVersion="1.8.0">
+  <bpmn:collaboration id="Collaboration_1g45vdf">
+    <bpmn:participant id="Participant_1h0cefw" name="SDM" processRef="Process_10g4oo5" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_10g4oo5" name="Cancelar mandamiento de pago" isExecutable="true">
+    <bpmn:laneSet>
+      <bpmn:lane id="Lane_0h8wokr" name="AT.1 (Abogado de dependencia)">
+        <bpmn:flowNodeRef>Task_0nla03p</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>StartEvent_0e4dsyw</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EndEvent_09cmk39</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="StartEvent_0e4dsyw" name="Inicio">
+      <bpmn:outgoing>SequenceFlow_1seebas</bpmn:outgoing>
+      <bpmn:messageEventDefinition messageRef="Message_1ak81vc" />
+    </bpmn:startEvent>
+    <bpmn:callActivity id="Task_0nla03p" name="Acto cancelar titulo ejecutivo" calledElement="Acto administrativo">
+      <bpmn:incoming>SequenceFlow_1seebas</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1wrhnwt</bpmn:outgoing>
+    </bpmn:callActivity>
+    <bpmn:endEvent id="EndEvent_09cmk39">
+      <bpmn:incoming>SequenceFlow_1wrhnwt</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_1seebas" sourceRef="StartEvent_0e4dsyw" targetRef="Task_0nla03p" />
+    <bpmn:sequenceFlow id="SequenceFlow_1wrhnwt" sourceRef="Task_0nla03p" targetRef="EndEvent_09cmk39" />
+  </bpmn:process>
+  <bpmn:message id="Message_1ak81vc" name="Message_18o6qu7" />
+  <bpmndi:BPMNDiagram id="EAID_5ACB4FC0_FE5F_48cc_88E9_399E5ED7B6B3" name="Cancelar mandamiento pago">
+    <bpmndi:BPMNPlane id="EAID_PL000000_FE5F_48cc_88E9_399E5ED7B6B3" bpmnElement="Collaboration_1g45vdf">
+      <bpmndi:BPMNShape id="Participant_1h0cefw_di" bpmnElement="Participant_1h0cefw">
+        <dc:Bounds x="0" y="0" width="346" height="161" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_0h8wokr_di" bpmnElement="Lane_0h8wokr">
+        <dc:Bounds x="30" y="0" width="316" height="161" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="StartEvent_1qh74ow_di" bpmnElement="StartEvent_0e4dsyw">
+        <dc:Bounds x="70" y="64" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="74" y="103" width="26" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_1seebas_di" bpmnElement="SequenceFlow_1seebas">
+        <di:waypoint xsi:type="dc:Point" x="106" y="82" />
+        <di:waypoint xsi:type="dc:Point" x="131" y="82" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="118.5" y="60.5" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="CallActivity_1q17axq_di" bpmnElement="Task_0nla03p">
+        <dc:Bounds x="131" y="42" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_09cmk39_di" bpmnElement="EndEvent_09cmk39">
+        <dc:Bounds x="258.188" y="64" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="276.188" y="103" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_1wrhnwt_di" bpmnElement="SequenceFlow_1wrhnwt">
+        <di:waypoint xsi:type="dc:Point" x="231" y="82" />
+        <di:waypoint xsi:type="dc:Point" x="258" y="82" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="244.5" y="60" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+    <bpmndi:BPMNLabelStyle id="EAID_LS000000_FE5F_48cc_88E9_399E5ED7B6B3">
+      <dc:Font name="Calibri" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+    </bpmndi:BPMNLabelStyle>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

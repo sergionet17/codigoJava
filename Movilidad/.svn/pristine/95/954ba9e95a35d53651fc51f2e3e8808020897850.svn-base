@@ -1,0 +1,722 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<XMI xmi.version="1.1" xmlns:UML="omg.org/UML1.3">
+	<XMI.header>
+		<XMI.documentation>
+			<XMI.exporter>Enterprise Architect</XMI.exporter>
+			<XMI.exporterVersion>2.5</XMI.exporterVersion>
+		</XMI.documentation>
+	</XMI.header>
+	<XMI.content>
+		<UML:Model name="EA Model" xmi.id="MX_EAID_D279675C_7AB4_4b3d_AB59_09AB642CB4FC">
+			<UML:Namespace.ownedElement>
+				<UML:Class name="EARootClass" xmi.id="EAID_11111111_5487_4080_A7F4_41526CB0AA00" isRoot="true" isLeaf="false" isAbstract="false"/>
+				<UML:Package name="Reporte centrales de riesgo" xmi.id="EAPK_D279675C_7AB4_4b3d_AB59_09AB642CB4FC" isRoot="false" isLeaf="false" isAbstract="false" visibility="public">
+					<UML:ModelElement.taggedValue>
+						<UML:TaggedValue tag="parent" value="EAPK_57856AF1_CC57_4b3c_84C5_598274CECADC"/>
+						<UML:TaggedValue tag="created" value="2017-02-21 10:37:26"/>
+						<UML:TaggedValue tag="modified" value="2017-04-30 15:22:19"/>
+						<UML:TaggedValue tag="iscontrolled" value="TRUE"/>
+						<UML:TaggedValue tag="xmlpath" value="ucm-coactiva-reporte-centrales-de-riesgo.xml"/>
+						<UML:TaggedValue tag="lastloaddate" value="2017-04-30 15:22:19"/>
+						<UML:TaggedValue tag="lastsavedate" value="2017-02-21 11:41:24"/>
+						<UML:TaggedValue tag="version" value="1.0"/>
+						<UML:TaggedValue tag="isprotected" value="FALSE"/>
+						<UML:TaggedValue tag="usedtd" value="FALSE"/>
+						<UML:TaggedValue tag="xmiver" value="Enterprise Architect XMI/UML 1.3"/>
+						<UML:TaggedValue tag="logxml" value="FALSE"/>
+						<UML:TaggedValue tag="tpos" value="0"/>
+						<UML:TaggedValue tag="packageFlags" value="Recurse=0;VCCFG=secmov-sipa;CRC=0;"/>
+						<UML:TaggedValue tag="batchsave" value="0"/>
+						<UML:TaggedValue tag="batchload" value="0"/>
+						<UML:TaggedValue tag="phase" value="1.0"/>
+						<UML:TaggedValue tag="status" value="Proposed"/>
+						<UML:TaggedValue tag="author" value="dev"/>
+						<UML:TaggedValue tag="complexity" value="1"/>
+						<UML:TaggedValue tag="ea_stype" value="Public"/>
+						<UML:TaggedValue tag="tpos" value="0"/>
+						<UML:TaggedValue tag="gentype" value="Java"/>
+					</UML:ModelElement.taggedValue>
+					<UML:Namespace.ownedElement>
+						<UML:UseCase name="CU345.2  Recibir pago de la cuota en mora" xmi.id="EAID_088F8E10_5CB7_44c6_9A41_3D095379B92D" visibility="public" namespace="EAPK_D279675C_7AB4_4b3d_AB59_09AB642CB4FC" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="documentation" value="El sistema espera (20) días después de haber comunicado el aviso del reporte a central de riesgos para recibir el pago de la cuota que ha entrado en mora del acuerdo de pago."/>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="UseCase"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_D279675C_7AB4_4b3d_AB59_09AB642CB4FC"/>
+								<UML:TaggedValue tag="date_created" value="2017-02-21 10:41:58"/>
+								<UML:TaggedValue tag="date_modified" value="2017-02-21 10:43:07"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="Reporte centrales de riesgo"/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="dev"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Proposed"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="503"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:UseCase>
+						<UML:Association xmi.id="EAID_94512DB5_12FF_46f5_B429_03959B9730E0" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="3061"/>
+								<UML:TaggedValue tag="ea_sourceName" value="Timer"/>
+								<UML:TaggedValue tag="ea_targetName" value="CU345.2  Recibir pago de la cuota en mora"/>
+								<UML:TaggedValue tag="ea_sourceType" value="Actor"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="6213"/>
+								<UML:TaggedValue tag="ea_targetID" value="503"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_C1BFCF04_964A_4957_9418_BCC89EFC0A67">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_088F8E10_5CB7_44c6_9A41_3D095379B92D">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:UseCase name="CU346.2 Identificar terceros para reporte a centrales de riesgo" xmi.id="EAID_25700C11_A59B_411f_8693_FFDDF62818E5" visibility="public" namespace="EAPK_D279675C_7AB4_4b3d_AB59_09AB642CB4FC" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="documentation" value="Este proceso se lanza de forma automática todos los meses.&#xA;&#xA;Los terceros son reportados a centrales de riesgo por (3) tres motivos:&#xA;&lt;ol&gt;&#xA;	&lt;li&gt;Los terceros marcados por mora en acuerdo de pago.&lt;/li&gt;&#xA;	&lt;li&gt;Los terceros que se encuentran al día con el pago de las cuotas del acuerdo de pago.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;Los terceros que han incumplido los acuerdos de pago."/>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="UseCase"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_D279675C_7AB4_4b3d_AB59_09AB642CB4FC"/>
+								<UML:TaggedValue tag="date_created" value="2017-02-21 10:43:53"/>
+								<UML:TaggedValue tag="date_modified" value="2017-02-21 10:44:44"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="Reporte centrales de riesgo"/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="dev"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Proposed"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="504"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:UseCase>
+						<UML:Association xmi.id="EAID_EC90FF24_8C1D_4044_817B_B060DD416097" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="3020"/>
+								<UML:TaggedValue tag="ea_sourceName" value="Timer"/>
+								<UML:TaggedValue tag="ea_targetName" value="CU346.2 Identificar terceros para reporte a centrales de riesgo"/>
+								<UML:TaggedValue tag="ea_sourceType" value="Actor"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="6213"/>
+								<UML:TaggedValue tag="ea_targetID" value="504"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_C1BFCF04_964A_4957_9418_BCC89EFC0A67">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_25700C11_A59B_411f_8693_FFDDF62818E5">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:UseCase name="CU344.1 Registrar una objeción al aviso de reporte a las centrales de riesgo." xmi.id="EAID_7069228B_9C93_4472_9E4C_6FCF1154EBA5" visibility="public" namespace="EAPK_D279675C_7AB4_4b3d_AB59_09AB642CB4FC" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="documentation" value="El usuario abogado recibe por correspondencia de entrada la objeción al aviso previo al reporte a centrales de riesgo."/>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="UseCase"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_D279675C_7AB4_4b3d_AB59_09AB642CB4FC"/>
+								<UML:TaggedValue tag="date_created" value="2017-02-21 10:39:57"/>
+								<UML:TaggedValue tag="date_modified" value="2017-02-21 10:40:38"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="Reporte centrales de riesgo"/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="dev"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Proposed"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="505"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:UseCase>
+						<UML:Association xmi.id="EAID_CD8C255F_B4D0_4c85_948F_4CB5526BC0C9" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="2920"/>
+								<UML:TaggedValue tag="ea_sourceName" value="AT1 Abogado de dependencia"/>
+								<UML:TaggedValue tag="ea_targetName" value="CU344.1 Registrar una objeción al aviso de reporte a las centrales de riesgo."/>
+								<UML:TaggedValue tag="ea_sourceType" value="Actor"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="6167"/>
+								<UML:TaggedValue tag="ea_targetID" value="505"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_3DD5640D_94A5_4922_9D23_2B53F628C170">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_7069228B_9C93_4472_9E4C_6FCF1154EBA5">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:UseCase name="CU345.1 Crear un oficio de respuesta a la objeción de aviso de reporte a centrales de riesgo." xmi.id="EAID_9CF73BEE_6DA0_42b7_BE2A_CF3F6F7EE826" visibility="public" namespace="EAPK_D279675C_7AB4_4b3d_AB59_09AB642CB4FC" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="UseCase"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_D279675C_7AB4_4b3d_AB59_09AB642CB4FC"/>
+								<UML:TaggedValue tag="date_created" value="2017-02-21 10:40:41"/>
+								<UML:TaggedValue tag="date_modified" value="2017-02-21 10:41:45"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="Reporte centrales de riesgo"/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="dev"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Proposed"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="506"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:UseCase>
+						<UML:Association xmi.id="EAID_A6298ACE_3C99_410f_91F1_D1C0D2A146F3" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.stereotype>
+								<UML:Stereotype name="include"/>
+							</UML:ModelElement.stereotype>
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="subtype" value="Includes"/>
+								<UML:TaggedValue tag="stereotype" value="include"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="conditional" value=" &#xA;«include»"/>
+								<UML:TaggedValue tag="ea_localid" value="1250"/>
+								<UML:TaggedValue tag="ea_sourceName" value="CU345.1 Crear un oficio de respuesta a la objeción de aviso de reporte a centrales de riesgo."/>
+								<UML:TaggedValue tag="ea_targetName" value="CUT-3 Realizar un oficio"/>
+								<UML:TaggedValue tag="ea_sourceType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="506"/>
+								<UML:TaggedValue tag="ea_targetID" value="1033"/>
+								<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={2FF9D66B-0FA2-499b-90A3-79A7FCCBF17B}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=include;GUID={124A0C36-2725-4a17-97A4-F2CE030EA9E8};@ENDSTEREO;$DES;$CLT={A6298ACE-3C99-410f-91F1-D1C0D2A146F3}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+								<UML:TaggedValue tag="mb" value=" &#xA;«include»"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_9CF73BEE_6DA0_42b7_BE2A_CF3F6F7EE826">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_6FFC2FA2_8B42_4d38_BF25_A5AAF8DD95FB">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:Association xmi.id="EAID_D76B2696_341D_49e4_A60C_34EAE0A41F55" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="2916"/>
+								<UML:TaggedValue tag="ea_sourceName" value="AT1 Abogado de dependencia"/>
+								<UML:TaggedValue tag="ea_targetName" value="CU345.1 Crear un oficio de respuesta a la objeción de aviso de reporte a centrales de riesgo."/>
+								<UML:TaggedValue tag="ea_sourceType" value="Actor"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="6167"/>
+								<UML:TaggedValue tag="ea_targetID" value="506"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_3DD5640D_94A5_4922_9D23_2B53F628C170">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_9CF73BEE_6DA0_42b7_BE2A_CF3F6F7EE826">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:UseCase name="CU346.3 Crear oficio de reporte a centrales de riesgo." xmi.id="EAID_BDC0B25D_7199_4abb_A325_F378BFDC23D4" visibility="public" namespace="EAPK_D279675C_7AB4_4b3d_AB59_09AB642CB4FC" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="documentation" value="Este proceso se lanza de forma automática todos los meses."/>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="UseCase"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_D279675C_7AB4_4b3d_AB59_09AB642CB4FC"/>
+								<UML:TaggedValue tag="date_created" value="2017-02-21 10:44:59"/>
+								<UML:TaggedValue tag="date_modified" value="2017-02-21 10:45:43"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="Reporte centrales de riesgo"/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="dev"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Proposed"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="507"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:UseCase>
+						<UML:Association xmi.id="EAID_466987E2_9B1E_4033_8124_0C661A6DBAC8" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="3100"/>
+								<UML:TaggedValue tag="ea_sourceName" value="Timer"/>
+								<UML:TaggedValue tag="ea_targetName" value="CU346.3 Crear oficio de reporte a centrales de riesgo."/>
+								<UML:TaggedValue tag="ea_sourceType" value="Actor"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="6213"/>
+								<UML:TaggedValue tag="ea_targetID" value="507"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_C1BFCF04_964A_4957_9418_BCC89EFC0A67">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_BDC0B25D_7199_4abb_A325_F378BFDC23D4">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:Association xmi.id="EAID_51F833F3_DAC3_45ec_AE06_377C02C04F28" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.stereotype>
+								<UML:Stereotype name="include"/>
+							</UML:ModelElement.stereotype>
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="subtype" value="Includes"/>
+								<UML:TaggedValue tag="stereotype" value="include"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="conditional" value=" &#xA;«include»"/>
+								<UML:TaggedValue tag="ea_localid" value="1247"/>
+								<UML:TaggedValue tag="ea_sourceName" value="CU346.3 Crear oficio de reporte a centrales de riesgo."/>
+								<UML:TaggedValue tag="ea_targetName" value="CUT-2 Generar un oficio automático"/>
+								<UML:TaggedValue tag="ea_sourceType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="507"/>
+								<UML:TaggedValue tag="ea_targetID" value="1035"/>
+								<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={7BFFCC33-CEA5-49fc-9366-B5E0453C1451}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=include;GUID={124A0C36-2725-4a17-97A4-F2CE030EA9E8};@ENDSTEREO;$DES;$CLT={51F833F3-DAC3-45ec-AE06-377C02C04F28}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+								<UML:TaggedValue tag="mb" value=" &#xA;«include»"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_BDC0B25D_7199_4abb_A325_F378BFDC23D4">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_9E2E6515_E895_4b5f_85F2_F6EE8E32D8A0">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:UseCase name="CU346.1 Marcar al tercero deudor para ser reportado a centrales de riesgo." xmi.id="EAID_C8C08160_0810_4bce_BEAC_C9EF3F2433E8" visibility="public" namespace="EAPK_D279675C_7AB4_4b3d_AB59_09AB642CB4FC" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="UseCase"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_D279675C_7AB4_4b3d_AB59_09AB642CB4FC"/>
+								<UML:TaggedValue tag="date_created" value="2017-02-21 10:43:17"/>
+								<UML:TaggedValue tag="date_modified" value="2017-02-21 10:43:49"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="Reporte centrales de riesgo"/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="dev"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Proposed"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="508"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:UseCase>
+						<UML:Association xmi.id="EAID_89F20E99_2A9B_4550_A6C5_B28B6BC7FF82" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="3067"/>
+								<UML:TaggedValue tag="ea_sourceName" value="Timer"/>
+								<UML:TaggedValue tag="ea_targetName" value="CU346.1 Marcar al tercero deudor para ser reportado a centrales de riesgo."/>
+								<UML:TaggedValue tag="ea_sourceType" value="Actor"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="6213"/>
+								<UML:TaggedValue tag="ea_targetID" value="508"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_C1BFCF04_964A_4957_9418_BCC89EFC0A67">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_C8C08160_0810_4bce_BEAC_C9EF3F2433E8">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:UseCase name="CU343.1 Generar automáticamente un aviso al tercero deudor en el cual se indica que será reportado en centrales de riesgo." xmi.id="EAID_FA11AB7D_784E_4803_BFA2_2061D855CC53" visibility="public" namespace="EAPK_D279675C_7AB4_4b3d_AB59_09AB642CB4FC" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="documentation" value="Generar el proceso de aviso previo a ser reportado a centrales de riesgo, a los terceros que llevan (2) dos meses de mora en un acuerdo de pago."/>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="UseCase"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_D279675C_7AB4_4b3d_AB59_09AB642CB4FC"/>
+								<UML:TaggedValue tag="date_created" value="2017-02-21 10:38:38"/>
+								<UML:TaggedValue tag="date_modified" value="2017-02-21 10:39:39"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="Reporte centrales de riesgo"/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="dev"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Proposed"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="509"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:UseCase>
+						<UML:Association xmi.id="EAID_8CA3E72D_2056_4f39_B625_3F03BB71B3A3" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="3064"/>
+								<UML:TaggedValue tag="ea_sourceName" value="Timer"/>
+								<UML:TaggedValue tag="ea_targetName" value="CU343.1 Generar automáticamente un aviso al tercero deudor en el cual se indica que será reportado en centrales de riesgo."/>
+								<UML:TaggedValue tag="ea_sourceType" value="Actor"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="6213"/>
+								<UML:TaggedValue tag="ea_targetID" value="509"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_C1BFCF04_964A_4957_9418_BCC89EFC0A67">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_FA11AB7D_784E_4803_BFA2_2061D855CC53">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:Association xmi.id="EAID_AD2A2E93_3C81_4eab_8017_6C0D1D3C0EA6" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.stereotype>
+								<UML:Stereotype name="include"/>
+							</UML:ModelElement.stereotype>
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="subtype" value="Includes"/>
+								<UML:TaggedValue tag="stereotype" value="include"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="conditional" value=" &#xA;«include»"/>
+								<UML:TaggedValue tag="ea_localid" value="1242"/>
+								<UML:TaggedValue tag="ea_sourceName" value="CU343.1 Generar automáticamente un aviso al tercero deudor en el cual se indica que será reportado en centrales de riesgo."/>
+								<UML:TaggedValue tag="ea_targetName" value="CUT-2 Generar un oficio automático"/>
+								<UML:TaggedValue tag="ea_sourceType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="509"/>
+								<UML:TaggedValue tag="ea_targetID" value="1035"/>
+								<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={BDAFE3D9-57F3-4e41-8416-E6285C37CB31}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=include;GUID={124A0C36-2725-4a17-97A4-F2CE030EA9E8};@ENDSTEREO;$DES;$CLT={AD2A2E93-3C81-4eab-8017-6C0D1D3C0EA6}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+								<UML:TaggedValue tag="mb" value=" &#xA;«include»"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_FA11AB7D_784E_4803_BFA2_2061D855CC53">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_9E2E6515_E895_4b5f_85F2_F6EE8E32D8A0">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+					</UML:Namespace.ownedElement>
+				</UML:Package>
+			</UML:Namespace.ownedElement>
+		</UML:Model>
+		<UML:Diagram name="Reporte centrales de riesgo" xmi.id="EAID_F13BBB7C_49B4_47e9_97FA_81D2FAA6AEBD" diagramType="UseCaseDiagram" owner="EAPK_D279675C_7AB4_4b3d_AB59_09AB642CB4FC" toolName="Enterprise Architect 2.5">
+			<UML:ModelElement.taggedValue>
+				<UML:TaggedValue tag="version" value="1.0"/>
+				<UML:TaggedValue tag="author" value="dev"/>
+				<UML:TaggedValue tag="created_date" value="2017-02-21 10:37:28"/>
+				<UML:TaggedValue tag="modified_date" value="2017-05-01 16:13:02"/>
+				<UML:TaggedValue tag="package" value="EAPK_D279675C_7AB4_4b3d_AB59_09AB642CB4FC"/>
+				<UML:TaggedValue tag="type" value="Use Case"/>
+				<UML:TaggedValue tag="swimlanes" value="locked=false;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;cls=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;"/>
+				<UML:TaggedValue tag="matrixitems" value="locked=false;matrixactive=false;swimlanesactive=true;kanbanactive=false;width=1;clrLine=0;"/>
+				<UML:TaggedValue tag="ea_localid" value="20"/>
+				<UML:TaggedValue tag="EAStyle" value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=1;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=1;PPgs.cy=1;DocSize.cx=850;DocSize.cy=1098;ShowDetails=0;Orientation=P;Zoom=100;ShowTags=0;OpParams=1;VisibleAttributeDetail=0;ShowOpRetType=1;ShowIcons=1;CollabNums=0;HideProps=0;ShowReqs=0;ShowCons=0;PaperSize=1;HideParents=0;UseAlias=0;HideAtts=0;HideOps=0;HideStereo=0;HideElemStereo=0;ShowTests=0;ShowMaint=0;ConnectorNotation=UML 2.1;ExplicitNavigability=0;ShowShape=1;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;ShowNotes=0;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;"/>
+				<UML:TaggedValue tag="styleex" value="SaveTag=31188859;ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=1;MatrixActive=0;SwimlanesActive=1;KanbanActive=0;MatrixLineWidth=1;MatrixLineClr=0;MatrixLocked=0;TConnectorNotation=UML 2.1;TExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;ProfileData=;MDGDgm=;STBLDgm=;ShowNotes=0;VisibleAttributeDetail=0;ShowOpRetType=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;SuppressedCompartments=;Theme=:119;"/>
+			</UML:ModelElement.taggedValue>
+			<UML:Diagram.element>
+				<UML:DiagramElement geometry="Left=213;Top=170;Right=318;Bottom=240;" subject="EAID_BDC0B25D_7199_4abb_A325_F378BFDC23D4" seqno="1" style="DUID=5E2077DA;"/>
+				<UML:DiagramElement geometry="Left=210;Top=246;Right=315;Bottom=316;" subject="EAID_25700C11_A59B_411f_8693_FFDDF62818E5" seqno="2" style="DUID=5A248858;"/>
+				<UML:DiagramElement geometry="Left=102;Top=289;Right=207;Bottom=359;" subject="EAID_C8C08160_0810_4bce_BEAC_C9EF3F2433E8" seqno="3" style="DUID=9E46F0E8;"/>
+				<UML:DiagramElement geometry="Left=358;Top=161;Right=403;Bottom=251;" subject="EAID_3DD5640D_94A5_4922_9D23_2B53F628C170" seqno="4" style="DUID=871D07C9;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;"/>
+				<UML:DiagramElement geometry="Left=174;Top=90;Right=279;Bottom=160;" subject="EAID_088F8E10_5CB7_44c6_9A41_3D095379B92D" seqno="5" style="DUID=677CA9AC;"/>
+				<UML:DiagramElement geometry="Left=461;Top=119;Right=566;Bottom=189;" subject="EAID_9CF73BEE_6DA0_42b7_BE2A_CF3F6F7EE826" seqno="6" style="DUID=AC77491A;"/>
+				<UML:DiagramElement geometry="Left=462;Top=226;Right=567;Bottom=296;" subject="EAID_7069228B_9C93_4472_9E4C_6FCF1154EBA5" seqno="7" style="DUID=BF93FA4D;"/>
+				<UML:DiagramElement geometry="Left=34;Top=27;Right=178;Bottom=123;" subject="EAID_FA11AB7D_784E_4803_BFA2_2061D855CC53" seqno="8" style="DUID=09BA4C9C;"/>
+				<UML:DiagramElement geometry="Left=51;Top=156;Right=96;Bottom=246;" subject="EAID_C1BFCF04_964A_4957_9418_BCC89EFC0A67" seqno="9" style="DUID=49E3C4A2;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=1;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_8CA3E72D_2056_4f39_B625_3F03BB71B3A3" style="Mode=3;EOID=09BA4C9C;SOID=49E3C4A2;Color=-1;LWidth=0;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_CD8C255F_B4D0_4c85_948F_4CB5526BC0C9" style="Mode=3;EOID=BF93FA4D;SOID=871D07C9;Color=-1;LWidth=0;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_D76B2696_341D_49e4_A60C_34EAE0A41F55" style="Mode=3;EOID=AC77491A;SOID=871D07C9;Color=-1;LWidth=0;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_94512DB5_12FF_46f5_B429_03959B9730E0" style="Mode=3;EOID=677CA9AC;SOID=49E3C4A2;Color=-1;LWidth=0;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_89F20E99_2A9B_4550_A6C5_B28B6BC7FF82" style="Mode=3;EOID=9E46F0E8;SOID=49E3C4A2;Color=-1;LWidth=0;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_EC90FF24_8C1D_4044_817B_B060DD416097" style="Mode=3;EOID=5A248858;SOID=49E3C4A2;Color=-1;LWidth=0;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_466987E2_9B1E_4033_8124_0C661A6DBAC8" style="Mode=3;EOID=5E2077DA;SOID=49E3C4A2;Color=-1;LWidth=0;Hidden=0;"/>
+			</UML:Diagram.element>
+		</UML:Diagram>
+	</XMI.content>
+	<XMI.difference/>
+	<XMI.extensions xmi.extender="Enterprise Architect 2.5">
+		<EAModel.scenario>
+			<EAScenario name="Basic Path" type="Basic Path" weight="0,00" subject="EAID_088F8E10_5CB7_44c6_9A41_3D095379B92D" xmi.id="EAID_D233AF61_4CC9_42ed_9AED_4435AD25FD27">
+				<EAScenarioContent>
+					<path>
+						<step name="El sistema espera el pago de la cuota que se encuentra en mora del acuerdo de pago hasta que se cumplan (20) veinte días desde la comunicación del aviso de reporte a central de riesgo." guid="{5842A1BB-2BF6-4be8-8971-36B9706A7F7A}" level="1" uses="" useslist="" result="Verificar que el proceso de reporte a centrales de pago haya finalizado" state="" trigger="0" link=""/>
+						<step name="El sistema identifica el pago de la cuota que se encuentra en mora y finaliza el proceso de reporte a central de riesgo." guid="{D2224312-4DD7-47e7-B0DE-09C86D68B456}" level="2" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<context/>
+					</path>
+				</EAScenarioContent>
+			</EAScenario>
+			<EAScenario name="Basic Path" type="Basic Path" weight="0,00" subject="EAID_25700C11_A59B_411f_8693_FFDDF62818E5" xmi.id="EAID_61820966_AD7A_4e67_998D_16C789961B36">
+				<EAScenarioContent>
+					<path>
+						<step name="El sistema carga la lista de terceros marcados por mora en el pago de cuotas del acuerdo de pago." guid="{49D1DE35-7ADF-4544-BEBD-BFD7037D275B}" level="1" uses="" useslist="" result="Listar terceros en mora.&#xA;&#xA;Listar terceros al día.&#xA;&#xA;Listar terceros que incumplieron.&#xA;" state="" trigger="0" link=""/>
+						<step name="El sistema carga la lista de terceros que se encuentran al día en el pago de las cuotas del acuerdo de pago." guid="{84D99121-7666-4c19-AB31-A4780F33379F}" level="2" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="El sistema carga la lista de terceros que han incumplido un acuerdo de pago." guid="{E41E72EF-3A9D-4a2c-830B-58C371313274}" level="3" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<context/>
+					</path>
+				</EAScenarioContent>
+			</EAScenario>
+			<EAScenario name="Basic Path" type="Basic Path" weight="0,00" subject="EAID_7069228B_9C93_4472_9E4C_6FCF1154EBA5" xmi.id="EAID_C29BF1F9_C53B_4005_92BC_AFA5AF86F227">
+				<EAScenarioContent>
+					<path>
+						<step name="El usuario recibe por correspondencia de entrada los documentos digitalizados con la objeción al aviso previo al reporte a centrales de riesgo." guid="{64C5F19D-4ECF-4578-8D91-4C920095AF4A}" level="1" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="El abogado selecciona el documento digital y lo ingresa al expediente del proceso." guid="{11C6E08E-84EA-4268-A0A3-925211815979}" level="2" uses="" useslist="" result="Verificar el ingreso del documento digital de objeción al aviso de reporte a centrales de riesgo." state="" trigger="1" link=""/>
+						<context/>
+					</path>
+				</EAScenarioContent>
+			</EAScenario>
+			<EAScenario name="Basic Path" type="Basic Path" weight="0,00" subject="EAID_9CF73BEE_6DA0_42b7_BE2A_CF3F6F7EE826" xmi.id="EAID_216D2710_C419_4be9_9047_BF424218281E">
+				<EAScenarioContent>
+					<path>
+						<step name="El sistema presenta al abogado la objeción realizada." guid="{4940CDFE-9AFD-4aea-812A-0A609493F6E5}" level="1" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="El sistema identifica la plantilla para crear el oficio de aviso de respuesta a las objeciones." guid="{1E2769CF-D140-41d1-8023-BD73CC310529}" level="2" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="CUT-3 (Caso de uso crear oficio)." guid="{CC792561-88B3-4fac-A513-8223EB8C7BF7}" level="3" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="El sistema registra el documento de oficio de respuesta a las objeciones." guid="{6DF52D3F-1224-4fe2-AB78-3B501214A1AC}" level="4" uses="" useslist="" result="Crear el del documento de oficio de respuesta a las objeciones." state="" trigger="0" link=""/>
+						<step name="El usuario registra la decisión adoptada ante la objeción al reporte a centrales de riesgo." guid="{63399AC2-A8FC-4965-B493-5D3FD4BE947C}" level="5" uses="" useslist="" result="Registrar la decisión de que no se hará reporte a la central de riesgos. &#xA;&#xA;Registrar la decisión de que si se hará reporte a la central de riesgos.&#xA;" state="" trigger="1" link=""/>
+						<step name="El sistema genera el proceso de comunicación al tercero deudor" guid="{227CBDC2-C2DB-4344-B381-9C5280748B5E}" level="6" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<context/>
+					</path>
+				</EAScenarioContent>
+			</EAScenario>
+			<EAScenario name="Basic Path" type="Basic Path" weight="0,00" subject="EAID_BDC0B25D_7199_4abb_A325_F378BFDC23D4" xmi.id="EAID_F8AE51BC_CA81_46b3_9AA0_16338721D080">
+				<EAScenarioContent>
+					<path>
+						<step name="El sistema carga el listado como anexo de los terceros que serán reportados por los diferentes motivos a centrales de riesgos." guid="{0451B0BA-8963-41cd-B1C3-B0CCE863A867}" level="1" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="El sistema identifica la plantilla para generar el oficio automático de reporte a centrales de riesgo." guid="{E1C9F2C4-9E8C-4f9e-8E89-D2DDD1BC9FB4}" level="2" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="CUT-2 (Caso de uso crear oficio automático)." guid="{636A2CFE-4754-4633-BD89-72570123538C}" level="3" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="El sistema registra el documento de oficio automático de reporte a centrales de riesgo." guid="{9C16C84D-9C57-4e28-8475-E0CD33B1BCCF}" level="4" uses="" useslist="" result="Crear el del documento de oficio automático de reporte a centrales de riesgo." state="" trigger="0" link=""/>
+						<step name="El sistema genera el proceso de comunicación a la central de riesgos." guid="{1536C3A9-8025-497a-A5C9-BFB65BC1F81E}" level="5" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<context/>
+					</path>
+				</EAScenarioContent>
+			</EAScenario>
+			<EAScenario name="Basic Path" type="Basic Path" weight="0,00" subject="EAID_C8C08160_0810_4bce_BEAC_C9EF3F2433E8" xmi.id="EAID_445BEC36_2C5F_44d2_988D_DDEFAADF99FC">
+				<EAScenarioContent>
+					<path>
+						<step name="El sistema no recibe pago de la cuota del acuerdo de pago que se encuentra en mora después de veinte (20) días de haber comunicado el aviso del reporte a centrales de riesgo." guid="{87AFF809-EBAF-42fd-AC3B-3C11C4C4D3CD}" level="1" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="El sistema marca al deudor para ser reportado en el próximo reporte a centrales de riesgo." guid="{458DCF03-5871-44ad-9565-2B99854B0014}" level="2" uses="" useslist="" result="Verificar que el deudor se encuentra marcado para ser reportado a centrales de riesgo." state="" trigger="0" link=""/>
+						<context/>
+					</path>
+				</EAScenarioContent>
+			</EAScenario>
+			<EAScenario name="Basic Path" type="Basic Path" weight="0,00" subject="EAID_FA11AB7D_784E_4803_BFA2_2061D855CC53" xmi.id="EAID_88DA9305_49BE_41cf_AF95_AFA1A21364D3">
+				<EAScenarioContent>
+					<path>
+						<step name="El sistema identifica que una cuota del acuerdo de pago lleva (2) dos meses en mora." guid="{1260C92C-BE74-46e4-9CEC-9AA34C24D085}" level="1" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="El sistema inicia el proceso de aviso previo al reporte a centrales de riesgo calculando los intereses de mora." guid="{57ABFD85-F546-4d8b-8A4C-56BA5DF4681D}" level="2" uses="" useslist="" result="Verificar el cálculo de los intereses de mora del acuerdo de pago." state="" trigger="0" link=""/>
+						<step name="El sistema identifica la plantilla para generar el oficio automático de aviso previo al reporte en centrales de riesgo." guid="{5BB2228D-CE70-4bc4-9480-0728FDB612CE}" level="3" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="CUT-2 (Caso de uso crear oficio automático)." guid="{C4DF8596-D980-4423-A1AD-389D3864D277}" level="4" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="El sistema registra el documento de oficio automático de aviso previo a centrales de riesgo." guid="{69BC1FDE-DAA1-4e9c-90CA-E8D60C94AD8E}" level="5" uses="" useslist="" result="Crear el del documento de oficio automático de aviso previo a centrales de riesgo." state="" trigger="0" link=""/>
+						<step name="El sistema genera el proceso de comunicación al tercero deudor." guid="{0ACF136F-A4D4-46c2-8A60-18959AB7D85D}" level="6" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<context/>
+					</path>
+				</EAScenarioContent>
+			</EAScenario>
+		</EAModel.scenario>
+		<EAStub xmi.id="EAID_C1BFCF04_964A_4957_9418_BCC89EFC0A67" name="Timer" UMLType="Actor"/>
+		<EAStub xmi.id="EAID_3DD5640D_94A5_4922_9D23_2B53F628C170" name="AT1 Abogado de dependencia" UMLType="Actor"/>
+		<EAStub xmi.id="EAID_6FFC2FA2_8B42_4d38_BF25_A5AAF8DD95FB" name="CUT-3 Realizar un oficio" UMLType="UseCase"/>
+		<EAStub xmi.id="EAID_9E2E6515_E895_4b5f_85F2_F6EE8E32D8A0" name="CUT-2 Generar un oficio automático" UMLType="UseCase"/>
+	</XMI.extensions>
+</XMI>

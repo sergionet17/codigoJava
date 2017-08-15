@@ -1,0 +1,394 @@
+/*
+ * Propiedades específicas para el logo
+ */
+#sipa-logo {
+  min-height: 115px;
+  padding: 5px 10px 1px 10px;
+}
+
+#sipa-menu {
+  min-height: 30px;
+  padding: 0 0 3px 10px;
+}
+
+#sipa-top {
+  padding-top: 40px ;
+  padding-left: 30px;
+  height: 115px;
+}
+
+#sipa-orb {
+  max-height: @navbar-height;
+  z-index: 1000;
+  img {
+    height: floor((@navbar-height * 1.3));
+  }
+}
+
+#sipa-orb-menu {
+  top: 155px;
+  position: fixed;
+  z-index: 1000;
+  margin: floor((@grid-gutter-width / 2));
+  padding: 0px;
+  .well {
+    background-color: @state-info-bg;
+    height: 400px;
+    padding: 10px ! important;
+  }
+}
+/*Login cambios*/
+.sipa-m{
+  margin-bottom: 20%;
+}
+
+.sipa-bogota{
+float: right;
+padding-right: 10px;
+}
+
+.sipa-login-m{
+  margin-left: 10px;
+  margin-right: 10px; 
+}
+/*
+ * Alteraciones al sistema de grilla
+ */
+.sipa-p-0 {
+  padding: 0px ! important;
+}
+
+.sipa-m-0 {
+  margin: 0px ! important;
+}
+
+
+/* 
+ * Clases para definir el fondo con los colores principales de la paleta de SIPA 
+ */
+.sipa-texto-claro() {
+  color: @sipa-text-color-light;
+
+  a {
+    color: @sipa-text-color-light !important;
+  }
+}
+
+
+.sipa-fondo-1 {
+  .sipa-texto-claro;
+  background-color: @sipa-color-1;
+}
+
+.sipa-fondo-2 {
+  .sipa-texto-claro;
+  background-color: @sipa-color-2;
+}
+
+.sipa-fondo-3 {
+  background-color: @sipa-color-3;
+}
+
+/*
+ * Clases específicas para el encabezado
+ */
+.sipa-header {
+  padding-top:  floor((@grid-gutter-width / 2));
+  padding-bottom: ceil((@grid-gutter-width / 2));
+}
+.sipa-w100{
+  width: 100%;
+}
+
+ .sipa{
+ width: 300px;
+ }
+
+ .noticia{
+  width:200px;
+}
+
+.sipa-min-menu{
+  min-height: 10px ! important;
+}
+
+.sipa-menu-text{
+  font-size: 16px;
+  text-align: justify;
+}
+
+.sipa-menu-list{
+  text-align: justify;
+ list-style-type: none;
+}
+
+.sipa-shadow{
+  float: right;
+  margin-top: 70%;
+}
+
+#sipa-user{
+  padding-top: 25px;
+  height: 115px;
+}
+.sipa-hr{
+  height: 2px;
+}
+.sipa-hamburger{
+  font-size: 26px;
+}
+
+.sipa-ml-mr-3{
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+#triangle {
+width: 0px; 
+height: 0px; 
+border-left:  20px solid transparent;
+border-right: 20px solid transparent; 
+border-bottom: 20px solid @state-info-bg;
+border: 1px solid #e3e3e3;
+}
+
+.sipa-box{
+  border: 1px solid #003c65;
+  border-radius: 5px;
+  background-color: #fff;
+  height: auto;
+  margin-bottom: 5px;
+}
+
+.sipa-title{
+  font-size: 13px;
+  color: #333;
+  text-align: center;
+  padding-right: 10px;
+}
+.sipa-text-p{
+  font-size: 10px;
+  text-align: left;
+}
+.sipa-item{
+  text-align: center;
+  padding-top: 10px;
+  width: 20%;
+  float: left;
+}
+
+.sipa-link{
+  float: right;
+  font-size: 10px;
+  color: #009fe3;
+  padding-right: 10px;
+}
+
+#sipa-logo {
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+    width: 30%;
+  }
+}
+
+#sipa-top {
+  @media (max-width: @screen-xs-max) {
+  padding-top: 0px;
+  padding-left: 10px;
+  }
+}
+.sipa-footer{
+  height: 60px;
+}
+.sipa-footer-button{
+  float: right; 
+  margin-bottom: 10px;
+}
+
+.sipa-alcaldia-logo{
+  float: right; 
+  padding-right: 10px;
+}
+
+/*
+ * @medias para moviles y tablets
+ */
+.sipa-footer{
+  @media (max-width: @screen-md-min){
+    margin-bottom: -26%;
+    position: absolute;
+    bottom: 0;
+    top: 145%;
+  }
+}
+
+.sipa-footer{
+   @media (max-width: @screen-xs-max){
+    position: absolute;
+    bottom: 0;
+    top: 145%;
+   }
+}
+/*
+.semaforo-rojo{
+ width: 50px;
+ height: 50px;
+ -moz-border-radius: 50%;
+ -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: #ed1c24;
+
+}
+
+.semaforo-amarillo{
+  width: 50px;
+ height: 50px;
+ -moz-border-radius: 50%;
+ -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: #ffd400;
+}
+
+.semaforo-verde{
+ width: 50px;
+ height: 50px;
+ -moz-border-radius: 50%;
+ -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: #009245;
+}
+
+.semaforo-blanco{
+ width: 50px;
+ height: 50px;
+ -moz-border-radius: 50%;
+ -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #000000;
+}
+.alcaldia{
+  float: right; 
+  padding-right: 10px;
+}
+
+.line{
+  border-width:1px;
+  }
+
+.tareas{
+  background-color: @sipa-color-2;
+}
+
+.login{
+  padding:15px;
+}
+
+.fondo{
+  background-color: #FFFFFF;
+  border-bottom: 1px solid @sipa-color-2;
+  border-top: 1px solid @sipa-color-2;
+  text-align: center;
+}
+
+.bogota{
+  float: left;
+}
+.final{
+  border-right: 1px solid @sipa-color-2;
+}
+
+.navbar-default{
+    background-color: @sipa-color-2 !important;
+}
+
+.menu{
+  color: #FFF;
+  font-size: 12px;
+}
+
+.menu_2{
+  font-size: 14px;
+}
+.barra{
+  background-color: @sipa-color-2; 
+  height: auto; 
+  margin-top: 0%;
+  margin-bottom: 0%;
+  border-color: @sipa-color-2 !important;
+}
+
+ .sipa{
+ width: 300px;
+ }
+
+ .vertical{
+ width: 15%; 
+ padding-right: 0; 
+ padding-left: 0; 
+ float: left;
+ margin-top: 0%;
+ background-color: @sipa-color-1;
+ color:#FFF;
+ height: 100%;
+ }
+
+ .vertical {
+  @media (max-width: @screen-xs-max) {
+    width: 100%;
+    margin-bottom: 5%;
+  }
+}
+.icon{
+  width: 25%;
+}
+
+ .sipa {
+  @media (max-width: @screen-xs-max) {
+    width: 100%;
+  }
+}
+.noticia{
+  width:200px;
+}
+
+.sipa {
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+    width: 70%;
+  }
+}
+
+ .vertical {
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+    width: 20%;
+  }
+}
+.menu_vertical{
+width: 16.66666667%; 
+ padding-right: 0; 
+ padding-left: 0; 
+ float: left;
+ margin-top: -1.1%;
+ background-color: @sipa-color-1;
+ color:#FFF;
+ height: 100%;
+}
+
+#vertical_drop li ul{
+position: absolute;
+    width: 0;
+    left: 130px;
+    top: 0;
+    overflow: hidden; 
+}
+
+.lateral{
+  min-width: 500px;
+}
+
+ .submenus{
+ line-height: 19px;
+ padding-left: 2%;
+ }
+*/

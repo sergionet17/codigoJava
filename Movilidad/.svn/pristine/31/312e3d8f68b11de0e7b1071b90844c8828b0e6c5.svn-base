@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:ssbp="www.sparxsystems.com.au/bpmn20" id="EAPK_2C0A1561_9A59_4db3_BF60_682C2978B4AA" name="Decretar desembargo" targetNamespace="www.sparxsystems.com.au/bpmn20" exporter="Camunda Modeler" exporterVersion="1.8.0">
+  <bpmn:collaboration id="Collaboration_163j0ug">
+    <bpmn:participant id="Participant_0yj3pnc" name="SDM" processRef="Process_0vnb1ro" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_0vnb1ro" name="Decretar desembargo" isExecutable="true">
+    <bpmn:laneSet>
+      <bpmn:lane id="Lane_0cuk6xx" name="AT.1 (Abogado de dependencia)">
+        <bpmn:flowNodeRef>Task_0s1qsy2</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_02jnxta</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>StartEvent_0sxcia9</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EndEvent_1jl0a8o</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="StartEvent_0sxcia9" name="Inicio">
+      <bpmn:outgoing>SequenceFlow_02blxqe</bpmn:outgoing>
+      <bpmn:messageEventDefinition messageRef="Message_0s2u6p3" />
+    </bpmn:startEvent>
+    <bpmn:serviceTask id="Task_0s1qsy2" name="Agrupar solicitudes desembargo por ente registrador" camunda:class="co.gov.movilidadbogota.sipa.bpm.DummyTask">
+      <bpmn:incoming>SequenceFlow_02blxqe</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0tvr5nr</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:callActivity id="Task_02jnxta" name="Desembargo por ente registrador" calledElement="Sp desembargo por ente registrador">
+      <bpmn:incoming>SequenceFlow_0tvr5nr</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_10vk4fb</bpmn:outgoing>
+      <bpmn:multiInstanceLoopCharacteristics>
+        <bpmn:loopCardinality xsi:type="bpmn:tFormalExpression">1</bpmn:loopCardinality>
+      </bpmn:multiInstanceLoopCharacteristics>
+    </bpmn:callActivity>
+    <bpmn:endEvent id="EndEvent_1jl0a8o">
+      <bpmn:incoming>SequenceFlow_10vk4fb</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_02blxqe" sourceRef="StartEvent_0sxcia9" targetRef="Task_0s1qsy2" />
+    <bpmn:sequenceFlow id="SequenceFlow_0tvr5nr" sourceRef="Task_0s1qsy2" targetRef="Task_02jnxta" />
+    <bpmn:sequenceFlow id="SequenceFlow_10vk4fb" sourceRef="Task_02jnxta" targetRef="EndEvent_1jl0a8o" />
+    <bpmn:textAnnotation id="EAID_E71BBE52_68C9_4d22_9FC9_DC3649571A2B">    <bpmn:text>SIM es el unico que da respuesta a desembargo</bpmn:text>
+</bpmn:textAnnotation>
+  </bpmn:process>
+  <bpmn:message id="Message_0s2u6p3" name="Message_21b8i5v" />
+  <bpmndi:BPMNDiagram id="EAID_45AA47F3_0AF1_4924_8D04_95F67239FE6E" name="Decretar desembargo">
+    <bpmndi:BPMNPlane id="EAID_PL000000_0AF1_4924_8D04_95F67239FE6E" bpmnElement="Collaboration_163j0ug">
+      <bpmndi:BPMNShape id="EAID_DO000003_0AF1_4924_8D04_95F67239FE6E" bpmnElement="EAID_E71BBE52_68C9_4d22_9FC9_DC3649571A2B">
+        <dc:Bounds x="359" y="17" width="137" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Participant_0yj3pnc_di" bpmnElement="Participant_0yj3pnc">
+        <dc:Bounds x="0" y="0" width="516" height="168" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_0cuk6xx_di" bpmnElement="Lane_0cuk6xx">
+        <dc:Bounds x="30" y="0" width="486" height="168" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="StartEvent_0b576gq_di" bpmnElement="StartEvent_0sxcia9">
+        <dc:Bounds x="63" y="90" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="67" y="129" width="26" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_02blxqe_di" bpmnElement="SequenceFlow_02blxqe">
+        <di:waypoint xsi:type="dc:Point" x="99" y="108" />
+        <di:waypoint xsi:type="dc:Point" x="132" y="108" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="115.5" y="86.5" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="ServiceTask_1mwh1gr_di" bpmnElement="Task_0s1qsy2">
+        <dc:Bounds x="132" y="68" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0tvr5nr_di" bpmnElement="SequenceFlow_0tvr5nr">
+        <di:waypoint xsi:type="dc:Point" x="232" y="108" />
+        <di:waypoint xsi:type="dc:Point" x="259" y="108" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="245.5" y="86.5" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="CallActivity_03o47v1_di" bpmnElement="Task_02jnxta">
+        <dc:Bounds x="259" y="68" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_1jl0a8o_di" bpmnElement="EndEvent_1jl0a8o">
+        <dc:Bounds x="396.041" y="90" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="414.041" y="129" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_10vk4fb_di" bpmnElement="SequenceFlow_10vk4fb">
+        <di:waypoint xsi:type="dc:Point" x="359" y="108" />
+        <di:waypoint xsi:type="dc:Point" x="396" y="108" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="377.5" y="86" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+    <bpmndi:BPMNLabelStyle id="EAID_LS000000_0AF1_4924_8D04_95F67239FE6E">
+      <dc:Font name="Calibri" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+    </bpmndi:BPMNLabelStyle>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
