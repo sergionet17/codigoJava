@@ -1,0 +1,14 @@
+#!/bin/bash
+
+IP_LOAD_BALANCER="66.175.219.84"
+IP_APPLICATION="173.255.214.179,192.81.134.56"
+IP_BPM="45.33.34.167,45.33.44.201"
+IP_ESB="104.200.25.208,45.56.87.229"
+IP_ORACLE="45.56.95.9"
+IP_MONGO="74.207.249.248"
+IP_JASPER="198.74.48.98"
+IP_ECM="173.255.221.202,45.33.104.65"
+IP_CAS="173.230.153.65,173.255.211.56"
+
+URL_REPOSITORY="http://svn.ingenian.com/Movilidad/trunk/src"
+WK_LOCATION="../src" # This is relative to the root of the deploy.sh script
