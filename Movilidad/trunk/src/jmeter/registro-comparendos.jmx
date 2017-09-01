@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="3.2" jmeter="3.2 r1790748">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="pwd" elementType="Argument">
+            <stringProp name="Argument.name">pwd</stringProp>
+            <stringProp name="Argument.value">/home/acpreda/projects/sipa/jmeter</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="hostname" elementType="Argument">
+            <stringProp name="Argument.name">hostname</stringProp>
+            <stringProp name="Argument.value">66.175.219.84</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="port" elementType="Argument">
+            <stringProp name="Argument.name">port</stringProp>
+            <stringProp name="Argument.value">80</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Hilos de prueba para Servicio de comparendos" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">5</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">0</stringProp>
+        <longProp name="ThreadGroup.start_time">1498592869000</longProp>
+        <longProp name="ThreadGroup.end_time">1498592869000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="Formatos de comparendo" enabled="true">
+          <stringProp name="delimiter">,</stringProp>
+          <stringProp name="fileEncoding">UTF-8</stringProp>
+          <stringProp name="filename">${pwd}/comparendos.csv</stringProp>
+          <boolProp name="ignoreFirstLine">false</boolProp>
+          <boolProp name="quotedData">true</boolProp>
+          <boolProp name="recycle">false</boolProp>
+          <stringProp name="shareMode">shareMode.group</stringProp>
+          <boolProp name="stopThread">true</boolProp>
+          <stringProp name="variableNames">id,consecutivo,numero,fecha,hora,tipo,direccion,localidad,municipio,departamento,codigoInfraccion,placaVehiculo,tipoVehiculo,claseServicioVehiculo,modeloVehiculo,pasajerosVehiculo,tipoIdentificacionInfractor,numeroIdentificacionInfractor,nombresInfractor,apellidosInfractor,numeroLicencia,categoriaLicencia,direccionInfractor,municipioDireccionInfractor,edadInfractor,telefonoInfractor,emailInfractor,tipoInfractor,organismoTransito,tipoIdentificacionPropietario,numeroIdentificacionPropietario,nombresPropietario,apellidosPropietario,nitEmpresa,nombreEmpresa,tarjetaOperacion,nombresAgente,apellidosAgente,placaAgente,entidadAgente,numeroPatio,direccionPatio,numeroGrua,placaGrua,numeroInmovilizacion,observaciones,tipoIdentificacionTestigo,numeroIdentificacionTestigo,nombresTestigo,apellidosTestigo,direccionTestigo,telefonoTestigo</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+        <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="Lector de imagen Base64" enabled="true">
+          <stringProp name="cacheKey"></stringProp>
+          <stringProp name="filename"></stringProp>
+          <stringProp name="parameters"></stringProp>
+          <stringProp name="script">import org.apache.jmeter.util.JMeterUtils;
+
+String fileContents = new File(vars.get(&apos;pwd&apos;) + &apos;/comparendo.b64&apos;).getText(&apos;UTF-8&apos;);
+vars.put(&quot;foto&quot;, fileContents);
+</stringProp>
+          <stringProp name="scriptLanguage">groovy</stringProp>
+        </JSR223PreProcessor>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Request token" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="grant_type" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.value">client_credentials</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">grant_type</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">66.175.219.84</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/sipa-cas/oauth/token</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Basic c2lwYXdlYjpzaXBhd2Vic2VjcmV0</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">TOKEN</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">access_token</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers"></stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+          <ResultSaver guiclass="ResultSaverGui" testclass="ResultSaver" testname="Save Responses to a file" enabled="true">
+            <stringProp name="FileSaver.filename">${pwd}/cas-${numero}-</stringProp>
+            <boolProp name="FileSaver.errorsonly">true</boolProp>
+            <boolProp name="FileSaver.skipautonumber">false</boolProp>
+            <boolProp name="FileSaver.skipsuffix">false</boolProp>
+            <boolProp name="FileSaver.successonly">false</boolProp>
+          </ResultSaver>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Registrar comparendo" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">--sipa_is_great&#xd;
+Content-Type: application/json; charset=UTF-8&#xd;
+Content-Disposition: form-data; name=&quot;formato&quot;&#xd;
+&#xd;
+{&quot;numero&quot;: &quot;${numero}&quot;,	&quot;categoriaLicencia&quot;: &quot;${categoriaLicencia}&quot;,&quot;tipoVehiculo&quot;: &quot;${tipoVehiculo}&quot;,&quot;codigoInfraccion&quot;: &quot;${codigoInfraccion}&quot;,&quot;departamento&quot;: &quot;${departamento}&quot;,&quot;direccion&quot;: &quot;${direccion}&quot;,&quot;direccionInfractor&quot;: &quot;${direccionInfractor}&quot;,&quot;direccionPatio&quot;: &quot;${direccionPatio}&quot;,&quot;direccionTestigo&quot;: &quot;Calle 95&quot;,&quot;edadInfractor&quot;: &quot;${edadInfractor}&quot;,&quot;emailInfractor&quot;: &quot;${emailInfractor}&quot;,&quot;entidadAgente&quot;: &quot;${entidadAgente}&quot;,&quot;fecha&quot;: &quot;${fecha}&quot;,&quot;hora&quot;: &quot;${hora}&quot;,&quot;localidad&quot;: &quot;${localidad}&quot;,&quot;modeloVehiculo&quot;: &quot;${modeloVehiculo}&quot;,&quot;municipio&quot;: &quot;${municipio}&quot;,&quot;municipioDireccionInfractor&quot;: &quot;${municipioDireccionInfractor}&quot;,&quot;nitEmpresa&quot;: &quot;${nitEmpresa}&quot;,&quot;nombreEmpresa&quot;: &quot;${nombreEmpresa}&quot;,&quot;primerNombreAgente&quot;: &quot;${nombresAgente}&quot;,&quot;segundoNombreAgente&quot;: &quot;&quot;,&quot;primerApellidoAgente&quot;: &quot;${apellidosAgente}&quot;,&quot;segundoApellidoAgente&quot;: &quot;&quot;,&quot;primerNombreInfractor&quot;: &quot;${nombresInfractor}&quot;,&quot;segundoNombreInfractor&quot;: &quot;&quot;,&quot;primerApellidoInfractor&quot;: &quot;${apellidosInfractor}&quot;,&quot;segundoApellidoInfractor&quot;: &quot;&quot;,&quot;nombresPropietario&quot;: &quot;${nombresPropietario}&quot;,&quot;apellidosPropietario&quot;: &quot;${apellidosPropietario}&quot;,&quot;primerNombreTestigo&quot;: &quot;${nombresTestigo}&quot;,&quot;segundoNombreTestigo&quot;: &quot;&quot;,&quot;primerApellidoTestigo&quot;: &quot;${apellidosTestigo}&quot;,&quot;segundoApellidoTestigo&quot;: &quot;&quot;,&quot;numeroGrua&quot;: &quot;${numeroGrua}&quot;,&quot;numeroIdentificacionInfractor&quot;: &quot;${numeroIdentificacionInfractor}&quot;,&quot;numeroIdentificacionPropietario&quot;: &quot;${numeroIdentificacionPropietario}&quot;,&quot;numeroIdentificacionTestigo&quot;: &quot;${numeroIdentificacionTestigo}&quot;,&quot;numeroInmovilizacion&quot;: &quot;${numeroInmovilizacion}&quot;,&quot;numeroLicencia&quot;: &quot;${numeroLicencia}&quot;,&quot;numeroPatio&quot;: &quot;${numeroPatio}&quot;,&quot;observaciones&quot;: &quot;${observaciones}&quot;,&quot;organismoTransito&quot;: &quot;${organismoTransito}&quot;,&quot;pasajerosVehiculo&quot;: &quot;${pasajerosVehiculo}&quot;,&quot;placaAgente&quot;: &quot;${placaAgente}&quot;,&quot;placaGrua&quot;: &quot;${placaGrua}&quot;,&quot;placaVehiculo&quot;: &quot;${placaVehiculo}&quot;,&quot;claseServicioVehiculo&quot;: &quot;${claseServicioVehiculo}&quot;,&quot;tarjetaOperacion&quot;: &quot;${tarjetaOperacion}&quot;,&quot;telefonoInfractor&quot;: &quot;${telefonoInfractor}&quot;,&quot;telefonoTestigo&quot;: &quot;${telefonoTestigo}&quot;,&quot;tipo&quot;: &quot;${tipo}&quot;,&quot;tipoIdentificacionInfractor&quot;: &quot;${tipoIdentificacionInfractor}&quot;,&quot;tipoIdentificacionPropietario&quot;: &quot;${tipoIdentificacionPropietario}&quot;,&quot;tipoIdentificacionTestigo&quot;: &quot;${tipoIdentificacionTestigo}&quot;,&quot;tipoInfractor&quot;: &quot;${tipoInfractor}&quot;,&quot;tipoViaPrincipal&quot;: &quot;&quot;,&quot;tipoViaSecundaria&quot;: &quot;&quot;,&quot;valor&quot;: &quot;&quot;}&#xd;
+--sipa_is_great&#xd;
+Content-Type: image/tiff&#xd;
+Content-Disposition: form-data; name=&quot;orden&quot;; filename=&quot;imagen-comparendo.tiff&quot;&#xd;
+&#xd;
+${foto}&#xd;
+--sipa_is_great--</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${hostname}</stringProp>
+          <stringProp name="HTTPSampler.port">${port}</stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
+          <stringProp name="HTTPSampler.path">/v1/comparendo/manual</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename">sipa-summary.txt</stringProp>
+          </ResultCollector>
+          <hashTree/>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer ${TOKEN}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">multipart/form-data; boundary=sipa_is_great</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename">sipa-summary.txt</stringProp>
+          </ResultCollector>
+          <hashTree/>
+          <ResultSaver guiclass="ResultSaverGui" testclass="ResultSaver" testname="Save Responses to a file" enabled="true">
+            <stringProp name="FileSaver.filename">${pwd}/comparendo-${numero}-</stringProp>
+            <boolProp name="FileSaver.errorsonly">true</boolProp>
+            <boolProp name="FileSaver.skipautonumber">false</boolProp>
+            <boolProp name="FileSaver.skipsuffix">false</boolProp>
+            <boolProp name="FileSaver.successonly">false</boolProp>
+            <stringProp name="FileSaver.variablename">numero</stringProp>
+          </ResultSaver>
+          <hashTree/>
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+    </hashTree>
+    <WorkBench guiclass="WorkBenchGui" testclass="WorkBench" testname="WorkBench" enabled="true">
+      <boolProp name="WorkBench.save">true</boolProp>
+    </WorkBench>
+    <hashTree/>
+  </hashTree>
+</jmeterTestPlan>

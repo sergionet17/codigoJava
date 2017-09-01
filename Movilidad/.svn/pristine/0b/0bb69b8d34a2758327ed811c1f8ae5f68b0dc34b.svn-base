@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:ssbp="www.sparxsystems.com.au/bpmn20" id="EAPK_8CCCAD93_F3EF_417d_B680_9D501E691987" name="Resolucion automatica abandono" targetNamespace="www.sparxsystems.com.au/bpmn20" exporter="Camunda Modeler" exporterVersion="1.8.0">
+  <bpmn:collaboration id="Collaboration_1adrkfa">
+    <bpmn:participant id="Participant_1v8upcz" name="SDM" processRef="Process_0nnk76l" />
+    <bpmn:participant id="Participant_1wkw5vp" name="SIPA WEB" processRef="Process_0yy3beh" />
+    <bpmn:messageFlow id="MessageFlow_055xzo8" sourceRef="Participant_1wkw5vp" targetRef="StartEvent_1mrqqd1" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_0nnk76l" name="Resolucion automatica abandono" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1mrqqd1" name="Inicio">
+      <bpmn:outgoing>SequenceFlow_0ffciiv</bpmn:outgoing>
+      <bpmn:messageEventDefinition messageRef="Message_1y21ymc" />
+    </bpmn:startEvent>
+    <bpmn:callActivity id="Task_02k4pgq" name="Acto Decretar caducidad y/o archivo del expediente" calledElement="Acto administrativo">
+      <bpmn:incoming>SequenceFlow_0ffciiv</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1f10jkz</bpmn:outgoing>
+    </bpmn:callActivity>
+    <bpmn:serviceTask id="Task_1n5shpw" name="Registrar financiera" camunda:class="co.gov.movilidadbogota.sipa.bpm.DummyTask">
+      <bpmn:incoming>SequenceFlow_1f10jkz</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1cz09g8</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:endEvent id="EndEvent_1192biu">
+      <bpmn:incoming>SequenceFlow_1cz09g8</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_0ffciiv" sourceRef="StartEvent_1mrqqd1" targetRef="Task_02k4pgq" />
+    <bpmn:sequenceFlow id="SequenceFlow_1f10jkz" sourceRef="Task_02k4pgq" targetRef="Task_1n5shpw" />
+    <bpmn:sequenceFlow id="SequenceFlow_1cz09g8" sourceRef="Task_1n5shpw" targetRef="EndEvent_1192biu" />
+    <bpmn:textAnnotation id="EAID_A4C33BFE_E413_4ba5_89E4_ED68B18D9C07">    <bpmn:text><![CDATA[No se ha emitido fallo
+Transporte publico son 3 anhos
+Transito son 6 meses]]></bpmn:text>
+</bpmn:textAnnotation>
+  </bpmn:process>
+  <bpmn:message id="Message_1y21ymc" name="Message_0jrd2vv" />
+  <bpmn:process id="Process_0yy3beh" isExecutable="false" />
+  <bpmndi:BPMNDiagram id="EAID_67F9A685_7BB5_4597_AAA7_367E0727A75E" name="Resolucion automatica abandono">
+    <bpmndi:BPMNPlane id="EAID_PL000000_7BB5_4597_AAA7_367E0727A75E" bpmnElement="Collaboration_1adrkfa">
+      <bpmndi:BPMNShape id="EAID_DO000003_7BB5_4597_AAA7_367E0727A75E" bpmnElement="EAID_A4C33BFE_E413_4ba5_89E4_ED68B18D9C07">
+        <dc:Bounds x="126" y="203" width="261" height="57" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Participant_1v8upcz_di" bpmnElement="Participant_1v8upcz">
+        <dc:Bounds x="0" y="87" width="458" height="193" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="StartEvent_10lpvf0_di" bpmnElement="StartEvent_1mrqqd1">
+        <dc:Bounds x="51" y="129" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="55" y="168" width="26" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0ffciiv_di" bpmnElement="SequenceFlow_0ffciiv">
+        <di:waypoint xsi:type="dc:Point" x="87" y="147" />
+        <di:waypoint xsi:type="dc:Point" x="115" y="147" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="101" y="125.5" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="CallActivity_1ou65ur_di" bpmnElement="Task_02k4pgq">
+        <dc:Bounds x="115" y="107" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_1f10jkz_di" bpmnElement="SequenceFlow_1f10jkz">
+        <di:waypoint xsi:type="dc:Point" x="215" y="147" />
+        <di:waypoint xsi:type="dc:Point" x="260" y="147" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="237.5" y="125.5" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="ServiceTask_02wbuu6_di" bpmnElement="Task_1n5shpw">
+        <dc:Bounds x="260" y="107" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_1192biu_di" bpmnElement="EndEvent_1192biu">
+        <dc:Bounds x="392.094" y="129" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="410.094" y="168" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_1cz09g8_di" bpmnElement="SequenceFlow_1cz09g8">
+        <di:waypoint xsi:type="dc:Point" x="360" y="147" />
+        <di:waypoint xsi:type="dc:Point" x="392" y="147" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="376" y="125" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Participant_1wkw5vp_di" bpmnElement="Participant_1wkw5vp">
+        <dc:Bounds x="0" y="0" width="378" height="67" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="MessageFlow_055xzo8_di" bpmnElement="MessageFlow_055xzo8">
+        <di:waypoint xsi:type="dc:Point" x="67" y="67" />
+        <di:waypoint xsi:type="dc:Point" x="67" y="129" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="82" y="91.5" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+    <bpmndi:BPMNLabelStyle id="EAID_LS000000_7BB5_4597_AAA7_367E0727A75E">
+      <dc:Font name="Calibri" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+    </bpmndi:BPMNLabelStyle>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

@@ -1,0 +1,188 @@
+.sipa-bg-primary {
+	background-color: @brand-primary;
+}
+
+/*Fuentes*/
+@font-face {
+  font-family: 'GothamNarrow-Medium';
+  src:url('@{font-path}/GothamNarrow-Medium.woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GothamRounded-Bold';
+    src: url('@{font-path}/gotham-rounded-bold.woff');
+  font-weight: normal;
+  font-style: normal;
+}
+/*
+ * Alteraciones al sistema de grilla
+ */
+.sipa-p-0 {
+  padding: 0px ! important;
+}
+
+.sipa-m-0 {
+  margin: 0px ! important;
+}
+
+/*
+ * Logo Alcadia estilos
+ */
+.sipa-alcadia-logo{
+  max-height: 90px;
+}
+
+/*
+ * mensajes estilos
+ */
+ .sipa-mensajes{
+  top: 50px; 
+  left: -200px; 
+  display: block; 
+  min-width: 400px; 
+  position: absolute;
+ }
+ .sipa-mensajes{
+  @media (max-width: @screen-sm-max){
+    left: 0 ! important;
+    min-width: 300px ! important;
+
+  }
+
+ }
+
+/*
+ * Cambios vista error 401
+ */
+.sipa-candado{
+  width: 500px;
+}
+.sipa-401-t{
+  font-size: 4em;
+  color: #003c65;
+}
+.sipa-401-p{
+  font-size: 2em;
+  color: #003c65;
+}
+
+.sipa-select {
+    border: 1px solid #009fe3 ! important;
+}
+/*
+ * Footer estilos
+ */
+.sipa-footer{
+  height: 60px;
+  width: 100%;
+}
+
+.sipa-footer{
+  @media (max-width: @screen-sm-max){
+    margin-bottom: -26%;
+    position: absolute;
+    bottom: 0;
+    top: 140%;
+  }
+}
+
+.sipa-bottom-10{
+  margin-bottom: 10px;
+}
+/*
+ * Title estilos
+ */
+.sipa-title {
+  padding-top: 20px;
+  padding-left: 30px;
+  color: #FFF;
+}
+.sipa-subtitle{
+  padding-left: 30px;
+  color: #FFF;
+}
+
+.sipa-title, .sipa-subtitle{
+  @media (max-width: @screen-sm-max){
+    padding-left: 0;
+  }
+}
+
+/*
+ * Tablas estilos
+ */
+
+.sipa-tr{
+  border-bottom: 1px rgba(0, 60, 101, 0.1) solid;
+}
+
+/*
+ * well estilos
+ */
+
+.sipa-well{
+  height: auto !important;
+}
+
+/*
+ * error 404 estilos
+ */
+
+.sipa-contstruccion{
+  width: 100%;
+}
+
+/*
+ * index noticias estilos
+ */
+
+ .noticia{
+  width:200px;
+}
+
+.noticia{
+  @media (max-width: @screen-xs-max){
+    width: 100%;
+  }
+}
+
+/*
+ * Comparendos estilos
+ */
+
+ .sipa-label{
+  color: #003c65;
+ }
+
+ /*
+ * Audiencia de aceptación estilos
+ */
+ .sipa-m-3-r{
+  margin-right: 3px !important;
+ }
+ .sipa-m-3-l{
+  margin-left: 3px !important;
+ }
+
+ .sipa-m-3-r{
+  @media (max-width: @screen-sm-max){
+      margin-right: -15px !important;
+      margin-left:  -15px !important;
+  
+  }
+ }
+
+ .sipa-m-3-l{
+  @media (max-width: @screen-sm-max){
+   margin-right: -15px !important;
+   margin-left:  -15px !important;
+  }
+ }
+ /*
+ * Obligatorio estilos
+ */
+ .sipa-red{
+  color: red;
+ }

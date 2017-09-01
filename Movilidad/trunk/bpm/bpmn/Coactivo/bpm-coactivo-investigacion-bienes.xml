@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:ssbp="www.sparxsystems.com.au/bpmn20" id="EAPK_041F55B0_EEE6_4409_945A_0A8BE787CBC8" name="Investigacion bienes" targetNamespace="www.sparxsystems.com.au/bpmn20" exporter="Camunda Modeler" exporterVersion="1.7.2">
+  <bpmn:collaboration id="Collaboration_07wvt5x">
+    <bpmn:participant id="Participant_0ppt0ul" name="SDM" processRef="EAID_7B2D58F8_55D5_4633_AE65_849B6B2DC7C4" />
+  </bpmn:collaboration>
+  <bpmn:process id="EAID_7B2D58F8_55D5_4633_AE65_849B6B2DC7C4" name="Investigacion bienes" processType="None" isClosed="false" isExecutable="false">
+    <bpmn:laneSet>
+      <bpmn:lane id="Lane_0ha4u4a" name="AT.1 (Abogado de dependencia)">
+        <bpmn:flowNodeRef>EAID_30A8E6CA_7B0A_4d42_8213_CD2DD3453DBB</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EAID_5F407505_AD7E_4a11_90CE_F1007DFD34FA</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EAID_72A1353B_8640_448b_B030_43AB847BFDF1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EAID_E8E5FAC7_2CAF_49ca_9888_E9E4C39EE76A</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="EAID_30A8E6CA_7B0A_4d42_8213_CD2DD3453DBB" name="Inicio">
+      <bpmn:outgoing>EAID_9C7C1764_92D9_4385_BB6F_4EAD00750044</bpmn:outgoing>
+      <bpmn:messageEventDefinition />
+    </bpmn:startEvent>
+    <bpmn:endEvent id="EAID_5F407505_AD7E_4a11_90CE_F1007DFD34FA" name="EndEvent1">
+      <bpmn:incoming>EAID_B3FE1729_2681_4e82_B310_9801EB004C29</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:callActivity id="EAID_72A1353B_8640_448b_B030_43AB847BFDF1" name="Investigaciones por ente registrador">
+      <bpmn:incoming>EAID_A6A70251_6608_4142_9300_35CE30880DF5</bpmn:incoming>
+      <bpmn:outgoing>EAID_B3FE1729_2681_4e82_B310_9801EB004C29</bpmn:outgoing>
+      <bpmn:multiInstanceLoopCharacteristics />
+    </bpmn:callActivity>
+    <bpmn:serviceTask id="EAID_E8E5FAC7_2CAF_49ca_9888_E9E4C39EE76A" name="Agrupar solicitudes investigacion por ente registrador" implementation="##unspecified">
+      <bpmn:incoming>EAID_9C7C1764_92D9_4385_BB6F_4EAD00750044</bpmn:incoming>
+      <bpmn:outgoing>EAID_A6A70251_6608_4142_9300_35CE30880DF5</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="EAID_9C7C1764_92D9_4385_BB6F_4EAD00750044" sourceRef="EAID_30A8E6CA_7B0A_4d42_8213_CD2DD3453DBB" targetRef="EAID_E8E5FAC7_2CAF_49ca_9888_E9E4C39EE76A" />
+    <bpmn:sequenceFlow id="EAID_B3FE1729_2681_4e82_B310_9801EB004C29" sourceRef="EAID_72A1353B_8640_448b_B030_43AB847BFDF1" targetRef="EAID_5F407505_AD7E_4a11_90CE_F1007DFD34FA" />
+    <bpmn:sequenceFlow id="EAID_A6A70251_6608_4142_9300_35CE30880DF5" sourceRef="EAID_E8E5FAC7_2CAF_49ca_9888_E9E4C39EE76A" targetRef="EAID_72A1353B_8640_448b_B030_43AB847BFDF1" />
+    <bpmn:textAnnotation id="EAID_72FB4294_3DFC_405c_ADD7_B944DF5C58B5">    <bpmn:text>Solo entran a investigacion de bienes las personas que no han firmado acuerdos de pago y que tienen titulos ejecutivos vigentes.</bpmn:text>
+</bpmn:textAnnotation>
+    <bpmn:textAnnotation id="EAID_CF1D81D3_F20A_47b5_8134_C64E8F12DD90">    <bpmn:text><![CDATA[-Tipo de investigaciones: vehiculos, inmuebles, cuentas y salarios u honorarios
+-Rango de fechas titulo ejecutivo
+-Tipo de titulo ejecutivo (Ej: Contravenciones - embriaguez]]></bpmn:text>
+</bpmn:textAnnotation>
+    <bpmn:textAnnotation id="EAID_0CAAB01C_6CB0_49e5_8B13_CC145829820D">    <bpmn:text>El registro de las respuestas a investigaciones se realiza mediante reparto de los titulos y registro del resultado en el modulo transaccional</bpmn:text>
+</bpmn:textAnnotation>
+    <bpmn:textAnnotation id="EAID_DF6968DE_2721_4534_A11D_F26834FC7A91">    <bpmn:text><![CDATA[Despues del primer proceso de investigacion este mismo proceso se vuelve a ejecutar cada 6 meses para las personas a las que: 
+1. Arrojo negativo todos los tipos de investigaciones: vehiculos, inmuebles, cuentas y sueldos.
+2. Tienen titulos ejecutivos vigentes que no estan incluidos dentro de un acuerdo de pago.]]></bpmn:text>
+</bpmn:textAnnotation>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="EAID_B7778905_11DC_4427_BD17_468B0FC1D7C1" name="Investigacion bienes">
+    <bpmndi:BPMNPlane id="EAID_PL000000_11DC_4427_BD17_468B0FC1D7C1" bpmnElement="Collaboration_07wvt5x">
+      <bpmndi:BPMNShape id="Participant_0ppt0ul_di" bpmnElement="Participant_0ppt0ul">
+        <dc:Bounds x="10" y="10" width="652" height="363" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000000_11DC_4427_BD17_468B0FC1D7C1" bpmnElement="EAID_30A8E6CA_7B0A_4d42_8213_CD2DD3453DBB">
+        <dc:Bounds x="125" y="144" width="30" height="30" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_7B0A_4d42_8213_CD2DD3453DBB" labelStyle="EAID_LS000000_11DC_4427_BD17_468B0FC1D7C1">
+          <dc:Bounds x="125" y="184" width="25" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000007_11DC_4427_BD17_468B0FC1D7C1" bpmnElement="EAID_5F407505_AD7E_4a11_90CE_F1007DFD34FA">
+        <dc:Bounds x="582" y="144" width="30" height="30" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_AD7E_4a11_90CE_F1007DFD34FA" labelStyle="EAID_LS000000_11DC_4427_BD17_468B0FC1D7C1">
+          <dc:Bounds x="579" y="184" width="53" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000005_11DC_4427_BD17_468B0FC1D7C1" bpmnElement="EAID_72A1353B_8640_448b_B030_43AB847BFDF1" isExpanded="false">
+        <dc:Bounds x="404" y="123" width="123" height="72" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_8640_448b_B030_43AB847BFDF1" labelStyle="EAID_LS000000_11DC_4427_BD17_468B0FC1D7C1" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000001_11DC_4427_BD17_468B0FC1D7C1" bpmnElement="EAID_E8E5FAC7_2CAF_49ca_9888_E9E4C39EE76A">
+        <dc:Bounds x="210" y="125" width="128" height="68" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_2CAF_49ca_9888_E9E4C39EE76A" labelStyle="EAID_LS000000_11DC_4427_BD17_468B0FC1D7C1" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000004_11DC_4427_BD17_468B0FC1D7C1" bpmnElement="EAID_72FB4294_3DFC_405c_ADD7_B944DF5C58B5">
+        <dc:Bounds x="120" y="292" width="236" height="61" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000003_11DC_4427_BD17_468B0FC1D7C1" bpmnElement="EAID_CF1D81D3_F20A_47b5_8134_C64E8F12DD90">
+        <dc:Bounds x="120" y="212" width="290" height="70" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000006_11DC_4427_BD17_468B0FC1D7C1" bpmnElement="EAID_0CAAB01C_6CB0_49e5_8B13_CC145829820D">
+        <dc:Bounds x="410" y="212" width="230" height="60" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000002_11DC_4427_BD17_468B0FC1D7C1" bpmnElement="EAID_DF6968DE_2721_4534_A11D_F26834FC7A91">
+        <dc:Bounds x="170" y="40" width="465" height="75" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="EAID_DL000001_11DC_4427_BD17_468B0FC1D7C1" bpmnElement="EAID_9C7C1764_92D9_4385_BB6F_4EAD00750044">
+        <di:waypoint xsi:type="dc:Point" x="155" y="159" />
+        <di:waypoint xsi:type="dc:Point" x="210" y="159" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="138" y="134" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="EAID_DL000002_11DC_4427_BD17_468B0FC1D7C1" bpmnElement="EAID_B3FE1729_2681_4e82_B310_9801EB004C29">
+        <di:waypoint xsi:type="dc:Point" x="527" y="159" />
+        <di:waypoint xsi:type="dc:Point" x="582" y="159" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="510" y="134" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="EAID_DL000000_11DC_4427_BD17_468B0FC1D7C1" bpmnElement="EAID_A6A70251_6608_4142_9300_35CE30880DF5">
+        <di:waypoint xsi:type="dc:Point" x="338" y="159" />
+        <di:waypoint xsi:type="dc:Point" x="404" y="159" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="326" y="134" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Lane_0ha4u4a_di" bpmnElement="Lane_0ha4u4a">
+        <dc:Bounds x="40" y="10" width="622" height="363" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+    <bpmndi:BPMNLabelStyle id="EAID_LS000000_11DC_4427_BD17_468B0FC1D7C1">
+      <dc:Font name="Calibri" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+    </bpmndi:BPMNLabelStyle>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

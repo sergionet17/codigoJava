@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:ssbp="www.sparxsystems.com.au/bpmn20" id="EAPK_F0A26EF5_B7FE_4037_92E6_C98F018220F1" name="Decretar embargo" targetNamespace="www.sparxsystems.com.au/bpmn20" exporter="Camunda Modeler" exporterVersion="1.7.2">
+  <bpmn:collaboration id="Collaboration_1ud4znh">
+    <bpmn:participant id="Participant_0e3ll4s" name="SDM" processRef="EAID_3FE1F034_EC6A_4cb7_A16C_78127BABF6C8" />
+  </bpmn:collaboration>
+  <bpmn:process id="EAID_3FE1F034_EC6A_4cb7_A16C_78127BABF6C8" name="Decretar embargo" processType="None" isClosed="false" isExecutable="false">
+    <bpmn:laneSet>
+      <bpmn:lane id="Lane_0pq01n7" name="AT.1 (Abogado de dependencia)">
+        <bpmn:flowNodeRef>EAID_AB7DE718_EE68_449d_85B4_73D5624751D0</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EAID_F3681528_A0BC_40ca_80BB_611FE9B3D869</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EAID_151F74A9_7CAE_4029_BE0D_7C680C9A3546</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EAID_1536F20D_05D4_4914_A872_9ED6454E1141</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EAID_FA5D5733_DE2D_4f92_9BDC_7545211F9A51</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EAID_9D84DC74_D487_493a_B2F2_9D4BA3DFF421</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="EAID_AB7DE718_EE68_449d_85B4_73D5624751D0" name="Inicio">
+      <bpmn:outgoing>EAID_0DEAD8C6_B1EA_483a_AA24_AA7653C4D354</bpmn:outgoing>
+      <bpmn:messageEventDefinition />
+    </bpmn:startEvent>
+    <bpmn:endEvent id="EAID_F3681528_A0BC_40ca_80BB_611FE9B3D869" name="EndEvent1">
+      <bpmn:incoming>EAID_E84750F8_AC47_47bd_B37D_E30BB9F5B788</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:userTask id="EAID_151F74A9_7CAE_4029_BE0D_7C680C9A3546" name="Seleccionar bienes a embargar" implementation="##unspecified">
+      <bpmn:incoming>EAID_CAE84973_3705_4566_8413_60BD484B0402</bpmn:incoming>
+      <bpmn:outgoing>EAID_D0162070_AFFF_49ed_A9CC_0A0ED5B543BB</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:callActivity id="EAID_1536F20D_05D4_4914_A872_9ED6454E1141" name="Embargos por ente registrador">
+      <bpmn:incoming>EAID_D0162070_AFFF_49ed_A9CC_0A0ED5B543BB</bpmn:incoming>
+      <bpmn:outgoing>EAID_E84750F8_AC47_47bd_B37D_E30BB9F5B788</bpmn:outgoing>
+      <bpmn:multiInstanceLoopCharacteristics />
+    </bpmn:callActivity>
+    <bpmn:serviceTask id="EAID_FA5D5733_DE2D_4f92_9BDC_7545211F9A51" name="Calcular embargos" implementation="##unspecified">
+      <bpmn:incoming>EAID_1C0DDBBA_FC0F_4b66_A97B_33BED00D5F3D</bpmn:incoming>
+      <bpmn:outgoing>EAID_CAE84973_3705_4566_8413_60BD484B0402</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:serviceTask id="EAID_9D84DC74_D487_493a_B2F2_9D4BA3DFF421" name="Agrupar solicitudes embargo por ente registrador" implementation="##unspecified">
+      <bpmn:incoming>EAID_0DEAD8C6_B1EA_483a_AA24_AA7653C4D354</bpmn:incoming>
+      <bpmn:outgoing>EAID_1C0DDBBA_FC0F_4b66_A97B_33BED00D5F3D</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="EAID_0DEAD8C6_B1EA_483a_AA24_AA7653C4D354" sourceRef="EAID_AB7DE718_EE68_449d_85B4_73D5624751D0" targetRef="EAID_9D84DC74_D487_493a_B2F2_9D4BA3DFF421" />
+    <bpmn:sequenceFlow id="EAID_E84750F8_AC47_47bd_B37D_E30BB9F5B788" sourceRef="EAID_1536F20D_05D4_4914_A872_9ED6454E1141" targetRef="EAID_F3681528_A0BC_40ca_80BB_611FE9B3D869" />
+    <bpmn:sequenceFlow id="EAID_CAE84973_3705_4566_8413_60BD484B0402" sourceRef="EAID_FA5D5733_DE2D_4f92_9BDC_7545211F9A51" targetRef="EAID_151F74A9_7CAE_4029_BE0D_7C680C9A3546" />
+    <bpmn:sequenceFlow id="EAID_D0162070_AFFF_49ed_A9CC_0A0ED5B543BB" sourceRef="EAID_151F74A9_7CAE_4029_BE0D_7C680C9A3546" targetRef="EAID_1536F20D_05D4_4914_A872_9ED6454E1141" />
+    <bpmn:sequenceFlow id="EAID_1C0DDBBA_FC0F_4b66_A97B_33BED00D5F3D" sourceRef="EAID_9D84DC74_D487_493a_B2F2_9D4BA3DFF421" targetRef="EAID_FA5D5733_DE2D_4f92_9BDC_7545211F9A51" />
+    <bpmn:textAnnotation id="EAID_417E05F8_FA0F_47d7_8BC4_D7853C6423F8">    <bpmn:text>Se embargan bienes muebles, inmuebles, cuentas y sueldos</bpmn:text>
+</bpmn:textAnnotation>
+    <bpmn:textAnnotation id="EAID_64616583_CCF0_4c4b_94D3_861BB0B04110">    <bpmn:text>Secuestro y avaluo solo a los embargos realizados</bpmn:text>
+</bpmn:textAnnotation>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="EAID_3486C927_8636_491f_A79E_AB9F968ADF6A" name="Decretar embargo">
+    <bpmndi:BPMNPlane id="EAID_PL000000_8636_491f_A79E_AB9F968ADF6A" bpmnElement="Collaboration_1ud4znh">
+      <bpmndi:BPMNShape id="Participant_0e3ll4s_di" bpmnElement="Participant_0e3ll4s">
+        <dc:Bounds x="21" y="23" width="920" height="267" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000000_8636_491f_A79E_AB9F968ADF6A" bpmnElement="EAID_AB7DE718_EE68_449d_85B4_73D5624751D0">
+        <dc:Bounds x="109" y="135" width="30" height="30" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_EE68_449d_85B4_73D5624751D0" labelStyle="EAID_LS000000_8636_491f_A79E_AB9F968ADF6A">
+          <dc:Bounds x="109" y="175" width="25" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000005_8636_491f_A79E_AB9F968ADF6A" bpmnElement="EAID_F3681528_A0BC_40ca_80BB_611FE9B3D869">
+        <dc:Bounds x="871" y="135" width="30" height="30" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_A0BC_40ca_80BB_611FE9B3D869" labelStyle="EAID_LS000000_8636_491f_A79E_AB9F968ADF6A">
+          <dc:Bounds x="868" y="175" width="53" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000007_8636_491f_A79E_AB9F968ADF6A" bpmnElement="EAID_151F74A9_7CAE_4029_BE0D_7C680C9A3546">
+        <dc:Bounds x="506" y="120" width="110" height="60" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_7CAE_4029_BE0D_7C680C9A3546" labelStyle="EAID_LS000000_8636_491f_A79E_AB9F968ADF6A" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000003_8636_491f_A79E_AB9F968ADF6A" bpmnElement="EAID_1536F20D_05D4_4914_A872_9ED6454E1141" isExpanded="false">
+        <dc:Bounds x="686" y="111" width="126" height="78" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_05D4_4914_A872_9ED6454E1141" labelStyle="EAID_LS000000_8636_491f_A79E_AB9F968ADF6A" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000006_8636_491f_A79E_AB9F968ADF6A" bpmnElement="EAID_FA5D5733_DE2D_4f92_9BDC_7545211F9A51">
+        <dc:Bounds x="356" y="120" width="110" height="60" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_DE2D_4f92_9BDC_7545211F9A51" labelStyle="EAID_LS000000_8636_491f_A79E_AB9F968ADF6A" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000001_8636_491f_A79E_AB9F968ADF6A" bpmnElement="EAID_9D84DC74_D487_493a_B2F2_9D4BA3DFF421">
+        <dc:Bounds x="186" y="115" width="139" height="70" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_D487_493a_B2F2_9D4BA3DFF421" labelStyle="EAID_LS000000_8636_491f_A79E_AB9F968ADF6A" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000002_8636_491f_A79E_AB9F968ADF6A" bpmnElement="EAID_417E05F8_FA0F_47d7_8BC4_D7853C6423F8">
+        <dc:Bounds x="166" y="60" width="160" height="40" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000004_8636_491f_A79E_AB9F968ADF6A" bpmnElement="EAID_64616583_CCF0_4c4b_94D3_861BB0B04110">
+        <dc:Bounds x="356" y="60" width="150" height="45" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="EAID_DL000003_8636_491f_A79E_AB9F968ADF6A" bpmnElement="EAID_0DEAD8C6_B1EA_483a_AA24_AA7653C4D354">
+        <di:waypoint xsi:type="dc:Point" x="139" y="150" />
+        <di:waypoint xsi:type="dc:Point" x="186" y="150" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="118" y="125" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="EAID_DL000002_8636_491f_A79E_AB9F968ADF6A" bpmnElement="EAID_E84750F8_AC47_47bd_B37D_E30BB9F5B788">
+        <di:waypoint xsi:type="dc:Point" x="812" y="150" />
+        <di:waypoint xsi:type="dc:Point" x="871" y="150" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="797" y="125" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="EAID_DL000000_8636_491f_A79E_AB9F968ADF6A" bpmnElement="EAID_CAE84973_3705_4566_8413_60BD484B0402">
+        <di:waypoint xsi:type="dc:Point" x="466" y="150" />
+        <di:waypoint xsi:type="dc:Point" x="506" y="150" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="441" y="125" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="EAID_DL000004_8636_491f_A79E_AB9F968ADF6A" bpmnElement="EAID_D0162070_AFFF_49ed_A9CC_0A0ED5B543BB">
+        <di:waypoint xsi:type="dc:Point" x="616" y="150" />
+        <di:waypoint xsi:type="dc:Point" x="686" y="150" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="606" y="125" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="EAID_DL000001_8636_491f_A79E_AB9F968ADF6A" bpmnElement="EAID_1C0DDBBA_FC0F_4b66_A97B_33BED00D5F3D">
+        <di:waypoint xsi:type="dc:Point" x="325" y="150" />
+        <di:waypoint xsi:type="dc:Point" x="356" y="150" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="296" y="125" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Lane_0pq01n7_di" bpmnElement="Lane_0pq01n7">
+        <dc:Bounds x="51" y="23" width="890" height="267" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+    <bpmndi:BPMNLabelStyle id="EAID_LS000000_8636_491f_A79E_AB9F968ADF6A">
+      <dc:Font name="Calibri" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+    </bpmndi:BPMNLabelStyle>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

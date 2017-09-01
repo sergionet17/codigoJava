@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:ssbp="www.sparxsystems.com.au/bpmn20" id="EAPK_A6E48D7F_7645_476d_8D1B_99086140B932" name="Clasificacion periodica cartera" targetNamespace="www.sparxsystems.com.au/bpmn20" exporter="Camunda Modeler" exporterVersion="1.7.2">
+  <bpmn:collaboration id="Collaboration_0xa66m6">
+    <bpmn:participant id="Participant_0et0ehi" name="SDM" processRef="EAID_293A66DB_B212_42bb_BBB3_3C2EDC4CB6BC" />
+  </bpmn:collaboration>
+  <bpmn:process id="EAID_293A66DB_B212_42bb_BBB3_3C2EDC4CB6BC" name="Clasificacion periodica cartera" processType="None" isClosed="false" isExecutable="false">
+    <bpmn:startEvent id="EAID_6F0D1ADD_743A_42bf_81A2_8573A37F2F19" name="Inicio">
+      <bpmn:outgoing>EAID_5E11FBAE_E005_4385_B3C7_7885DC2C7F5C</bpmn:outgoing>
+      <bpmn:messageEventDefinition />
+    </bpmn:startEvent>
+    <bpmn:endEvent id="EAID_36561419_9891_4607_8AE1_FC1FDC801B07" name="EndEvent1">
+      <bpmn:incoming>EAID_C7412822_B46B_4fc3_8833_443C3846F377</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:callActivity id="EAID_C7957560_5A8D_4396_A486_53E66E624481" name="Terceros en coactiva">
+      <bpmn:incoming>EAID_1486039B_7341_4509_A900_2603C4017779</bpmn:incoming>
+      <bpmn:outgoing>EAID_C7412822_B46B_4fc3_8833_443C3846F377</bpmn:outgoing>
+      <bpmn:multiInstanceLoopCharacteristics />
+    </bpmn:callActivity>
+    <bpmn:serviceTask id="EAID_204DE110_0BA1_449f_AE12_F1B7817F402C" name="Listar terceros en coactiva" implementation="##unspecified">
+      <bpmn:incoming>EAID_5E11FBAE_E005_4385_B3C7_7885DC2C7F5C</bpmn:incoming>
+      <bpmn:outgoing>EAID_1486039B_7341_4509_A900_2603C4017779</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="EAID_5E11FBAE_E005_4385_B3C7_7885DC2C7F5C" sourceRef="EAID_6F0D1ADD_743A_42bf_81A2_8573A37F2F19" targetRef="EAID_204DE110_0BA1_449f_AE12_F1B7817F402C" />
+    <bpmn:sequenceFlow id="EAID_C7412822_B46B_4fc3_8833_443C3846F377" sourceRef="EAID_C7957560_5A8D_4396_A486_53E66E624481" targetRef="EAID_36561419_9891_4607_8AE1_FC1FDC801B07" />
+    <bpmn:sequenceFlow id="EAID_1486039B_7341_4509_A900_2603C4017779" sourceRef="EAID_204DE110_0BA1_449f_AE12_F1B7817F402C" targetRef="EAID_C7957560_5A8D_4396_A486_53E66E624481" />
+    <bpmn:textAnnotation id="EAID_2943178F_E90D_4122_B2FC_20B2D81D48AF">    <bpmn:text>Este proceso se inicia cada 6 meses para clasificar cartera</bpmn:text>
+</bpmn:textAnnotation>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="EAID_7D8D1B0F_11B1_466d_B4EF_8D9F577E84EC" name="Clasificacion periodica cartera">
+    <bpmndi:BPMNPlane id="EAID_PL000000_11B1_466d_B4EF_8D9F577E84EC" bpmnElement="Collaboration_0xa66m6">
+      <bpmndi:BPMNShape id="Participant_0et0ehi_di" bpmnElement="Participant_0et0ehi">
+        <dc:Bounds x="40" y="28" width="555" height="192" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000000_11B1_466d_B4EF_8D9F577E84EC" bpmnElement="EAID_6F0D1ADD_743A_42bf_81A2_8573A37F2F19">
+        <dc:Bounds x="90" y="130" width="30" height="30" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_743A_42bf_81A2_8573A37F2F19" labelStyle="EAID_LS000000_11B1_466d_B4EF_8D9F577E84EC">
+          <dc:Bounds x="90" y="170" width="25" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000004_11B1_466d_B4EF_8D9F577E84EC" bpmnElement="EAID_36561419_9891_4607_8AE1_FC1FDC801B07">
+        <dc:Bounds x="509" y="127" width="30" height="30" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_9891_4607_8AE1_FC1FDC801B07" labelStyle="EAID_LS000000_11B1_466d_B4EF_8D9F577E84EC">
+          <dc:Bounds x="506" y="167" width="53" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000003_11B1_466d_B4EF_8D9F577E84EC" bpmnElement="EAID_C7957560_5A8D_4396_A486_53E66E624481" isExpanded="false">
+        <dc:Bounds x="340" y="110" width="110" height="60" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_5A8D_4396_A486_53E66E624481" labelStyle="EAID_LS000000_11B1_466d_B4EF_8D9F577E84EC" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000001_11B1_466d_B4EF_8D9F577E84EC" bpmnElement="EAID_204DE110_0BA1_449f_AE12_F1B7817F402C">
+        <dc:Bounds x="172" y="112" width="110" height="60" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_0BA1_449f_AE12_F1B7817F402C" labelStyle="EAID_LS000000_11B1_466d_B4EF_8D9F577E84EC" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000002_11B1_466d_B4EF_8D9F577E84EC" bpmnElement="EAID_2943178F_E90D_4122_B2FC_20B2D81D48AF">
+        <dc:Bounds x="150" y="50" width="201" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="EAID_DL000000_11B1_466d_B4EF_8D9F577E84EC" bpmnElement="EAID_5E11FBAE_E005_4385_B3C7_7885DC2C7F5C">
+        <di:waypoint xsi:type="dc:Point" x="120" y="144" />
+        <di:waypoint xsi:type="dc:Point" x="172" y="144" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="101" y="119" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="EAID_DL000001_11B1_466d_B4EF_8D9F577E84EC" bpmnElement="EAID_C7412822_B46B_4fc3_8833_443C3846F377">
+        <di:waypoint xsi:type="dc:Point" x="450" y="141" />
+        <di:waypoint xsi:type="dc:Point" x="509" y="141" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="435" y="116" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="EAID_DL000002_11B1_466d_B4EF_8D9F577E84EC" bpmnElement="EAID_1486039B_7341_4509_A900_2603C4017779">
+        <di:waypoint xsi:type="dc:Point" x="282" y="140" />
+        <di:waypoint xsi:type="dc:Point" x="340" y="140" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="266" y="115" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+    <bpmndi:BPMNLabelStyle id="EAID_LS000000_11B1_466d_B4EF_8D9F577E84EC">
+      <dc:Font name="Calibri" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+    </bpmndi:BPMNLabelStyle>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

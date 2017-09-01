@@ -1,0 +1,1446 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<XMI xmi.version="1.1" xmlns:UML="omg.org/UML1.3">
+	<XMI.header>
+		<XMI.documentation>
+			<XMI.exporter>Enterprise Architect</XMI.exporter>
+			<XMI.exporterVersion>2.5</XMI.exporterVersion>
+		</XMI.documentation>
+	</XMI.header>
+	<XMI.content>
+		<UML:Model name="EA Model" xmi.id="MX_EAID_82881427_B9E5_4040_B502_D63DBB9CBBBF">
+			<UML:Namespace.ownedElement>
+				<UML:Class name="EARootClass" xmi.id="EAID_11111111_5487_4080_A7F4_41526CB0AA00" isRoot="true" isLeaf="false" isAbstract="false"/>
+				<UML:Package name="013-Inmovilizados en estado de abandono." xmi.id="EAPK_82881427_B9E5_4040_B502_D63DBB9CBBBF" isRoot="false" isLeaf="false" isAbstract="false" visibility="public">
+					<UML:ModelElement.taggedValue>
+						<UML:TaggedValue tag="parent" value="EAPK_212FFB6B_8338_48a8_B093_5D0DBEDD150F"/>
+						<UML:TaggedValue tag="created" value="2017-02-17 15:42:07"/>
+						<UML:TaggedValue tag="modified" value="2017-04-17 09:26:46"/>
+						<UML:TaggedValue tag="iscontrolled" value="TRUE"/>
+						<UML:TaggedValue tag="xmlpath" value="ucm-contraverciones-inmovilizados-en-estado-deabandono.xml"/>
+						<UML:TaggedValue tag="lastloaddate" value="2017-04-17 09:26:47"/>
+						<UML:TaggedValue tag="lastsavedate" value="2017-02-19 12:06:16"/>
+						<UML:TaggedValue tag="version" value="1.0"/>
+						<UML:TaggedValue tag="isprotected" value="FALSE"/>
+						<UML:TaggedValue tag="usedtd" value="FALSE"/>
+						<UML:TaggedValue tag="xmiver" value="Enterprise Architect XMI/UML 1.3"/>
+						<UML:TaggedValue tag="logxml" value="FALSE"/>
+						<UML:TaggedValue tag="packageFlags" value="Recurse=0;VCCFG=secmov-sipa;CRC=0;"/>
+						<UML:TaggedValue tag="batchsave" value="0"/>
+						<UML:TaggedValue tag="batchload" value="0"/>
+						<UML:TaggedValue tag="phase" value="1.0"/>
+						<UML:TaggedValue tag="status" value="Proposed"/>
+						<UML:TaggedValue tag="author" value="dev"/>
+						<UML:TaggedValue tag="complexity" value="1"/>
+						<UML:TaggedValue tag="ea_stype" value="Public"/>
+						<UML:TaggedValue tag="tpos" value="0"/>
+						<UML:TaggedValue tag="gentype" value="Java"/>
+					</UML:ModelElement.taggedValue>
+					<UML:Namespace.ownedElement>
+						<UML:UseCase name="001-CU102.1 Realizar las audiencias de aceptación o impugnación de proceso por abandono de vehículo." xmi.id="EAID_0EE7AF27_E812_440a_BF39_96077DC19247" visibility="public" namespace="EAPK_82881427_B9E5_4040_B502_D63DBB9CBBBF" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="documentation" value="Cuando se realiza la audiencia de impugnación o aceptación se debe realizar registro del tercero contraventor porque el comparendo por abandono de vehículo C02 no tiene registro del infractor.&#xA;Pasados 5 meses y 29 días sin pago ni impugnación se declara inhibitorio el proceso.&#xA;Pueden pasar hasta 3 años y un día para hacer proceso de audiencia antes de que el proceso C02 sea archivado."/>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="UseCase"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_82881427_B9E5_4040_B502_D63DBB9CBBBF"/>
+								<UML:TaggedValue tag="date_created" value="2017-02-17 15:45:49"/>
+								<UML:TaggedValue tag="date_modified" value="2017-03-27 23:46:07"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="013-Inmovilizados en estado de abandono."/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="dev"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Proposed"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="306"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:UseCase>
+						<UML:Association xmi.id="EAID_10EBE0F7_3D25_4972_B268_B30DBA8BB1FD" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.stereotype>
+								<UML:Stereotype name="include"/>
+							</UML:ModelElement.stereotype>
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="subtype" value="Includes"/>
+								<UML:TaggedValue tag="stereotype" value="include"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="conditional" value=" &#xA;«include»"/>
+								<UML:TaggedValue tag="ea_localid" value="300"/>
+								<UML:TaggedValue tag="ea_sourceName" value="001-CU102.1 Realizar las audiencias de aceptación o impugnación de proceso por abandono de vehículo."/>
+								<UML:TaggedValue tag="ea_targetName" value="003-CU050.1 Seleccionar o registrar comparendo."/>
+								<UML:TaggedValue tag="ea_sourceType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="306"/>
+								<UML:TaggedValue tag="ea_targetID" value="423"/>
+								<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={1C3C0A38-70F5-4729-B4CF-E0C50C913A01}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=include;GUID={124A0C36-2725-4a17-97A4-F2CE030EA9E8};@ENDSTEREO;$DES;$CLT={10EBE0F7-3D25-4972-B268-B30DBA8BB1FD}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+								<UML:TaggedValue tag="mb" value=" &#xA;«include»"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_0EE7AF27_E812_440a_BF39_96077DC19247">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_9A5C837A_3882_4e79_BF81_3D214F506787">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:Association xmi.id="EAID_4201F503_EEA3_4168_92C8_8C0DDC20F63A" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.stereotype>
+								<UML:Stereotype name="include"/>
+							</UML:ModelElement.stereotype>
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="subtype" value="Includes"/>
+								<UML:TaggedValue tag="stereotype" value="include"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="conditional" value=" &#xA;«include»"/>
+								<UML:TaggedValue tag="ea_localid" value="293"/>
+								<UML:TaggedValue tag="ea_sourceName" value="001-CU102.1 Realizar las audiencias de aceptación o impugnación de proceso por abandono de vehículo."/>
+								<UML:TaggedValue tag="ea_targetName" value="004-CU054.1 Crear el acto administrativo de audiencia de impugnación."/>
+								<UML:TaggedValue tag="ea_sourceType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="306"/>
+								<UML:TaggedValue tag="ea_targetID" value="425"/>
+								<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={8ABBD281-BD32-4898-ACF3-4EA8B4183873}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=include;GUID={124A0C36-2725-4a17-97A4-F2CE030EA9E8};@ENDSTEREO;$DES;$CLT={4201F503-EEA3-4168-92C8-8C0DDC20F63A}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+								<UML:TaggedValue tag="mb" value=" &#xA;«include»"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_0EE7AF27_E812_440a_BF39_96077DC19247">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_BC115626_4A43_490d_9682_6ECEC7B6C19B">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:Association xmi.id="EAID_4D9ADCD3_A017_4796_8EA8_CA2F115A4CDE" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.stereotype>
+								<UML:Stereotype name="include"/>
+							</UML:ModelElement.stereotype>
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="subtype" value="Includes"/>
+								<UML:TaggedValue tag="stereotype" value="include"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="conditional" value=" &#xA;«include»"/>
+								<UML:TaggedValue tag="ea_localid" value="228"/>
+								<UML:TaggedValue tag="ea_sourceName" value="001-CU102.1 Realizar las audiencias de aceptación o impugnación de proceso por abandono de vehículo."/>
+								<UML:TaggedValue tag="ea_targetName" value="002-CU047.1 Crear el acto administrativo presencial de aceptación de comparendo."/>
+								<UML:TaggedValue tag="ea_sourceType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="306"/>
+								<UML:TaggedValue tag="ea_targetID" value="362"/>
+								<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={A9848197-B63B-4f8b-B2E6-AFA45200249D}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=include;GUID={124A0C36-2725-4a17-97A4-F2CE030EA9E8};@ENDSTEREO;$DES;$CLT={4D9ADCD3-A017-4796-8EA8-CA2F115A4CDE}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+								<UML:TaggedValue tag="mb" value=" &#xA;«include»"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_0EE7AF27_E812_440a_BF39_96077DC19247">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_FF58EFF4_29E5_4d09_A943_99C79A338BE9">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:Association xmi.id="EAID_732278A7_F7AF_462c_8B63_11304E0DEA12" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.stereotype>
+								<UML:Stereotype name="include"/>
+							</UML:ModelElement.stereotype>
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="subtype" value="Includes"/>
+								<UML:TaggedValue tag="stereotype" value="include"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="conditional" value=" &#xA;«include»"/>
+								<UML:TaggedValue tag="ea_localid" value="232"/>
+								<UML:TaggedValue tag="ea_sourceName" value="001-CU102.1 Realizar las audiencias de aceptación o impugnación de proceso por abandono de vehículo."/>
+								<UML:TaggedValue tag="ea_targetName" value="001-CU043.1 Realizar apertura a una audiencia de aceptación de comparendo"/>
+								<UML:TaggedValue tag="ea_sourceType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="306"/>
+								<UML:TaggedValue tag="ea_targetID" value="356"/>
+								<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={736F699B-62CA-4857-8D59-CB8D18BF2BFB}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=include;GUID={124A0C36-2725-4a17-97A4-F2CE030EA9E8};@ENDSTEREO;$DES;$CLT={732278A7-F7AF-462c-8B63-11304E0DEA12}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+								<UML:TaggedValue tag="mb" value=" &#xA;«include»"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_0EE7AF27_E812_440a_BF39_96077DC19247">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_47036A44_741A_4cd1_8688_2101CE873A5D">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:Association xmi.id="EAID_9C36A5B1_E4E0_41d7_97BB_C26E0B6727A6" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.stereotype>
+								<UML:Stereotype name="include"/>
+							</UML:ModelElement.stereotype>
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="subtype" value="Includes"/>
+								<UML:TaggedValue tag="stereotype" value="include"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="conditional" value=" &#xA;«include»"/>
+								<UML:TaggedValue tag="ea_localid" value="288"/>
+								<UML:TaggedValue tag="ea_sourceName" value="001-CU102.1 Realizar las audiencias de aceptación o impugnación de proceso por abandono de vehículo."/>
+								<UML:TaggedValue tag="ea_targetName" value="001-CU049.1 Apertura de audiencia de impugnación"/>
+								<UML:TaggedValue tag="ea_sourceType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="306"/>
+								<UML:TaggedValue tag="ea_targetID" value="426"/>
+								<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={F5A19D29-A4BF-4b54-AB72-1B1DD16533C7}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=include;GUID={124A0C36-2725-4a17-97A4-F2CE030EA9E8};@ENDSTEREO;$DES;$CLT={9C36A5B1-E4E0-41d7-97BB-C26E0B6727A6}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+								<UML:TaggedValue tag="mb" value=" &#xA;«include»"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_0EE7AF27_E812_440a_BF39_96077DC19247">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_C3B3176B_DF43_4694_A5ED_C1634439A8B5">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:Association xmi.id="EAID_D381E27B_71C5_4c20_AE99_E515F64E9743" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="subtype" value="Includes"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="conditional" value=" &#xA;«include»"/>
+								<UML:TaggedValue tag="ea_localid" value="151"/>
+								<UML:TaggedValue tag="ea_sourceName" value="002-CU103.1 Realizar el proceso de inmovilización o subsanación por abandono de vehículo."/>
+								<UML:TaggedValue tag="ea_targetName" value="001-CU102.1 Realizar las audiencias de aceptación o impugnación de proceso por abandono de vehículo."/>
+								<UML:TaggedValue tag="ea_sourceType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="308"/>
+								<UML:TaggedValue tag="ea_targetID" value="306"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_83F48B51_DCA0_43de_9193_211A73C28D91">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_0EE7AF27_E812_440a_BF39_96077DC19247">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:Association xmi.id="EAID_EA19067E_A328_41a1_8CC4_48235DAF89CC" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="552"/>
+								<UML:TaggedValue tag="ea_sourceName" value="AT4.1.2 Abogado de audiencias contravencionales"/>
+								<UML:TaggedValue tag="ea_targetName" value="001-CU102.1 Realizar las audiencias de aceptación o impugnación de proceso por abandono de vehículo."/>
+								<UML:TaggedValue tag="ea_sourceType" value="Actor"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="531"/>
+								<UML:TaggedValue tag="ea_targetID" value="306"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_31F08BCE_6C60_4298_89B5_6A3A1517318A">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_0EE7AF27_E812_440a_BF39_96077DC19247">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:UseCase name="003-CU104.1 Crear el acto administrativo automático en el cual se inhibe de decretar fallo." xmi.id="EAID_54E71B90_A6DC_47cd_A351_BE4D72B1B9C5" visibility="public" namespace="EAPK_82881427_B9E5_4040_B502_D63DBB9CBBBF" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="documentation" value="Proceso C02 Abandono de vehículo.&#xA;&#xA;Se inicia el desarrollo del acto administrativo automático de inhibitoria pasados 5 meses y 29 días sin identificar pago o impugnación del proceso de abandono de vehículo C02."/>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="UseCase"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_82881427_B9E5_4040_B502_D63DBB9CBBBF"/>
+								<UML:TaggedValue tag="date_created" value="2017-02-17 15:48:57"/>
+								<UML:TaggedValue tag="date_modified" value="2017-03-27 23:46:24"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="013-Inmovilizados en estado de abandono."/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="dev"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Proposed"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="307"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:UseCase>
+						<UML:Association xmi.id="EAID_424806F3_F299_47a5_A759_F3CB04486EE9" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.stereotype>
+								<UML:Stereotype name="include"/>
+							</UML:ModelElement.stereotype>
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="subtype" value="Includes"/>
+								<UML:TaggedValue tag="stereotype" value="include"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="conditional" value=" &#xA;«include»"/>
+								<UML:TaggedValue tag="ea_localid" value="1269"/>
+								<UML:TaggedValue tag="ea_sourceName" value="003-CU104.1 Crear el acto administrativo automático en el cual se inhibe de decretar fallo."/>
+								<UML:TaggedValue tag="ea_targetName" value="CUT-2 Generar un oficio automático"/>
+								<UML:TaggedValue tag="ea_sourceType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="307"/>
+								<UML:TaggedValue tag="ea_targetID" value="1031"/>
+								<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={755CAA76-BBF4-48c1-84DD-F779C9F3B97A}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=include;GUID={124A0C36-2725-4a17-97A4-F2CE030EA9E8};@ENDSTEREO;$DES;$CLT={424806F3-F299-47a5-A759-F3CB04486EE9}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+								<UML:TaggedValue tag="mb" value=" &#xA;«include»"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_54E71B90_A6DC_47cd_A351_BE4D72B1B9C5">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_9E2E6515_E895_4b5f_85F2_F6EE8E32D8A0">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:Association xmi.id="EAID_8D65945A_2C42_45b9_84AB_5B326CFF08D0" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="630"/>
+								<UML:TaggedValue tag="ea_sourceName" value="Timer"/>
+								<UML:TaggedValue tag="ea_targetName" value="003-CU104.1 Crear el acto administrativo automático en el cual se inhibe de decretar fallo."/>
+								<UML:TaggedValue tag="ea_sourceType" value="Actor"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="579"/>
+								<UML:TaggedValue tag="ea_targetID" value="307"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_C1BFCF04_964A_4957_9418_BCC89EFC0A67">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_54E71B90_A6DC_47cd_A351_BE4D72B1B9C5">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:UseCase name="002-CU103.1 Realizar el proceso de inmovilización o subsanación por abandono de vehículo." xmi.id="EAID_83F48B51_DCA0_43de_9193_211A73C28D91" visibility="public" namespace="EAPK_82881427_B9E5_4040_B502_D63DBB9CBBBF" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="UseCase"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_82881427_B9E5_4040_B502_D63DBB9CBBBF"/>
+								<UML:TaggedValue tag="date_created" value="2017-02-17 15:47:53"/>
+								<UML:TaggedValue tag="date_modified" value="2017-03-27 23:46:11"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="013-Inmovilizados en estado de abandono."/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="dev"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Proposed"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="308"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:UseCase>
+						<UML:Association xmi.id="EAID_0C8B8C03_AC61_4177_9243_1237B6C82EB1" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.stereotype>
+								<UML:Stereotype name="include"/>
+							</UML:ModelElement.stereotype>
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="subtype" value="Includes"/>
+								<UML:TaggedValue tag="stereotype" value="include"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="conditional" value=" &#xA;«include»"/>
+								<UML:TaggedValue tag="ea_localid" value="217"/>
+								<UML:TaggedValue tag="ea_sourceName" value="002-CU103.1 Realizar el proceso de inmovilización o subsanación por abandono de vehículo."/>
+								<UML:TaggedValue tag="ea_targetName" value="009-CU088.1 Radicación de descargos del proceso de incumplimiento del acta de compromiso."/>
+								<UML:TaggedValue tag="ea_sourceType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="308"/>
+								<UML:TaggedValue tag="ea_targetID" value="344"/>
+								<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={DE20D2AB-21BA-4cea-952F-5954B1A32818}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=include;GUID={124A0C36-2725-4a17-97A4-F2CE030EA9E8};@ENDSTEREO;$DES;$CLT={0C8B8C03-AC61-4177-9243-1237B6C82EB1}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+								<UML:TaggedValue tag="mb" value=" &#xA;«include»"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_83F48B51_DCA0_43de_9193_211A73C28D91">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_5C57C0E1_F9D2_48bf_914B_D4677C3695B9">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:Association xmi.id="EAID_0DB4F8CB_01B7_44f8_B438_E55417AF4ED3" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.stereotype>
+								<UML:Stereotype name="include"/>
+							</UML:ModelElement.stereotype>
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="subtype" value="Includes"/>
+								<UML:TaggedValue tag="stereotype" value="include"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="conditional" value=" &#xA;«include»"/>
+								<UML:TaggedValue tag="ea_localid" value="159"/>
+								<UML:TaggedValue tag="ea_sourceName" value="002-CU103.1 Realizar el proceso de inmovilización o subsanación por abandono de vehículo."/>
+								<UML:TaggedValue tag="ea_targetName" value="003-CU078.1 Verificar requisitos de salida de un vehículo inmovilizado."/>
+								<UML:TaggedValue tag="ea_sourceType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="308"/>
+								<UML:TaggedValue tag="ea_targetID" value="317"/>
+								<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={A2235555-4898-4aa6-BDE3-0AD89CB3D698}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=include;GUID={124A0C36-2725-4a17-97A4-F2CE030EA9E8};@ENDSTEREO;$DES;$CLT={0DB4F8CB-01B7-44f8-B438-E55417AF4ED3}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+								<UML:TaggedValue tag="mb" value=" &#xA;«include»"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_83F48B51_DCA0_43de_9193_211A73C28D91">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_A215A53D_C911_4009_ACD3_A8E4E95C462F">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:Association xmi.id="EAID_12D0713E_B837_4bbf_9086_DCAE594C3753" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.stereotype>
+								<UML:Stereotype name="include"/>
+							</UML:ModelElement.stereotype>
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="subtype" value="Includes"/>
+								<UML:TaggedValue tag="stereotype" value="include"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="conditional" value=" &#xA;«include»"/>
+								<UML:TaggedValue tag="ea_localid" value="198"/>
+								<UML:TaggedValue tag="ea_sourceName" value="002-CU103.1 Realizar el proceso de inmovilización o subsanación por abandono de vehículo."/>
+								<UML:TaggedValue tag="ea_targetName" value="010-CU089.1 Practicar pruebas al proceso de incumplimiento del acta de compromiso."/>
+								<UML:TaggedValue tag="ea_sourceType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="308"/>
+								<UML:TaggedValue tag="ea_targetID" value="350"/>
+								<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={121D415F-1A02-405c-AD3B-6397B09208C7}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=include;GUID={124A0C36-2725-4a17-97A4-F2CE030EA9E8};@ENDSTEREO;$DES;$CLT={12D0713E-B837-4bbf-9086-DCAE594C3753}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+								<UML:TaggedValue tag="mb" value=" &#xA;«include»"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_83F48B51_DCA0_43de_9193_211A73C28D91">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_D69A0B86_D2AF_4219_8166_50FFD233DB56">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:Association xmi.id="EAID_18D64245_1844_46f4_9AD7_B1E081ACDF46" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.stereotype>
+								<UML:Stereotype name="include"/>
+							</UML:ModelElement.stereotype>
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="subtype" value="Includes"/>
+								<UML:TaggedValue tag="stereotype" value="include"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="conditional" value=" &#xA;«include»"/>
+								<UML:TaggedValue tag="ea_localid" value="202"/>
+								<UML:TaggedValue tag="ea_sourceName" value="002-CU103.1 Realizar el proceso de inmovilización o subsanación por abandono de vehículo."/>
+								<UML:TaggedValue tag="ea_targetName" value="007-CU086.1 Crear acto administrativo de apertura de proceso de investigación por incumplimiento del acta de compromiso."/>
+								<UML:TaggedValue tag="ea_sourceType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="308"/>
+								<UML:TaggedValue tag="ea_targetID" value="349"/>
+								<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={3B487975-2DB7-493b-8C80-87FA6E801251}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=include;GUID={124A0C36-2725-4a17-97A4-F2CE030EA9E8};@ENDSTEREO;$DES;$CLT={18D64245-1844-46f4-9AD7-B1E081ACDF46}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+								<UML:TaggedValue tag="mb" value=" &#xA;«include»"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_83F48B51_DCA0_43de_9193_211A73C28D91">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_CD2AD930_A373_4b06_AE64_88143C32B539">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:Association xmi.id="EAID_20565916_DD95_4934_BEC2_BC5C9D72B044" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.stereotype>
+								<UML:Stereotype name="include"/>
+							</UML:ModelElement.stereotype>
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="subtype" value="Includes"/>
+								<UML:TaggedValue tag="stereotype" value="include"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="conditional" value=" &#xA;«include»"/>
+								<UML:TaggedValue tag="ea_localid" value="157"/>
+								<UML:TaggedValue tag="ea_sourceName" value="002-CU103.1 Realizar el proceso de inmovilización o subsanación por abandono de vehículo."/>
+								<UML:TaggedValue tag="ea_targetName" value="007-CU080.1 Cargar en el sistema las pruebas de salida del vehículo"/>
+								<UML:TaggedValue tag="ea_sourceType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="308"/>
+								<UML:TaggedValue tag="ea_targetID" value="318"/>
+								<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={82A9B0DF-D021-4656-A414-38E536992D55}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=include;GUID={124A0C36-2725-4a17-97A4-F2CE030EA9E8};@ENDSTEREO;$DES;$CLT={20565916-DD95-4934-BEC2-BC5C9D72B044}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+								<UML:TaggedValue tag="mb" value=" &#xA;«include»"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_83F48B51_DCA0_43de_9193_211A73C28D91">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_B105D8EA_B9F2_4a66_AEDC_AFC7BB7A093D">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:Association xmi.id="EAID_29CD1228_A067_415b_BA7D_F05C44B272C1" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.stereotype>
+								<UML:Stereotype name="include"/>
+							</UML:ModelElement.stereotype>
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="subtype" value="Includes"/>
+								<UML:TaggedValue tag="stereotype" value="include"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="conditional" value=" &#xA;«include»"/>
+								<UML:TaggedValue tag="ea_localid" value="205"/>
+								<UML:TaggedValue tag="ea_sourceName" value="002-CU103.1 Realizar el proceso de inmovilización o subsanación por abandono de vehículo."/>
+								<UML:TaggedValue tag="ea_targetName" value="004-CU083.1 Cargar pruebas de salida provisional del vehículo."/>
+								<UML:TaggedValue tag="ea_sourceType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="308"/>
+								<UML:TaggedValue tag="ea_targetID" value="348"/>
+								<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={880BF83F-E523-4a7d-8BE1-E398EA57B296}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=include;GUID={124A0C36-2725-4a17-97A4-F2CE030EA9E8};@ENDSTEREO;$DES;$CLT={29CD1228-A067-415b-BA7D-F05C44B272C1}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+								<UML:TaggedValue tag="mb" value=" &#xA;«include»"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_83F48B51_DCA0_43de_9193_211A73C28D91">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_C4D49161_3C4F_4848_923A_AF736D96C626">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:Association xmi.id="EAID_2B3208D5_660F_4266_AE0F_99444B6960BF" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.stereotype>
+								<UML:Stereotype name="include"/>
+							</UML:ModelElement.stereotype>
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="subtype" value="Includes"/>
+								<UML:TaggedValue tag="stereotype" value="include"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="conditional" value=" &#xA;«include»"/>
+								<UML:TaggedValue tag="ea_localid" value="219"/>
+								<UML:TaggedValue tag="ea_sourceName" value="002-CU103.1 Realizar el proceso de inmovilización o subsanación por abandono de vehículo."/>
+								<UML:TaggedValue tag="ea_targetName" value="008-CU087.1 Realizar reparto del proceso de incumplimiento del acta de compromiso"/>
+								<UML:TaggedValue tag="ea_sourceType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="308"/>
+								<UML:TaggedValue tag="ea_targetID" value="343"/>
+								<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={8ACA318A-181B-45a7-9A69-C00530BECBCB}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=include;GUID={124A0C36-2725-4a17-97A4-F2CE030EA9E8};@ENDSTEREO;$DES;$CLT={2B3208D5-660F-4266-AE0F-99444B6960BF}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+								<UML:TaggedValue tag="mb" value=" &#xA;«include»"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_83F48B51_DCA0_43de_9193_211A73C28D91">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_500E6CD6_0D68_4a58_A0D5_469B2A7027A9">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:Association xmi.id="EAID_3F86A158_7D4E_42f7_B78C_9417C8B58C85" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.stereotype>
+								<UML:Stereotype name="include"/>
+							</UML:ModelElement.stereotype>
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="subtype" value="Includes"/>
+								<UML:TaggedValue tag="stereotype" value="include"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="conditional" value=" &#xA;«include»"/>
+								<UML:TaggedValue tag="ea_localid" value="191"/>
+								<UML:TaggedValue tag="ea_sourceName" value="002-CU103.1 Realizar el proceso de inmovilización o subsanación por abandono de vehículo."/>
+								<UML:TaggedValue tag="ea_targetName" value="006-CU085.1 Crear acto administrativo para archivar el proceso de subsanación."/>
+								<UML:TaggedValue tag="ea_sourceType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="308"/>
+								<UML:TaggedValue tag="ea_targetID" value="352"/>
+								<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={0051D0B2-5BB7-4bd1-AF90-7478AC9A98DF}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=include;GUID={124A0C36-2725-4a17-97A4-F2CE030EA9E8};@ENDSTEREO;$DES;$CLT={3F86A158-7D4E-42f7-B78C-9417C8B58C85}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+								<UML:TaggedValue tag="mb" value=" &#xA;«include»"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_83F48B51_DCA0_43de_9193_211A73C28D91">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_DD3E1434_5E4A_4662_B7D1_3796F720E930">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:Association xmi.id="EAID_586F9795_0271_47ad_8882_C0EEC148B8EB" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.stereotype>
+								<UML:Stereotype name="include"/>
+							</UML:ModelElement.stereotype>
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="subtype" value="Includes"/>
+								<UML:TaggedValue tag="stereotype" value="include"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="conditional" value=" &#xA;«include»"/>
+								<UML:TaggedValue tag="ea_localid" value="208"/>
+								<UML:TaggedValue tag="ea_sourceName" value="002-CU103.1 Realizar el proceso de inmovilización o subsanación por abandono de vehículo."/>
+								<UML:TaggedValue tag="ea_targetName" value="003-CU082.1 Realizar el registro en el sistema de información de patios y grúas de la salida provisional del vehículo."/>
+								<UML:TaggedValue tag="ea_sourceType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="308"/>
+								<UML:TaggedValue tag="ea_targetID" value="346"/>
+								<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={8BC6F48D-AC5A-422f-93D5-04584113F174}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=include;GUID={124A0C36-2725-4a17-97A4-F2CE030EA9E8};@ENDSTEREO;$DES;$CLT={586F9795-0271-47ad-8882-C0EEC148B8EB}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+								<UML:TaggedValue tag="mb" value=" &#xA;«include»"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_83F48B51_DCA0_43de_9193_211A73C28D91">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_6634943D_A5C8_4085_9889_93ADD69629EE">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:Association xmi.id="EAID_90B4DA26_59E6_4776_B1B1_A067B96ED233" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.stereotype>
+								<UML:Stereotype name="include"/>
+							</UML:ModelElement.stereotype>
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="subtype" value="Includes"/>
+								<UML:TaggedValue tag="stereotype" value="include"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="conditional" value=" &#xA;«include»"/>
+								<UML:TaggedValue tag="ea_localid" value="195"/>
+								<UML:TaggedValue tag="ea_sourceName" value="002-CU103.1 Realizar el proceso de inmovilización o subsanación por abandono de vehículo."/>
+								<UML:TaggedValue tag="ea_targetName" value="002-CU081.2 Crear acto administrativo de salida provisional de patios o acta de compromiso."/>
+								<UML:TaggedValue tag="ea_sourceType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="308"/>
+								<UML:TaggedValue tag="ea_targetID" value="351"/>
+								<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={2BE6F954-5514-4b90-9601-C5DED3C51EE9}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=include;GUID={124A0C36-2725-4a17-97A4-F2CE030EA9E8};@ENDSTEREO;$DES;$CLT={90B4DA26-59E6-4776-B1B1-A067B96ED233}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+								<UML:TaggedValue tag="mb" value=" &#xA;«include»"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_83F48B51_DCA0_43de_9193_211A73C28D91">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_D995562A_291A_40d6_96B2_E75A938E6779">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:Association xmi.id="EAID_A5A5F586_10FB_4da8_8827_871E5A527D2C" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.stereotype>
+								<UML:Stereotype name="include"/>
+							</UML:ModelElement.stereotype>
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="subtype" value="Includes"/>
+								<UML:TaggedValue tag="stereotype" value="include"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="conditional" value=" &#xA;«include»"/>
+								<UML:TaggedValue tag="ea_localid" value="206"/>
+								<UML:TaggedValue tag="ea_sourceName" value="002-CU103.1 Realizar el proceso de inmovilización o subsanación por abandono de vehículo."/>
+								<UML:TaggedValue tag="ea_targetName" value="011-CU092.1 Crear acto administrativo de fallo al proceso de incumplimiento del acta de compromiso."/>
+								<UML:TaggedValue tag="ea_sourceType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="308"/>
+								<UML:TaggedValue tag="ea_targetID" value="347"/>
+								<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={1EA559A3-D19D-4930-A669-8862BBD91D9E}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=include;GUID={124A0C36-2725-4a17-97A4-F2CE030EA9E8};@ENDSTEREO;$DES;$CLT={A5A5F586-10FB-4da8-8827-871E5A527D2C}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+								<UML:TaggedValue tag="mb" value=" &#xA;«include»"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_83F48B51_DCA0_43de_9193_211A73C28D91">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_7D41FE6C_909C_4d83_9E52_D3B935124A77">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:Association xmi.id="EAID_B9E80E4D_46DE_4518_9434_000939D80175" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.stereotype>
+								<UML:Stereotype name="include"/>
+							</UML:ModelElement.stereotype>
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="subtype" value="Includes"/>
+								<UML:TaggedValue tag="stereotype" value="include"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="conditional" value=" &#xA;«include»"/>
+								<UML:TaggedValue tag="ea_localid" value="161"/>
+								<UML:TaggedValue tag="ea_sourceName" value="002-CU103.1 Realizar el proceso de inmovilización o subsanación por abandono de vehículo."/>
+								<UML:TaggedValue tag="ea_targetName" value="006-CU079.1 Realizar el registro en el sistema de información de patios y grúas de la salida definitiva del vehículo."/>
+								<UML:TaggedValue tag="ea_sourceType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="308"/>
+								<UML:TaggedValue tag="ea_targetID" value="315"/>
+								<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={FE3D30C1-AB99-4398-80A3-36F10B1679B8}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=include;GUID={124A0C36-2725-4a17-97A4-F2CE030EA9E8};@ENDSTEREO;$DES;$CLT={B9E80E4D-46DE-4518-9434-000939D80175}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+								<UML:TaggedValue tag="mb" value=" &#xA;«include»"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_83F48B51_DCA0_43de_9193_211A73C28D91">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_8A8F5C66_9AA9_4600_AC0C_76DCE32DBAB0">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:Association xmi.id="EAID_BE297186_64D8_46ad_AF0A_84BD7FF229C5" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.stereotype>
+								<UML:Stereotype name="include"/>
+							</UML:ModelElement.stereotype>
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="subtype" value="Includes"/>
+								<UML:TaggedValue tag="stereotype" value="include"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="conditional" value=" &#xA;«include»"/>
+								<UML:TaggedValue tag="ea_localid" value="220"/>
+								<UML:TaggedValue tag="ea_sourceName" value="002-CU103.1 Realizar el proceso de inmovilización o subsanación por abandono de vehículo."/>
+								<UML:TaggedValue tag="ea_targetName" value="012-CU093.1 Crear constancia de ejecutoria del proceso de incumplimiento del acta de compromiso."/>
+								<UML:TaggedValue tag="ea_sourceType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="308"/>
+								<UML:TaggedValue tag="ea_targetID" value="342"/>
+								<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={68E93F4E-6E83-4462-9B02-D9AB44FC5577}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=include;GUID={124A0C36-2725-4a17-97A4-F2CE030EA9E8};@ENDSTEREO;$DES;$CLT={BE297186-64D8-46ad-AF0A-84BD7FF229C5}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+								<UML:TaggedValue tag="mb" value=" &#xA;«include»"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_83F48B51_DCA0_43de_9193_211A73C28D91">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_3BA281CA_D8B0_4c6c_A5C8_FBB1D10BD977">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:Association xmi.id="EAID_C0330B38_0E1D_4b6d_A485_C54B2A5864D0" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.stereotype>
+								<UML:Stereotype name="include"/>
+							</UML:ModelElement.stereotype>
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="subtype" value="Includes"/>
+								<UML:TaggedValue tag="stereotype" value="include"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="conditional" value=" &#xA;«include»"/>
+								<UML:TaggedValue tag="ea_localid" value="167"/>
+								<UML:TaggedValue tag="ea_sourceName" value="002-CU103.1 Realizar el proceso de inmovilización o subsanación por abandono de vehículo."/>
+								<UML:TaggedValue tag="ea_targetName" value="005-CU078.2 Crear acto administrativo de entrega definitiva de un vehículo inmovilizado."/>
+								<UML:TaggedValue tag="ea_sourceType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="308"/>
+								<UML:TaggedValue tag="ea_targetID" value="312"/>
+								<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={137A06DE-3376-493d-B9A7-FC4CCF7D896F}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=include;GUID={124A0C36-2725-4a17-97A4-F2CE030EA9E8};@ENDSTEREO;$DES;$CLT={C0330B38-0E1D-4b6d-A485-C54B2A5864D0}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+								<UML:TaggedValue tag="mb" value=" &#xA;«include»"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_83F48B51_DCA0_43de_9193_211A73C28D91">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_42C4E453_0545_4f02_B6E1_6F96E0B4D2D6">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:Association xmi.id="EAID_C8AA9530_4232_4f15_A10D_1C81BCA7748A" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.stereotype>
+								<UML:Stereotype name="include"/>
+							</UML:ModelElement.stereotype>
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="subtype" value="Includes"/>
+								<UML:TaggedValue tag="stereotype" value="include"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="conditional" value=" &#xA;«include»"/>
+								<UML:TaggedValue tag="ea_localid" value="221"/>
+								<UML:TaggedValue tag="ea_sourceName" value="002-CU103.1 Realizar el proceso de inmovilización o subsanación por abandono de vehículo."/>
+								<UML:TaggedValue tag="ea_targetName" value="005-CU084.1 Cargar pruebas de subsanación del vehículo"/>
+								<UML:TaggedValue tag="ea_sourceType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="308"/>
+								<UML:TaggedValue tag="ea_targetID" value="341"/>
+								<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={D9F21B30-7DD3-428d-80C7-7C02452791F5}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=include;GUID={124A0C36-2725-4a17-97A4-F2CE030EA9E8};@ENDSTEREO;$DES;$CLT={C8AA9530-4232-4f15-A10D-1C81BCA7748A}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+								<UML:TaggedValue tag="mb" value=" &#xA;«include»"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_83F48B51_DCA0_43de_9193_211A73C28D91">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_32CABC13_C241_4438_8A95_E13DF0E336C6">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:Association xmi.id="EAID_CA5B6DD0_F9C8_4af7_B454_9DD8785C0837" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="597"/>
+								<UML:TaggedValue tag="ea_sourceName" value="Timer"/>
+								<UML:TaggedValue tag="ea_targetName" value="002-CU103.1 Realizar el proceso de inmovilización o subsanación por abandono de vehículo."/>
+								<UML:TaggedValue tag="ea_sourceType" value="Actor"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="579"/>
+								<UML:TaggedValue tag="ea_targetID" value="308"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_C1BFCF04_964A_4957_9418_BCC89EFC0A67">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_83F48B51_DCA0_43de_9193_211A73C28D91">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:Association xmi.id="EAID_EC981343_F01B_483e_8EBA_2F361B2FFE0E" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.stereotype>
+								<UML:Stereotype name="include"/>
+							</UML:ModelElement.stereotype>
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="subtype" value="Includes"/>
+								<UML:TaggedValue tag="stereotype" value="include"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="conditional" value=" &#xA;«include»"/>
+								<UML:TaggedValue tag="ea_localid" value="209"/>
+								<UML:TaggedValue tag="ea_sourceName" value="002-CU103.1 Realizar el proceso de inmovilización o subsanación por abandono de vehículo."/>
+								<UML:TaggedValue tag="ea_targetName" value="001-CU081.1 Verificar requisitos de salida provisional de un vehículo inmovilizado."/>
+								<UML:TaggedValue tag="ea_sourceType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="308"/>
+								<UML:TaggedValue tag="ea_targetID" value="345"/>
+								<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={AE90CDC7-9692-4554-87A2-77C506FA2316}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=include;GUID={124A0C36-2725-4a17-97A4-F2CE030EA9E8};@ENDSTEREO;$DES;$CLT={EC981343-F01B-483e-8EBA-2F361B2FFE0E}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+								<UML:TaggedValue tag="mb" value=" &#xA;«include»"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_83F48B51_DCA0_43de_9193_211A73C28D91">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_63B3BCDF_114D_498f_8BE4_A828179AA05B">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:UseCase name="004-CU104.2 Archivar procesos inhibitorios." xmi.id="EAID_8A1BE790_6C37_48c6_9CA1_D57BD1BFC254" visibility="public" namespace="EAPK_82881427_B9E5_4040_B502_D63DBB9CBBBF" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="documentation" value="El proceso se hace de forma masiva a través de una resolución. Los comparendos pasan a estado archivo. En la masiva entran todos los comparendos en estado inhibitorio por abandono de vehículo C02 que lleven más de 3 años y un día en ese estado."/>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="UseCase"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_82881427_B9E5_4040_B502_D63DBB9CBBBF"/>
+								<UML:TaggedValue tag="date_created" value="2017-02-17 15:50:35"/>
+								<UML:TaggedValue tag="date_modified" value="2017-03-27 23:46:27"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="013-Inmovilizados en estado de abandono."/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="dev"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Proposed"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="309"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:UseCase>
+						<UML:Association xmi.id="EAID_8259AAD7_0938_406e_8377_5DEC34C1D75F" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="638"/>
+								<UML:TaggedValue tag="ea_sourceName" value="Timer"/>
+								<UML:TaggedValue tag="ea_targetName" value="004-CU104.2 Archivar procesos inhibitorios."/>
+								<UML:TaggedValue tag="ea_sourceType" value="Actor"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="579"/>
+								<UML:TaggedValue tag="ea_targetID" value="309"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_C1BFCF04_964A_4957_9418_BCC89EFC0A67">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_8A1BE790_6C37_48c6_9CA1_D57BD1BFC254">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+					</UML:Namespace.ownedElement>
+				</UML:Package>
+			</UML:Namespace.ownedElement>
+		</UML:Model>
+		<UML:Diagram name="Inmovilizados en estado de abandono." xmi.id="EAID_30064044_D1FE_429e_8880_77FE20588515" diagramType="UseCaseDiagram" owner="EAPK_82881427_B9E5_4040_B502_D63DBB9CBBBF" toolName="Enterprise Architect 2.5">
+			<UML:ModelElement.taggedValue>
+				<UML:TaggedValue tag="version" value="1.0"/>
+				<UML:TaggedValue tag="author" value="dev"/>
+				<UML:TaggedValue tag="created_date" value="2017-02-17 15:42:17"/>
+				<UML:TaggedValue tag="modified_date" value="2017-03-27 22:57:09"/>
+				<UML:TaggedValue tag="package" value="EAPK_82881427_B9E5_4040_B502_D63DBB9CBBBF"/>
+				<UML:TaggedValue tag="type" value="Use Case"/>
+				<UML:TaggedValue tag="swimlanes" value="locked=false;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;cls=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;"/>
+				<UML:TaggedValue tag="matrixitems" value="locked=false;matrixactive=false;swimlanesactive=true;kanbanactive=false;width=1;clrLine=0;"/>
+				<UML:TaggedValue tag="ea_localid" value="20"/>
+				<UML:TaggedValue tag="EAStyle" value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=1;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=1;PPgs.cy=1;DocSize.cx=850;DocSize.cy=1098;ShowDetails=0;Orientation=P;Zoom=100;ShowTags=0;OpParams=1;VisibleAttributeDetail=0;ShowOpRetType=1;ShowIcons=1;CollabNums=0;HideProps=0;ShowReqs=0;ShowCons=0;PaperSize=1;HideParents=0;UseAlias=0;HideAtts=0;HideOps=0;HideStereo=0;HideElemStereo=0;ShowTests=0;ShowMaint=0;ConnectorNotation=UML 2.1;ExplicitNavigability=0;ShowShape=1;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;ShowNotes=0;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;"/>
+				<UML:TaggedValue tag="styleex" value="SaveTag=0957996D;ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=1;MatrixActive=0;SwimlanesActive=1;KanbanActive=0;MatrixLineWidth=1;MatrixLineClr=0;MatrixLocked=0;TConnectorNotation=UML 2.1;TExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;ProfileData=;MDGDgm=;STBLDgm=;ShowNotes=0;VisibleAttributeDetail=0;ShowOpRetType=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;SuppressedCompartments=;Theme=:119;"/>
+			</UML:ModelElement.taggedValue>
+			<UML:Diagram.element>
+				<UML:DiagramElement geometry="Left=397;Top=279;Right=502;Bottom=349;" subject="EAID_8A1BE790_6C37_48c6_9CA1_D57BD1BFC254" seqno="1" style="DUID=9FFB478E;"/>
+				<UML:DiagramElement geometry="Left=434;Top=157;Right=576;Bottom=252;" subject="EAID_54E71B90_A6DC_47cd_A351_BE4D72B1B9C5" seqno="2" style="DUID=ADAAB1F0;"/>
+				<UML:DiagramElement geometry="Left=432;Top=37;Right=579;Bottom=135;" subject="EAID_83F48B51_DCA0_43de_9193_211A73C28D91" seqno="3" style="DUID=E0415E7B;"/>
+				<UML:DiagramElement geometry="Left=329;Top=139;Right=374;Bottom=229;" subject="EAID_C1BFCF04_964A_4957_9418_BCC89EFC0A67" seqno="4" style="DUID=33F19987;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;"/>
+				<UML:DiagramElement geometry="Left=200;Top=42;Right=345;Bottom=139;" subject="EAID_0EE7AF27_E812_440a_BF39_96077DC19247" seqno="5" style="DUID=DE781FEF;"/>
+				<UML:DiagramElement geometry="Left=35;Top=25;Right=80;Bottom=115;" subject="EAID_31F08BCE_6C60_4298_89B5_6A3A1517318A" seqno="6" style="DUID=81495558;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;Path=;" subject="EAID_EA19067E_A328_41a1_8CC4_48235DAF89CC" style="Mode=3;EOID=DE781FEF;SOID=81495558;Color=-1;LWidth=0;Hidden=0;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=4;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_D381E27B_71C5_4c20_AE99_E515F64E9743" style="Mode=3;EOID=DE781FEF;SOID=E0415E7B;Color=-1;LWidth=0;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;Path=;" subject="EAID_CA5B6DD0_F9C8_4af7_B454_9DD8785C0837" style="Mode=3;EOID=E0415E7B;SOID=33F19987;Color=-1;LWidth=0;Hidden=0;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;Path=;" subject="EAID_8D65945A_2C42_45b9_84AB_5B326CFF08D0" style="Mode=3;EOID=ADAAB1F0;SOID=33F19987;Color=-1;LWidth=0;Hidden=0;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;Path=;" subject="EAID_8259AAD7_0938_406e_8377_5DEC34C1D75F" style="Mode=3;EOID=9FFB478E;SOID=33F19987;Color=-1;LWidth=0;Hidden=0;Hidden=0;"/>
+			</UML:Diagram.element>
+		</UML:Diagram>
+	</XMI.content>
+	<XMI.difference/>
+	<XMI.extensions xmi.extender="Enterprise Architect 2.5">
+		<EAModel.scenario>
+			<EAScenario name="Basic Path" type="Basic Path" weight="0,00" subject="EAID_0EE7AF27_E812_440a_BF39_96077DC19247" xmi.id="EAID_85F403B5_4CCD_4535_B0E5_9551C4593008">
+				<EAScenarioContent>
+					<path>
+						<step name="El sistema identifica si el proceso C02 ya había sido declarado inhibitorio y se lo informa al abogado de audiencia. " guid="{BE2BBCDF-F0BE-4722-A45A-5999F25397D3}" level="1" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="CU043.1 Realizar apertura a una audiencia de aceptación de comparendo , CU047.1 Crear el acto administrativo presencial de aceptación de comparendo. Audiencia de aceptación CU049.1 Apertura de audiencia de impugnación, CU054.1 Crear el acto administrativo de audiencia de impugnación.  Audiencia de impugnación" guid="{B1A9B52E-709F-4d84-B066-448CE49A8400}" level="2" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<context>
+							<item oldname="AT4.1.2 Abogado de audiencias contravencionales" guid="{31F08BCE-6C60-4298-89B5-6A3A1517318A}"/>
+							<item oldname="CU103.1 Realizar el proceso de inmovilización o subsanación por abandono de vehículo." guid="{83F48B51-DCA0-43de-9193-211A73C28D91}"/>
+							<item oldname="CU043.1 Realizar apertura a una audiencia de aceptación de comparendo" guid="{47036A44-741A-4cd1-8688-2101CE873A5D}"/>
+							<item oldname="CU047.1 Crear el acto administrativo presencial de aceptación de comparendo." guid="{FF58EFF4-29E5-4d09-A943-99C79A338BE9}"/>
+							<item oldname="Realizar las audiencias de aceptación o impugnación de proceso por abandono de vehículo" guid="{91E8E81C-236F-4e01-9382-A6A93C307322}"/>
+							<item oldname="CU054.1 Crear el acto administrativo de audiencia de impugnación." guid="{BC115626-4A43-490d-9682-6ECEC7B6C19B}"/>
+							<item oldname="CU049.1 Apertura de audiencia de impugnación" guid="{C3B3176B-DF43-4694-A5ED-C1634439A8B5}"/>
+						</context>
+					</path>
+				</EAScenarioContent>
+			</EAScenario>
+			<EAScenario name="Basic Path" type="Basic Path" weight="0,00" subject="EAID_54E71B90_A6DC_47cd_A351_BE4D72B1B9C5" xmi.id="EAID_2F6426A8_C2EF_4f6d_AE80_6E5FA490606B">
+				<EAScenarioContent>
+					<path>
+						<step name="El sistema verifica que no exista impugnación o pago del proceso contravencional." guid="{F676446D-2EA5-4c93-9253-D91BF2FE04EC}" level="1" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="El sistema identifica la plantilla para generar el acto administrativo automático de fallo por inhibitorio de proceso C02 de abandono de vehículo." guid="{55994DB1-A0BE-4106-A166-C1157D5ADFF7}" level="2" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="CUT-4 Generar un acto administrativo automático" guid="{0C3C3023-7949-4364-BDE4-2B7E2435846E}" level="3" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="El sistema registra el documento de acto administrativo automático por inhibitorio de proceso C02 de abandono de vehículo." guid="{5FA0012D-95AB-4c94-BC16-936140107706}" level="4" uses="" useslist="" result="Crear el documento de acto administrativo automático por inhibitorio de proceso C02 de abandono de vehículo a partir de la última versión del documento." state="" trigger="0" link=""/>
+						<step name="El acto administrativo no se comunica a nadie." guid="{4F40D84B-EF92-4572-BA3B-14E876A4F4F0}" level="5" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="El sistema cambia el estado del comparendo C02 por abandono de vehículo como inhibitorio." guid="{6F935B62-9835-4fb4-85AD-6AA718F7E2EA}" level="6" uses="" useslist="" result="Verificar el registro del comparendo C02 por abandono de vehículo a estado inhibitorio." state="" trigger="0" link=""/>
+						<context>
+							<item oldname="Timer" guid="{C1BFCF04-964A-4957-9418-BCC89EFC0A67}"/>
+							<item oldname="CUT-4 Generar un acto administrativo automático" guid="{4D26DD4A-DFB1-4edf-AE1F-3894FDF21042}"/>
+						</context>
+					</path>
+				</EAScenarioContent>
+			</EAScenario>
+			<EAScenario name="Basic Path" type="Basic Path" weight="0,00" subject="EAID_83F48B51_DCA0_43de_9193_211A73C28D91" xmi.id="EAID_C69DAC8D_2F17_45e9_B86A_F52E1CD45FA9">
+				<EAScenarioContent>
+					<path>
+						<step name="El ciudadano debe iniciar proceso de audiencia de impugnación o de aceptación obligatoriamente para registrarse como tercero contraventor. CU102.1 Realizar las audiencias de aceptación o impugnación de proceso por abandono de vehículo." guid="{73156F7B-E28A-4185-ADF7-100EB483600E}" level="1" uses="" useslist="" result="" state="" trigger="1" link=""/>
+						<step name="CU078.1 Verificar requisitos de salida de un vehículo inmovilizado. CU078.2 Crear acto administrativo de entrega definitiva de un vehículo inmovilizado. CU079.1 Realizar el registro en el sistema de información de patios y grúas de la salida definitiva del vehículo.  CU080.1 Cargar en el sistema las pruebas de salida del vehículo Proceso de salida definitiva de patios. CU080.1 Cargar en el sistema las pruebas de salida del vehículo  CU081.1 Verificar requisitos de salida provisional de un vehículo inmovilizado.&#xA; CU081.2 Crear acto administrativo de salida provisional de patios o acta de compromiso. CU082.1 Realizar el registro en el sistema de información de patios y grúas de la salida provisional del vehículo. CU083.1 Cargar pruebas de salida provisional del vehículo. CU084.1 Cargar pruebas de subsanación del vehículo. CU085.1 Crear acto administrativo para archivar el proceso de subsanación.  CU086.1 Crear acto administrativo de apertura de proceso de investigación por incumplimiento del acta de compromiso. CU087.1 Realizar reparto del proceso de incumplimiento del acta de compromiso CU088.1 Radicación de descargos del proceso de incumplimiento del acta de compromiso.  CU089.1 Practicar pruebas al proceso de incumplimiento del acta de compromiso. CU092.1 Crear acto administrativo de fallo al proceso de incumplimiento del acta de compromiso. CU093.1 Crear constancia de ejecutoria del proceso de incumplimiento del acta de compromiso.&#xA;Proceso de salida provisional de patios por subsanación.&#xA;" guid="{446BAF5D-F784-458d-A0C7-62B75A81FE37}" level="2" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<context>
+							<item oldname="CU102.1 Realizar las audiencias de aceptación o impugnación de proceso por abandono de vehículo." guid="{0EE7AF27-E812-440a-BF39-96077DC19247}"/>
+							<item oldname="CU078.2 Crear acto administrativo de entrega definitiva de un vehículo inmovilizado." guid="{42C4E453-0545-4f02-B6E1-6F96E0B4D2D6}"/>
+							<item oldname="CU079.1 Realizar el registro en el sistema de información de patios y grúas de la salida definitiva del vehículo." guid="{8A8F5C66-9AA9-4600-AC0C-76DCE32DBAB0}"/>
+							<item oldname="CU078.1 Verificar requisitos de salida de un vehículo inmovilizado." guid="{A215A53D-C911-4009-ACD3-A8E4E95C462F}"/>
+							<item oldname="CU084.1 Cargar pruebas de subsanación del vehículo." guid="{32CABC13-C241-4438-8A95-E13DF0E336C6}"/>
+							<item oldname="CU093.1 Crear constancia de ejecutoria del proceso de incumplimiento del acta de compromiso." guid="{3BA281CA-D8B0-4c6c-A5C8-FBB1D10BD977}"/>
+							<item oldname="CU087.1 Realizar reparto del proceso de incumplimiento del acta de compromiso" guid="{500E6CD6-0D68-4a58-A0D5-469B2A7027A9}"/>
+							<item oldname="CU088.1 Radicación de descargos del proceso de incumplimiento del acta de compromiso." guid="{5C57C0E1-F9D2-48bf-914B-D4677C3695B9}"/>
+							<item oldname="CU081.1 Verificar requisitos de salida provisional de un vehículo inmovilizado." guid="{63B3BCDF-114D-498f-8BE4-A828179AA05B}"/>
+							<item oldname="CU082.1 Realizar el registro en el sistema de información de patios y grúas de la salida provisional del vehículo." guid="{6634943D-A5C8-4085-9889-93ADD69629EE}"/>
+							<item oldname="CU092.1 Crear acto administrativo de fallo al proceso de incumplimiento del acta de compromiso." guid="{7D41FE6C-909C-4d83-9E52-D3B935124A77}"/>
+							<item oldname="Timer" guid="{C1BFCF04-964A-4957-9418-BCC89EFC0A67}"/>
+							<item oldname="CU083.1 Cargar pruebas de salida provisional del vehículo." guid="{C4D49161-3C4F-4848-923A-AF736D96C626}"/>
+							<item oldname="CU086.1 Crear acto administrativo de apertura de proceso de investigación por incumplimiento del acta de compromiso." guid="{CD2AD930-A373-4b06-AE64-88143C32B539}"/>
+							<item oldname="CU089.1 Practicar pruebas al proceso de incumplimiento del acta de compromiso." guid="{D69A0B86-D2AF-4219-8166-50FFD233DB56}"/>
+							<item oldname="CU081.2 Crear acto administrativo de salida provisional de patios o acta de compromiso." guid="{D995562A-291A-40d6-96B2-E75A938E6779}"/>
+							<item oldname="CU085.1 Crear acto administrativo para archivar el proceso de subsanación." guid="{DD3E1434-5E4A-4662-B7D1-3796F720E930}"/>
+							<item oldname="CU080.1 Cargar en el sistema las pruebas de salida del vehículo" guid="{B105D8EA-B9F2-4a66-AEDC-AFC7BB7A093D}"/>
+						</context>
+					</path>
+				</EAScenarioContent>
+			</EAScenario>
+			<EAScenario name="Basic Path" type="Basic Path" weight="0,00" subject="EAID_8A1BE790_6C37_48c6_9CA1_D57BD1BFC254" xmi.id="EAID_19A0523E_BB6C_4657_9C31_E23F8B1B37C1">
+				<EAScenarioContent>
+					<path>
+						<step name="El sistema identifica los procesos C02 que lleven más de 3 años y un día en estado inhibitorio." guid="{203A93AA-44EC-4f07-B44D-A84F12566A86}" level="1" uses="" useslist="" result="Listar los procesos inhibitorios que llevan más de 3 años y un día en ese estado." state="" trigger="0" link=""/>
+						<step name="El sistema carga la plantilla de resolución de archivo de procesos inhibitorios." guid="{2C6E6088-9DB3-4ac1-B80D-49801EAE62E3}" level="2" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="El sistema genera automáticamente el documento de resolución de archivo." guid="{948D1EC6-8B7D-47df-956F-47F92606291B}" level="3" uses="" useslist="" result="Cargar documento de constancia ejecutoria dentro del expediente de los proceso C02." state="" trigger="0" link=""/>
+						<step name="El sistema registra el cambio de estado archivado a los procesos." guid="{E358662C-E86C-457a-B3D6-D85B940BCD74}" level="4" uses="" useslist="" result="Verificar el cambio  de estado archivado a los procesos." state="" trigger="0" link=""/>
+						<step name="El sistema realiza el registro en cartera ya que se archivó el proceso y ya no hay obligaciones vigentes." guid="{B6D625D5-E4A2-41f1-A382-FA144040D07F}" level="5" uses="" useslist="" result="Verificar el registro en cartera de la obligación." state="" trigger="0" link=""/>
+						<context/>
+					</path>
+				</EAScenarioContent>
+			</EAScenario>
+		</EAModel.scenario>
+		<EAStub xmi.id="EAID_9A5C837A_3882_4e79_BF81_3D214F506787" name="003-CU050.1 Seleccionar o registrar comparendo." UMLType="UseCase"/>
+		<EAStub xmi.id="EAID_BC115626_4A43_490d_9682_6ECEC7B6C19B" name="004-CU054.1 Crear el acto administrativo de audiencia de impugnación." UMLType="UseCase"/>
+		<EAStub xmi.id="EAID_FF58EFF4_29E5_4d09_A943_99C79A338BE9" name="002-CU047.1 Crear el acto administrativo presencial de aceptación de comparendo." UMLType="UseCase"/>
+		<EAStub xmi.id="EAID_47036A44_741A_4cd1_8688_2101CE873A5D" name="001-CU043.1 Realizar apertura a una audiencia de aceptación de comparendo" UMLType="UseCase"/>
+		<EAStub xmi.id="EAID_C3B3176B_DF43_4694_A5ED_C1634439A8B5" name="001-CU049.1 Apertura de audiencia de impugnación" UMLType="UseCase"/>
+		<EAStub xmi.id="EAID_31F08BCE_6C60_4298_89B5_6A3A1517318A" name="AT4.1.2 Abogado de audiencias contravencionales" UMLType="Actor"/>
+		<EAStub xmi.id="EAID_9E2E6515_E895_4b5f_85F2_F6EE8E32D8A0" name="CUT-2 Generar un oficio automático" UMLType="UseCase"/>
+		<EAStub xmi.id="EAID_C1BFCF04_964A_4957_9418_BCC89EFC0A67" name="Timer" UMLType="Actor"/>
+		<EAStub xmi.id="EAID_5C57C0E1_F9D2_48bf_914B_D4677C3695B9" name="009-CU088.1 Radicación de descargos del proceso de incumplimiento del acta de compromiso." UMLType="UseCase"/>
+		<EAStub xmi.id="EAID_A215A53D_C911_4009_ACD3_A8E4E95C462F" name="003-CU078.1 Verificar requisitos de salida de un vehículo inmovilizado." UMLType="UseCase"/>
+		<EAStub xmi.id="EAID_D69A0B86_D2AF_4219_8166_50FFD233DB56" name="010-CU089.1 Practicar pruebas al proceso de incumplimiento del acta de compromiso." UMLType="UseCase"/>
+		<EAStub xmi.id="EAID_CD2AD930_A373_4b06_AE64_88143C32B539" name="007-CU086.1 Crear acto administrativo de apertura de proceso de investigación por incumplimiento del acta de compromiso." UMLType="UseCase"/>
+		<EAStub xmi.id="EAID_B105D8EA_B9F2_4a66_AEDC_AFC7BB7A093D" name="007-CU080.1 Cargar en el sistema las pruebas de salida del vehículo" UMLType="UseCase"/>
+		<EAStub xmi.id="EAID_C4D49161_3C4F_4848_923A_AF736D96C626" name="004-CU083.1 Cargar pruebas de salida provisional del vehículo." UMLType="UseCase"/>
+		<EAStub xmi.id="EAID_500E6CD6_0D68_4a58_A0D5_469B2A7027A9" name="008-CU087.1 Realizar reparto del proceso de incumplimiento del acta de compromiso" UMLType="UseCase"/>
+		<EAStub xmi.id="EAID_DD3E1434_5E4A_4662_B7D1_3796F720E930" name="006-CU085.1 Crear acto administrativo para archivar el proceso de subsanación." UMLType="UseCase"/>
+		<EAStub xmi.id="EAID_6634943D_A5C8_4085_9889_93ADD69629EE" name="003-CU082.1 Realizar el registro en el sistema de información de patios y grúas de la salida provisional del vehículo." UMLType="UseCase"/>
+		<EAStub xmi.id="EAID_D995562A_291A_40d6_96B2_E75A938E6779" name="002-CU081.2 Crear acto administrativo de salida provisional de patios o acta de compromiso." UMLType="UseCase"/>
+		<EAStub xmi.id="EAID_7D41FE6C_909C_4d83_9E52_D3B935124A77" name="011-CU092.1 Crear acto administrativo de fallo al proceso de incumplimiento del acta de compromiso." UMLType="UseCase"/>
+		<EAStub xmi.id="EAID_8A8F5C66_9AA9_4600_AC0C_76DCE32DBAB0" name="006-CU079.1 Realizar el registro en el sistema de información de patios y grúas de la salida definitiva del vehículo." UMLType="UseCase"/>
+		<EAStub xmi.id="EAID_3BA281CA_D8B0_4c6c_A5C8_FBB1D10BD977" name="012-CU093.1 Crear constancia de ejecutoria del proceso de incumplimiento del acta de compromiso." UMLType="UseCase"/>
+		<EAStub xmi.id="EAID_42C4E453_0545_4f02_B6E1_6F96E0B4D2D6" name="005-CU078.2 Crear acto administrativo de entrega definitiva de un vehículo inmovilizado." UMLType="UseCase"/>
+		<EAStub xmi.id="EAID_32CABC13_C241_4438_8A95_E13DF0E336C6" name="005-CU084.1 Cargar pruebas de subsanación del vehículo" UMLType="UseCase"/>
+		<EAStub xmi.id="EAID_63B3BCDF_114D_498f_8BE4_A828179AA05B" name="001-CU081.1 Verificar requisitos de salida provisional de un vehículo inmovilizado." UMLType="UseCase"/>
+	</XMI.extensions>
+</XMI>

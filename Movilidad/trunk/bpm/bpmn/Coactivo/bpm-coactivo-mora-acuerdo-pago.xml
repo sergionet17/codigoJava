@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:ssbp="www.sparxsystems.com.au/bpmn20" id="EAPK_DAF08BD3_46AF_4ee8_873E_491E46E5D348" name="Mora acuerdo pago" targetNamespace="www.sparxsystems.com.au/bpmn20" exporter="Camunda Modeler" exporterVersion="1.7.2">
+  <bpmn:collaboration id="Collaboration_0idqil5">
+    <bpmn:participant id="Participant_0grgm6s" name="SDM" processRef="EAID_55FB8ED0_A9B7_439f_86C9_93D9AB98DA38" />
+  </bpmn:collaboration>
+  <bpmn:process id="EAID_55FB8ED0_A9B7_439f_86C9_93D9AB98DA38" name="Mora acuerdo pago" processType="None" isClosed="false" isExecutable="false">
+    <bpmn:startEvent id="EAID_B83EE2D0_BDC0_4ad3_86EE_65619EBF64F4" name="Inicio">
+      <bpmn:outgoing>EAID_8BE0C393_420F_458d_882E_F2605C0942AE</bpmn:outgoing>
+      <bpmn:messageEventDefinition />
+    </bpmn:startEvent>
+    <bpmn:endEvent id="EAID_C3FF66FB_0955_4375_9264_610D64F3E0EE" name="EndEvent1">
+      <bpmn:incoming>EAID_55412744_CDAF_4926_8A93_7EBD9B113808</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:serviceTask id="EAID_77F21EAF_5491_4fd1_BE55_4A377CFE9E9E" name="Registrar para gestion persuasiva por mora" implementation="##unspecified">
+      <bpmn:incoming>EAID_A4F6BEFE_03B9_4fb8_A665_01131AF886D5</bpmn:incoming>
+      <bpmn:outgoing>EAID_55412744_CDAF_4926_8A93_7EBD9B113808</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:serviceTask id="EAID_C785532D_28F2_4597_ADA1_A3A2EBA809E6" name="Registrar acuerdo de pago en estado de mora" implementation="##unspecified">
+      <bpmn:incoming>EAID_8BE0C393_420F_458d_882E_F2605C0942AE</bpmn:incoming>
+      <bpmn:outgoing>EAID_A4F6BEFE_03B9_4fb8_A665_01131AF886D5</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="EAID_8BE0C393_420F_458d_882E_F2605C0942AE" sourceRef="EAID_B83EE2D0_BDC0_4ad3_86EE_65619EBF64F4" targetRef="EAID_C785532D_28F2_4597_ADA1_A3A2EBA809E6" />
+    <bpmn:sequenceFlow id="EAID_55412744_CDAF_4926_8A93_7EBD9B113808" sourceRef="EAID_77F21EAF_5491_4fd1_BE55_4A377CFE9E9E" targetRef="EAID_C3FF66FB_0955_4375_9264_610D64F3E0EE" />
+    <bpmn:sequenceFlow id="EAID_A4F6BEFE_03B9_4fb8_A665_01131AF886D5" sourceRef="EAID_C785532D_28F2_4597_ADA1_A3A2EBA809E6" targetRef="EAID_77F21EAF_5491_4fd1_BE55_4A377CFE9E9E" />
+    <bpmn:textAnnotation id="EAID_35322218_544F_468f_88B2_283D89FFC741">    <bpmn:text>Se inicia este proceso (1) un dia despues del incumplimiento en el pago de una cuota del acuerdo de pago.</bpmn:text>
+</bpmn:textAnnotation>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="EAID_69D26505_C002_47c8_9973_2F49F5638C3F" name="Mora acuerdo pago">
+    <bpmndi:BPMNPlane id="EAID_PL000000_C002_47c8_9973_2F49F5638C3F" bpmnElement="Collaboration_0idqil5">
+      <bpmndi:BPMNShape id="Participant_0grgm6s_di" bpmnElement="Participant_0grgm6s">
+        <dc:Bounds x="13" y="14" width="519" height="219" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000000_C002_47c8_9973_2F49F5638C3F" bpmnElement="EAID_B83EE2D0_BDC0_4ad3_86EE_65619EBF64F4">
+        <dc:Bounds x="63" y="111" width="30" height="30" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_BDC0_4ad3_86EE_65619EBF64F4" labelStyle="EAID_LS000000_C002_47c8_9973_2F49F5638C3F">
+          <dc:Bounds x="63" y="151" width="25" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000003_C002_47c8_9973_2F49F5638C3F" bpmnElement="EAID_C3FF66FB_0955_4375_9264_610D64F3E0EE">
+        <dc:Bounds x="462" y="115" width="30" height="30" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_0955_4375_9264_610D64F3E0EE" labelStyle="EAID_LS000000_C002_47c8_9973_2F49F5638C3F">
+          <dc:Bounds x="459" y="155" width="53" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000002_C002_47c8_9973_2F49F5638C3F" bpmnElement="EAID_77F21EAF_5491_4fd1_BE55_4A377CFE9E9E">
+        <dc:Bounds x="306" y="106" width="110" height="60" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_5491_4fd1_BE55_4A377CFE9E9E" labelStyle="EAID_LS000000_C002_47c8_9973_2F49F5638C3F" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000001_C002_47c8_9973_2F49F5638C3F" bpmnElement="EAID_C785532D_28F2_4597_ADA1_A3A2EBA809E6">
+        <dc:Bounds x="150" y="93" width="110" height="75" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_28F2_4597_ADA1_A3A2EBA809E6" labelStyle="EAID_LS000000_C002_47c8_9973_2F49F5638C3F" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000004_C002_47c8_9973_2F49F5638C3F" bpmnElement="EAID_35322218_544F_468f_88B2_283D89FFC741">
+        <dc:Bounds x="113" y="34" width="266" height="49" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="EAID_DL000000_C002_47c8_9973_2F49F5638C3F" bpmnElement="EAID_8BE0C393_420F_458d_882E_F2605C0942AE">
+        <di:waypoint xsi:type="dc:Point" x="93" y="126" />
+        <di:waypoint xsi:type="dc:Point" x="150" y="126" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="77" y="101" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="EAID_DL000002_C002_47c8_9973_2F49F5638C3F" bpmnElement="EAID_55412744_CDAF_4926_8A93_7EBD9B113808">
+        <di:waypoint xsi:type="dc:Point" x="416" y="130" />
+        <di:waypoint xsi:type="dc:Point" x="462" y="130" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="394" y="105" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="EAID_DL000001_C002_47c8_9973_2F49F5638C3F" bpmnElement="EAID_A4F6BEFE_03B9_4fb8_A665_01131AF886D5">
+        <di:waypoint xsi:type="dc:Point" x="260" y="133" />
+        <di:waypoint xsi:type="dc:Point" x="306" y="133" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="238" y="108" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+    <bpmndi:BPMNLabelStyle id="EAID_LS000000_C002_47c8_9973_2F49F5638C3F">
+      <dc:Font name="Calibri" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+    </bpmndi:BPMNLabelStyle>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

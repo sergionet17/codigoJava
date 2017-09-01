@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<XMI xmi.version="1.1" xmlns:UML="omg.org/UML1.3">
+	<XMI.header>
+		<XMI.documentation>
+			<XMI.exporter>Enterprise Architect</XMI.exporter>
+			<XMI.exporterVersion>2.5</XMI.exporterVersion>
+		</XMI.documentation>
+	</XMI.header>
+	<XMI.content>
+		<UML:Model name="EA Model" xmi.id="MX_EAID_EF0981A2_DE97_4c42_A39D_509F555C0FBA">
+			<UML:Namespace.ownedElement>
+				<UML:Class name="EARootClass" xmi.id="EAID_11111111_5487_4080_A7F4_41526CB0AA00" isRoot="true" isLeaf="false" isAbstract="false"/>
+				<UML:Package name="Administración de licencias de conducción" xmi.id="EAPK_EF0981A2_DE97_4c42_A39D_509F555C0FBA" isRoot="false" isLeaf="false" isAbstract="false" visibility="public">
+					<UML:ModelElement.taggedValue>
+						<UML:TaggedValue tag="parent" value="EAPK_AC2829DF_2F72_422a_B9C3_27FD312F0628"/>
+						<UML:TaggedValue tag="created" value="2017-03-10 14:44:15"/>
+						<UML:TaggedValue tag="modified" value="2017-03-10 14:44:15"/>
+						<UML:TaggedValue tag="iscontrolled" value="TRUE"/>
+						<UML:TaggedValue tag="xmlpath" value="rm-contravenciones-administracion-de-licencias-de-conducción.xml"/>
+						<UML:TaggedValue tag="version" value="1.0"/>
+						<UML:TaggedValue tag="isprotected" value="FALSE"/>
+						<UML:TaggedValue tag="usedtd" value="FALSE"/>
+						<UML:TaggedValue tag="owner" value="dev"/>
+						<UML:TaggedValue tag="xmiver" value="Enterprise Architect XMI/UML 1.3"/>
+						<UML:TaggedValue tag="logxml" value="FALSE"/>
+						<UML:TaggedValue tag="packageFlags" value="Recurse=0;VCCFG=secmov-sipa;CRC=0;"/>
+						<UML:TaggedValue tag="batchsave" value="0"/>
+						<UML:TaggedValue tag="batchload" value="0"/>
+						<UML:TaggedValue tag="phase" value="1.0"/>
+						<UML:TaggedValue tag="status" value="Proposed"/>
+						<UML:TaggedValue tag="author" value="dev"/>
+						<UML:TaggedValue tag="complexity" value="1"/>
+						<UML:TaggedValue tag="ea_stype" value="Public"/>
+						<UML:TaggedValue tag="tpos" value="0"/>
+						<UML:TaggedValue tag="gentype" value="Java"/>
+					</UML:ModelElement.taggedValue>
+					<UML:Namespace.ownedElement>
+						<UML:Collaboration xmi.id="EAID_EF0981A2_DE97_4c42_A39D_509F555C0FBA_Collaboration" name="Collaborations">
+							<UML:Namespace.ownedElement>
+								<UML:ClassifierRole name="RF70  Se debe poder generar constancia ejecutoria" xmi.id="EAID_0FCD1A7C_5456_49f0_950F_3ADF1CE11C1F" visibility="public" base="EAID_11111111_5487_4080_A7F4_41526CB0AA00">
+									<UML:ModelElement.stereotype>
+										<UML:Stereotype name="FunctionalRequirement"/>
+									</UML:ModelElement.stereotype>
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="documentation" value="El sistema debe generar la constancia ejecutoria (Las posibles decisiones son: archivar o declaratoria de reincidencia en la cual se hace suspensión de la licencia)."/>
+										<UML:TaggedValue tag="isAbstract" value="false"/>
+										<UML:TaggedValue tag="isSpecification" value="false"/>
+										<UML:TaggedValue tag="ea_stype" value="Requirement"/>
+										<UML:TaggedValue tag="ea_ntype" value="0"/>
+										<UML:TaggedValue tag="version" value="1.0"/>
+										<UML:TaggedValue tag="isActive" value="false"/>
+										<UML:TaggedValue tag="package" value="EAPK_EF0981A2_DE97_4c42_A39D_509F555C0FBA"/>
+										<UML:TaggedValue tag="date_created" value="2017-03-10 14:47:22"/>
+										<UML:TaggedValue tag="date_modified" value="2017-03-10 14:48:34"/>
+										<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+										<UML:TaggedValue tag="tagged" value="0"/>
+										<UML:TaggedValue tag="package_name" value="Administración de licencias de conducción"/>
+										<UML:TaggedValue tag="phase" value="1.0"/>
+										<UML:TaggedValue tag="author" value="dev"/>
+										<UML:TaggedValue tag="complexity" value="1"/>
+										<UML:TaggedValue tag="status" value="Proposed"/>
+										<UML:TaggedValue tag="stereotype" value="FunctionalRequirement"/>
+										<UML:TaggedValue tag="tpos" value="0"/>
+										<UML:TaggedValue tag="ea_localid" value="9669"/>
+										<UML:TaggedValue tag="ea_eleType" value="element"/>
+										<UML:TaggedValue tag="difficulty" value="Medium"/>
+										<UML:TaggedValue tag="priority" value="Medium"/>
+										<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+										<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={0679B50B-9006-4051-8A80-93CD630456EF}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=FunctionalRequirement;FQName=EAREQ::FunctionalRequirement;@ENDSTEREO;$DES;$CLT={0FCD1A7C-5456-49f0-950F-3ADF1CE11C1F}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+									</UML:ModelElement.taggedValue>
+								</UML:ClassifierRole>
+								<UML:ClassifierRole name="RF72 Se debe poder llevar un control de las licencias de conducción con procesos" xmi.id="EAID_3F0BC7FC_3BE4_47d0_93C9_63CD0B0CD8FE" visibility="public" base="EAID_11111111_5487_4080_A7F4_41526CB0AA00">
+									<UML:ModelElement.stereotype>
+										<UML:Stereotype name="FunctionalRequirement"/>
+									</UML:ModelElement.stereotype>
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="documentation" value="El sistema debe llevar un control de las licencias de conducción que han sido suspendidas, canceladas en que se pueda saber cuales se encuentran en custodia y cuáles han cumplido los requisitos para la entrega de la licencia al titular.l)."/>
+										<UML:TaggedValue tag="isAbstract" value="false"/>
+										<UML:TaggedValue tag="isSpecification" value="false"/>
+										<UML:TaggedValue tag="ea_stype" value="Requirement"/>
+										<UML:TaggedValue tag="ea_ntype" value="0"/>
+										<UML:TaggedValue tag="version" value="1.0"/>
+										<UML:TaggedValue tag="isActive" value="false"/>
+										<UML:TaggedValue tag="package" value="EAPK_EF0981A2_DE97_4c42_A39D_509F555C0FBA"/>
+										<UML:TaggedValue tag="date_created" value="2017-03-10 14:51:00"/>
+										<UML:TaggedValue tag="date_modified" value="2017-03-10 14:58:00"/>
+										<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+										<UML:TaggedValue tag="tagged" value="0"/>
+										<UML:TaggedValue tag="package_name" value="Administración de licencias de conducción"/>
+										<UML:TaggedValue tag="phase" value="1.0"/>
+										<UML:TaggedValue tag="author" value="dev"/>
+										<UML:TaggedValue tag="complexity" value="1"/>
+										<UML:TaggedValue tag="status" value="Proposed"/>
+										<UML:TaggedValue tag="stereotype" value="FunctionalRequirement"/>
+										<UML:TaggedValue tag="tpos" value="0"/>
+										<UML:TaggedValue tag="ea_localid" value="9670"/>
+										<UML:TaggedValue tag="ea_eleType" value="element"/>
+										<UML:TaggedValue tag="difficulty" value="Medium"/>
+										<UML:TaggedValue tag="priority" value="Medium"/>
+										<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+										<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={95F80D87-7910-41c0-A8E2-8809C1D341DF}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=FunctionalRequirement;FQName=EAREQ::FunctionalRequirement;@ENDSTEREO;$DES;$CLT={3F0BC7FC-3BE4-47d0-93C9-63CD0B0CD8FE}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+									</UML:ModelElement.taggedValue>
+								</UML:ClassifierRole>
+								<UML:ClassifierRole name="RF75 Se debe permitir el diligenciamiento del formato de solicitud de entrega de la licencia de conducción." xmi.id="EAID_61F3BCBB_2E98_44dd_90B5_D9FC9A6D0230" visibility="public" base="EAID_11111111_5487_4080_A7F4_41526CB0AA00">
+									<UML:ModelElement.stereotype>
+										<UML:Stereotype name="FunctionalRequirement"/>
+									</UML:ModelElement.stereotype>
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="documentation" value="El sistema debe permitir el diligenciamiento del formato de solicitud de entrega de la licencia de conducción.&#xA;&#xA;Generar el acta de entrega de la licencia de conducción para ser impresa"/>
+										<UML:TaggedValue tag="isAbstract" value="false"/>
+										<UML:TaggedValue tag="isSpecification" value="false"/>
+										<UML:TaggedValue tag="ea_stype" value="Requirement"/>
+										<UML:TaggedValue tag="ea_ntype" value="0"/>
+										<UML:TaggedValue tag="version" value="1.0"/>
+										<UML:TaggedValue tag="isActive" value="false"/>
+										<UML:TaggedValue tag="package" value="EAPK_EF0981A2_DE97_4c42_A39D_509F555C0FBA"/>
+										<UML:TaggedValue tag="date_created" value="2017-03-10 15:32:32"/>
+										<UML:TaggedValue tag="date_modified" value="2017-03-10 16:12:08"/>
+										<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+										<UML:TaggedValue tag="tagged" value="0"/>
+										<UML:TaggedValue tag="package_name" value="Administración de licencias de conducción"/>
+										<UML:TaggedValue tag="phase" value="1.0"/>
+										<UML:TaggedValue tag="author" value="dev"/>
+										<UML:TaggedValue tag="complexity" value="1"/>
+										<UML:TaggedValue tag="status" value="Proposed"/>
+										<UML:TaggedValue tag="stereotype" value="FunctionalRequirement"/>
+										<UML:TaggedValue tag="tpos" value="0"/>
+										<UML:TaggedValue tag="ea_localid" value="9690"/>
+										<UML:TaggedValue tag="ea_eleType" value="element"/>
+										<UML:TaggedValue tag="difficulty" value="Medium"/>
+										<UML:TaggedValue tag="priority" value="Medium"/>
+										<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+										<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={1D986501-8F4A-48bb-B0BF-A4555085F565}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=FunctionalRequirement;FQName=EAREQ::FunctionalRequirement;@ENDSTEREO;$DES;$CLT={61F3BCBB-2E98-44dd-90B5-D9FC9A6D0230}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+									</UML:ModelElement.taggedValue>
+								</UML:ClassifierRole>
+								<UML:AssociationRole xmi.id="EAID_30109EF0_83E4_48d9_A273_E580E46B3D21" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="style" value="3"/>
+										<UML:TaggedValue tag="ea_type" value="Association"/>
+										<UML:TaggedValue tag="direction" value="Unspecified"/>
+										<UML:TaggedValue tag="linemode" value="3"/>
+										<UML:TaggedValue tag="linecolor" value="-1"/>
+										<UML:TaggedValue tag="linewidth" value="0"/>
+										<UML:TaggedValue tag="seqno" value="0"/>
+										<UML:TaggedValue tag="headStyle" value="0"/>
+										<UML:TaggedValue tag="lineStyle" value="0"/>
+										<UML:TaggedValue tag="ea_localid" value="7255"/>
+										<UML:TaggedValue tag="ea_sourceName" value="RF73 Se debe permitir el registro de la solicitud de devolución de la licencia de conducción"/>
+										<UML:TaggedValue tag="ea_targetName" value="RF75 Se debe permitir el diligenciamiento del formato de solicitud de entrega de la licencia de conducción."/>
+										<UML:TaggedValue tag="ea_sourceType" value="Requirement"/>
+										<UML:TaggedValue tag="ea_targetType" value="Requirement"/>
+										<UML:TaggedValue tag="ea_sourceID" value="9687"/>
+										<UML:TaggedValue tag="ea_targetID" value="9690"/>
+										<UML:TaggedValue tag="src_visibility" value="Public"/>
+										<UML:TaggedValue tag="src_aggregation" value="0"/>
+										<UML:TaggedValue tag="src_isOrdered" value="false"/>
+										<UML:TaggedValue tag="src_targetScope" value="instance"/>
+										<UML:TaggedValue tag="src_changeable" value="none"/>
+										<UML:TaggedValue tag="src_isNavigable" value="false"/>
+										<UML:TaggedValue tag="src_containment" value="Unspecified"/>
+										<UML:TaggedValue tag="src_style" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Unspecified;"/>
+										<UML:TaggedValue tag="dst_visibility" value="Public"/>
+										<UML:TaggedValue tag="dst_aggregation" value="0"/>
+										<UML:TaggedValue tag="dst_isOrdered" value="false"/>
+										<UML:TaggedValue tag="dst_targetScope" value="instance"/>
+										<UML:TaggedValue tag="dst_changeable" value="none"/>
+										<UML:TaggedValue tag="dst_isNavigable" value="false"/>
+										<UML:TaggedValue tag="dst_containment" value="Unspecified"/>
+										<UML:TaggedValue tag="dst_style" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Unspecified;"/>
+										<UML:TaggedValue tag="virtualInheritance" value="0"/>
+									</UML:ModelElement.taggedValue>
+									<UML:Association.connection>
+										<UML:AssociationEndRole visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_A5D442D2_2D71_4e95_8A38_45987F7AC9ED">
+											<UML:ModelElement.taggedValue>
+												<UML:TaggedValue tag="containment" value="Unspecified"/>
+												<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Unspecified;"/>
+												<UML:TaggedValue tag="ea_end" value="source"/>
+											</UML:ModelElement.taggedValue>
+										</UML:AssociationEndRole>
+										<UML:AssociationEndRole visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_61F3BCBB_2E98_44dd_90B5_D9FC9A6D0230">
+											<UML:ModelElement.taggedValue>
+												<UML:TaggedValue tag="containment" value="Unspecified"/>
+												<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Unspecified;"/>
+												<UML:TaggedValue tag="ea_end" value="target"/>
+											</UML:ModelElement.taggedValue>
+										</UML:AssociationEndRole>
+									</UML:Association.connection>
+								</UML:AssociationRole>
+								<UML:ClassifierRole name="RF74 El sistema debe permitir la consulta del estado de suspensión via web" xmi.id="EAID_9EF17D05_4C41_445a_B6B0_065B48EA357F" visibility="public" base="EAID_11111111_5487_4080_A7F4_41526CB0AA00">
+									<UML:ModelElement.stereotype>
+										<UML:Stereotype name="FunctionalRequirement"/>
+									</UML:ModelElement.stereotype>
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="documentation" value="El sistema debe permitir la consulta del estado de suspensión de la licencia de conducción vía WEB."/>
+										<UML:TaggedValue tag="isAbstract" value="false"/>
+										<UML:TaggedValue tag="isSpecification" value="false"/>
+										<UML:TaggedValue tag="ea_stype" value="Requirement"/>
+										<UML:TaggedValue tag="ea_ntype" value="0"/>
+										<UML:TaggedValue tag="version" value="1.0"/>
+										<UML:TaggedValue tag="isActive" value="false"/>
+										<UML:TaggedValue tag="package" value="EAPK_EF0981A2_DE97_4c42_A39D_509F555C0FBA"/>
+										<UML:TaggedValue tag="date_created" value="2017-03-10 15:31:18"/>
+										<UML:TaggedValue tag="date_modified" value="2017-03-10 15:31:46"/>
+										<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+										<UML:TaggedValue tag="tagged" value="0"/>
+										<UML:TaggedValue tag="package_name" value="Administración de licencias de conducción"/>
+										<UML:TaggedValue tag="phase" value="1.0"/>
+										<UML:TaggedValue tag="author" value="dev"/>
+										<UML:TaggedValue tag="complexity" value="1"/>
+										<UML:TaggedValue tag="status" value="Proposed"/>
+										<UML:TaggedValue tag="stereotype" value="FunctionalRequirement"/>
+										<UML:TaggedValue tag="tpos" value="0"/>
+										<UML:TaggedValue tag="ea_localid" value="9689"/>
+										<UML:TaggedValue tag="ea_eleType" value="element"/>
+										<UML:TaggedValue tag="difficulty" value="Medium"/>
+										<UML:TaggedValue tag="priority" value="Medium"/>
+										<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+										<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={62AC617F-58D5-4ce7-AD82-4CE4CE66E47C}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=FunctionalRequirement;FQName=EAREQ::FunctionalRequirement;@ENDSTEREO;$DES;$CLT={9EF17D05-4C41-445a-B6B0-065B48EA357F}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+									</UML:ModelElement.taggedValue>
+								</UML:ClassifierRole>
+								<UML:AssociationRole xmi.id="EAID_DAC0A8BE_B275_457c_AEED_EA7AFDCA85E6" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="style" value="3"/>
+										<UML:TaggedValue tag="ea_type" value="Association"/>
+										<UML:TaggedValue tag="direction" value="Unspecified"/>
+										<UML:TaggedValue tag="linemode" value="3"/>
+										<UML:TaggedValue tag="linecolor" value="-1"/>
+										<UML:TaggedValue tag="linewidth" value="0"/>
+										<UML:TaggedValue tag="seqno" value="0"/>
+										<UML:TaggedValue tag="headStyle" value="0"/>
+										<UML:TaggedValue tag="lineStyle" value="0"/>
+										<UML:TaggedValue tag="ea_localid" value="7253"/>
+										<UML:TaggedValue tag="ea_sourceName" value="RF74 El sistema debe permitir la consulta del estado de suspensión via web"/>
+										<UML:TaggedValue tag="ea_targetName" value="RF73 Se debe permitir el registro de la solicitud de devolución de la licencia de conducción"/>
+										<UML:TaggedValue tag="ea_sourceType" value="Requirement"/>
+										<UML:TaggedValue tag="ea_targetType" value="Requirement"/>
+										<UML:TaggedValue tag="ea_sourceID" value="9689"/>
+										<UML:TaggedValue tag="ea_targetID" value="9687"/>
+										<UML:TaggedValue tag="src_visibility" value="Public"/>
+										<UML:TaggedValue tag="src_aggregation" value="0"/>
+										<UML:TaggedValue tag="src_isOrdered" value="false"/>
+										<UML:TaggedValue tag="src_targetScope" value="instance"/>
+										<UML:TaggedValue tag="src_changeable" value="none"/>
+										<UML:TaggedValue tag="src_isNavigable" value="false"/>
+										<UML:TaggedValue tag="src_containment" value="Unspecified"/>
+										<UML:TaggedValue tag="src_style" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Unspecified;"/>
+										<UML:TaggedValue tag="dst_visibility" value="Public"/>
+										<UML:TaggedValue tag="dst_aggregation" value="0"/>
+										<UML:TaggedValue tag="dst_isOrdered" value="false"/>
+										<UML:TaggedValue tag="dst_targetScope" value="instance"/>
+										<UML:TaggedValue tag="dst_changeable" value="none"/>
+										<UML:TaggedValue tag="dst_isNavigable" value="false"/>
+										<UML:TaggedValue tag="dst_containment" value="Unspecified"/>
+										<UML:TaggedValue tag="dst_style" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Unspecified;"/>
+										<UML:TaggedValue tag="virtualInheritance" value="0"/>
+									</UML:ModelElement.taggedValue>
+									<UML:Association.connection>
+										<UML:AssociationEndRole visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_9EF17D05_4C41_445a_B6B0_065B48EA357F">
+											<UML:ModelElement.taggedValue>
+												<UML:TaggedValue tag="containment" value="Unspecified"/>
+												<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Unspecified;"/>
+												<UML:TaggedValue tag="ea_end" value="source"/>
+											</UML:ModelElement.taggedValue>
+										</UML:AssociationEndRole>
+										<UML:AssociationEndRole visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_A5D442D2_2D71_4e95_8A38_45987F7AC9ED">
+											<UML:ModelElement.taggedValue>
+												<UML:TaggedValue tag="containment" value="Unspecified"/>
+												<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Unspecified;"/>
+												<UML:TaggedValue tag="ea_end" value="target"/>
+											</UML:ModelElement.taggedValue>
+										</UML:AssociationEndRole>
+									</UML:Association.connection>
+								</UML:AssociationRole>
+								<UML:ClassifierRole name="RF73 Se debe permitir el registro de la solicitud de devolución de la licencia de conducción" xmi.id="EAID_A5D442D2_2D71_4e95_8A38_45987F7AC9ED" visibility="public" base="EAID_11111111_5487_4080_A7F4_41526CB0AA00">
+									<UML:ModelElement.stereotype>
+										<UML:Stereotype name="FunctionalRequirement"/>
+									</UML:ModelElement.stereotype>
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="documentation" value="El sistema debe permitir el registro de la solicitud de devolución de la licencia de conducción cuando ya se han cumplido los requisitos de entrega."/>
+										<UML:TaggedValue tag="isAbstract" value="false"/>
+										<UML:TaggedValue tag="isSpecification" value="false"/>
+										<UML:TaggedValue tag="ea_stype" value="Requirement"/>
+										<UML:TaggedValue tag="ea_ntype" value="0"/>
+										<UML:TaggedValue tag="version" value="1.0"/>
+										<UML:TaggedValue tag="isActive" value="false"/>
+										<UML:TaggedValue tag="package" value="EAPK_EF0981A2_DE97_4c42_A39D_509F555C0FBA"/>
+										<UML:TaggedValue tag="date_created" value="2017-03-10 15:23:10"/>
+										<UML:TaggedValue tag="date_modified" value="2017-03-10 16:11:33"/>
+										<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+										<UML:TaggedValue tag="tagged" value="0"/>
+										<UML:TaggedValue tag="package_name" value="Administración de licencias de conducción"/>
+										<UML:TaggedValue tag="phase" value="1.0"/>
+										<UML:TaggedValue tag="author" value="dev"/>
+										<UML:TaggedValue tag="complexity" value="1"/>
+										<UML:TaggedValue tag="status" value="Proposed"/>
+										<UML:TaggedValue tag="stereotype" value="FunctionalRequirement"/>
+										<UML:TaggedValue tag="tpos" value="0"/>
+										<UML:TaggedValue tag="ea_localid" value="9687"/>
+										<UML:TaggedValue tag="ea_eleType" value="element"/>
+										<UML:TaggedValue tag="difficulty" value="Medium"/>
+										<UML:TaggedValue tag="priority" value="Medium"/>
+										<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+										<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={F7BADE3C-E50A-4c13-BC08-B97E8A207A2C}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=FunctionalRequirement;FQName=EAREQ::FunctionalRequirement;@ENDSTEREO;$DES;$CLT={A5D442D2-2D71-4e95-8A38-45987F7AC9ED}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+									</UML:ModelElement.taggedValue>
+								</UML:ClassifierRole>
+							</UML:Namespace.ownedElement>
+							<UML:Collaboration.interaction/>
+						</UML:Collaboration>
+						<UML:Dependency client="EAID_3F0BC7FC_3BE4_47d0_93C9_63CD0B0CD8FE" supplier="EAID_0FCD1A7C_5456_49f0_950F_3ADF1CE11C1F" xmi.id="EAID_035857AF_1FF0_4dc9_96D3_57DF50E88A6B" visibility="public">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="Dependency"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="7251"/>
+								<UML:TaggedValue tag="ea_sourceName" value="RF72 Se debe poder llevar un control de las licencias de conducción con procesos"/>
+								<UML:TaggedValue tag="ea_targetName" value="RF70  Se debe poder generar constancia ejecutoria"/>
+								<UML:TaggedValue tag="ea_sourceType" value="Requirement"/>
+								<UML:TaggedValue tag="ea_targetType" value="Requirement"/>
+								<UML:TaggedValue tag="ea_sourceID" value="9670"/>
+								<UML:TaggedValue tag="ea_targetID" value="9669"/>
+								<UML:TaggedValue tag="src_visibility" value="Public"/>
+								<UML:TaggedValue tag="src_aggregation" value="0"/>
+								<UML:TaggedValue tag="src_isOrdered" value="false"/>
+								<UML:TaggedValue tag="src_targetScope" value="instance"/>
+								<UML:TaggedValue tag="src_changeable" value="none"/>
+								<UML:TaggedValue tag="src_isNavigable" value="false"/>
+								<UML:TaggedValue tag="src_containment" value="Unspecified"/>
+								<UML:TaggedValue tag="src_style" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+								<UML:TaggedValue tag="dst_visibility" value="Public"/>
+								<UML:TaggedValue tag="dst_aggregation" value="0"/>
+								<UML:TaggedValue tag="dst_isOrdered" value="false"/>
+								<UML:TaggedValue tag="dst_targetScope" value="instance"/>
+								<UML:TaggedValue tag="dst_changeable" value="none"/>
+								<UML:TaggedValue tag="dst_isNavigable" value="true"/>
+								<UML:TaggedValue tag="dst_containment" value="Unspecified"/>
+								<UML:TaggedValue tag="dst_style" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+							</UML:ModelElement.taggedValue>
+						</UML:Dependency>
+						<UML:Association xmi.id="EAID_1E3F324C_A570_4fbc_9A1A_8DD1A8115640" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="Aggregation"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="7257"/>
+								<UML:TaggedValue tag="ea_sourceName" value="RF74 El sistema debe permitir la consulta del estado de suspensión via web"/>
+								<UML:TaggedValue tag="ea_targetName" value="RF70  Se debe poder generar constancia ejecutoria"/>
+								<UML:TaggedValue tag="ea_sourceType" value="Requirement"/>
+								<UML:TaggedValue tag="ea_targetType" value="Requirement"/>
+								<UML:TaggedValue tag="ea_sourceID" value="9689"/>
+								<UML:TaggedValue tag="ea_targetID" value="9669"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_9EF17D05_4C41_445a_B6B0_065B48EA357F">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="shared" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_0FCD1A7C_5456_49f0_950F_3ADF1CE11C1F">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Unspecified;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:Association xmi.id="EAID_56108130_7468_4fdc_9BE6_A93B225559D1" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="Aggregation"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="7258"/>
+								<UML:TaggedValue tag="ea_sourceName" value="RF73 Se debe permitir el registro de la solicitud de devolución de la licencia de conducción"/>
+								<UML:TaggedValue tag="ea_targetName" value="RF70  Se debe poder generar constancia ejecutoria"/>
+								<UML:TaggedValue tag="ea_sourceType" value="Requirement"/>
+								<UML:TaggedValue tag="ea_targetType" value="Requirement"/>
+								<UML:TaggedValue tag="ea_sourceID" value="9687"/>
+								<UML:TaggedValue tag="ea_targetID" value="9669"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_A5D442D2_2D71_4e95_8A38_45987F7AC9ED">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="shared" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_0FCD1A7C_5456_49f0_950F_3ADF1CE11C1F">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Unspecified;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:Association xmi.id="EAID_AB1B9B98_EA42_4740_A76A_54534D99B644" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="Aggregation"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="7259"/>
+								<UML:TaggedValue tag="ea_sourceName" value="RF75 Se debe permitir el diligenciamiento del formato de solicitud de entrega de la licencia de conducción."/>
+								<UML:TaggedValue tag="ea_targetName" value="RF70  Se debe poder generar constancia ejecutoria"/>
+								<UML:TaggedValue tag="ea_sourceType" value="Requirement"/>
+								<UML:TaggedValue tag="ea_targetType" value="Requirement"/>
+								<UML:TaggedValue tag="ea_sourceID" value="9690"/>
+								<UML:TaggedValue tag="ea_targetID" value="9669"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_61F3BCBB_2E98_44dd_90B5_D9FC9A6D0230">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="shared" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_0FCD1A7C_5456_49f0_950F_3ADF1CE11C1F">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Unspecified;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:Association xmi.id="EAID_F1BBCC53_A5FC_4142_8E26_B4D3DB516D73" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.stereotype>
+								<UML:Stereotype name="trace"/>
+							</UML:ModelElement.stereotype>
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="Abstraction"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="stereotype" value="trace"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="conditional" value=" &#xA;«trace»"/>
+								<UML:TaggedValue tag="ea_localid" value="7250"/>
+								<UML:TaggedValue tag="ea_sourceName" value="RF74 El sistema debe permitir la consulta del estado de suspensión via web"/>
+								<UML:TaggedValue tag="ea_targetName" value="Realizar consulta del estado de suspensión por parte del ciudadano vía WEB"/>
+								<UML:TaggedValue tag="ea_sourceType" value="Requirement"/>
+								<UML:TaggedValue tag="ea_targetType" value="Screen"/>
+								<UML:TaggedValue tag="ea_sourceID" value="9689"/>
+								<UML:TaggedValue tag="ea_targetID" value="8828"/>
+								<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={FD335D86-3FC4-43dc-B3CE-D345803BB874}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=trace;FQName=EAUML::trace;@ENDSTEREO;$DES;$CLT={F1BBCC53-A5FC-4142-8E26-B4D3DB516D73}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+								<UML:TaggedValue tag="mb" value=" &#xA;«trace»"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_9EF17D05_4C41_445a_B6B0_065B48EA357F">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_91F34946_3618_4030_A40B_41C481781022">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:Association xmi.id="EAID_E32D82B7_8D04_4b8a_A13A_4AA9458C4B54" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.stereotype>
+								<UML:Stereotype name="trace"/>
+							</UML:ModelElement.stereotype>
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="Abstraction"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="stereotype" value="trace"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="conditional" value=" &#xA;«trace»"/>
+								<UML:TaggedValue tag="ea_localid" value="7249"/>
+								<UML:TaggedValue tag="ea_sourceName" value="RF73 Se debe permitir el registro de la solicitud de devolución de la licencia de conducción"/>
+								<UML:TaggedValue tag="ea_targetName" value="Digitalizar formulario de solicitud de devolución de licencia en custodia"/>
+								<UML:TaggedValue tag="ea_sourceType" value="Requirement"/>
+								<UML:TaggedValue tag="ea_targetType" value="Screen"/>
+								<UML:TaggedValue tag="ea_sourceID" value="9687"/>
+								<UML:TaggedValue tag="ea_targetID" value="8815"/>
+								<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={567E9C7B-58FC-4299-9835-BC49E30BAC5F}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=trace;FQName=EAUML::trace;@ENDSTEREO;$DES;$CLT={E32D82B7-8D04-4b8a-A13A-4AA9458C4B54}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+								<UML:TaggedValue tag="mb" value=" &#xA;«trace»"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_A5D442D2_2D71_4e95_8A38_45987F7AC9ED">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_4DBFA1EF_DBB1_4cda_9AA3_247A5422A338">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+					</UML:Namespace.ownedElement>
+				</UML:Package>
+			</UML:Namespace.ownedElement>
+		</UML:Model>
+		<UML:TaggedValue tag="dataDescription" xmi.id="EAID_64CA653E_B818_3ab8_BB3F_894E8B3E6822" value="&lt;memo&gt;" modelElement="EAID_0FCD1A7C_5456_49f0_950F_3ADF1CE11C1F"/>
+		<UML:TaggedValue tag="operationDescription" xmi.id="EAID_3B32EAF5_2A0F_392a_870E_F440696B6627" value="&lt;memo&gt;" modelElement="EAID_0FCD1A7C_5456_49f0_950F_3ADF1CE11C1F"/>
+		<UML:TaggedValue tag="priority" xmi.id="EAID_A142CBA2_8BDC_378b_AFD2_C1B38244DBA5" value="#NOTES#Values: High,Medium,Low,Essential,Conditional,Optional&#xA;" modelElement="EAID_0FCD1A7C_5456_49f0_950F_3ADF1CE11C1F"/>
+		<UML:TaggedValue tag="reportDescription" xmi.id="EAID_82F72280_1BDA_121b_999E_9890498BB45A" value="&lt;memo&gt;" modelElement="EAID_0FCD1A7C_5456_49f0_950F_3ADF1CE11C1F"/>
+		<UML:TaggedValue tag="workflowDescription" xmi.id="EAID_CF865F7F_9F59_8f9f_9C4B_EA02C37D554C" value="&lt;memo&gt;" modelElement="EAID_0FCD1A7C_5456_49f0_950F_3ADF1CE11C1F"/>
+		<UML:TaggedValue tag="dataDescription" xmi.id="EAID_64CA653E_B818_3ab8_A990_01ACC2A9FFF8" value="&lt;memo&gt;" modelElement="EAID_3F0BC7FC_3BE4_47d0_93C9_63CD0B0CD8FE"/>
+		<UML:TaggedValue tag="operationDescription" xmi.id="EAID_3B32EAF5_2A0F_392a_A176_80EB4BEFAE14" value="&lt;memo&gt;" modelElement="EAID_3F0BC7FC_3BE4_47d0_93C9_63CD0B0CD8FE"/>
+		<UML:TaggedValue tag="priority" xmi.id="EAID_A142CBA2_8BDC_378b_A452_F5A6C116213D" value="#NOTES#Values: High,Medium,Low,Essential,Conditional,Optional&#xA;" modelElement="EAID_3F0BC7FC_3BE4_47d0_93C9_63CD0B0CD8FE"/>
+		<UML:TaggedValue tag="reportDescription" xmi.id="EAID_82F72280_1BDA_121b_BB9E_5A085E254A5D" value="&lt;memo&gt;" modelElement="EAID_3F0BC7FC_3BE4_47d0_93C9_63CD0B0CD8FE"/>
+		<UML:TaggedValue tag="workflowDescription" xmi.id="EAID_CF865F7F_9F59_8f9f_9809_DA001D934B7A" value="&lt;memo&gt;" modelElement="EAID_3F0BC7FC_3BE4_47d0_93C9_63CD0B0CD8FE"/>
+		<UML:TaggedValue tag="dataDescription" xmi.id="EAID_64CA653E_B818_3ab8_89A0_CF56F6E9269D" value="&lt;memo&gt;" modelElement="EAID_61F3BCBB_2E98_44dd_90B5_D9FC9A6D0230"/>
+		<UML:TaggedValue tag="operationDescription" xmi.id="EAID_3B32EAF5_2A0F_392a_97CC_EDDB34434B92" value="&lt;memo&gt;" modelElement="EAID_61F3BCBB_2E98_44dd_90B5_D9FC9A6D0230"/>
+		<UML:TaggedValue tag="priority" xmi.id="EAID_A142CBA2_8BDC_378b_B023_D0B255F4E546" value="#NOTES#Values: High,Medium,Low,Essential,Conditional,Optional&#xA;" modelElement="EAID_61F3BCBB_2E98_44dd_90B5_D9FC9A6D0230"/>
+		<UML:TaggedValue tag="reportDescription" xmi.id="EAID_82F72280_1BDA_121b_9F31_11693C093931" value="&lt;memo&gt;" modelElement="EAID_61F3BCBB_2E98_44dd_90B5_D9FC9A6D0230"/>
+		<UML:TaggedValue tag="workflowDescription" xmi.id="EAID_CF865F7F_9F59_8f9f_B4D4_181641E1C71C" value="&lt;memo&gt;" modelElement="EAID_61F3BCBB_2E98_44dd_90B5_D9FC9A6D0230"/>
+		<UML:TaggedValue tag="dataDescription" xmi.id="EAID_64CA653E_B818_3ab8_B6BD_08DAEC6305B9" value="&lt;memo&gt;" modelElement="EAID_9EF17D05_4C41_445a_B6B0_065B48EA357F"/>
+		<UML:TaggedValue tag="operationDescription" xmi.id="EAID_3B32EAF5_2A0F_392a_A223_1006366D6E2A" value="&lt;memo&gt;" modelElement="EAID_9EF17D05_4C41_445a_B6B0_065B48EA357F"/>
+		<UML:TaggedValue tag="priority" xmi.id="EAID_A142CBA2_8BDC_378b_B2B2_5D5C27EE774A" value="#NOTES#Values: High,Medium,Low,Essential,Conditional,Optional&#xA;" modelElement="EAID_9EF17D05_4C41_445a_B6B0_065B48EA357F"/>
+		<UML:TaggedValue tag="reportDescription" xmi.id="EAID_82F72280_1BDA_121b_A527_F789C3FFD5FE" value="&lt;memo&gt;" modelElement="EAID_9EF17D05_4C41_445a_B6B0_065B48EA357F"/>
+		<UML:TaggedValue tag="workflowDescription" xmi.id="EAID_CF865F7F_9F59_8f9f_B163_B1DA57DBA854" value="&lt;memo&gt;" modelElement="EAID_9EF17D05_4C41_445a_B6B0_065B48EA357F"/>
+		<UML:TaggedValue tag="dataDescription" xmi.id="EAID_64CA653E_B818_3ab8_981F_2C4C29D5F140" value="&lt;memo&gt;" modelElement="EAID_A5D442D2_2D71_4e95_8A38_45987F7AC9ED"/>
+		<UML:TaggedValue tag="operationDescription" xmi.id="EAID_3B32EAF5_2A0F_392a_83B9_29D439C88EA1" value="&lt;memo&gt;" modelElement="EAID_A5D442D2_2D71_4e95_8A38_45987F7AC9ED"/>
+		<UML:TaggedValue tag="priority" xmi.id="EAID_A142CBA2_8BDC_378b_BE46_13D647DF0B20" value="#NOTES#Values: High,Medium,Low,Essential,Conditional,Optional&#xA;" modelElement="EAID_A5D442D2_2D71_4e95_8A38_45987F7AC9ED"/>
+		<UML:TaggedValue tag="reportDescription" xmi.id="EAID_82F72280_1BDA_121b_8DD2_31D8439E7C65" value="&lt;memo&gt;" modelElement="EAID_A5D442D2_2D71_4e95_8A38_45987F7AC9ED"/>
+		<UML:TaggedValue tag="workflowDescription" xmi.id="EAID_CF865F7F_9F59_8f9f_9A75_333C9A91F2C3" value="&lt;memo&gt;" modelElement="EAID_A5D442D2_2D71_4e95_8A38_45987F7AC9ED"/>
+		<UML:Diagram name="Administración de licencias de conducción" xmi.id="EAID_3849A902_5CB5_44d8_9454_95BE089BF9CB" diagramType="CustomDiagram" owner="EAPK_EF0981A2_DE97_4c42_A39D_509F555C0FBA" toolName="Enterprise Architect 2.5">
+			<UML:ModelElement.taggedValue>
+				<UML:TaggedValue tag="version" value="1.0"/>
+				<UML:TaggedValue tag="author" value="dev"/>
+				<UML:TaggedValue tag="created_date" value="2017-03-10 14:44:55"/>
+				<UML:TaggedValue tag="modified_date" value="2017-03-10 16:15:54"/>
+				<UML:TaggedValue tag="package" value="EAPK_EF0981A2_DE97_4c42_A39D_509F555C0FBA"/>
+				<UML:TaggedValue tag="type" value="Custom"/>
+				<UML:TaggedValue tag="swimlanes" value="locked=false;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;cls=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;"/>
+				<UML:TaggedValue tag="matrixitems" value="locked=false;matrixactive=false;swimlanesactive=true;kanbanactive=false;width=1;clrLine=0;"/>
+				<UML:TaggedValue tag="ea_localid" value="661"/>
+				<UML:TaggedValue tag="EAStyle" value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=1;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=1;PPgs.cy=1;DocSize.cx=850;DocSize.cy=1098;ShowDetails=0;Orientation=P;Zoom=100;ShowTags=0;OpParams=1;VisibleAttributeDetail=0;ShowOpRetType=1;ShowIcons=1;CollabNums=0;HideProps=0;ShowReqs=0;ShowCons=0;PaperSize=1;HideParents=0;UseAlias=0;HideAtts=0;HideOps=0;HideStereo=0;HideElemStereo=0;ShowTests=0;ShowMaint=0;ConnectorNotation=UML 2.1;ExplicitNavigability=0;ShowShape=1;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;ShowNotes=0;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;"/>
+				<UML:TaggedValue tag="styleex" value="SaveTag=C794DCB0;ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=1;MatrixActive=0;SwimlanesActive=1;KanbanActive=0;MatrixLineWidth=1;MatrixLineClr=0;MatrixLocked=0;TConnectorNotation=UML 2.1;TExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;ProfileData=;MDGDgm=Extended::Requirements;STBLDgm=;ShowNotes=0;VisibleAttributeDetail=0;ShowOpRetType=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;SuppressedCompartments=;Theme=:119;"/>
+			</UML:ModelElement.taggedValue>
+			<UML:Diagram.element>
+				<UML:DiagramElement geometry="Left=472;Top=362;Right=617;Bottom=447;" subject="EAID_61F3BCBB_2E98_44dd_90B5_D9FC9A6D0230" seqno="1" style="DUID=CDB30CE6;HideIcon=0;"/>
+				<UML:DiagramElement geometry="Left=469;Top=5;Right=614;Bottom=77;" subject="EAID_9EF17D05_4C41_445a_B6B0_065B48EA357F" seqno="2" style="DUID=5EF549A7;HideIcon=0;"/>
+				<UML:DiagramElement geometry="Left=473;Top=183;Right=618;Bottom=281;" subject="EAID_A5D442D2_2D71_4e95_8A38_45987F7AC9ED" seqno="3" style="DUID=FF71D451;HideIcon=0;"/>
+				<UML:DiagramElement geometry="Left=32;Top=407;Right=177;Bottom=492;" subject="EAID_3F0BC7FC_3BE4_47d0_93C9_63CD0B0CD8FE" seqno="4" style="DUID=F19DAB1C;HideIcon=0;"/>
+				<UML:DiagramElement geometry="Left=33;Top=221;Right=178;Bottom=267;" subject="EAID_0FCD1A7C_5456_49f0_950F_3ADF1CE11C1F" seqno="5" style="DUID=5BFFE608;HideIcon=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=4;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_AB1B9B98_EA42_4740_A76A_54534D99B644" style="Mode=3;EOID=5BFFE608;SOID=CDB30CE6;Color=-1;LWidth=0;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=4;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_1E3F324C_A570_4fbc_9A1A_8DD1A8115640" style="Mode=3;EOID=5BFFE608;SOID=5EF549A7;Color=-1;LWidth=0;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=3;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_DAC0A8BE_B275_457c_AEED_EA7AFDCA85E6" style="Mode=3;EOID=FF71D451;SOID=5EF549A7;Color=-1;LWidth=0;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=4;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_56108130_7468_4fdc_9BE6_A93B225559D1" style="Mode=3;EOID=5BFFE608;SOID=FF71D451;Color=-1;LWidth=0;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=3;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_30109EF0_83E4_48d9_A273_E580E46B3D21" style="Mode=3;EOID=CDB30CE6;SOID=FF71D451;Color=-1;LWidth=0;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=1;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_035857AF_1FF0_4dc9_96D3_57DF50E88A6B" style="Mode=3;EOID=5BFFE608;SOID=F19DAB1C;Color=-1;LWidth=0;Hidden=0;"/>
+			</UML:Diagram.element>
+		</UML:Diagram>
+		<UML:DiagramElement geometry="Left=996;Top=2599;Right=1106;Bottom=2710;" subject="EAID_9EF17D05_4C41_445a_B6B0_065B48EA357F" seqno="1" style="DUID=016FC62E;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;HideIcon=0;">
+			<UML:ModelElement.taggedValue>
+				<UML:TaggedValue tag="diagram_guid" value="EAID_7C5CEDC4_7C8E_4215_BB64_2EFB807B7416"/>
+			</UML:ModelElement.taggedValue>
+		</UML:DiagramElement>
+		<UML:DiagramElement geometry="Left=923;Top=1928;Right=1033;Bottom=2026;" subject="EAID_A5D442D2_2D71_4e95_8A38_45987F7AC9ED" seqno="2" style="DUID=53EA031E;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;HideIcon=0;">
+			<UML:ModelElement.taggedValue>
+				<UML:TaggedValue tag="diagram_guid" value="EAID_7C5CEDC4_7C8E_4215_BB64_2EFB807B7416"/>
+			</UML:ModelElement.taggedValue>
+		</UML:DiagramElement>
+		<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=4;$LLB=;LLT=;LMT=;LMB=CX=35:CY=13:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LRT=;LRB=;IRHS=;ILHS=;" subject="EAID_F1BBCC53_A5FC_4142_8E26_B4D3DB516D73" style="Mode=3;EOID=C9754191;SOID=016FC62E;Color=-1;LWidth=0;">
+			<UML:ModelElement.taggedValue>
+				<UML:TaggedValue tag="diagram_guid" value="EAID_7C5CEDC4_7C8E_4215_BB64_2EFB807B7416"/>
+				<UML:TaggedValue tag="hidden" value="0"/>
+			</UML:ModelElement.taggedValue>
+		</UML:DiagramElement>
+		<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=4;$LLB=;LLT=;LMT=;LMB=CX=35:CY=13:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LRT=;LRB=;IRHS=;ILHS=;" subject="EAID_F1BBCC53_A5FC_4142_8E26_B4D3DB516D73" style="Mode=3;EOID=C9754191;SOID=016FC62E;Color=-1;LWidth=0;">
+			<UML:ModelElement.taggedValue>
+				<UML:TaggedValue tag="diagram_guid" value="EAID_7C5CEDC4_7C8E_4215_BB64_2EFB807B7416"/>
+				<UML:TaggedValue tag="hidden" value="0"/>
+			</UML:ModelElement.taggedValue>
+		</UML:DiagramElement>
+		<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=4;$LLB=;LLT=;LMT=;LMB=CX=35:CY=13:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LRT=;LRB=;IRHS=;ILHS=;" subject="EAID_E32D82B7_8D04_4b8a_A13A_4AA9458C4B54" style="Mode=3;EOID=DF3000F6;SOID=53EA031E;Color=-1;LWidth=0;">
+			<UML:ModelElement.taggedValue>
+				<UML:TaggedValue tag="diagram_guid" value="EAID_7C5CEDC4_7C8E_4215_BB64_2EFB807B7416"/>
+				<UML:TaggedValue tag="hidden" value="0"/>
+			</UML:ModelElement.taggedValue>
+		</UML:DiagramElement>
+		<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=4;$LLB=;LLT=;LMT=;LMB=CX=35:CY=13:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LRT=;LRB=;IRHS=;ILHS=;" subject="EAID_E32D82B7_8D04_4b8a_A13A_4AA9458C4B54" style="Mode=3;EOID=DF3000F6;SOID=53EA031E;Color=-1;LWidth=0;">
+			<UML:ModelElement.taggedValue>
+				<UML:TaggedValue tag="diagram_guid" value="EAID_7C5CEDC4_7C8E_4215_BB64_2EFB807B7416"/>
+				<UML:TaggedValue tag="hidden" value="0"/>
+			</UML:ModelElement.taggedValue>
+		</UML:DiagramElement>
+	</XMI.content>
+	<XMI.difference/>
+	<XMI.extensions xmi.extender="Enterprise Architect 2.5">
+		<EAModel.paramSub/>
+		<EAStub xmi.id="EAID_91F34946_3618_4030_A40B_41C481781022" name="Realizar consulta del estado de suspensión por parte del ciudadano vía WEB" UMLType="Screen"/>
+		<EAStub xmi.id="EAID_4DBFA1EF_DBB1_4cda_9AA3_247A5422A338" name="Digitalizar formulario de solicitud de devolución de licencia en custodia" UMLType="Screen"/>
+	</XMI.extensions>
+</XMI>

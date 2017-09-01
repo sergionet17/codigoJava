@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:ssbp="www.sparxsystems.com.au/bpmn20" id="EAPK_9019C821_7E39_4b5e_8B1E_B07DCF302C8B" name="Solicitar Pruebas" targetNamespace="www.sparxsystems.com.au/bpmn20" exporter="Camunda Modeler" exporterVersion="1.7.2">
+  <bpmn:collaboration id="Collaboration_0paqmr4">
+    <bpmn:participant id="Participant_0w4f5i8" name="SDM" processRef="EAID_B8D4CDDB_7347_493c_BEF2_FA6FFF7C934A" />
+    <bpmn:participant id="Participant_1ew9lne" name="SIPA WEB" processRef="Process_0j6ek0r" />
+    <bpmn:messageFlow id="MessageFlow_07f84gk" sourceRef="Participant_1ew9lne" targetRef="EAID_1F2E6548_4909_4b44_8722_7F9322652588" />
+  </bpmn:collaboration>
+  <bpmn:process id="EAID_B8D4CDDB_7347_493c_BEF2_FA6FFF7C934A" name="SolicitarPruebas" processType="None" isClosed="false" isExecutable="false">
+    <bpmn:laneSet>
+      <bpmn:lane id="Lane_0jye6mu" name="(AT4.1.2)Abogado de audiencias contravencionales">
+        <bpmn:flowNodeRef>EAID_B14E30BC_9FC6_4251_A36A_9EB08217E29D</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EAID_60FFA047_534B_49fa_AA1D_A0234CC7BAD2</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EAID_1F2E6548_4909_4b44_8722_7F9322652588</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EAID_F7D70F29_0C38_40eb_A861_30F81F3BBEE3</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EAID_357DACF0_CE75_42ab_8782_46887AC3A50C</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EAID_420D8046_B49F_4d88_90FD_CCD18BB1BDAE</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EAID_B75633C8_469F_4eee_8076_216D95BAADBF</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EAID_20B75DE8_51C9_470c_91A3_4E5F5E1F6606</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:exclusiveGateway id="EAID_B14E30BC_9FC6_4251_A36A_9EB08217E29D" name="�Se entregamn pruebas en audiencia?">
+      <bpmn:incoming>EAID_F1C61637_70EE_4f16_892B_ACBF19A39501</bpmn:incoming>
+      <bpmn:outgoing>EAID_DE628E69_A826_4442_A359_23AF845C18FF</bpmn:outgoing>
+      <bpmn:outgoing>EAID_F0A45C2D_9AC2_46d0_9826_29555DDD67BF</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:exclusiveGateway id="EAID_60FFA047_534B_49fa_AA1D_A0234CC7BAD2">
+      <bpmn:incoming>EAID_A8B44740_01F0_44f4_AC2F_002EE74B857F</bpmn:incoming>
+      <bpmn:incoming>EAID_46E7E6FC_4A02_49ed_8454_5F4491808D1C</bpmn:incoming>
+      <bpmn:outgoing>EAID_D5A39173_B5FC_4ebc_888D_F34DD25DB83B</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:startEvent id="EAID_1F2E6548_4909_4b44_8722_7F9322652588" name="Inicio">
+      <bpmn:documentation>Se espera por parte de audiencia o a solicitud interna</bpmn:documentation>
+      <bpmn:outgoing>EAID_80EC4BF7_C14C_4891_BB0A_37E6116E765C</bpmn:outgoing>
+      <bpmn:messageEventDefinition />
+    </bpmn:startEvent>
+    <bpmn:endEvent id="EAID_F7D70F29_0C38_40eb_A861_30F81F3BBEE3" name="EndEvent1">
+      <bpmn:incoming>EAID_D5A39173_B5FC_4ebc_888D_F34DD25DB83B</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:userTask id="EAID_357DACF0_CE75_42ab_8782_46887AC3A50C" name="Seleccionar proceso contravencional y tipo prueba" implementation="##unspecified">
+      <bpmn:incoming>EAID_80EC4BF7_C14C_4891_BB0A_37E6116E765C</bpmn:incoming>
+      <bpmn:outgoing>EAID_F1C61637_70EE_4f16_892B_ACBF19A39501</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:callActivity id="EAID_420D8046_B49F_4d88_90FD_CCD18BB1BDAE" name="Pruebas a terceros contr">
+      <bpmn:incoming>EAID_40194F1B_9C86_4336_9845_0991045BE77A</bpmn:incoming>
+      <bpmn:outgoing>EAID_A8B44740_01F0_44f4_AC2F_002EE74B857F</bpmn:outgoing>
+      <bpmn:multiInstanceLoopCharacteristics />
+    </bpmn:callActivity>
+    <bpmn:userTask id="EAID_B75633C8_469F_4eee_8076_216D95BAADBF" name="Definir terceros para practica de pruebas" implementation="##unspecified">
+      <bpmn:incoming>EAID_DE628E69_A826_4442_A359_23AF845C18FF</bpmn:incoming>
+      <bpmn:outgoing>EAID_40194F1B_9C86_4336_9845_0991045BE77A</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="EAID_20B75DE8_51C9_470c_91A3_4E5F5E1F6606" name="Cargar pruebas presenciales" implementation="##unspecified">
+      <bpmn:incoming>EAID_F0A45C2D_9AC2_46d0_9826_29555DDD67BF</bpmn:incoming>
+      <bpmn:outgoing>EAID_46E7E6FC_4A02_49ed_8454_5F4491808D1C</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="EAID_F1C61637_70EE_4f16_892B_ACBF19A39501" sourceRef="EAID_357DACF0_CE75_42ab_8782_46887AC3A50C" targetRef="EAID_B14E30BC_9FC6_4251_A36A_9EB08217E29D" />
+    <bpmn:sequenceFlow id="EAID_DE628E69_A826_4442_A359_23AF845C18FF" name="NO" sourceRef="EAID_B14E30BC_9FC6_4251_A36A_9EB08217E29D" targetRef="EAID_B75633C8_469F_4eee_8076_216D95BAADBF" />
+    <bpmn:sequenceFlow id="EAID_F0A45C2D_9AC2_46d0_9826_29555DDD67BF" name="SI" sourceRef="EAID_B14E30BC_9FC6_4251_A36A_9EB08217E29D" targetRef="EAID_20B75DE8_51C9_470c_91A3_4E5F5E1F6606" />
+    <bpmn:sequenceFlow id="EAID_A8B44740_01F0_44f4_AC2F_002EE74B857F" sourceRef="EAID_420D8046_B49F_4d88_90FD_CCD18BB1BDAE" targetRef="EAID_60FFA047_534B_49fa_AA1D_A0234CC7BAD2" />
+    <bpmn:sequenceFlow id="EAID_46E7E6FC_4A02_49ed_8454_5F4491808D1C" sourceRef="EAID_20B75DE8_51C9_470c_91A3_4E5F5E1F6606" targetRef="EAID_60FFA047_534B_49fa_AA1D_A0234CC7BAD2" />
+    <bpmn:sequenceFlow id="EAID_D5A39173_B5FC_4ebc_888D_F34DD25DB83B" sourceRef="EAID_60FFA047_534B_49fa_AA1D_A0234CC7BAD2" targetRef="EAID_F7D70F29_0C38_40eb_A861_30F81F3BBEE3" />
+    <bpmn:sequenceFlow id="EAID_80EC4BF7_C14C_4891_BB0A_37E6116E765C" sourceRef="EAID_1F2E6548_4909_4b44_8722_7F9322652588" targetRef="EAID_357DACF0_CE75_42ab_8782_46887AC3A50C" />
+    <bpmn:sequenceFlow id="EAID_40194F1B_9C86_4336_9845_0991045BE77A" sourceRef="EAID_B75633C8_469F_4eee_8076_216D95BAADBF" targetRef="EAID_420D8046_B49F_4d88_90FD_CCD18BB1BDAE" />
+    <bpmn:textAnnotation id="EAID_32B1025F_F1D9_498e_A2F6_B1E9B5A8B1A3">    <bpmn:text>Si las pruebas se solicitan de oficio se cargan al proceso por correspondencia de interna o de entrada</bpmn:text>
+</bpmn:textAnnotation>
+    <bpmn:textAnnotation id="EAID_3310840E_A4E5_42e8_A07C_22143EA47FBB">    <bpmn:text>Si las pruebas se entregan en audiencia se cargar al proceso</bpmn:text>
+</bpmn:textAnnotation>
+    <bpmn:textAnnotation id="EAID_6F7DFDF0_734F_4508_8962_2C843D60DD2A">    <bpmn:text>El tipo de pruebas es: entregada en audiencia, solicitud a dependencia interna o a tercero externo a la sdm</bpmn:text>
+</bpmn:textAnnotation>
+  </bpmn:process>
+  <bpmn:process id="Process_0j6ek0r" isExecutable="false" />
+  <bpmndi:BPMNDiagram id="EAID_7C6E9171_89D8_4112_ADB1_5D2B3ECD3A67" name="SolicitarPruebas">
+    <bpmndi:BPMNPlane id="EAID_PL000000_89D8_4112_ADB1_5D2B3ECD3A67" bpmnElement="Collaboration_0paqmr4">
+      <bpmndi:BPMNShape id="Participant_0w4f5i8_di" bpmnElement="Participant_0w4f5i8">
+        <dc:Bounds x="21" y="65" width="853" height="313" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000002_89D8_4112_ADB1_5D2B3ECD3A67" bpmnElement="EAID_B14E30BC_9FC6_4251_A36A_9EB08217E29D" isMarkerVisible="true">
+        <dc:Bounds x="315" y="184" width="42" height="42" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_9FC6_4251_A36A_9EB08217E29D" labelStyle="EAID_LS000000_89D8_4112_ADB1_5D2B3ECD3A67">
+          <dc:Bounds x="299" y="125" width="79" height="36" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000006_89D8_4112_ADB1_5D2B3ECD3A67" bpmnElement="EAID_60FFA047_534B_49fa_AA1D_A0234CC7BAD2" isMarkerVisible="true">
+        <dc:Bounds x="722" y="184" width="42" height="42" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="698" y="226" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000000_89D8_4112_ADB1_5D2B3ECD3A67" bpmnElement="EAID_1F2E6548_4909_4b44_8722_7F9322652588">
+        <dc:Bounds x="82" y="190" width="30" height="30" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_4909_4b44_8722_7F9322652588" labelStyle="EAID_LS000000_89D8_4112_ADB1_5D2B3ECD3A67">
+          <dc:Bounds x="82" y="230" width="25" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000009_89D8_4112_ADB1_5D2B3ECD3A67" bpmnElement="EAID_F7D70F29_0C38_40eb_A861_30F81F3BBEE3">
+        <dc:Bounds x="803" y="190" width="30" height="30" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_0C38_40eb_A861_30F81F3BBEE3" labelStyle="EAID_LS000000_89D8_4112_ADB1_5D2B3ECD3A67">
+          <dc:Bounds x="800" y="230" width="53" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000001_89D8_4112_ADB1_5D2B3ECD3A67" bpmnElement="EAID_357DACF0_CE75_42ab_8782_46887AC3A50C">
+        <dc:Bounds x="158" y="165" width="110" height="80" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_CE75_42ab_8782_46887AC3A50C" labelStyle="EAID_LS000000_89D8_4112_ADB1_5D2B3ECD3A67" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000005_89D8_4112_ADB1_5D2B3ECD3A67" bpmnElement="EAID_420D8046_B49F_4d88_90FD_CCD18BB1BDAE" isExpanded="false">
+        <dc:Bounds x="556" y="175" width="110" height="60" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_B49F_4d88_90FD_CCD18BB1BDAE" labelStyle="EAID_LS000000_89D8_4112_ADB1_5D2B3ECD3A67" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000004_89D8_4112_ADB1_5D2B3ECD3A67" bpmnElement="EAID_B75633C8_469F_4eee_8076_216D95BAADBF">
+        <dc:Bounds x="399" y="175" width="110" height="60" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_469F_4eee_8076_216D95BAADBF" labelStyle="EAID_LS000000_89D8_4112_ADB1_5D2B3ECD3A67" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000007_89D8_4112_ADB1_5D2B3ECD3A67" bpmnElement="EAID_20B75DE8_51C9_470c_91A3_4E5F5E1F6606">
+        <dc:Bounds x="499" y="259" width="110" height="60" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_51C9_470c_91A3_4E5F5E1F6606" labelStyle="EAID_LS000000_89D8_4112_ADB1_5D2B3ECD3A67" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000010_89D8_4112_ADB1_5D2B3ECD3A67" bpmnElement="EAID_32B1025F_F1D9_498e_A2F6_B1E9B5A8B1A3">
+        <dc:Bounds x="462" y="90" width="219" height="56" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000008_89D8_4112_ADB1_5D2B3ECD3A67" bpmnElement="EAID_3310840E_A4E5_42e8_A07C_22143EA47FBB">
+        <dc:Bounds x="295" y="300" width="126" height="58" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000003_89D8_4112_ADB1_5D2B3ECD3A67" bpmnElement="EAID_6F7DFDF0_734F_4508_8962_2C843D60DD2A">
+        <dc:Bounds x="114" y="85" width="192" height="57" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="EAID_DL000001_89D8_4112_ADB1_5D2B3ECD3A67" bpmnElement="EAID_F1C61637_70EE_4f16_892B_ACBF19A39501">
+        <di:waypoint xsi:type="dc:Point" x="268" y="205" />
+        <di:waypoint xsi:type="dc:Point" x="315" y="205" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="247" y="180" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="EAID_DL000003_89D8_4112_ADB1_5D2B3ECD3A67" bpmnElement="EAID_DE628E69_A826_4442_A359_23AF845C18FF">
+        <di:waypoint xsi:type="dc:Point" x="357" y="205" />
+        <di:waypoint xsi:type="dc:Point" x="399" y="205" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_A826_4442_A359_23AF845C18FF" labelStyle="EAID_LS000001_89D8_4112_ADB1_5D2B3ECD3A67">
+          <dc:Bounds x="378" y="184" width="17" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="EAID_DL000002_89D8_4112_ADB1_5D2B3ECD3A67" bpmnElement="EAID_F0A45C2D_9AC2_46d0_9826_29555DDD67BF">
+        <di:waypoint xsi:type="dc:Point" x="336" y="226" />
+        <di:waypoint xsi:type="dc:Point" x="336" y="284" />
+        <di:waypoint xsi:type="dc:Point" x="499" y="284" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_9AC2_46d0_9826_29555DDD67BF" labelStyle="EAID_LS000001_89D8_4112_ADB1_5D2B3ECD3A67">
+          <dc:Bounds x="485" y="263" width="10" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="EAID_DL000005_89D8_4112_ADB1_5D2B3ECD3A67" bpmnElement="EAID_A8B44740_01F0_44f4_AC2F_002EE74B857F">
+        <di:waypoint xsi:type="dc:Point" x="666" y="205" />
+        <di:waypoint xsi:type="dc:Point" x="722" y="205" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="649" y="180" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="EAID_DL000007_89D8_4112_ADB1_5D2B3ECD3A67" bpmnElement="EAID_46E7E6FC_4A02_49ed_8454_5F4491808D1C">
+        <di:waypoint xsi:type="dc:Point" x="609" y="282" />
+        <di:waypoint xsi:type="dc:Point" x="743" y="282" />
+        <di:waypoint xsi:type="dc:Point" x="743" y="226" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="631" y="257" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="EAID_DL000006_89D8_4112_ADB1_5D2B3ECD3A67" bpmnElement="EAID_D5A39173_B5FC_4ebc_888D_F34DD25DB83B">
+        <di:waypoint xsi:type="dc:Point" x="764" y="205" />
+        <di:waypoint xsi:type="dc:Point" x="803" y="205" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="739" y="180" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="EAID_DL000000_89D8_4112_ADB1_5D2B3ECD3A67" bpmnElement="EAID_80EC4BF7_C14C_4891_BB0A_37E6116E765C">
+        <di:waypoint xsi:type="dc:Point" x="112" y="205" />
+        <di:waypoint xsi:type="dc:Point" x="158" y="205" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="90" y="180" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="EAID_DL000004_89D8_4112_ADB1_5D2B3ECD3A67" bpmnElement="EAID_40194F1B_9C86_4336_9845_0991045BE77A">
+        <di:waypoint xsi:type="dc:Point" x="509" y="205" />
+        <di:waypoint xsi:type="dc:Point" x="556" y="205" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="488" y="180" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Lane_0jye6mu_di" bpmnElement="Lane_0jye6mu">
+        <dc:Bounds x="51" y="65" width="823" height="313" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Participant_1ew9lne_di" bpmnElement="Participant_1ew9lne">
+        <dc:Bounds x="21" y="-3" width="833" height="67" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="MessageFlow_07f84gk_di" bpmnElement="MessageFlow_07f84gk">
+        <di:waypoint xsi:type="dc:Point" x="92" y="64" />
+        <di:waypoint xsi:type="dc:Point" x="92" y="193" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="107" y="122.5" width="0" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+    <bpmndi:BPMNLabelStyle id="EAID_LS000000_89D8_4112_ADB1_5D2B3ECD3A67">
+      <dc:Font name="Calibri" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+    </bpmndi:BPMNLabelStyle>
+    <bpmndi:BPMNLabelStyle id="EAID_LS000001_89D8_4112_ADB1_5D2B3ECD3A67">
+      <dc:Font name="Calibri" size="8.5" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+    </bpmndi:BPMNLabelStyle>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

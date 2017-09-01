@@ -1,0 +1,89 @@
+server:
+  port: 8081
+  contextPath: /sipa
+  tomcat:
+      max-http-post-size: 10485760
+
+spring:
+  mvc:
+    static-path-pattern: /static/**
+  http:
+    multipart:
+        maxFileSize: 10Mb
+        maxRequestSize: 10Mb
+
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521:orcl
+    username: sipa
+    password: sipa
+
+  freemarker:
+    cache: true
+    settings:
+      template_exception_handler: ignore
+      auto_import: /spring.ftl as s, /layout.ftl as l
+
+app:
+  oauth2-server: http://66.175.219.84/sipa-cas
+
+security:
+  basic:
+    enabled: false
+  oauth2:
+    client:
+      client-id: sipaweb
+      client-secret: sipawebsecret
+      access-token-uri: ${app.oauth2-server}/oauth/token
+      user-authorization-uri: ${app.oauth2-server}/oauth/authorize
+      scope: read, write
+    resource:
+      token-info-uri: ${app.oauth2-server}/oauth/check_token
+
+sipa:
+  #Ruta donde se almacenan los documentos
+  documentosPath: /home/maria/documentos
+  #Prefijo con se concatena al nombre del documento
+  documentosPrefix: sipa-documento-
+
+  serv:
+      comparendos:
+        # Este parámetro debe eliminarse
+        registroComparendo: http://66.175.219.84/v1/comparendos
+
+  service:
+    location:
+      baseUrl: http://66.175.219.84
+
+---
+spring:
+  profiles: development
+
+  freemarker:
+    cache: false
+    templateLoaderPath:
+    - file://${sipa.dev.rootPath}/sipa-web/src/main/resources/templates
+    settings:
+      template_exception_handler: rethrow
+
+  resources:
+    static-locations: file://${sipa.dev.rootPath}/sipa-web/src/main/resources/static/
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/sipa
+
+liquibase:
+  enabled: true
+  change-log: classpath:/db/changelog/db.changelog-master-postgresql.yaml
+
+sipa:
+  dev:
+    rootPath: ${HOME}/projects/sipa
+  loadInitialData: true
+  service:
+    location:
+      baseUrl: http://localhost:8082
+
+logging:
+  level:
+    co.gov.movilidadbogota: DEBUG
+#    org.hibernate.type: TRACE

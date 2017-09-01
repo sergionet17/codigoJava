@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:ssbp="www.sparxsystems.com.au/bpmn20" id="EAPK_F0A26EF5_B7FE_4037_92E6_C98F018220F1" name="Decretar embargo" targetNamespace="www.sparxsystems.com.au/bpmn20" exporter="Camunda Modeler" exporterVersion="1.8.0">
+  <bpmn:collaboration id="Collaboration_1ud4znh">
+    <bpmn:participant id="Participant_0kw0yl6" name="SDM" processRef="Process_1mlkyef" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_1mlkyef" name="Decretar embargo" isExecutable="true">
+    <bpmn:laneSet>
+      <bpmn:lane id="Lane_0d1su53" name="AT.1 (Abogado de dependencia)">
+        <bpmn:flowNodeRef>Task_0po4cbt</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_0uuarmp</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_15ypqj9</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_1ipl0xv</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>StartEvent_0hqqk2n</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EndEvent_0jw9hs3</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="StartEvent_0hqqk2n" name="Inicio">
+      <bpmn:outgoing>SequenceFlow_0eompd9</bpmn:outgoing>
+      <bpmn:messageEventDefinition messageRef="Message_1xti7if" />
+    </bpmn:startEvent>
+    <bpmn:serviceTask id="Task_0po4cbt" name="Agrupar solicitudes embargo por ente registrador" camunda:class="co.gov.movilidadbogota.sipa.bpm.DummyTask">
+      <bpmn:incoming>SequenceFlow_0eompd9</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0b7rpfa</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:serviceTask id="Task_0uuarmp" name="Calcular embargos" camunda:class="co.gov.movilidadbogota.sipa.bpm.DummyTask">
+      <bpmn:incoming>SequenceFlow_0b7rpfa</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0xvpb2g</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:userTask id="Task_15ypqj9" name="Seleccionar bienes a embargar" camunda:assignee="Abogado">
+      <bpmn:incoming>SequenceFlow_0xvpb2g</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1kdeeyb</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:callActivity id="Task_1ipl0xv" name="Embargos por ente registrador" calledElement="Sp embargos por ente registrador">
+      <bpmn:incoming>SequenceFlow_1kdeeyb</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0su9knf</bpmn:outgoing>
+      <bpmn:multiInstanceLoopCharacteristics>
+        <bpmn:loopCardinality xsi:type="bpmn:tFormalExpression">1</bpmn:loopCardinality>
+      </bpmn:multiInstanceLoopCharacteristics>
+    </bpmn:callActivity>
+    <bpmn:endEvent id="EndEvent_0jw9hs3">
+      <bpmn:incoming>SequenceFlow_0su9knf</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_0eompd9" sourceRef="StartEvent_0hqqk2n" targetRef="Task_0po4cbt" />
+    <bpmn:sequenceFlow id="SequenceFlow_0b7rpfa" sourceRef="Task_0po4cbt" targetRef="Task_0uuarmp" />
+    <bpmn:sequenceFlow id="SequenceFlow_0xvpb2g" sourceRef="Task_0uuarmp" targetRef="Task_15ypqj9" />
+    <bpmn:sequenceFlow id="SequenceFlow_1kdeeyb" sourceRef="Task_15ypqj9" targetRef="Task_1ipl0xv" />
+    <bpmn:sequenceFlow id="SequenceFlow_0su9knf" sourceRef="Task_1ipl0xv" targetRef="EndEvent_0jw9hs3" />
+    <bpmn:textAnnotation id="EAID_417E05F8_FA0F_47d7_8BC4_D7853C6423F8">    <bpmn:text>Se embargan bienes muebles, inmuebles, cuentas y sueldos</bpmn:text>
+</bpmn:textAnnotation>
+    <bpmn:textAnnotation id="EAID_64616583_CCF0_4c4b_94D3_861BB0B04110">    <bpmn:text>Secuestro y avaluo solo a los embargos realizados</bpmn:text>
+</bpmn:textAnnotation>
+  </bpmn:process>
+  <bpmn:message id="Message_1xti7if" name="Message_3ovq3u5" />
+  <bpmndi:BPMNDiagram id="EAID_3486C927_8636_491f_A79E_AB9F968ADF6A" name="Decretar embargo">
+    <bpmndi:BPMNPlane id="EAID_PL000000_8636_491f_A79E_AB9F968ADF6A" bpmnElement="Collaboration_1ud4znh">
+      <bpmndi:BPMNShape id="EAID_DO000002_8636_491f_A79E_AB9F968ADF6A" bpmnElement="EAID_417E05F8_FA0F_47d7_8BC4_D7853C6423F8">
+        <dc:Bounds x="118" y="10" width="160" height="40" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000004_8636_491f_A79E_AB9F968ADF6A" bpmnElement="EAID_64616583_CCF0_4c4b_94D3_861BB0B04110">
+        <dc:Bounds x="262" y="7" width="150" height="45" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Participant_0kw0yl6_di" bpmnElement="Participant_0kw0yl6">
+        <dc:Bounds x="0" y="0" width="746" height="176" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_0d1su53_di" bpmnElement="Lane_0d1su53">
+        <dc:Bounds x="30" y="0" width="716" height="176" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="StartEvent_13uezpf_di" bpmnElement="StartEvent_0hqqk2n">
+        <dc:Bounds x="79" y="95" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="83" y="133" width="26" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0eompd9_di" bpmnElement="SequenceFlow_0eompd9">
+        <di:waypoint xsi:type="dc:Point" x="115" y="113" />
+        <di:waypoint xsi:type="dc:Point" x="148" y="113" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="131.5" y="91.5" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="ServiceTask_1gdktet_di" bpmnElement="Task_0po4cbt">
+        <dc:Bounds x="148" y="73" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0b7rpfa_di" bpmnElement="SequenceFlow_0b7rpfa">
+        <di:waypoint xsi:type="dc:Point" x="248" y="113" />
+        <di:waypoint xsi:type="dc:Point" x="278" y="113" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="263" y="91.5" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="ServiceTask_0pr7ldl_di" bpmnElement="Task_0uuarmp">
+        <dc:Bounds x="278" y="73" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0xvpb2g_di" bpmnElement="SequenceFlow_0xvpb2g">
+        <di:waypoint xsi:type="dc:Point" x="378" y="113" />
+        <di:waypoint xsi:type="dc:Point" x="415" y="113" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="396.5" y="91.5" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="UserTask_0uc3bry_di" bpmnElement="Task_15ypqj9">
+        <dc:Bounds x="415" y="73" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_1kdeeyb_di" bpmnElement="SequenceFlow_1kdeeyb">
+        <di:waypoint xsi:type="dc:Point" x="515" y="113" />
+        <di:waypoint xsi:type="dc:Point" x="547" y="113" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="531" y="91.5" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="CallActivity_0yuz427_di" bpmnElement="Task_1ipl0xv">
+        <dc:Bounds x="547" y="73" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_0jw9hs3_di" bpmnElement="EndEvent_0jw9hs3">
+        <dc:Bounds x="677.418" y="95" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="695.418" y="134" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0su9knf_di" bpmnElement="SequenceFlow_0su9knf">
+        <di:waypoint xsi:type="dc:Point" x="647" y="113" />
+        <di:waypoint xsi:type="dc:Point" x="677" y="113" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="662" y="91" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+    <bpmndi:BPMNLabelStyle id="EAID_LS000000_8636_491f_A79E_AB9F968ADF6A">
+      <dc:Font name="Calibri" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+    </bpmndi:BPMNLabelStyle>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

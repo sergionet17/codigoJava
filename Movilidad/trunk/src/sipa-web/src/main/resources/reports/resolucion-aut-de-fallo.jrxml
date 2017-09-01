@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2017-06-15T18:01:33 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="resolucion-de-fallo" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="332fee4b-baa8-44d6-99e1-1b5ca6c42316">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="numero" class="java.lang.String">
+		<fieldDescription><![CDATA[numero]]></fieldDescription>
+	</field>
+	<field name="comparendo" class="co.gov.movilidadbogota.sipa.data.biz.comp.Comparendo">
+		<fieldDescription><![CDATA[comparendo]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image>
+				<reportElement x="244" y="6" width="50" height="50" uuid="a56e6304-c05f-4b47-88b9-4ae7346cb5a3"/>
+				<imageExpression><![CDATA["/home/maria/projects/sipa/sipa-web/src/main/resources/static/img/bogota-secrearia-sm.png"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="93" y="30" width="100" height="30" uuid="44b72ce7-8222-4977-a76d-51dec2bb6a94"/>
+				<textFieldExpression><![CDATA[$F{comparendo}.getCarpeta().getNombre()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="70" splitType="Stretch">
+			<textField>
+				<reportElement x="180" y="30" width="100" height="30" uuid="6522a085-b598-4239-b656-f6141f88553c"/>
+				<textFieldExpression><![CDATA[$F{comparendo}.getNumero().getNumero()
+]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="182" y="1" width="100" height="30" uuid="4923ff6e-4179-45ce-9b03-713487efa8cf"/>
+				<textFieldExpression><![CDATA[$F{comparendo}.getCarpeta().getNombre()
+]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-10" y="1" width="100" height="30" uuid="35eff895-477a-40a7-9599-f9daa4c9bdc1"/>
+				<textFieldExpression><![CDATA["EXPEDIENTE"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-10" y="40" width="100" height="30" uuid="fd3e3a0d-a9ed-4f25-ab79-a221db9757a0"/>
+				<textFieldExpression><![CDATA["COMPARENDO No "]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="-10" y="10" width="146" height="30" uuid="2ba63f17-f5d4-46bc-919f-0fdcc55d3a68"/>
+				<textFieldExpression><![CDATA["FECHA COMPARENDO No"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="185" y="9" width="100" height="30" uuid="2cd8e2f1-cb85-42da-97a7-636b0c5fc53b"/>
+				<textFieldExpression><![CDATA[$F{comparendo}.getFechaImposicion()]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

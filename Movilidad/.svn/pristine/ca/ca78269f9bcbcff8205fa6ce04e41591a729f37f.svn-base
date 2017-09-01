@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:ssbp="www.sparxsystems.com.au/bpmn20" id="EAPK_02860DE4_B748_4eae_BAA4_BD5B24DDC749" name="Pago total acuerdo pago" targetNamespace="www.sparxsystems.com.au/bpmn20" exporter="Camunda Modeler" exporterVersion="1.7.2">
+  <bpmn:collaboration id="Collaboration_0el9m7y">
+    <bpmn:participant id="Participant_019b36j" name="SDM" processRef="EAID_56E4321C_E8E3_4cd8_9F9B_B6E3CAEC75CD" />
+  </bpmn:collaboration>
+  <bpmn:process id="EAID_56E4321C_E8E3_4cd8_9F9B_B6E3CAEC75CD" name="Pago total acuerdo pago" processType="None" isClosed="false" isExecutable="false">
+    <bpmn:startEvent id="EAID_E40C3B3B_A457_41f8_B3B9_7B6F41F98A69" name="Inicio">
+      <bpmn:outgoing>EAID_0C7DC7F1_4C87_4b44_B881_8D282DE5E6EE</bpmn:outgoing>
+      <bpmn:messageEventDefinition />
+    </bpmn:startEvent>
+    <bpmn:endEvent id="EAID_31A01750_1D3A_4edd_97B7_C4A4904E2561" name="EndEvent1">
+      <bpmn:incoming>EAID_ACB8AB46_D30A_4ff0_B6B0_BF7499DBD1A8</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:serviceTask id="EAID_C65CDCD9_2B1E_4ff3_A796_44519971A766" name="Terminar procesos asociados a obligaciones del acuerdo de pago" implementation="##unspecified">
+      <bpmn:incoming>EAID_BF7E42DC_8AF3_4794_8999_B420B2DC4077</bpmn:incoming>
+      <bpmn:outgoing>EAID_ACB8AB46_D30A_4ff0_B6B0_BF7499DBD1A8</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:serviceTask id="EAID_17E20B3B_FD51_4829_8583_9F213B302168" name="Registrar cambio de estado en acuerdo de pago apagado" implementation="##unspecified">
+      <bpmn:incoming>EAID_0C7DC7F1_4C87_4b44_B881_8D282DE5E6EE</bpmn:incoming>
+      <bpmn:outgoing>EAID_BF7E42DC_8AF3_4794_8999_B420B2DC4077</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="EAID_0C7DC7F1_4C87_4b44_B881_8D282DE5E6EE" sourceRef="EAID_E40C3B3B_A457_41f8_B3B9_7B6F41F98A69" targetRef="EAID_17E20B3B_FD51_4829_8583_9F213B302168" />
+    <bpmn:sequenceFlow id="EAID_ACB8AB46_D30A_4ff0_B6B0_BF7499DBD1A8" sourceRef="EAID_C65CDCD9_2B1E_4ff3_A796_44519971A766" targetRef="EAID_31A01750_1D3A_4edd_97B7_C4A4904E2561" />
+    <bpmn:sequenceFlow id="EAID_BF7E42DC_8AF3_4794_8999_B420B2DC4077" sourceRef="EAID_17E20B3B_FD51_4829_8583_9F213B302168" targetRef="EAID_C65CDCD9_2B1E_4ff3_A796_44519971A766" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="EAID_8CAF2A3F_0324_46a5_8064_66F443E99E0D" name="Pago total acuerdo pago">
+    <bpmndi:BPMNPlane id="EAID_PL000000_0324_46a5_8064_66F443E99E0D" bpmnElement="Collaboration_0el9m7y">
+      <bpmndi:BPMNShape id="Participant_019b36j_di" bpmnElement="Participant_019b36j">
+        <dc:Bounds x="19" y="25" width="579" height="170" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000000_0324_46a5_8064_66F443E99E0D" bpmnElement="EAID_E40C3B3B_A457_41f8_B3B9_7B6F41F98A69">
+        <dc:Bounds x="69" y="101" width="30" height="30" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_A457_41f8_B3B9_7B6F41F98A69" labelStyle="EAID_LS000000_0324_46a5_8064_66F443E99E0D">
+          <dc:Bounds x="82" y="141" width="25" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000003_0324_46a5_8064_66F443E99E0D" bpmnElement="EAID_31A01750_1D3A_4edd_97B7_C4A4904E2561">
+        <dc:Bounds x="526" y="103" width="30" height="30" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_1D3A_4edd_97B7_C4A4904E2561" labelStyle="EAID_LS000000_0324_46a5_8064_66F443E99E0D">
+          <dc:Bounds x="523" y="143" width="53" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000002_0324_46a5_8064_66F443E99E0D" bpmnElement="EAID_C65CDCD9_2B1E_4ff3_A796_44519971A766">
+        <dc:Bounds x="344" y="81" width="125" height="78" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_2B1E_4ff3_A796_44519971A766" labelStyle="EAID_LS000000_0324_46a5_8064_66F443E99E0D" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000001_0324_46a5_8064_66F443E99E0D" bpmnElement="EAID_17E20B3B_FD51_4829_8583_9F213B302168">
+        <dc:Bounds x="164" y="82" width="127" height="73" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_FD51_4829_8583_9F213B302168" labelStyle="EAID_LS000000_0324_46a5_8064_66F443E99E0D" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="EAID_DL000000_0324_46a5_8064_66F443E99E0D" bpmnElement="EAID_0C7DC7F1_4C87_4b44_B881_8D282DE5E6EE">
+        <di:waypoint xsi:type="dc:Point" x="99" y="116" />
+        <di:waypoint xsi:type="dc:Point" x="164" y="116" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="87" y="91" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="EAID_DL000001_0324_46a5_8064_66F443E99E0D" bpmnElement="EAID_ACB8AB46_D30A_4ff0_B6B0_BF7499DBD1A8">
+        <di:waypoint xsi:type="dc:Point" x="469" y="118" />
+        <di:waypoint xsi:type="dc:Point" x="526" y="118" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="453" y="93" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="EAID_DL000002_0324_46a5_8064_66F443E99E0D" bpmnElement="EAID_BF7E42DC_8AF3_4794_8999_B420B2DC4077">
+        <di:waypoint xsi:type="dc:Point" x="291" y="119" />
+        <di:waypoint xsi:type="dc:Point" x="344" y="119" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="273" y="94" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+    <bpmndi:BPMNLabelStyle id="EAID_LS000000_0324_46a5_8064_66F443E99E0D">
+      <dc:Font name="Calibri" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+    </bpmndi:BPMNLabelStyle>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

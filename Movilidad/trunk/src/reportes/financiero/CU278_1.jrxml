@@ -1,0 +1,671 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.0.final using JasperReports Library version 6.4.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="CU278_1" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e551e6c7-8c8f-47dc-8107-d5e348f5e0b0">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="SIPA"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w1" value="282"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w2" value="713"/>
+	<property name="ireport.jasperserver.url" value="http://loa1.sipa/jasperserver/"/>
+	<property name="ireport.jasperserver.user" value="jasperadmin"/>
+	<property name="ireport.jasperserver.reportUnit" value="/REPORTS/CU278_1"/>
+	<property name="ireport.jasperserver.report.resource" value="/REPORTS/CU278_1_files/CU278_1"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="cartera comparendos" uuid="0a84ecb5-86b6-4965-858b-5f456f6f9e33">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="SIPA"/>
+		<queryString language="SQL">
+			<![CDATA[select label, valor, orden from (
+
+-- SALDO CARTERA
+select 'SALDO CARTERA' as label, sum(valor) as valor, 1 as orden
+  from entrada e
+  join cuenta c on e.cuenta_id = c.id
+  join naturaleza_cuenta n on c.naturaleza_cuenta_id = n.id
+ where cuenta_id = hextoraw('83fe1dcf5ffb40bc90f7871ff62c6235')
+    
+union
+    
+-- PAGOS APLICADOS
+select 'PAGOS APLICADOS (C+D)' as label, sum(e.valor) * -1 as valor, 2 as orden
+  from transaccion t
+  join entrada e on t.id = e.transaccion_id
+ where codigo_evento = 'PagoComparendo'
+   and e.cuenta_id = hextoraw('83fe1dcf5ffb40bc90f7871ff62c6235')
+   and e.tipo_movimiento = 0
+
+union
+    
+-- PAGOS APLICADOS
+select '(C) PAGOS COMPARENDOS' as label, sum(e.valor) * -1 as valor, 3 as orden
+  from transaccion t
+  join entrada e on t.id = e.transaccion_id
+ where codigo_evento = 'PagoComparendo'
+   and e.cuenta_id = hextoraw('83fe1dcf5ffb40bc90f7871ff62c6235')
+   and e.tipo_movimiento = 0
+
+union
+
+select '(D) PAGOS INTERESES' as label, 0 as valor , 4 as orden
+  from dual
+
+union 
+
+select 'PROCESO EN EXCEPCION' as label, 0 as valor, 5 as orden
+  from dual 
+
+union 
+
+-- DESCUENTOS
+select 'DESCUENTOS' as label, sum(e.valor) as valor, 6 as orden
+  from transaccion t
+  join entrada e on t.id = e.transaccion_id
+ where codigo_evento = 'AplicarDescuento'
+   and e.cuenta_id = hextoraw('8d21356400174d1490d65a396e82d050')
+
+union
+
+-- DEBITOS CARTERA
+select 'DEBITOS (A+B)' as label, sum(valor) as valor, 7 as orden
+  from entrada e 
+ where e.cuenta_id = hextoraw('83fe1dcf5ffb40bc90f7871ff62c6235')
+   and tipo_movimiento = 1
+
+union
+
+-- DEBITOS CARTERA
+select '(A) DEBITOS OTROS' as label, sum(valor) as valor, 8 as orden
+  from entrada e 
+ where e.cuenta_id = hextoraw('83fe1dcf5ffb40bc90f7871ff62c6235')
+   and tipo_movimiento = 1
+
+union
+
+select '(B) DEBITOS INTERESES' as label, 0 as valor, 9 as orden 
+  from dual
+
+) order by orden]]>
+		</queryString>
+		<field name="LABEL" class="java.lang.String"/>
+		<field name="VALOR" class="java.math.BigDecimal"/>
+	</subDataset>
+	<subDataset name="Intereses" uuid="0fa2754a-64cc-4a75-9c12-1c680320a8e2">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Intereses"/>
+		<queryString>
+			<![CDATA[select 'SALDO INTERESES' as LABEL, 0 as VALOR from dual
+union
+select 'INTERESES PAGADOS' as LABEL, 0 as VALOR from dual
+union
+select 'INTERESES GENERADOS' as LABEL, 0 as VALOR from dual]]>
+		</queryString>
+		<field name="LABEL" class="java.lang.String"/>
+		<field name="VALOR" class="java.lang.String"/>
+	</subDataset>
+	<subDataset name="acuerdos" uuid="99280e2a-43ed-4001-95f6-81119587f1d5">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="SIPA"/>
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<queryString>
+			<![CDATA[select * from (
+select 'SALDO CARTERA ( C + D )' as LABEL, 0 AS VALOR, 1 AS ORDEN FROM DUAL
+union
+select '(C) SALDO CARTERA A COMPARENDOS' as LABEL, 0 AS VALOR, 2 AS ORDEN FROM DUAL
+union 
+select '(D) SALDO EN CARTERA A INTERESES DE COMPARENDOS' as LABEL, 0 AS VALOR, 3 AS ORDEN FROM DUAL
+union 
+select 'PAGOS APLICADOS' as LABEL, 0 AS VALOR, 4 AS ORDEN FROM DUAL
+union 
+select 'DESCUENTOS' as LABEL, 0 AS VALOR, 5 AS ORDEN FROM DUAL
+union 
+select 'DEBITOS' as LABEL, 0 AS VALOR, 6 AS ORDEN FROM DUAL
+
+) order by orden]]>
+		</queryString>
+		<field name="LABEL" class="java.lang.String"/>
+		<field name="VALOR" class="java.math.BigDecimal"/>
+		<field name="ORDEN" class="java.math.BigDecimal"/>
+	</subDataset>
+	<subDataset name="multas-tm" uuid="9c918800-fba6-4820-8de3-342b0deb6939">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="SIPA"/>
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<queryString>
+			<![CDATA[select * from (
+select 'SALDO CARTERA' as LABEL, 0 AS VALOR, 1 AS ORDEN FROM DUAL
+union
+select 'PAGOS APLICADOS' as LABEL, 0 AS VALOR, 4 AS ORDEN FROM DUAL
+union 
+select 'DESCUENTOS' as LABEL, 0 AS VALOR, 5 AS ORDEN FROM DUAL
+union 
+select 'DEBITOS' as LABEL, 0 AS VALOR, 6 AS ORDEN FROM DUAL
+
+) order by orden]]>
+		</queryString>
+		<field name="LABEL" class="java.lang.String"/>
+		<field name="VALOR" class="java.math.BigDecimal"/>
+		<field name="ORDEN" class="java.math.BigDecimal"/>
+	</subDataset>
+	<subDataset name="choque" uuid="03c2d05e-a085-48ff-ac82-1493fadb6fdd">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="SIPA"/>
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<queryString>
+			<![CDATA[select * from (
+select 'SALDO CARTERA' as LABEL, 0 AS VALOR, 1 AS ORDEN FROM DUAL
+union
+select 'PAGOS APLICADOS' as LABEL, 0 AS VALOR, 4 AS ORDEN FROM DUAL
+union 
+select 'DESCUENTOS' as LABEL, 0 AS VALOR, 5 AS ORDEN FROM DUAL
+union 
+select 'DEBITOS' as LABEL, 0 AS VALOR, 6 AS ORDEN FROM DUAL
+
+) order by orden]]>
+		</queryString>
+		<field name="LABEL" class="java.lang.String"/>
+		<field name="VALOR" class="java.math.BigDecimal"/>
+		<field name="ORDEN" class="java.math.BigDecimal"/>
+	</subDataset>
+	<subDataset name="subsa" uuid="4701e1f0-f187-4462-a42c-b520ee5b0e0f">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="SIPA"/>
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<queryString>
+			<![CDATA[select * from (
+select 'SALDO CARTERA' as LABEL, 0 AS VALOR, 1 AS ORDEN FROM DUAL
+union
+select 'PAGOS APLICADOS' as LABEL, 0 AS VALOR, 4 AS ORDEN FROM DUAL
+union 
+select 'DESCUENTOS' as LABEL, 0 AS VALOR, 5 AS ORDEN FROM DUAL
+union 
+select 'DEBITOS' as LABEL, 0 AS VALOR, 6 AS ORDEN FROM DUAL
+
+) order by orden]]>
+		</queryString>
+		<field name="LABEL" class="java.lang.String"/>
+		<field name="VALOR" class="java.math.BigDecimal"/>
+		<field name="ORDEN" class="java.math.BigDecimal"/>
+	</subDataset>
+	<parameter name="fechaCorte" class="java.util.Date">
+		<parameterDescription><![CDATA[Fecha de corte del reporte]]></parameterDescription>
+		<defaultValueExpression><![CDATA[NOW()]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select label, valor, orden from (
+
+-- SALDO CARTERA
+select 'SALDO CARTERA' as label, sum(valor) as valor, 1 as orden
+  from entrada e
+  join cuenta c on e.cuenta_id = c.id
+  join naturaleza_cuenta n on c.naturaleza_cuenta_id = n.id
+ where cuenta_id = hextoraw('83fe1dcf5ffb40bc90f7871ff62c6235')
+    
+union
+    
+-- PAGOS APLICADOS
+select 'PAGOS APLICADOS (C+D)' as label, sum(e.valor) * -1 as valor, 2 as orden
+  from transaccion t
+  join entrada e on t.id = e.transaccion_id
+ where codigo_evento = 'PagoComparendo'
+   and e.cuenta_id = hextoraw('83fe1dcf5ffb40bc90f7871ff62c6235')
+   and e.tipo_movimiento = 0
+
+union
+    
+-- PAGOS APLICADOS
+select '(C) PAGOS COMPARENDOS' as label, sum(e.valor) * -1 as valor, 3 as orden
+  from transaccion t
+  join entrada e on t.id = e.transaccion_id
+ where codigo_evento = 'PagoComparendo'
+   and e.cuenta_id = hextoraw('83fe1dcf5ffb40bc90f7871ff62c6235')
+   and e.tipo_movimiento = 0
+
+union
+
+select '(D) PAGOS INTERESES' as label, 0 as valor , 4 as orden
+  from dual
+
+union 
+
+select 'PROCESO EN EXCEPCION' as label, 0 as valor, 5 as orden
+  from dual 
+
+union 
+
+-- DESCUENTOS
+select 'DESCUENTOS' as label, sum(e.valor) as valor, 6 as orden
+  from transaccion t
+  join entrada e on t.id = e.transaccion_id
+ where codigo_evento = 'AplicarDescuento'
+   and e.cuenta_id = hextoraw('8d21356400174d1490d65a396e82d050')
+
+union
+
+-- DEBITOS CARTERA
+select 'DEBITOS (A+B)' as label, sum(valor) as valor, 7 as orden
+  from entrada e 
+ where e.cuenta_id = hextoraw('83fe1dcf5ffb40bc90f7871ff62c6235')
+   and tipo_movimiento = 1
+
+union
+
+-- DEBITOS CARTERA
+select '(A) DEBITOS OTROS' as label, sum(valor) as valor, 8 as orden
+  from entrada e 
+ where e.cuenta_id = hextoraw('83fe1dcf5ffb40bc90f7871ff62c6235')
+   and tipo_movimiento = 1
+
+union
+
+select '(B) DEBITOS INTERESES' as label, 0 as valor, 9 as orden 
+  from dual
+
+) order by orden]]>
+	</queryString>
+	<field name="LABEL" class="java.lang.String"/>
+	<field name="VALOR" class="java.math.BigDecimal"/>
+	<field name="ORDEN" class="java.math.BigDecimal"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="3" width="140" height="65" uuid="9cce70d8-169a-47b7-a79e-45598dba5650"/>
+				<imageExpression><![CDATA["repo:/IMAGES/LOGO"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="150" y="23" width="420" height="14" uuid="45657c2c-203e-4411-b99c-c6312edf9072"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Fecha de extracción: " + NOW( ) + " Fecha de corte: " + $P{fechaCorte}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="150" y="3" width="420" height="20" uuid="bd484e80-af60-4a93-9025-8232b1ccbc41"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[REPORTE DE REGISTROS DE TRÁNSITO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="37" width="419" height="12" uuid="6f11669b-dd75-406a-8e2e-386ddda4869e"/>
+				<textElement verticalAlignment="Middle">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[(Los Saldos de Cartera son corte a fin del mes. Los Pagos, Descuentos y Débitos son movimientos del mes)]]></text>
+			</staticText>
+		</band>
+	</title>
+	<summary>
+		<band height="351">
+			<componentElement>
+				<reportElement positionType="Float" x="0" y="19" width="570" height="29" uuid="f219f373-d825-4bfd-8603-e894482f178f">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="cartera comparendos" uuid="15984ff9-55f8-493f-b1e8-20bcd6ba0fb0">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="120" uuid="e898f5d1-3491-4464-a69c-6d7ae1a86aa5">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+						<jr:columnHeader style="Table_CH" height="14"/>
+						<jr:detailCell style="Table_TD" height="17">
+							<textField>
+								<reportElement x="0" y="0" width="120" height="17" uuid="02e61816-36bf-46a1-8db5-0431dd84392f"/>
+								<box padding="2"/>
+								<textElement verticalAlignment="Middle">
+									<font size="6"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{LABEL}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="80" uuid="057f816a-a947-4908-ab4f-cbeb4633d13f">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+						<jr:columnHeader style="Table_CH" height="14">
+							<staticText>
+								<reportElement x="0" y="0" width="80" height="14" uuid="45b57562-f6d0-46ef-b801-ade192ce8a0e"/>
+								<box padding="3"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="6"/>
+								</textElement>
+								<text><![CDATA[JULIO 2017]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="17">
+							<textField pattern="#,##0;-#,##0">
+								<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="80" height="17" uuid="c616771a-2564-43ba-a48d-8330cc7ce237"/>
+								<box padding="2"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="6"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{VALOR}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<staticText>
+				<reportElement x="1" y="0" width="568" height="19" uuid="723fd871-42d6-49b6-8e73-3c4bcaad7e72"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CARTERA DE COMPARENDOS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="54" width="568" height="19" uuid="2366b33e-da38-4c83-9972-2977b5570e21"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[INTERESES GENERADOS A COMPARENDOS]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement positionType="Float" x="0" y="73" width="570" height="29" uuid="26fa404f-8372-4943-888f-91bcc967dd69">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+					<property name="net.sf.jasperreports.export.headertoolbar.table.name" value=""/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Intereses" uuid="b135692f-79ef-463a-ac6a-c7e7966d079e">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="120" uuid="82920088-1b67-436a-8bbc-f4f0994a8de4">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+						<jr:columnHeader style="Table_CH" height="14"/>
+						<jr:detailCell style="Table_TD" height="17">
+							<textField>
+								<reportElement x="0" y="0" width="120" height="17" uuid="10b0f7a7-584b-4858-994b-60ba832810a2"/>
+								<box padding="2"/>
+								<textElement verticalAlignment="Middle">
+									<font size="6"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{LABEL}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="80" uuid="1529e203-c277-4bd5-9b56-b4988c49c203">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+						<jr:columnHeader style="Table_CH" height="14">
+							<staticText>
+								<reportElement x="0" y="0" width="80" height="14" uuid="97521ab5-4a8a-4c3a-ab2b-d0e77568ab98"/>
+								<box padding="3"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="6"/>
+								</textElement>
+								<text><![CDATA[JULIO 2017]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="17">
+							<textField pattern="#,##0;-#,##0">
+								<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="80" height="17" uuid="97c87705-0a9b-49ff-9ff0-428b748c18ee"/>
+								<box padding="2"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="6"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{VALOR}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<staticText>
+				<reportElement positionType="Float" x="1" y="109" width="568" height="19" uuid="782147b2-a46d-4179-a3bc-a1a2f25488dc"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CARTERA DE ACUERDOS DE PAGO]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement positionType="Float" x="1" y="128" width="570" height="29" uuid="4cab3f84-88b0-49f2-98c8-3459085da824">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+					<property name="net.sf.jasperreports.export.headertoolbar.table.name" value=""/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="acuerdos" uuid="e49bc38e-7c8d-4c61-84bd-5811f630baf7">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="120" uuid="c578fc97-ac5f-4d54-90ad-22e8aef03e26">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+						<jr:columnHeader style="Table_CH" height="14"/>
+						<jr:detailCell style="Table_TD" height="17">
+							<textField>
+								<reportElement x="0" y="0" width="120" height="17" uuid="7f080e56-25b3-43f4-a590-b1452cdbf12c"/>
+								<box padding="2"/>
+								<textElement verticalAlignment="Middle">
+									<font size="6"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{LABEL}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="80" uuid="daf9f5b5-d2b8-4a51-bb8b-e51f69d48751">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+						<jr:columnHeader style="Table_CH" height="14">
+							<staticText>
+								<reportElement x="0" y="0" width="80" height="14" uuid="35383048-e0da-4707-bc35-6c15041a6f76"/>
+								<box padding="3"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="6"/>
+								</textElement>
+								<text><![CDATA[JULIO 2017]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="17">
+							<textField pattern="#,##0;-#,##0">
+								<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="80" height="17" uuid="7a06ca1a-f079-46b8-aa9b-3ab7621baa00"/>
+								<box padding="2"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="6"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{VALOR}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<staticText>
+				<reportElement positionType="Float" x="1" y="164" width="568" height="19" uuid="358883c6-31f4-4462-a764-8314cb123d0a"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CARTERA DE MULTAS POR REVISIÓN TÉCNICO-MECÁNICA]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement positionType="Float" x="1" y="190" width="570" height="29" uuid="a0c647f3-f97b-4b61-8288-317763a7391e">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+					<property name="net.sf.jasperreports.export.headertoolbar.table.name" value=""/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="multas-tm" uuid="c8f6f446-67e1-42c9-9ea1-b6c4fc270a4b">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="120" uuid="a1be3a3b-01a2-4d4a-8d1b-8e7123802a21">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+						<jr:columnHeader style="Table_CH" height="14"/>
+						<jr:detailCell style="Table_TD" height="17">
+							<textField>
+								<reportElement x="0" y="0" width="120" height="17" uuid="49a7e341-3eee-4725-a40c-83cf14297d30"/>
+								<box padding="2"/>
+								<textElement verticalAlignment="Middle">
+									<font size="6"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{LABEL}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="80" uuid="29d1bc05-2a30-4e82-b815-d913c2d3ef0e">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+						<jr:columnHeader style="Table_CH" height="14">
+							<staticText>
+								<reportElement x="0" y="0" width="80" height="14" uuid="10475ede-e0a1-4de7-a25b-6bd72adc7c03"/>
+								<box padding="3"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="6"/>
+								</textElement>
+								<text><![CDATA[JULIO 2017]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="17">
+							<textField pattern="#,##0;-#,##0">
+								<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="80" height="17" uuid="4f43c9b4-e5d3-4e9a-ad6d-8d8f08c619d0"/>
+								<box padding="2"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="6"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{VALOR}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="230" width="568" height="19" uuid="cca49e8a-0334-46d2-b43f-067580c9b127"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CARTERA DE MULTAS POR FALLOS CHOQUE SIMPLE]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement positionType="Float" x="1" y="249" width="570" height="29" uuid="b68a5c9b-2615-43e7-a2b6-d89d9eae3615">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+					<property name="net.sf.jasperreports.export.headertoolbar.table.name" value=""/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="choque" uuid="8218820e-e3ca-46f3-81de-3d3e899b1052">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="120" uuid="6cb2e021-6763-4ce4-9301-070a6650836e">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+						<jr:columnHeader style="Table_CH" height="14"/>
+						<jr:detailCell style="Table_TD" height="17">
+							<textField>
+								<reportElement x="0" y="0" width="120" height="17" uuid="4b5f136a-048e-4488-9645-c830ce6a35d4"/>
+								<box padding="2"/>
+								<textElement verticalAlignment="Middle">
+									<font size="6"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{LABEL}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="80" uuid="fb74113d-6414-41a1-94d0-96b2565fc1d6">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+						<jr:columnHeader style="Table_CH" height="14">
+							<staticText>
+								<reportElement x="0" y="0" width="80" height="14" uuid="26fdc908-5deb-469d-a8d6-5739f0beb2c4"/>
+								<box padding="3"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="6"/>
+								</textElement>
+								<text><![CDATA[JULIO 2017]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="17">
+							<textField pattern="#,##0;-#,##0">
+								<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="80" height="17" uuid="369ffe19-4058-456e-94d3-3fb9707a3f6b"/>
+								<box padding="2"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="6"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{VALOR}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="290" width="568" height="19" uuid="3cd6361c-6d74-44ad-88c1-76db5784380e"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CARTERA DE SUBSANACIONES]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement positionType="Float" x="1" y="310" width="570" height="29" uuid="f255d39d-4931-4d51-862f-48023f44b697">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+					<property name="net.sf.jasperreports.export.headertoolbar.table.name" value=""/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="subsa" uuid="4c1cbec2-f8bd-4080-af48-865c2f61e1b2">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="120" uuid="2e6b6212-b060-4197-951c-9a86325f12b2">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+						<jr:columnHeader style="Table_CH" height="14"/>
+						<jr:detailCell style="Table_TD" height="17">
+							<textField>
+								<reportElement x="0" y="0" width="120" height="17" uuid="fe035947-98d5-4a4a-9490-90731c4c6231"/>
+								<box padding="2"/>
+								<textElement verticalAlignment="Middle">
+									<font size="6"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{LABEL}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="80" uuid="87dc49f4-44f7-48bf-ac8a-fe6ed50191a7">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+						<jr:columnHeader style="Table_CH" height="14">
+							<staticText>
+								<reportElement x="0" y="0" width="80" height="14" uuid="1248b8aa-ab16-41e2-8280-d2f8ef600b02"/>
+								<box padding="3"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="6"/>
+								</textElement>
+								<text><![CDATA[JULIO 2017]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="17">
+							<textField pattern="#,##0;-#,##0">
+								<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="80" height="17" uuid="14202826-30f9-456c-aaad-9678f300d354"/>
+								<box padding="2"/>
+								<textElement textAlignment="Right" verticalAlignment="Middle">
+									<font size="6"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{VALOR}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</summary>
+</jasperReport>

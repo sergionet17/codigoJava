@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="1.9.0">
+  <bpmn:process id="audiencia-aceptacion" name="Audiencia de aceptación" isExecutable="true">
+    <bpmn:endEvent id="EndEvent_0o9bxt6">
+      <bpmn:incoming>SequenceFlow_0csa9dh</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_17znu5e" sourceRef="inicio-comparendo" targetRef="Task_1ad7atf" />
+    <bpmn:sequenceFlow id="SequenceFlow_0csa9dh" sourceRef="Task_1ad7atf" targetRef="EndEvent_0o9bxt6" />
+    <bpmn:callActivity id="Task_1ad7atf" name="Resolución de fallo automática" calledElement="svf">
+      <bpmn:extensionElements>
+        <camunda:inputOutput>
+          <camunda:inputParameter name="nombrePlantilla">resolucion-automatica-fallo</camunda:inputParameter>
+          <camunda:inputParameter name="originalName">resolucion-fallo.pdf</camunda:inputParameter>
+          <camunda:inputParameter name="idTipoDocumental">2</camunda:inputParameter>
+        </camunda:inputOutput>
+        <camunda:in source="idComparendo" target="idComparendo" />
+        <camunda:in source="originalName" target="originalName" />
+        <camunda:in source="nombrePlantilla" target="nombrePlantilla" />
+        <camunda:in source="idTipoDocumental" target="idTipoDocumental" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_17znu5e</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0csa9dh</bpmn:outgoing>
+    </bpmn:callActivity>
+    <bpmn:startEvent id="inicio-comparendo" name="Inicio Comparendo">
+      <bpmn:outgoing>SequenceFlow_17znu5e</bpmn:outgoing>
+      <bpmn:messageEventDefinition messageRef="Message_0j7vwa7" />
+    </bpmn:startEvent>
+  </bpmn:process>
+  <bpmn:message id="Message_0j7vwa7" name="inicio-comparendo" />
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="audiencia-aceptacion">
+      <bpmndi:BPMNShape id="EndEvent_0o9bxt6_di" bpmnElement="EndEvent_0o9bxt6">
+        <dc:Bounds x="656" y="140" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="629" y="179" width="90" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_17znu5e_di" bpmnElement="SequenceFlow_17znu5e">
+        <di:waypoint xsi:type="dc:Point" x="213" y="158" />
+        <di:waypoint xsi:type="dc:Point" x="405" y="158" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="264" y="137" width="90" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0csa9dh_di" bpmnElement="SequenceFlow_0csa9dh">
+        <di:waypoint xsi:type="dc:Point" x="505" y="158" />
+        <di:waypoint xsi:type="dc:Point" x="656" y="158" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="535.5" y="136.5" width="90" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="CallActivity_0aa86of_di" bpmnElement="Task_1ad7atf">
+        <dc:Bounds x="405" y="118" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="StartEvent_1suocj3_di" bpmnElement="inicio-comparendo">
+        <dc:Bounds x="177" y="140" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="163" y="182" width="66" height="24" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

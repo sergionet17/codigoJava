@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:ssbp="www.sparxsystems.com.au/bpmn20" id="EAPK_041F55B0_EEE6_4409_945A_0A8BE787CBC8" name="Investigacion bienes" targetNamespace="www.sparxsystems.com.au/bpmn20" exporter="Camunda Modeler" exporterVersion="1.8.0">
+  <bpmn:collaboration id="Collaboration_07wvt5x">
+    <bpmn:participant id="Participant_0axegam" name="SDM" processRef="Process_0qc9v1e" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_0qc9v1e" name="Investgacion bienes" isExecutable="true">
+    <bpmn:laneSet>
+      <bpmn:lane id="Lane_1tm37tn" name="AT.1 (Abogado de dependencia)">
+        <bpmn:flowNodeRef>Task_1xy13s1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_0lu9ijo</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>StartEvent_0ndn2ue</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EndEvent_1pe9t6f</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="StartEvent_0ndn2ue" name="Inicio">
+      <bpmn:outgoing>SequenceFlow_112ncyt</bpmn:outgoing>
+      <bpmn:messageEventDefinition messageRef="Message_0kcu5wt" />
+    </bpmn:startEvent>
+    <bpmn:serviceTask id="Task_1xy13s1" name="Agrupar solicitudes investigacion por ente registrador" camunda:class="co.gov.movilidadbogota.sipa.bpm.DummyTask">
+      <bpmn:incoming>SequenceFlow_112ncyt</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0nphtmd</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:callActivity id="Task_0lu9ijo" name="Investigaciones por ente registrador" calledElement="Sp investigaciones por ente registrador">
+      <bpmn:incoming>SequenceFlow_0nphtmd</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1x929ng</bpmn:outgoing>
+      <bpmn:multiInstanceLoopCharacteristics>
+        <bpmn:loopCardinality xsi:type="bpmn:tFormalExpression">1</bpmn:loopCardinality>
+      </bpmn:multiInstanceLoopCharacteristics>
+    </bpmn:callActivity>
+    <bpmn:endEvent id="EndEvent_1pe9t6f">
+      <bpmn:incoming>SequenceFlow_1x929ng</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_112ncyt" sourceRef="StartEvent_0ndn2ue" targetRef="Task_1xy13s1" />
+    <bpmn:sequenceFlow id="SequenceFlow_0nphtmd" sourceRef="Task_1xy13s1" targetRef="Task_0lu9ijo" />
+    <bpmn:sequenceFlow id="SequenceFlow_1x929ng" sourceRef="Task_0lu9ijo" targetRef="EndEvent_1pe9t6f" />
+    <bpmn:textAnnotation id="EAID_DF6968DE_2721_4534_A11D_F26834FC7A91">    <bpmn:text><![CDATA[Despues del primer proceso de investigacion este mismo proceso se vuelve a ejecutar cada 6 meses para las personas a las que: 
+1. Arrojo negativo todos los tipos de investigaciones: vehiculos, inmuebles, cuentas y sueldos.
+2. Tienen titulos ejecutivos vigentes que no estan incluidos dentro de un acuerdo de pago.]]></bpmn:text>
+</bpmn:textAnnotation>
+    <bpmn:textAnnotation id="EAID_CF1D81D3_F20A_47b5_8134_C64E8F12DD90">    <bpmn:text><![CDATA[-Tipo de investigaciones: vehiculos, inmuebles, cuentas y salarios u honorarios
+-Rango de fechas titulo ejecutivo
+-Tipo de titulo ejecutivo (Ej: Contravenciones - embriaguez]]></bpmn:text>
+</bpmn:textAnnotation>
+    <bpmn:textAnnotation id="EAID_72FB4294_3DFC_405c_ADD7_B944DF5C58B5">    <bpmn:text>Solo entran a investigacion de bienes las personas que no han firmado acuerdos de pago y que tienen titulos ejecutivos vigentes.</bpmn:text>
+</bpmn:textAnnotation>
+    <bpmn:textAnnotation id="EAID_0CAAB01C_6CB0_49e5_8B13_CC145829820D">    <bpmn:text>El registro de las respuestas a investigaciones se realiza mediante reparto de los titulos y registro del resultado en el modulo transaccional</bpmn:text>
+</bpmn:textAnnotation>
+  </bpmn:process>
+  <bpmn:message id="Message_0kcu5wt" name="Message_0gkfqp6" />
+  <bpmndi:BPMNDiagram id="EAID_B7778905_11DC_4427_BD17_468B0FC1D7C1" name="Investigacion bienes">
+    <bpmndi:BPMNPlane id="EAID_PL000000_11DC_4427_BD17_468B0FC1D7C1" bpmnElement="Collaboration_07wvt5x">
+      <bpmndi:BPMNShape id="EAID_DO000004_11DC_4427_BD17_468B0FC1D7C1" bpmnElement="EAID_72FB4294_3DFC_405c_ADD7_B944DF5C58B5">
+        <dc:Bounds x="82" y="263" width="236" height="61" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000003_11DC_4427_BD17_468B0FC1D7C1" bpmnElement="EAID_CF1D81D3_F20A_47b5_8134_C64E8F12DD90">
+        <dc:Bounds x="84" y="184" width="290" height="70" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000006_11DC_4427_BD17_468B0FC1D7C1" bpmnElement="EAID_0CAAB01C_6CB0_49e5_8B13_CC145829820D">
+        <dc:Bounds x="382" y="189" width="230" height="60" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000002_11DC_4427_BD17_468B0FC1D7C1" bpmnElement="EAID_DF6968DE_2721_4534_A11D_F26834FC7A91">
+        <dc:Bounds x="77" y="7" width="465" height="75" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Participant_0axegam_di" bpmnElement="Participant_0axegam">
+        <dc:Bounds x="0" y="0" width="632" height="344" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_1tm37tn_di" bpmnElement="Lane_1tm37tn">
+        <dc:Bounds x="30" y="0" width="602" height="344" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="StartEvent_0h4krhb_di" bpmnElement="StartEvent_0ndn2ue">
+        <dc:Bounds x="131" y="116" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="136" y="155" width="26" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_112ncyt_di" bpmnElement="SequenceFlow_112ncyt">
+        <di:waypoint xsi:type="dc:Point" x="167" y="134" />
+        <di:waypoint xsi:type="dc:Point" x="207" y="134" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="187" y="112.5" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="ServiceTask_0j587y2_di" bpmnElement="Task_1xy13s1">
+        <dc:Bounds x="207" y="94" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0nphtmd_di" bpmnElement="SequenceFlow_0nphtmd">
+        <di:waypoint xsi:type="dc:Point" x="307" y="134" />
+        <di:waypoint xsi:type="dc:Point" x="336" y="134" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="321.5" y="112.5" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="CallActivity_14ixga6_di" bpmnElement="Task_0lu9ijo">
+        <dc:Bounds x="336" y="94" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_1pe9t6f_di" bpmnElement="EndEvent_1pe9t6f">
+        <dc:Bounds x="460.358" y="116" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="478.358" y="155" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_1x929ng_di" bpmnElement="SequenceFlow_1x929ng">
+        <di:waypoint xsi:type="dc:Point" x="436" y="134" />
+        <di:waypoint xsi:type="dc:Point" x="460" y="134" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="448" y="112" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+    <bpmndi:BPMNLabelStyle id="EAID_LS000000_11DC_4427_BD17_468B0FC1D7C1">
+      <dc:Font name="Calibri" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+    </bpmndi:BPMNLabelStyle>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

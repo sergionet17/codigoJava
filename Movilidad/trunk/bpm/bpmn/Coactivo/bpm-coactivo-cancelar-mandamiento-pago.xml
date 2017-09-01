@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:ssbp="www.sparxsystems.com.au/bpmn20" id="EAPK_BF53BE0E_E477_4e09_9764_999D12896994" name="Cancelar mandamiento pago" targetNamespace="www.sparxsystems.com.au/bpmn20" exporter="Camunda Modeler" exporterVersion="1.7.2">
+  <bpmn:collaboration id="Collaboration_1g45vdf">
+    <bpmn:participant id="Participant_1tet3n7" name="SDM" processRef="EAID_AB49FED1_1755_4d97_BBF8_A87DA076E47A" />
+  </bpmn:collaboration>
+  <bpmn:process id="EAID_AB49FED1_1755_4d97_BBF8_A87DA076E47A" name="Cancelar mandamiento pago" processType="None" isClosed="false" isExecutable="false">
+    <bpmn:laneSet>
+      <bpmn:lane id="Lane_0wj6qh9" name="AT.1 (Abogado de dependencia)">
+        <bpmn:flowNodeRef>EAID_14ACC4E2_2588_4956_9BFA_CC82B9E49F95</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EAID_719DC674_131E_4732_8B00_9B8C50E53F02</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EAID_1F816365_8E25_4383_9B70_EAABD2B118B2</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:dataObjectReference id="EAID_87A9F5DE_14F9_4caa_96D9_C269D64D9B2E" name="Plantilla cancelar titulo ejecutivo" dataObjectRef="EAID_DOb000000_14F9_4caa_96D9_C269D64D9B2E" />
+    <bpmn:dataObject id="EAID_DOb000000_14F9_4caa_96D9_C269D64D9B2E" name="Plantilla cancelar titulo ejecutivo" />
+    <bpmn:startEvent id="EAID_719DC674_131E_4732_8B00_9B8C50E53F02" name="Inicio">
+      <bpmn:outgoing>EAID_445B452F_2CB6_40ea_A251_1BA57F365346</bpmn:outgoing>
+      <bpmn:messageEventDefinition />
+    </bpmn:startEvent>
+    <bpmn:endEvent id="EAID_1F816365_8E25_4383_9B70_EAABD2B118B2" name="EndEvent1">
+      <bpmn:incoming>EAID_62D614F6_EB06_4fd1_A7AC_0AABFCAFF904</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:callActivity id="EAID_14ACC4E2_2588_4956_9BFA_CC82B9E49F95" name="Acto cancelar titulo ejecutivo">
+      <bpmn:incoming>EAID_445B452F_2CB6_40ea_A251_1BA57F365346</bpmn:incoming>
+      <bpmn:outgoing>EAID_62D614F6_EB06_4fd1_A7AC_0AABFCAFF904</bpmn:outgoing>
+      <bpmn:ioSpecification>
+        <bpmn:dataInput id="EAID_DDIO000000_2588_4956_9BFA_CC82B9E49F95" />
+        <bpmn:inputSet>
+          <bpmn:dataInputRefs>EAID_DDIO000000_2588_4956_9BFA_CC82B9E49F95</bpmn:dataInputRefs>
+        </bpmn:inputSet>
+        <bpmn:outputSet />
+      </bpmn:ioSpecification>
+      <bpmn:property id="Property_09z0zpn" name="__targetRef_placeholder" />
+      <bpmn:dataInputAssociation id="EAID_DB1C0A01_EE42_4ae8_A8F6_31C339174E45">
+        <bpmn:sourceRef>EAID_87A9F5DE_14F9_4caa_96D9_C269D64D9B2E</bpmn:sourceRef>
+        <bpmn:targetRef>Property_09z0zpn</bpmn:targetRef>
+      </bpmn:dataInputAssociation>
+    </bpmn:callActivity>
+    <bpmn:sequenceFlow id="EAID_445B452F_2CB6_40ea_A251_1BA57F365346" sourceRef="EAID_719DC674_131E_4732_8B00_9B8C50E53F02" targetRef="EAID_14ACC4E2_2588_4956_9BFA_CC82B9E49F95" />
+    <bpmn:sequenceFlow id="EAID_62D614F6_EB06_4fd1_A7AC_0AABFCAFF904" sourceRef="EAID_14ACC4E2_2588_4956_9BFA_CC82B9E49F95" targetRef="EAID_1F816365_8E25_4383_9B70_EAABD2B118B2" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="EAID_5ACB4FC0_FE5F_48cc_88E9_399E5ED7B6B3" name="Cancelar mandamiento pago">
+    <bpmndi:BPMNPlane id="EAID_PL000000_FE5F_48cc_88E9_399E5ED7B6B3" bpmnElement="Collaboration_1g45vdf">
+      <bpmndi:BPMNShape id="Participant_1tet3n7_di" bpmnElement="Participant_1tet3n7">
+        <dc:Bounds x="0" y="20" width="423" height="204" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000003_FE5F_48cc_88E9_399E5ED7B6B3" bpmnElement="EAID_87A9F5DE_14F9_4caa_96D9_C269D64D9B2E">
+        <dc:Bounds x="156" y="40" width="35" height="50" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_14F9_4caa_96D9_C269D64D9B2E" labelStyle="EAID_LS000000_FE5F_48cc_88E9_399E5ED7B6B3">
+          <dc:Bounds x="68" y="53" width="81" height="24" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000000_FE5F_48cc_88E9_399E5ED7B6B3" bpmnElement="EAID_719DC674_131E_4732_8B00_9B8C50E53F02">
+        <dc:Bounds x="94" y="121" width="30" height="30" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_131E_4732_8B00_9B8C50E53F02" labelStyle="EAID_LS000000_FE5F_48cc_88E9_399E5ED7B6B3">
+          <dc:Bounds x="94" y="161" width="25" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000002_FE5F_48cc_88E9_399E5ED7B6B3" bpmnElement="EAID_1F816365_8E25_4383_9B70_EAABD2B118B2">
+        <dc:Bounds x="337" y="121" width="30" height="30" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_8E25_4383_9B70_EAABD2B118B2" labelStyle="EAID_LS000000_FE5F_48cc_88E9_399E5ED7B6B3">
+          <dc:Bounds x="334" y="161" width="53" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000001_FE5F_48cc_88E9_399E5ED7B6B3" bpmnElement="EAID_14ACC4E2_2588_4956_9BFA_CC82B9E49F95" isExpanded="false">
+        <dc:Bounds x="173" y="105" width="110" height="69" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_2588_4956_9BFA_CC82B9E49F95" labelStyle="EAID_LS000000_FE5F_48cc_88E9_399E5ED7B6B3" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="EAID_DL000000_FE5F_48cc_88E9_399E5ED7B6B3" bpmnElement="EAID_DB1C0A01_EE42_4ae8_A8F6_31C339174E45" targetElement="EAID_DO000001_FE5F_48cc_88E9_399E5ED7B6B3">
+        <di:waypoint xsi:type="dc:Point" x="191" y="66" />
+        <di:waypoint xsi:type="dc:Point" x="222" y="66" />
+        <di:waypoint xsi:type="dc:Point" x="222" y="105" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="EAID_DL000001_FE5F_48cc_88E9_399E5ED7B6B3" bpmnElement="EAID_445B452F_2CB6_40ea_A251_1BA57F365346">
+        <di:waypoint xsi:type="dc:Point" x="124" y="136" />
+        <di:waypoint xsi:type="dc:Point" x="173" y="136" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="104" y="111" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="EAID_DL000002_FE5F_48cc_88E9_399E5ED7B6B3" bpmnElement="EAID_62D614F6_EB06_4fd1_A7AC_0AABFCAFF904">
+        <di:waypoint xsi:type="dc:Point" x="283" y="136" />
+        <di:waypoint xsi:type="dc:Point" x="337" y="136" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="265" y="111" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Lane_0wj6qh9_di" bpmnElement="Lane_0wj6qh9">
+        <dc:Bounds x="30" y="20" width="393" height="204" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+    <bpmndi:BPMNLabelStyle id="EAID_LS000000_FE5F_48cc_88E9_399E5ED7B6B3">
+      <dc:Font name="Calibri" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+    </bpmndi:BPMNLabelStyle>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

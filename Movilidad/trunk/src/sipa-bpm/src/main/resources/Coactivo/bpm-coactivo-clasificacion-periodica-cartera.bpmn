@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:ssbp="www.sparxsystems.com.au/bpmn20" id="EAPK_A6E48D7F_7645_476d_8D1B_99086140B932" name="Clasificacion periodica cartera" targetNamespace="www.sparxsystems.com.au/bpmn20" exporter="Camunda Modeler" exporterVersion="1.8.0">
+  <bpmn:collaboration id="Collaboration_0xa66m6">
+    <bpmn:participant id="Participant_16is3b1" name="SDM" processRef="Process_1poszev" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_1poszev" name="Clasificacion periodica cartera" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1eynhdf" name="Inicio">
+      <bpmn:outgoing>SequenceFlow_0qephhg</bpmn:outgoing>
+      <bpmn:messageEventDefinition messageRef="Message_080nxb2" />
+    </bpmn:startEvent>
+    <bpmn:serviceTask id="Task_1583r1f" name="Listar terceros en coactiva" camunda:class="co.gov.movilidadbogota.sipa.bpm.DummyTask">
+      <bpmn:incoming>SequenceFlow_0qephhg</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0n77du1</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:callActivity id="Task_0tai4jn" name="Terceros en coactiva" calledElement="Sp terceros en coactva">
+      <bpmn:incoming>SequenceFlow_0n77du1</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1gl9r3e</bpmn:outgoing>
+      <bpmn:multiInstanceLoopCharacteristics>
+        <bpmn:loopCardinality xsi:type="bpmn:tFormalExpression">1</bpmn:loopCardinality>
+      </bpmn:multiInstanceLoopCharacteristics>
+    </bpmn:callActivity>
+    <bpmn:endEvent id="EndEvent_1ujszz5">
+      <bpmn:incoming>SequenceFlow_1gl9r3e</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_0qephhg" sourceRef="StartEvent_1eynhdf" targetRef="Task_1583r1f" />
+    <bpmn:sequenceFlow id="SequenceFlow_0n77du1" sourceRef="Task_1583r1f" targetRef="Task_0tai4jn" />
+    <bpmn:sequenceFlow id="SequenceFlow_1gl9r3e" sourceRef="Task_0tai4jn" targetRef="EndEvent_1ujszz5" />
+    <bpmn:textAnnotation id="EAID_2943178F_E90D_4122_B2FC_20B2D81D48AF">    <bpmn:text>Este proceso se inicia cada 6 meses para clasificar cartera</bpmn:text>
+</bpmn:textAnnotation>
+  </bpmn:process>
+  <bpmn:message id="Message_080nxb2" name="Message_12r6tde" />
+  <bpmndi:BPMNDiagram id="EAID_7D8D1B0F_11B1_466d_B4EF_8D9F577E84EC" name="Clasificacion periodica cartera">
+    <bpmndi:BPMNPlane id="EAID_PL000000_11B1_466d_B4EF_8D9F577E84EC" bpmnElement="Collaboration_0xa66m6">
+      <bpmndi:BPMNShape id="EAID_DO000002_11B1_466d_B4EF_8D9F577E84EC" bpmnElement="EAID_2943178F_E90D_4122_B2FC_20B2D81D48AF">
+        <dc:Bounds x="72" y="11" width="201" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Participant_16is3b1_di" bpmnElement="Participant_16is3b1">
+        <dc:Bounds x="0" y="0" width="434" height="178" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="StartEvent_1g67x63_di" bpmnElement="StartEvent_1eynhdf">
+        <dc:Bounds x="51" y="83" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="56" y="122" width="26" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0qephhg_di" bpmnElement="SequenceFlow_0qephhg">
+        <di:waypoint xsi:type="dc:Point" x="87" y="101" />
+        <di:waypoint xsi:type="dc:Point" x="112" y="101" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="99.5" y="79.5" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="ServiceTask_048h3kr_di" bpmnElement="Task_1583r1f">
+        <dc:Bounds x="112" y="61" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0n77du1_di" bpmnElement="SequenceFlow_0n77du1">
+        <di:waypoint xsi:type="dc:Point" x="212" y="101" />
+        <di:waypoint xsi:type="dc:Point" x="240" y="101" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="226" y="79.5" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="CallActivity_0xwh6hf_di" bpmnElement="Task_0tai4jn">
+        <dc:Bounds x="240" y="61" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_1ujszz5_di" bpmnElement="EndEvent_1ujszz5">
+        <dc:Bounds x="366.39099999999996" y="83" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="384.39099999999996" y="122" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_1gl9r3e_di" bpmnElement="SequenceFlow_1gl9r3e">
+        <di:waypoint xsi:type="dc:Point" x="340" y="101" />
+        <di:waypoint xsi:type="dc:Point" x="366" y="101" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="353" y="79" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+    <bpmndi:BPMNLabelStyle id="EAID_LS000000_11B1_466d_B4EF_8D9F577E84EC">
+      <dc:Font name="Calibri" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+    </bpmndi:BPMNLabelStyle>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

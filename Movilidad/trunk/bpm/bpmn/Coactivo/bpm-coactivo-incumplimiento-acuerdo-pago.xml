@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:ssbp="www.sparxsystems.com.au/bpmn20" id="EAPK_B44F8498_7C96_4a29_BC12_7A1916126A3B" name="Incumplimiento acuerdo pago" targetNamespace="www.sparxsystems.com.au/bpmn20" exporter="Camunda Modeler" exporterVersion="1.7.2">
+  <bpmn:collaboration id="Collaboration_0n93bv7">
+    <bpmn:participant id="Participant_0i52w21" name="SDM" processRef="EAID_3BBD5367_B5B3_4cfa_AC31_798C6F6D3177" />
+  </bpmn:collaboration>
+  <bpmn:process id="EAID_3BBD5367_B5B3_4cfa_AC31_798C6F6D3177" name="Incumplimiento acuerdo pago" processType="None" isClosed="false" isExecutable="false">
+    <bpmn:laneSet>
+      <bpmn:lane id="Lane_0rwyilq" name="AT.1 (Abogado de dependencia)">
+        <bpmn:flowNodeRef>EAID_2151F8B0_1BC7_4946_A403_3ABDAE60DB6A</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EAID_8DC7988A_B52F_4a83_BDCF_E61C2F2926E5</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EAID_FDD5B82A_8D14_40f3_AB9A_DDD8292C6F9E</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EAID_5317DF49_0294_4070_8235_A056F1D64A30</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EAID_9CCD70D3_926F_4016_840B_22CD1E38603A</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EAID_99FE79EC_C093_4902_9240_7EBD4535B91C</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EAID_2F0E20E6_A52A_436a_A363_9035AE145A01</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EAID_B3FFDBE0_6E65_4ff8_A1AD_4C361F17148D</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:exclusiveGateway id="EAID_2151F8B0_1BC7_4946_A403_3ABDAE60DB6A" name="�Tiene co-deudor?">
+      <bpmn:incoming>EAID_A35E0C30_D2A5_4f36_A282_EA52639E0294</bpmn:incoming>
+      <bpmn:outgoing>EAID_530C2825_07AB_4f99_936F_8F76F04B547E</bpmn:outgoing>
+      <bpmn:outgoing>EAID_01296A3B_9FDD_42c8_815B_9E4255A0AC05</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:exclusiveGateway id="EAID_8DC7988A_B52F_4a83_BDCF_E61C2F2926E5">
+      <bpmn:incoming>EAID_EE2864FE_2810_4c2c_8D13_0D2438893832</bpmn:incoming>
+      <bpmn:incoming>EAID_01296A3B_9FDD_42c8_815B_9E4255A0AC05</bpmn:incoming>
+      <bpmn:outgoing>EAID_F3422D30_4A0A_4f18_83A7_C9D493D62B2A</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:dataObjectReference id="EAID_B4730CEF_C56A_45b4_90A3_EAF2CC385C02" name="Plantilla incumplimiento acuerdo pago" dataObjectRef="EAID_DOb000000_C56A_45b4_90A3_EAF2CC385C02">
+      <bpmn:documentation>La plantilla que se debe usar es la correspondiente al acto automatico incumplimiento acuerdo pago</bpmn:documentation>
+    </bpmn:dataObjectReference>
+    <bpmn:dataObject id="EAID_DOb000000_C56A_45b4_90A3_EAF2CC385C02" name="Plantilla incumplimiento acuerdo pago" />
+    <bpmn:dataObjectReference id="EAID_F85F6CA4_67CE_493f_8AD7_8B048B2F2BA9" name="Acto incumplimiento acuerdo pago" dataObjectRef="EAID_DOb000000_67CE_493f_8AD7_8B048B2F2BA9" />
+    <bpmn:dataObject id="EAID_DOb000000_67CE_493f_8AD7_8B048B2F2BA9" name="Acto incumplimiento acuerdo pago" />
+    <bpmn:intermediateCatchEvent id="EAID_FDD5B82A_8D14_40f3_AB9A_DDD8292C6F9E" name="T�rmino para reiniciar procesos coactivos, medidas cautelares o gestion persuasiva.">
+      <bpmn:incoming>EAID_F3422D30_4A0A_4f18_83A7_C9D493D62B2A</bpmn:incoming>
+      <bpmn:outgoing>EAID_6A55599D_2EE6_44d7_A8DD_840142A15F79</bpmn:outgoing>
+      <bpmn:timerEventDefinition />
+    </bpmn:intermediateCatchEvent>
+    <bpmn:startEvent id="EAID_5317DF49_0294_4070_8235_A056F1D64A30" name="Inicio">
+      <bpmn:outgoing>EAID_A8F91BB5_9658_4067_A8DC_549261EE2335</bpmn:outgoing>
+      <bpmn:messageEventDefinition />
+    </bpmn:startEvent>
+    <bpmn:endEvent id="EAID_9CCD70D3_926F_4016_840B_22CD1E38603A" name="EndEvent1">
+      <bpmn:incoming>EAID_6A55599D_2EE6_44d7_A8DD_840142A15F79</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:serviceTask id="EAID_99FE79EC_C093_4902_9240_7EBD4535B91C" name="Registrar el incumplimiento del acuerdo de pago en financiera" implementation="##unspecified">
+      <bpmn:incoming>EAID_6740B18D_E869_444f_B869_9F01D1CA17D3</bpmn:incoming>
+      <bpmn:outgoing>EAID_A35E0C30_D2A5_4f36_A282_EA52639E0294</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:serviceTask id="EAID_2F0E20E6_A52A_436a_A363_9035AE145A01" name="Registrar al co-deudor como responsable de las obligaciones" implementation="##unspecified">
+      <bpmn:incoming>EAID_530C2825_07AB_4f99_936F_8F76F04B547E</bpmn:incoming>
+      <bpmn:outgoing>EAID_EE2864FE_2810_4c2c_8D13_0D2438893832</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:callActivity id="EAID_B3FFDBE0_6E65_4ff8_A1AD_4C361F17148D" name="Acto automatico incumplimiento acuerdo pago">
+      <bpmn:incoming>EAID_A8F91BB5_9658_4067_A8DC_549261EE2335</bpmn:incoming>
+      <bpmn:outgoing>EAID_6740B18D_E869_444f_B869_9F01D1CA17D3</bpmn:outgoing>
+      <bpmn:ioSpecification>
+        <bpmn:dataInput id="EAID_DDIO000001_6E65_4ff8_A1AD_4C361F17148D" />
+        <bpmn:dataOutput id="EAID_DDIO000000_6E65_4ff8_A1AD_4C361F17148D" />
+        <bpmn:inputSet>
+          <bpmn:dataInputRefs>EAID_DDIO000001_6E65_4ff8_A1AD_4C361F17148D</bpmn:dataInputRefs>
+        </bpmn:inputSet>
+        <bpmn:outputSet>
+          <bpmn:dataOutputRefs>EAID_DDIO000000_6E65_4ff8_A1AD_4C361F17148D</bpmn:dataOutputRefs>
+        </bpmn:outputSet>
+      </bpmn:ioSpecification>
+      <bpmn:property id="Property_08ghgko" name="__targetRef_placeholder" />
+      <bpmn:dataInputAssociation id="EAID_D709FEB4_D920_41fe_9E0E_4D8D0CBC5B82">
+        <bpmn:sourceRef>EAID_B4730CEF_C56A_45b4_90A3_EAF2CC385C02</bpmn:sourceRef>
+        <bpmn:targetRef>Property_08ghgko</bpmn:targetRef>
+      </bpmn:dataInputAssociation>
+      <bpmn:dataOutputAssociation id="EAID_CA467B74_49B9_4d4d_99A0_4671DCCAE3D1">
+        <bpmn:sourceRef>EAID_DDIO000000_6E65_4ff8_A1AD_4C361F17148D</bpmn:sourceRef>
+        <bpmn:targetRef>EAID_F85F6CA4_67CE_493f_8AD7_8B048B2F2BA9</bpmn:targetRef>
+      </bpmn:dataOutputAssociation>
+    </bpmn:callActivity>
+    <bpmn:sequenceFlow id="EAID_A35E0C30_D2A5_4f36_A282_EA52639E0294" sourceRef="EAID_99FE79EC_C093_4902_9240_7EBD4535B91C" targetRef="EAID_2151F8B0_1BC7_4946_A403_3ABDAE60DB6A" />
+    <bpmn:sequenceFlow id="EAID_01296A3B_9FDD_42c8_815B_9E4255A0AC05" name="NO" sourceRef="EAID_2151F8B0_1BC7_4946_A403_3ABDAE60DB6A" targetRef="EAID_8DC7988A_B52F_4a83_BDCF_E61C2F2926E5" />
+    <bpmn:sequenceFlow id="EAID_530C2825_07AB_4f99_936F_8F76F04B547E" name="SI" sourceRef="EAID_2151F8B0_1BC7_4946_A403_3ABDAE60DB6A" targetRef="EAID_2F0E20E6_A52A_436a_A363_9035AE145A01" />
+    <bpmn:sequenceFlow id="EAID_EE2864FE_2810_4c2c_8D13_0D2438893832" sourceRef="EAID_2F0E20E6_A52A_436a_A363_9035AE145A01" targetRef="EAID_8DC7988A_B52F_4a83_BDCF_E61C2F2926E5" />
+    <bpmn:sequenceFlow id="EAID_F3422D30_4A0A_4f18_83A7_C9D493D62B2A" sourceRef="EAID_8DC7988A_B52F_4a83_BDCF_E61C2F2926E5" targetRef="EAID_FDD5B82A_8D14_40f3_AB9A_DDD8292C6F9E" />
+    <bpmn:sequenceFlow id="EAID_6A55599D_2EE6_44d7_A8DD_840142A15F79" sourceRef="EAID_FDD5B82A_8D14_40f3_AB9A_DDD8292C6F9E" targetRef="EAID_9CCD70D3_926F_4016_840B_22CD1E38603A" />
+    <bpmn:sequenceFlow id="EAID_A8F91BB5_9658_4067_A8DC_549261EE2335" sourceRef="EAID_5317DF49_0294_4070_8235_A056F1D64A30" targetRef="EAID_B3FFDBE0_6E65_4ff8_A1AD_4C361F17148D" />
+    <bpmn:sequenceFlow id="EAID_6740B18D_E869_444f_B869_9F01D1CA17D3" sourceRef="EAID_B3FFDBE0_6E65_4ff8_A1AD_4C361F17148D" targetRef="EAID_99FE79EC_C093_4902_9240_7EBD4535B91C" />
+    <bpmn:textAnnotation id="EAID_1AA9382D_D19F_4a79_BBB9_08A02CF420CB">    <bpmn:text>No todos los acuerdo de pago tienen codeudor como garantia</bpmn:text>
+</bpmn:textAnnotation>
+    <bpmn:textAnnotation id="EAID_20A1F9F3_106C_4f4a_89A1_E8B639A2797E">    <bpmn:text>Este proceso se genera de forma automatica</bpmn:text>
+</bpmn:textAnnotation>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="EAID_F66534E6_56C9_43cb_860E_D1BB61CB2A79" name="Incumplimiento acuerdo pago">
+    <bpmndi:BPMNPlane id="EAID_PL000000_56C9_43cb_860E_D1BB61CB2A79" bpmnElement="Collaboration_0n93bv7">
+      <bpmndi:BPMNShape id="Participant_0i52w21_di" bpmnElement="Participant_0i52w21">
+        <dc:Bounds x="-7" y="37" width="958" height="250" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000004_56C9_43cb_860E_D1BB61CB2A79" bpmnElement="EAID_2151F8B0_1BC7_4946_A403_3ABDAE60DB6A" isMarkerVisible="true">
+        <dc:Bounds x="487" y="142" width="42" height="42" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_1BC7_4946_A403_3ABDAE60DB6A" labelStyle="EAID_LS000000_56C9_43cb_860E_D1BB61CB2A79">
+          <dc:Bounds x="483" y="106" width="57" height="24" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000005_56C9_43cb_860E_D1BB61CB2A79" bpmnElement="EAID_8DC7988A_B52F_4a83_BDCF_E61C2F2926E5" isMarkerVisible="true">
+        <dc:Bounds x="716" y="133" width="42" height="42" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="692" y="175" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000010_56C9_43cb_860E_D1BB61CB2A79" bpmnElement="EAID_B4730CEF_C56A_45b4_90A3_EAF2CC385C02">
+        <dc:Bounds x="132" y="57" width="35" height="50" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_C56A_45b4_90A3_EAF2CC385C02" labelStyle="EAID_LS000000_56C9_43cb_860E_D1BB61CB2A79">
+          <dc:Bounds x="49" y="64" width="71" height="36" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000011_56C9_43cb_860E_D1BB61CB2A79" bpmnElement="EAID_F85F6CA4_67CE_493f_8AD7_8B048B2F2BA9">
+        <dc:Bounds x="268" y="58" width="35" height="50" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_67CE_493f_8AD7_8B048B2F2BA9" labelStyle="EAID_LS000000_56C9_43cb_860E_D1BB61CB2A79">
+          <dc:Bounds x="309" y="60" width="71" height="36" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000006_56C9_43cb_860E_D1BB61CB2A79" bpmnElement="EAID_FDD5B82A_8D14_40f3_AB9A_DDD8292C6F9E">
+        <dc:Bounds x="801" y="139" width="30" height="30" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_8D14_40f3_AB9A_DDD8292C6F9E" labelStyle="EAID_LS000000_56C9_43cb_860E_D1BB61CB2A79">
+          <dc:Bounds x="785" y="174" width="87" height="84" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000000_56C9_43cb_860E_D1BB61CB2A79" bpmnElement="EAID_5317DF49_0294_4070_8235_A056F1D64A30">
+        <dc:Bounds x="89" y="148" width="30" height="30" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_0294_4070_8235_A056F1D64A30" labelStyle="EAID_LS000000_56C9_43cb_860E_D1BB61CB2A79">
+          <dc:Bounds x="89" y="188" width="25" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000007_56C9_43cb_860E_D1BB61CB2A79" bpmnElement="EAID_9CCD70D3_926F_4016_840B_22CD1E38603A">
+        <dc:Bounds x="881" y="139" width="30" height="30" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_926F_4016_840B_22CD1E38603A" labelStyle="EAID_LS000000_56C9_43cb_860E_D1BB61CB2A79">
+          <dc:Bounds x="878" y="179" width="53" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000002_56C9_43cb_860E_D1BB61CB2A79" bpmnElement="EAID_99FE79EC_C093_4902_9240_7EBD4535B91C">
+        <dc:Bounds x="337" y="124" width="110" height="78" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_C093_4902_9240_7EBD4535B91C" labelStyle="EAID_LS000000_56C9_43cb_860E_D1BB61CB2A79" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000003_56C9_43cb_860E_D1BB61CB2A79" bpmnElement="EAID_2F0E20E6_A52A_436a_A363_9035AE145A01">
+        <dc:Bounds x="571" y="125" width="110" height="77" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_A52A_436a_A363_9035AE145A01" labelStyle="EAID_LS000000_56C9_43cb_860E_D1BB61CB2A79" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000001_56C9_43cb_860E_D1BB61CB2A79" bpmnElement="EAID_B3FFDBE0_6E65_4ff8_A1AD_4C361F17148D" isExpanded="false">
+        <dc:Bounds x="172" y="129" width="117" height="69" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_6E65_4ff8_A1AD_4C361F17148D" labelStyle="EAID_LS000000_56C9_43cb_860E_D1BB61CB2A79" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000009_56C9_43cb_860E_D1BB61CB2A79" bpmnElement="EAID_1AA9382D_D19F_4a79_BBB9_08A02CF420CB">
+        <dc:Bounds x="507" y="237" width="270" height="30" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000008_56C9_43cb_860E_D1BB61CB2A79" bpmnElement="EAID_20A1F9F3_106C_4f4a_89A1_E8B639A2797E">
+        <dc:Bounds x="97" y="207" width="150" height="46" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="EAID_DL000006_56C9_43cb_860E_D1BB61CB2A79" bpmnElement="EAID_A35E0C30_D2A5_4f36_A282_EA52639E0294">
+        <di:waypoint xsi:type="dc:Point" x="447" y="163" />
+        <di:waypoint xsi:type="dc:Point" x="487" y="163" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="422" y="138" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="EAID_DL000002_56C9_43cb_860E_D1BB61CB2A79" bpmnElement="EAID_01296A3B_9FDD_42c8_815B_9E4255A0AC05">
+        <di:waypoint xsi:type="dc:Point" x="508" y="184" />
+        <di:waypoint xsi:type="dc:Point" x="508" y="230" />
+        <di:waypoint xsi:type="dc:Point" x="737" y="230" />
+        <di:waypoint xsi:type="dc:Point" x="737" y="175" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_9FDD_42c8_815B_9E4255A0AC05" labelStyle="EAID_LS000001_56C9_43cb_860E_D1BB61CB2A79">
+          <dc:Bounds x="711" y="180" width="17" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="EAID_DL000008_56C9_43cb_860E_D1BB61CB2A79" bpmnElement="EAID_530C2825_07AB_4f99_936F_8F76F04B547E">
+        <di:waypoint xsi:type="dc:Point" x="529" y="163" />
+        <di:waypoint xsi:type="dc:Point" x="571" y="163" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_07AB_4f99_936F_8F76F04B547E" labelStyle="EAID_LS000001_56C9_43cb_860E_D1BB61CB2A79">
+          <dc:Bounds x="557" y="142" width="10" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="EAID_DL000003_56C9_43cb_860E_D1BB61CB2A79" bpmnElement="EAID_EE2864FE_2810_4c2c_8D13_0D2438893832">
+        <di:waypoint xsi:type="dc:Point" x="681" y="154" />
+        <di:waypoint xsi:type="dc:Point" x="716" y="154" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="654" y="129" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="EAID_DL000004_56C9_43cb_860E_D1BB61CB2A79" bpmnElement="EAID_F3422D30_4A0A_4f18_83A7_C9D493D62B2A">
+        <di:waypoint xsi:type="dc:Point" x="758" y="154" />
+        <di:waypoint xsi:type="dc:Point" x="801" y="154" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="735" y="129" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="EAID_DL000001_56C9_43cb_860E_D1BB61CB2A79" bpmnElement="EAID_D709FEB4_D920_41fe_9E0E_4D8D0CBC5B82" targetElement="EAID_DO000001_56C9_43cb_860E_D1BB61CB2A79">
+        <di:waypoint xsi:type="dc:Point" x="167" y="85" />
+        <di:waypoint xsi:type="dc:Point" x="198" y="85" />
+        <di:waypoint xsi:type="dc:Point" x="198" y="129" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="EAID_DL000000_56C9_43cb_860E_D1BB61CB2A79" bpmnElement="EAID_CA467B74_49B9_4d4d_99A0_4671DCCAE3D1" sourceElement="EAID_DO000001_56C9_43cb_860E_D1BB61CB2A79">
+        <di:waypoint xsi:type="dc:Point" x="230" y="129" />
+        <di:waypoint xsi:type="dc:Point" x="230" y="76" />
+        <di:waypoint xsi:type="dc:Point" x="268" y="76" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="EAID_DL000005_56C9_43cb_860E_D1BB61CB2A79" bpmnElement="EAID_6A55599D_2EE6_44d7_A8DD_840142A15F79">
+        <di:waypoint xsi:type="dc:Point" x="831" y="154" />
+        <di:waypoint xsi:type="dc:Point" x="881" y="154" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="811" y="129" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="EAID_DL000009_56C9_43cb_860E_D1BB61CB2A79" bpmnElement="EAID_A8F91BB5_9658_4067_A8DC_549261EE2335">
+        <di:waypoint xsi:type="dc:Point" x="119" y="163" />
+        <di:waypoint xsi:type="dc:Point" x="172" y="163" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="101" y="138" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="EAID_DL000007_56C9_43cb_860E_D1BB61CB2A79" bpmnElement="EAID_6740B18D_E869_444f_B869_9F01D1CA17D3">
+        <di:waypoint xsi:type="dc:Point" x="289" y="163" />
+        <di:waypoint xsi:type="dc:Point" x="337" y="163" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="268" y="138" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Lane_0rwyilq_di" bpmnElement="Lane_0rwyilq">
+        <dc:Bounds x="23" y="37" width="928" height="250" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+    <bpmndi:BPMNLabelStyle id="EAID_LS000000_56C9_43cb_860E_D1BB61CB2A79">
+      <dc:Font name="Calibri" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+    </bpmndi:BPMNLabelStyle>
+    <bpmndi:BPMNLabelStyle id="EAID_LS000001_56C9_43cb_860E_D1BB61CB2A79">
+      <dc:Font name="Calibri" size="8.5" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+    </bpmndi:BPMNLabelStyle>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

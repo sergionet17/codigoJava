@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:ssbp="www.sparxsystems.com.au/bpmn20" id="EAPK_3A25A220_6AC0_4ff7_AE40_8E3417F99C40" name="Pruebas" targetNamespace="www.sparxsystems.com.au/bpmn20" exporter="Camunda Modeler" exporterVersion="1.7.2">
+  <bpmn:collaboration id="Collaboration_1peysn7">
+    <bpmn:participant id="Participant_1bpi41r" name="SDM" processRef="EAID_57F0470D_C3FC_4876_83B0_3D802D67A29E" />
+  </bpmn:collaboration>
+  <bpmn:process id="EAID_57F0470D_C3FC_4876_83B0_3D802D67A29E" name="Pruebas" processType="None" isClosed="false" isExecutable="false">
+    <bpmn:laneSet>
+      <bpmn:lane id="Lane_1seuop0" name="AT.1(Abogado de dependencia)">
+        <bpmn:flowNodeRef>EAID_B506C1F1_4A36_462d_B72D_F2155E027D0E</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EAID_CBEC48FC_270B_4e40_ABC9_403B74501B42</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EAID_8BDA7831_730A_418e_9E7B_82BBD3EA1F64</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EAID_51A47EA7_22C0_400e_97F5_8D6B0267EF51</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EAID_F1FFA3AC_FB3F_4864_B5F9_252BA59A9D14</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:exclusiveGateway id="EAID_2BDD70F2_BBE5_431f_9B6D_75AE00B76622">
+      <bpmn:outgoing>EAID_DEFCD118_988C_42ae_BF05_182A4A1FBBB7</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:exclusiveGateway id="EAID_D8A5D103_20F2_4ba0_A2D8_47D136098920">
+      <bpmn:incoming>EAID_A3E249CE_C8E1_47b8_9E5B_6CDE88238580</bpmn:incoming>
+      <bpmn:outgoing>EAID_FB7F63AA_C323_47b6_A360_2E7D96E05A9D</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:exclusiveGateway id="EAID_AFC6214F_3529_4093_8758_65FC63C79154">
+      <bpmn:incoming>EAID_FB7F63AA_C323_47b6_A360_2E7D96E05A9D</bpmn:incoming>
+      <bpmn:outgoing>EAID_BA47F77F_2E69_4ba2_99BD_C590432B885F</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="EAID_FB7F63AA_C323_47b6_A360_2E7D96E05A9D" sourceRef="EAID_D8A5D103_20F2_4ba0_A2D8_47D136098920" targetRef="EAID_AFC6214F_3529_4093_8758_65FC63C79154" />
+    <bpmn:exclusiveGateway id="EAID_867507A5_4D20_4fe9_84F4_6C97C6C62F7C">
+      <bpmn:incoming>EAID_DEFCD118_988C_42ae_BF05_182A4A1FBBB7</bpmn:incoming>
+      <bpmn:incoming>EAID_7D8F2F1F_D41A_494d_B1F0_11A2A793ACB8</bpmn:incoming>
+      <bpmn:outgoing>EAID_A3E249CE_C8E1_47b8_9E5B_6CDE88238580</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="EAID_A3E249CE_C8E1_47b8_9E5B_6CDE88238580" sourceRef="EAID_867507A5_4D20_4fe9_84F4_6C97C6C62F7C" targetRef="EAID_D8A5D103_20F2_4ba0_A2D8_47D136098920" />
+    <bpmn:sequenceFlow id="EAID_DEFCD118_988C_42ae_BF05_182A4A1FBBB7" sourceRef="EAID_2BDD70F2_BBE5_431f_9B6D_75AE00B76622" targetRef="EAID_867507A5_4D20_4fe9_84F4_6C97C6C62F7C" />
+    <bpmn:exclusiveGateway id="EAID_7F512649_8843_49ad_B737_0F50F31342C4" />
+    <bpmn:exclusiveGateway id="EAID_2BDC55EB_6056_4861_B0E2_6B962865D220">
+      <bpmn:outgoing>EAID_7D8F2F1F_D41A_494d_B1F0_11A2A793ACB8</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="EAID_7D8F2F1F_D41A_494d_B1F0_11A2A793ACB8" sourceRef="EAID_2BDC55EB_6056_4861_B0E2_6B962865D220" targetRef="EAID_867507A5_4D20_4fe9_84F4_6C97C6C62F7C" />
+    <bpmn:sequenceFlow id="EAID_BA47F77F_2E69_4ba2_99BD_C590432B885F" sourceRef="EAID_AFC6214F_3529_4093_8758_65FC63C79154" targetRef="EAID_CBEC48FC_270B_4e40_ABC9_403B74501B42" />
+    <bpmn:dataObjectReference id="EAID_0865E76A_B86C_4efc_ADBA_B73CB75B0D61" name="Plantilla  decretar prubeas" dataObjectRef="EAID_DOb000000_B86C_4efc_ADBA_B73CB75B0D61">
+      <bpmn:documentation>La plantilla que se debe usar es la correspondiente al acto decretar prubeas</bpmn:documentation>
+    </bpmn:dataObjectReference>
+    <bpmn:dataObject id="EAID_DOb000000_B86C_4efc_ADBA_B73CB75B0D61" name="Plantilla  decretar prubeas" />
+    <bpmn:dataObjectReference id="EAID_0ED583F6_9AE4_4718_B906_5DD68153AC08" name="Anexo se cargan las pruebas que se tienen&#10;" dataObjectRef="EAID_DOb000000_9AE4_4718_B906_5DD68153AC08" />
+    <bpmn:dataObject id="EAID_DOb000000_9AE4_4718_B906_5DD68153AC08" name="Anexo se cargan las pruebas que se tienen&#10;" />
+    <bpmn:startEvent id="EAID_B506C1F1_4A36_462d_B72D_F2155E027D0E" name="Inicio">
+      <bpmn:outgoing>EAID_19F639D5_BAD9_41da_8EC2_AAAF77BCAEEA</bpmn:outgoing>
+      <bpmn:messageEventDefinition />
+    </bpmn:startEvent>
+    <bpmn:endEvent id="EAID_CBEC48FC_270B_4e40_ABC9_403B74501B42" name="EndEvent1">
+      <bpmn:incoming>EAID_BA47F77F_2E69_4ba2_99BD_C590432B885F</bpmn:incoming>
+      <bpmn:incoming>EAID_117074FE_73EA_475c_BDC8_829DCBFF2FC6</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:callActivity id="EAID_8BDA7831_730A_418e_9E7B_82BBD3EA1F64" name="Pruebas a terceros">
+      <bpmn:incoming>EAID_DB60C126_078B_4b4a_8B99_94CE0E19ED77</bpmn:incoming>
+      <bpmn:outgoing>EAID_117074FE_73EA_475c_BDC8_829DCBFF2FC6</bpmn:outgoing>
+      <bpmn:multiInstanceLoopCharacteristics />
+    </bpmn:callActivity>
+    <bpmn:userTask id="EAID_51A47EA7_22C0_400e_97F5_8D6B0267EF51" name="Definir terceros para practica de pruebas" implementation="##unspecified">
+      <bpmn:incoming>EAID_19F639D5_BAD9_41da_8EC2_AAAF77BCAEEA</bpmn:incoming>
+      <bpmn:outgoing>EAID_68C8153D_64B8_46c7_8A6F_039640F597AE</bpmn:outgoing>
+      <bpmn:ioSpecification>
+        <bpmn:dataInput id="EAID_DDIO000000_22C0_400e_97F5_8D6B0267EF51" />
+        <bpmn:inputSet>
+          <bpmn:dataInputRefs>EAID_DDIO000000_22C0_400e_97F5_8D6B0267EF51</bpmn:dataInputRefs>
+        </bpmn:inputSet>
+        <bpmn:outputSet />
+      </bpmn:ioSpecification>
+      <bpmn:property id="Property_0srauls" name="__targetRef_placeholder" />
+      <bpmn:dataInputAssociation id="EAID_0EDE3F3B_EA97_4fc1_BF40_F0DB23F2A442">
+        <bpmn:sourceRef>EAID_0ED583F6_9AE4_4718_B906_5DD68153AC08</bpmn:sourceRef>
+        <bpmn:targetRef>Property_0srauls</bpmn:targetRef>
+      </bpmn:dataInputAssociation>
+    </bpmn:userTask>
+    <bpmn:callActivity id="EAID_F1FFA3AC_FB3F_4864_B5F9_252BA59A9D14" name="Acto decretar pruebas">
+      <bpmn:incoming>EAID_68C8153D_64B8_46c7_8A6F_039640F597AE</bpmn:incoming>
+      <bpmn:outgoing>EAID_DB60C126_078B_4b4a_8B99_94CE0E19ED77</bpmn:outgoing>
+      <bpmn:ioSpecification>
+        <bpmn:dataInput id="EAID_DDIO000000_FB3F_4864_B5F9_252BA59A9D14" />
+        <bpmn:inputSet>
+          <bpmn:dataInputRefs>EAID_DDIO000000_FB3F_4864_B5F9_252BA59A9D14</bpmn:dataInputRefs>
+        </bpmn:inputSet>
+        <bpmn:outputSet />
+      </bpmn:ioSpecification>
+      <bpmn:property id="Property_0gmgod9" name="__targetRef_placeholder" />
+      <bpmn:dataInputAssociation id="EAID_64AF1AD6_CA4B_45ed_8537_A9A6A0059F7A">
+        <bpmn:sourceRef>EAID_0865E76A_B86C_4efc_ADBA_B73CB75B0D61</bpmn:sourceRef>
+        <bpmn:targetRef>Property_0gmgod9</bpmn:targetRef>
+      </bpmn:dataInputAssociation>
+    </bpmn:callActivity>
+    <bpmn:sequenceFlow id="EAID_19F639D5_BAD9_41da_8EC2_AAAF77BCAEEA" sourceRef="EAID_B506C1F1_4A36_462d_B72D_F2155E027D0E" targetRef="EAID_51A47EA7_22C0_400e_97F5_8D6B0267EF51" />
+    <bpmn:sequenceFlow id="EAID_117074FE_73EA_475c_BDC8_829DCBFF2FC6" sourceRef="EAID_8BDA7831_730A_418e_9E7B_82BBD3EA1F64" targetRef="EAID_CBEC48FC_270B_4e40_ABC9_403B74501B42" />
+    <bpmn:sequenceFlow id="EAID_DB60C126_078B_4b4a_8B99_94CE0E19ED77" sourceRef="EAID_F1FFA3AC_FB3F_4864_B5F9_252BA59A9D14" targetRef="EAID_8BDA7831_730A_418e_9E7B_82BBD3EA1F64" />
+    <bpmn:sequenceFlow id="EAID_68C8153D_64B8_46c7_8A6F_039640F597AE" sourceRef="EAID_51A47EA7_22C0_400e_97F5_8D6B0267EF51" targetRef="EAID_F1FFA3AC_FB3F_4864_B5F9_252BA59A9D14" />
+    <bpmn:textAnnotation id="EAID_536DFA6E_B0CF_413e_9B10_89C0A24A7842">    <bpmn:text>Tambien se cargan las pruebas que se tienen</bpmn:text>
+</bpmn:textAnnotation>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="EAID_D6E8051D_9A6F_4ffc_927B_60868E2CB12F" name="Pruebas">
+    <bpmndi:BPMNPlane id="EAID_PL000000_9A6F_4ffc_927B_60868E2CB12F" bpmnElement="Collaboration_1peysn7">
+      <bpmndi:BPMNShape id="Participant_1bpi41r_di" bpmnElement="Participant_1bpi41r">
+        <dc:Bounds x="-6" y="17" width="714" height="238" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000006_9A6F_4ffc_927B_60868E2CB12F" bpmnElement="EAID_0865E76A_B86C_4efc_ADBA_B73CB75B0D61">
+        <dc:Bounds x="320" y="150" width="35" height="50" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_B86C_4efc_ADBA_B73CB75B0D61" labelStyle="EAID_LS000000_9A6F_4ffc_927B_60868E2CB12F">
+          <dc:Bounds x="251" y="187" width="84" height="24" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000007_9A6F_4ffc_927B_60868E2CB12F" bpmnElement="EAID_0ED583F6_9AE4_4718_B906_5DD68153AC08">
+        <dc:Bounds x="160" y="152" width="35" height="50" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_9AE4_4718_B906_5DD68153AC08" labelStyle="EAID_LS000000_9A6F_4ffc_927B_60868E2CB12F">
+          <dc:Bounds x="73" y="172" width="83" height="36" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000000_9A6F_4ffc_927B_60868E2CB12F" bpmnElement="EAID_B506C1F1_4A36_462d_B72D_F2155E027D0E">
+        <dc:Bounds x="100" y="100" width="30" height="30" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_4A36_462d_B72D_F2155E027D0E" labelStyle="EAID_LS000000_9A6F_4ffc_927B_60868E2CB12F">
+          <dc:Bounds x="100" y="140" width="25" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000003_9A6F_4ffc_927B_60868E2CB12F" bpmnElement="EAID_CBEC48FC_270B_4e40_ABC9_403B74501B42">
+        <dc:Bounds x="630" y="100" width="30" height="30" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_270B_4e40_ABC9_403B74501B42" labelStyle="EAID_LS000000_9A6F_4ffc_927B_60868E2CB12F">
+          <dc:Bounds x="627" y="140" width="53" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000005_9A6F_4ffc_927B_60868E2CB12F" bpmnElement="EAID_8BDA7831_730A_418e_9E7B_82BBD3EA1F64" isExpanded="false">
+        <dc:Bounds x="490" y="80" width="110" height="60" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_730A_418e_9E7B_82BBD3EA1F64" labelStyle="EAID_LS000000_9A6F_4ffc_927B_60868E2CB12F" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000001_9A6F_4ffc_927B_60868E2CB12F" bpmnElement="EAID_51A47EA7_22C0_400e_97F5_8D6B0267EF51">
+        <dc:Bounds x="181" y="80" width="110" height="60" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_22C0_400e_97F5_8D6B0267EF51" labelStyle="EAID_LS000000_9A6F_4ffc_927B_60868E2CB12F" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000004_9A6F_4ffc_927B_60868E2CB12F" bpmnElement="EAID_F1FFA3AC_FB3F_4864_B5F9_252BA59A9D14" isExpanded="false">
+        <dc:Bounds x="331" y="80" width="110" height="60" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_FB3F_4864_B5F9_252BA59A9D14" labelStyle="EAID_LS000000_9A6F_4ffc_927B_60868E2CB12F" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000002_9A6F_4ffc_927B_60868E2CB12F" bpmnElement="EAID_536DFA6E_B0CF_413e_9B10_89C0A24A7842">
+        <dc:Bounds x="72" y="43" width="117" height="42" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="EAID_DL000001_9A6F_4ffc_927B_60868E2CB12F" bpmnElement="EAID_64AF1AD6_CA4B_45ed_8537_A9A6A0059F7A" targetElement="EAID_DO000004_9A6F_4ffc_927B_60868E2CB12F">
+        <di:waypoint xsi:type="dc:Point" x="355" y="174" />
+        <di:waypoint xsi:type="dc:Point" x="390" y="174" />
+        <di:waypoint xsi:type="dc:Point" x="390" y="140" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="EAID_DL000000_9A6F_4ffc_927B_60868E2CB12F" bpmnElement="EAID_0EDE3F3B_EA97_4fc1_BF40_F0DB23F2A442" targetElement="EAID_DO000001_9A6F_4ffc_927B_60868E2CB12F">
+        <di:waypoint xsi:type="dc:Point" x="195" y="182" />
+        <di:waypoint xsi:type="dc:Point" x="234" y="182" />
+        <di:waypoint xsi:type="dc:Point" x="234" y="140" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="EAID_DL000003_9A6F_4ffc_927B_60868E2CB12F" bpmnElement="EAID_19F639D5_BAD9_41da_8EC2_AAAF77BCAEEA">
+        <di:waypoint xsi:type="dc:Point" x="130" y="114" />
+        <di:waypoint xsi:type="dc:Point" x="181" y="114" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="111" y="89" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="EAID_DL000005_9A6F_4ffc_927B_60868E2CB12F" bpmnElement="EAID_117074FE_73EA_475c_BDC8_829DCBFF2FC6">
+        <di:waypoint xsi:type="dc:Point" x="600" y="114" />
+        <di:waypoint xsi:type="dc:Point" x="630" y="114" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="570" y="89" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="EAID_DL000004_9A6F_4ffc_927B_60868E2CB12F" bpmnElement="EAID_DB60C126_078B_4b4a_8B99_94CE0E19ED77">
+        <di:waypoint xsi:type="dc:Point" x="441" y="110" />
+        <di:waypoint xsi:type="dc:Point" x="490" y="110" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="421" y="85" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="EAID_DL000002_9A6F_4ffc_927B_60868E2CB12F" bpmnElement="EAID_68C8153D_64B8_46c7_8A6F_039640F597AE">
+        <di:waypoint xsi:type="dc:Point" x="291" y="110" />
+        <di:waypoint xsi:type="dc:Point" x="331" y="110" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="266" y="85" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Lane_1seuop0_di" bpmnElement="Lane_1seuop0">
+        <dc:Bounds x="24" y="17" width="684" height="238" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+    <bpmndi:BPMNLabelStyle id="EAID_LS000000_9A6F_4ffc_927B_60868E2CB12F">
+      <dc:Font name="Calibri" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+    </bpmndi:BPMNLabelStyle>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

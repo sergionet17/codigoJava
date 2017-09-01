@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<XMI xmi.version="1.1" xmlns:UML="omg.org/UML1.3">
+	<XMI.header>
+		<XMI.documentation>
+			<XMI.exporter>Enterprise Architect</XMI.exporter>
+			<XMI.exporterVersion>2.5</XMI.exporterVersion>
+		</XMI.documentation>
+	</XMI.header>
+	<XMI.content>
+		<UML:Model name="EA Model" xmi.id="MX_EAID_94BD2E23_8B30_4132_BF82_54EA2435EE11">
+			<UML:Namespace.ownedElement>
+				<UML:Class name="EARootClass" xmi.id="EAID_11111111_5487_4080_A7F4_41526CB0AA00" isRoot="true" isLeaf="false" isAbstract="false"/>
+				<UML:Package name="014-Comunicación a SIMIT " xmi.id="EAPK_94BD2E23_8B30_4132_BF82_54EA2435EE11" isRoot="false" isLeaf="false" isAbstract="false" visibility="public">
+					<UML:ModelElement.taggedValue>
+						<UML:TaggedValue tag="parent" value="EAPK_212FFB6B_8338_48a8_B093_5D0DBEDD150F"/>
+						<UML:TaggedValue tag="created" value="2017-02-17 15:54:11"/>
+						<UML:TaggedValue tag="modified" value="2017-03-27 23:47:17"/>
+						<UML:TaggedValue tag="iscontrolled" value="TRUE"/>
+						<UML:TaggedValue tag="xmlpath" value="ucm-contravenciones-comunicacion-a-simit .xml"/>
+						<UML:TaggedValue tag="lastloaddate" value="2017-03-27 22:59:04"/>
+						<UML:TaggedValue tag="lastsavedate" value="2017-02-19 11:56:13"/>
+						<UML:TaggedValue tag="version" value="1.0"/>
+						<UML:TaggedValue tag="isprotected" value="FALSE"/>
+						<UML:TaggedValue tag="usedtd" value="FALSE"/>
+						<UML:TaggedValue tag="xmiver" value="Enterprise Architect XMI/UML 1.3"/>
+						<UML:TaggedValue tag="logxml" value="FALSE"/>
+						<UML:TaggedValue tag="packageFlags" value="Recurse=0;VCCFG=secmov-sipa;CRC=0;"/>
+						<UML:TaggedValue tag="batchsave" value="0"/>
+						<UML:TaggedValue tag="batchload" value="0"/>
+						<UML:TaggedValue tag="phase" value="1.0"/>
+						<UML:TaggedValue tag="status" value="Proposed"/>
+						<UML:TaggedValue tag="author" value="dev"/>
+						<UML:TaggedValue tag="complexity" value="1"/>
+						<UML:TaggedValue tag="ea_stype" value="Public"/>
+						<UML:TaggedValue tag="tpos" value="0"/>
+						<UML:TaggedValue tag="gentype" value="Java"/>
+					</UML:ModelElement.taggedValue>
+					<UML:Namespace.ownedElement>
+						<UML:UseCase name="003-CU150.1 Realizar el reporte de recaudo a SIMIT." xmi.id="EAID_229433BB_DEAA_4dd2_A5E9_C1C9BF0D0159" visibility="public" namespace="EAPK_94BD2E23_8B30_4132_BF82_54EA2435EE11" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="documentation" value="Actualmente se hace envío de dos reportes por día."/>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="UseCase"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_94BD2E23_8B30_4132_BF82_54EA2435EE11"/>
+								<UML:TaggedValue tag="date_created" value="2017-02-17 15:57:23"/>
+								<UML:TaggedValue tag="date_modified" value="2017-03-27 23:47:38"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="014-Comunicación a SIMIT "/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="dev"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Proposed"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="15131"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:UseCase>
+						<UML:Association xmi.id="EAID_9C7617C4_9BF1_43b6_91EC_CE535215E8F6" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="10919"/>
+								<UML:TaggedValue tag="ea_sourceName" value="Timer"/>
+								<UML:TaggedValue tag="ea_targetName" value="003-CU150.1 Realizar el reporte de recaudo a SIMIT."/>
+								<UML:TaggedValue tag="ea_sourceType" value="Actor"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="14424"/>
+								<UML:TaggedValue tag="ea_targetID" value="15131"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_C1BFCF04_964A_4957_9418_BCC89EFC0A67">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_229433BB_DEAA_4dd2_A5E9_C1C9BF0D0159">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:Dependency client="EAID_229433BB_DEAA_4dd2_A5E9_C1C9BF0D0159" supplier="EAID_30A6681E_1D85_441f_88E1_3D4B21BB55A2" xmi.id="EAID_ADA15B3B_F365_46e7_A012_26BE6D9BBB5B" visibility="public">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="Dependency"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="11862"/>
+								<UML:TaggedValue tag="ea_sourceName" value="003-CU150.1 Realizar el reporte de recaudo a SIMIT."/>
+								<UML:TaggedValue tag="ea_targetName" value="SIMIT"/>
+								<UML:TaggedValue tag="ea_sourceType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_targetType" value="Actor"/>
+								<UML:TaggedValue tag="ea_sourceID" value="15131"/>
+								<UML:TaggedValue tag="ea_targetID" value="13131"/>
+								<UML:TaggedValue tag="src_visibility" value="Public"/>
+								<UML:TaggedValue tag="src_aggregation" value="0"/>
+								<UML:TaggedValue tag="src_isOrdered" value="false"/>
+								<UML:TaggedValue tag="src_targetScope" value="instance"/>
+								<UML:TaggedValue tag="src_changeable" value="none"/>
+								<UML:TaggedValue tag="src_isNavigable" value="false"/>
+								<UML:TaggedValue tag="src_containment" value="Unspecified"/>
+								<UML:TaggedValue tag="src_style" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+								<UML:TaggedValue tag="dst_visibility" value="Public"/>
+								<UML:TaggedValue tag="dst_aggregation" value="0"/>
+								<UML:TaggedValue tag="dst_isOrdered" value="false"/>
+								<UML:TaggedValue tag="dst_targetScope" value="instance"/>
+								<UML:TaggedValue tag="dst_changeable" value="none"/>
+								<UML:TaggedValue tag="dst_isNavigable" value="true"/>
+								<UML:TaggedValue tag="dst_containment" value="Unspecified"/>
+								<UML:TaggedValue tag="dst_style" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+							</UML:ModelElement.taggedValue>
+						</UML:Dependency>
+						<UML:UseCase name="001-CU148.1 Realizar el reporte de comparendos a SIMIT." xmi.id="EAID_4E150E4F_8D2A_42c2_BE64_02586EB21E52" visibility="public" namespace="EAPK_94BD2E23_8B30_4132_BF82_54EA2435EE11" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="documentation" value="Actualmente se hace envío de dos reportes por día."/>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="UseCase"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_94BD2E23_8B30_4132_BF82_54EA2435EE11"/>
+								<UML:TaggedValue tag="date_created" value="2017-02-17 15:54:41"/>
+								<UML:TaggedValue tag="date_modified" value="2017-03-27 23:47:31"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="014-Comunicación a SIMIT "/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="dev"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Proposed"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="15132"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:UseCase>
+						<UML:Dependency client="EAID_4E150E4F_8D2A_42c2_BE64_02586EB21E52" supplier="EAID_30A6681E_1D85_441f_88E1_3D4B21BB55A2" xmi.id="EAID_22F25B55_659A_4952_B0B9_49DA0254487E" visibility="public">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="Dependency"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="11861"/>
+								<UML:TaggedValue tag="ea_sourceName" value="001-CU148.1 Realizar el reporte de comparendos a SIMIT."/>
+								<UML:TaggedValue tag="ea_targetName" value="SIMIT"/>
+								<UML:TaggedValue tag="ea_sourceType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_targetType" value="Actor"/>
+								<UML:TaggedValue tag="ea_sourceID" value="15132"/>
+								<UML:TaggedValue tag="ea_targetID" value="13131"/>
+								<UML:TaggedValue tag="src_visibility" value="Public"/>
+								<UML:TaggedValue tag="src_aggregation" value="0"/>
+								<UML:TaggedValue tag="src_isOrdered" value="false"/>
+								<UML:TaggedValue tag="src_targetScope" value="instance"/>
+								<UML:TaggedValue tag="src_changeable" value="none"/>
+								<UML:TaggedValue tag="src_isNavigable" value="false"/>
+								<UML:TaggedValue tag="src_containment" value="Unspecified"/>
+								<UML:TaggedValue tag="src_style" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+								<UML:TaggedValue tag="dst_visibility" value="Public"/>
+								<UML:TaggedValue tag="dst_aggregation" value="0"/>
+								<UML:TaggedValue tag="dst_isOrdered" value="false"/>
+								<UML:TaggedValue tag="dst_targetScope" value="instance"/>
+								<UML:TaggedValue tag="dst_changeable" value="none"/>
+								<UML:TaggedValue tag="dst_isNavigable" value="true"/>
+								<UML:TaggedValue tag="dst_containment" value="Unspecified"/>
+								<UML:TaggedValue tag="dst_style" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+							</UML:ModelElement.taggedValue>
+						</UML:Dependency>
+						<UML:Association xmi.id="EAID_77C1D61C_B72B_4b3e_A1E4_236EEEF9D7BC" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="10939"/>
+								<UML:TaggedValue tag="ea_sourceName" value="Timer"/>
+								<UML:TaggedValue tag="ea_targetName" value="001-CU148.1 Realizar el reporte de comparendos a SIMIT."/>
+								<UML:TaggedValue tag="ea_sourceType" value="Actor"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="14424"/>
+								<UML:TaggedValue tag="ea_targetID" value="15132"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_C1BFCF04_964A_4957_9418_BCC89EFC0A67">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_4E150E4F_8D2A_42c2_BE64_02586EB21E52">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:UseCase name="002-CU149.1 Actualmente se hace envío de dos reportes por día." xmi.id="EAID_CE40D4C1_1231_4db3_9579_AC991A9688E9" visibility="public" namespace="EAPK_94BD2E23_8B30_4132_BF82_54EA2435EE11" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="UseCase"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_94BD2E23_8B30_4132_BF82_54EA2435EE11"/>
+								<UML:TaggedValue tag="date_created" value="2017-02-17 15:55:58"/>
+								<UML:TaggedValue tag="date_modified" value="2017-03-27 23:47:34"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="014-Comunicación a SIMIT "/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="dev"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Proposed"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="15133"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:UseCase>
+						<UML:Association xmi.id="EAID_32A0C79D_6866_44b8_A012_0E589CCD246C" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="10972"/>
+								<UML:TaggedValue tag="ea_sourceName" value="Timer"/>
+								<UML:TaggedValue tag="ea_targetName" value="002-CU149.1 Actualmente se hace envío de dos reportes por día."/>
+								<UML:TaggedValue tag="ea_sourceType" value="Actor"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="14424"/>
+								<UML:TaggedValue tag="ea_targetID" value="15133"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_C1BFCF04_964A_4957_9418_BCC89EFC0A67">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_CE40D4C1_1231_4db3_9579_AC991A9688E9">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:Dependency client="EAID_CE40D4C1_1231_4db3_9579_AC991A9688E9" supplier="EAID_30A6681E_1D85_441f_88E1_3D4B21BB55A2" xmi.id="EAID_C293F518_248A_47c8_AAB4_AA462205C117" visibility="public">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="Dependency"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="11860"/>
+								<UML:TaggedValue tag="ea_sourceName" value="002-CU149.1 Actualmente se hace envío de dos reportes por día."/>
+								<UML:TaggedValue tag="ea_targetName" value="SIMIT"/>
+								<UML:TaggedValue tag="ea_sourceType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_targetType" value="Actor"/>
+								<UML:TaggedValue tag="ea_sourceID" value="15133"/>
+								<UML:TaggedValue tag="ea_targetID" value="13131"/>
+								<UML:TaggedValue tag="src_visibility" value="Public"/>
+								<UML:TaggedValue tag="src_aggregation" value="0"/>
+								<UML:TaggedValue tag="src_isOrdered" value="false"/>
+								<UML:TaggedValue tag="src_targetScope" value="instance"/>
+								<UML:TaggedValue tag="src_changeable" value="none"/>
+								<UML:TaggedValue tag="src_isNavigable" value="false"/>
+								<UML:TaggedValue tag="src_containment" value="Unspecified"/>
+								<UML:TaggedValue tag="src_style" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+								<UML:TaggedValue tag="dst_visibility" value="Public"/>
+								<UML:TaggedValue tag="dst_aggregation" value="0"/>
+								<UML:TaggedValue tag="dst_isOrdered" value="false"/>
+								<UML:TaggedValue tag="dst_targetScope" value="instance"/>
+								<UML:TaggedValue tag="dst_changeable" value="none"/>
+								<UML:TaggedValue tag="dst_isNavigable" value="true"/>
+								<UML:TaggedValue tag="dst_containment" value="Unspecified"/>
+								<UML:TaggedValue tag="dst_style" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+							</UML:ModelElement.taggedValue>
+						</UML:Dependency>
+						<UML:UseCase name="004-CU155.1 Realizar el reporte de novedades de comparendos a SIMIT." xmi.id="EAID_D6E9AD2A_49C8_431e_B90C_022F1E174CF4" visibility="public" namespace="EAPK_94BD2E23_8B30_4132_BF82_54EA2435EE11" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="documentation" value="Actualmente se hace envío de dos reportes por día."/>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="UseCase"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_94BD2E23_8B30_4132_BF82_54EA2435EE11"/>
+								<UML:TaggedValue tag="date_created" value="2017-02-17 15:58:59"/>
+								<UML:TaggedValue tag="date_modified" value="2017-03-27 23:47:42"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="014-Comunicación a SIMIT "/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="dev"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Proposed"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="15134"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:UseCase>
+						<UML:Association xmi.id="EAID_9259120E_2CD7_40b9_B7F9_6EDA4B97BB11" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="10924"/>
+								<UML:TaggedValue tag="ea_sourceName" value="Timer"/>
+								<UML:TaggedValue tag="ea_targetName" value="004-CU155.1 Realizar el reporte de novedades de comparendos a SIMIT."/>
+								<UML:TaggedValue tag="ea_sourceType" value="Actor"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="14424"/>
+								<UML:TaggedValue tag="ea_targetID" value="15134"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_C1BFCF04_964A_4957_9418_BCC89EFC0A67">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_D6E9AD2A_49C8_431e_B90C_022F1E174CF4">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:Dependency client="EAID_D6E9AD2A_49C8_431e_B90C_022F1E174CF4" supplier="EAID_30A6681E_1D85_441f_88E1_3D4B21BB55A2" xmi.id="EAID_D08D7CC9_2558_4665_AC76_2175530CB407" visibility="public">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="Dependency"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="11859"/>
+								<UML:TaggedValue tag="ea_sourceName" value="004-CU155.1 Realizar el reporte de novedades de comparendos a SIMIT."/>
+								<UML:TaggedValue tag="ea_targetName" value="SIMIT"/>
+								<UML:TaggedValue tag="ea_sourceType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_targetType" value="Actor"/>
+								<UML:TaggedValue tag="ea_sourceID" value="15134"/>
+								<UML:TaggedValue tag="ea_targetID" value="13131"/>
+								<UML:TaggedValue tag="src_visibility" value="Public"/>
+								<UML:TaggedValue tag="src_aggregation" value="0"/>
+								<UML:TaggedValue tag="src_isOrdered" value="false"/>
+								<UML:TaggedValue tag="src_targetScope" value="instance"/>
+								<UML:TaggedValue tag="src_changeable" value="none"/>
+								<UML:TaggedValue tag="src_isNavigable" value="false"/>
+								<UML:TaggedValue tag="src_containment" value="Unspecified"/>
+								<UML:TaggedValue tag="src_style" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+								<UML:TaggedValue tag="dst_visibility" value="Public"/>
+								<UML:TaggedValue tag="dst_aggregation" value="0"/>
+								<UML:TaggedValue tag="dst_isOrdered" value="false"/>
+								<UML:TaggedValue tag="dst_targetScope" value="instance"/>
+								<UML:TaggedValue tag="dst_changeable" value="none"/>
+								<UML:TaggedValue tag="dst_isNavigable" value="true"/>
+								<UML:TaggedValue tag="dst_containment" value="Unspecified"/>
+								<UML:TaggedValue tag="dst_style" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+							</UML:ModelElement.taggedValue>
+						</UML:Dependency>
+					</UML:Namespace.ownedElement>
+				</UML:Package>
+			</UML:Namespace.ownedElement>
+		</UML:Model>
+		<UML:Diagram name="Comunicación a SIMIT " xmi.id="EAID_9F6AA85E_F861_45dd_8E88_87FD5D08D299" diagramType="UseCaseDiagram" owner="EAPK_94BD2E23_8B30_4132_BF82_54EA2435EE11" toolName="Enterprise Architect 2.5">
+			<UML:ModelElement.taggedValue>
+				<UML:TaggedValue tag="version" value="1.0"/>
+				<UML:TaggedValue tag="author" value="dev"/>
+				<UML:TaggedValue tag="created_date" value="2017-02-17 15:54:13"/>
+				<UML:TaggedValue tag="modified_date" value="2017-03-23 15:25:36"/>
+				<UML:TaggedValue tag="package" value="EAPK_94BD2E23_8B30_4132_BF82_54EA2435EE11"/>
+				<UML:TaggedValue tag="type" value="Use Case"/>
+				<UML:TaggedValue tag="swimlanes" value="locked=false;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;cls=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;"/>
+				<UML:TaggedValue tag="matrixitems" value="locked=false;matrixactive=false;swimlanesactive=true;kanbanactive=false;width=1;clrLine=0;"/>
+				<UML:TaggedValue tag="ea_localid" value="907"/>
+				<UML:TaggedValue tag="EAStyle" value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=1;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=1;PPgs.cy=1;DocSize.cx=850;DocSize.cy=1098;ShowDetails=0;Orientation=P;Zoom=100;ShowTags=0;OpParams=1;VisibleAttributeDetail=0;ShowOpRetType=1;ShowIcons=1;CollabNums=0;HideProps=0;ShowReqs=0;ShowCons=0;PaperSize=1;HideParents=0;UseAlias=0;HideAtts=0;HideOps=0;HideStereo=0;HideElemStereo=0;ShowTests=0;ShowMaint=0;ConnectorNotation=UML 2.1;ExplicitNavigability=0;ShowShape=1;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;ShowNotes=0;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;"/>
+				<UML:TaggedValue tag="styleex" value="SaveTag=A9FAA86B;ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=1;MatrixActive=0;SwimlanesActive=1;KanbanActive=0;MatrixLineWidth=1;MatrixLineClr=0;MatrixLocked=0;TConnectorNotation=UML 2.1;TExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;ProfileData=;MDGDgm=;STBLDgm=;ShowNotes=0;VisibleAttributeDetail=0;ShowOpRetType=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;SuppressedCompartments=;Theme=:119;"/>
+			</UML:ModelElement.taggedValue>
+			<UML:Diagram.element>
+				<UML:DiagramElement geometry="Left=473;Top=155;Right=518;Bottom=245;" subject="EAID_30A6681E_1D85_441f_88E1_3D4B21BB55A2" seqno="1" style="DUID=AF7A097E;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;"/>
+				<UML:DiagramElement geometry="Left=181;Top=151;Right=226;Bottom=241;" subject="EAID_C1BFCF04_964A_4957_9418_BCC89EFC0A67" seqno="2" style="DUID=56DA5F72;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;"/>
+				<UML:DiagramElement geometry="Left=298;Top=311;Right=415;Bottom=389;" subject="EAID_D6E9AD2A_49C8_431e_B90C_022F1E174CF4" seqno="3" style="DUID=D514A4A4;"/>
+				<UML:DiagramElement geometry="Left=298;Top=227;Right=403;Bottom=297;" subject="EAID_229433BB_DEAA_4dd2_A5E9_C1C9BF0D0159" seqno="4" style="DUID=63A7DBE3;"/>
+				<UML:DiagramElement geometry="Left=298;Top=148;Right=403;Bottom=218;" subject="EAID_CE40D4C1_1231_4db3_9579_AC991A9688E9" seqno="5" style="DUID=2A003B25;"/>
+				<UML:DiagramElement geometry="Left=293;Top=54;Right=410;Bottom=132;" subject="EAID_4E150E4F_8D2A_42c2_BE64_02586EB21E52" seqno="6" style="DUID=6AF70CDF;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=3;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_22F25B55_659A_4952_B0B9_49DA0254487E" style="Mode=3;EOID=AF7A097E;SOID=6AF70CDF;Color=-1;LWidth=0;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_C293F518_248A_47c8_AAB4_AA462205C117" style="Mode=3;EOID=AF7A097E;SOID=2A003B25;Color=-1;LWidth=0;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_ADA15B3B_F365_46e7_A012_26BE6D9BBB5B" style="Mode=3;EOID=AF7A097E;SOID=63A7DBE3;Color=-1;LWidth=0;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=1;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_D08D7CC9_2558_4665_AC76_2175530CB407" style="Mode=3;EOID=AF7A097E;SOID=D514A4A4;Color=-1;LWidth=0;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_32A0C79D_6866_44b8_A012_0E589CCD246C" style="Mode=3;EOID=2A003B25;SOID=56DA5F72;Color=-1;LWidth=0;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_77C1D61C_B72B_4b3e_A1E4_236EEEF9D7BC" style="Mode=3;EOID=6AF70CDF;SOID=56DA5F72;Color=-1;LWidth=0;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_9259120E_2CD7_40b9_B7F9_6EDA4B97BB11" style="Mode=3;EOID=D514A4A4;SOID=56DA5F72;Color=-1;LWidth=0;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_9C7617C4_9BF1_43b6_91EC_CE535215E8F6" style="Mode=3;EOID=63A7DBE3;SOID=56DA5F72;Color=-1;LWidth=0;Hidden=0;"/>
+			</UML:Diagram.element>
+		</UML:Diagram>
+	</XMI.content>
+	<XMI.difference/>
+	<XMI.extensions xmi.extender="Enterprise Architect 2.5">
+		<EAModel.scenario>
+			<EAScenario name="Basic Path" type="Basic Path" weight="0,00" subject="EAID_229433BB_DEAA_4dd2_A5E9_C1C9BF0D0159" xmi.id="EAID_F36868F5_C733_4162_B529_547E57395EAA">
+				<EAScenarioContent>
+					<path>
+						<step name="El sistema genera el reporte de recaudo y lo envía durante los periodos del día parametrizados. " guid="{92B95429-758E-4fb5-8915-809476216D2A}" level="1" uses="" useslist="" result="Generar el reporte de recaudo." state="" trigger="0" link=""/>
+						<step name="Firmar digitalmente el archivo generado." guid="{0E1E5D29-5B17-4922-98A2-B76133BE2951}" level="2" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="Enviar el archivo de reporte vía FTP o web service." guid="{AD083A83-287B-43f5-8529-BE61E8B47B9A}" level="3" uses="" useslist="" result="Verificar el envío del archivo." state="" trigger="0" link=""/>
+						<step name="El sistema registra el resultado de la operación." guid="{7A4FB94C-6E8C-4097-94C6-2AA30AC3288A}" level="4" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="El sistema marca las registro de recaudo como enviados a SIMIT." guid="{3090A510-AEDB-4234-AAB7-684630E3166C}" level="5" uses="" useslist="" result="Verificar que los registros de recaudo se encuentren marcados como enviados a SIMIT." state="" trigger="0" link=""/>
+						<context/>
+					</path>
+				</EAScenarioContent>
+			</EAScenario>
+			<EAScenario name="Basic Path" type="Basic Path" weight="0,00" subject="EAID_4E150E4F_8D2A_42c2_BE64_02586EB21E52" xmi.id="EAID_AE3BB689_F587_4247_A53E_E10BAE98DE4C">
+				<EAScenarioContent>
+					<path>
+						<step name="El sistema genera el reporte de comparendos y lo envía durante los periodos del día parametrizados. " guid="{A1D22F59-0BA1-4540-AAE7-6176A89A66D7}" level="1" uses="" useslist="" result="Generar el reporte de comparendos." state="" trigger="0" link=""/>
+						<step name="Firmar digitalmente el archivo generado." guid="{B9D7EC48-8CA0-4fc8-B6E1-C2FAAE3971C2}" level="2" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="Enviar el archivo de reporte vía FTP o web service." guid="{6BEB1F3F-F0CA-48fd-9DC7-61FE833C3DCF}" level="3" uses="" useslist="" result="Verificar el envío del archivo." state="" trigger="0" link=""/>
+						<step name="El sistema registra el resultado de la operación." guid="{9060E2C5-78E7-4994-8B91-CBC842E8869F}" level="4" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="El sistema marca los comparendos como enviados a SIMIT." guid="{2D4B223F-0C48-4ac8-9F8E-35E8F6B4C48E}" level="5" uses="" useslist="" result="Verificar que los comparendos se encuentren marcados como enviados a SIMIT." state="" trigger="0" link=""/>
+						<context/>
+					</path>
+				</EAScenarioContent>
+			</EAScenario>
+			<EAScenario name="Basic Path" type="Basic Path" weight="0,00" subject="EAID_CE40D4C1_1231_4db3_9579_AC991A9688E9" xmi.id="EAID_403B3C09_7D84_485f_A99C_15766DA9E064">
+				<EAScenarioContent>
+					<path>
+						<step name="El sistema genera el reporte de resoluciones y lo envía durante los periodos del día parametrizados. " guid="{0B56BF25-4147-4bb6-8EC2-95479EAE802A}" level="1" uses="" useslist="" result="Generar el reporte de resoluciones." state="" trigger="0" link=""/>
+						<step name="Firmar digitalmente el archivo generado." guid="{026BB01D-EE03-4bf1-9774-E3B8403213EA}" level="2" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="Enviar el archivo de reporte vía FTP o web service." guid="{FC9D7527-AFEB-4303-8E3D-6703539152E0}" level="3" uses="" useslist="" result="Verificar el envío del archivo." state="" trigger="0" link=""/>
+						<step name="El sistema registra el resultado de la operación." guid="{F48D983B-EED9-4729-9873-1CB1DAFD01CB}" level="4" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="El sistema marca las resoluciones como enviados a SIMIT." guid="{72C451FD-4BEC-421e-82F3-A4FE1517E752}" level="5" uses="" useslist="" result="Verificar que las resoluciones se encuentren marcadas como enviadas a SIMIT." state="" trigger="0" link=""/>
+						<context/>
+					</path>
+				</EAScenarioContent>
+			</EAScenario>
+			<EAScenario name="Basic Path" type="Basic Path" weight="0,00" subject="EAID_D6E9AD2A_49C8_431e_B90C_022F1E174CF4" xmi.id="EAID_0AB5D83E_3BBB_4621_9C59_165F522CB878">
+				<EAScenarioContent>
+					<path>
+						<step name="El sistema genera el reporte de novedades a comparendos y lo envía durante los periodos del día parametrizados. " guid="{786A7410-D11F-452d-AF7F-7FBDDCAB86B7}" level="1" uses="" useslist="" result="Generar el reporte de novedades a comparendos." state="" trigger="0" link=""/>
+						<step name="Firmar digitalmente el archivo generado." guid="{EB01F5B4-E0B0-42a6-AC95-92509BAEBA59}" level="2" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="Enviar el archivo de reporte vía FTP o web service." guid="{104EC734-FF8A-4f0b-9BE5-22A4EB783242}" level="3" uses="" useslist="" result="Verificar el envío del archivo." state="" trigger="0" link=""/>
+						<step name="El sistema registra el resultado de la operación." guid="{358E1008-C9AD-414f-BD5B-8CFEF5216B14}" level="4" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="El sistema marca las registro de novedades a comparendos como enviados a SIMIT." guid="{D17828FA-916C-4220-A86D-E599CF8A887E}" level="5" uses="" useslist="" result="Verificar que los registros de novedades a comparendos se encuentren marcados como enviados a SIMIT." state="" trigger="0" link=""/>
+						<context/>
+					</path>
+				</EAScenarioContent>
+			</EAScenario>
+		</EAModel.scenario>
+		<EAStub xmi.id="EAID_C1BFCF04_964A_4957_9418_BCC89EFC0A67" name="Timer" UMLType="Actor"/>
+		<EAStub xmi.id="EAID_30A6681E_1D85_441f_88E1_3D4B21BB55A2" name="SIMIT" UMLType="Actor"/>
+	</XMI.extensions>
+</XMI>

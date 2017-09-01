@@ -1,0 +1,702 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<XMI xmi.version="1.1" xmlns:UML="omg.org/UML1.3">
+	<XMI.header>
+		<XMI.documentation>
+			<XMI.exporter>Enterprise Architect</XMI.exporter>
+			<XMI.exporterVersion>2.5</XMI.exporterVersion>
+		</XMI.documentation>
+	</XMI.header>
+	<XMI.content>
+		<UML:Model name="EA Model" xmi.id="MX_EAID_2EF9D7A6_0410_4922_A2CB_53C9E0365951">
+			<UML:Namespace.ownedElement>
+				<UML:Class name="EARootClass" xmi.id="EAID_11111111_5487_4080_A7F4_41526CB0AA00" isRoot="true" isLeaf="false" isAbstract="false"/>
+				<UML:Package name="011-Resolución automática de fallo" xmi.id="EAPK_2EF9D7A6_0410_4922_A2CB_53C9E0365951" isRoot="false" isLeaf="false" isAbstract="false" visibility="public">
+					<UML:ModelElement.taggedValue>
+						<UML:TaggedValue tag="parent" value="EAPK_212FFB6B_8338_48a8_B093_5D0DBEDD150F"/>
+						<UML:TaggedValue tag="created" value="2017-02-17 14:44:10"/>
+						<UML:TaggedValue tag="modified" value="2017-03-27 23:43:12"/>
+						<UML:TaggedValue tag="iscontrolled" value="TRUE"/>
+						<UML:TaggedValue tag="xmlpath" value="ucm-contravenciones-resolucion-automatica-de-fallo.xml"/>
+						<UML:TaggedValue tag="lastloaddate" value="2017-03-27 23:43:06"/>
+						<UML:TaggedValue tag="lastsavedate" value="2017-02-18 17:43:12"/>
+						<UML:TaggedValue tag="version" value="1.0"/>
+						<UML:TaggedValue tag="isprotected" value="FALSE"/>
+						<UML:TaggedValue tag="usedtd" value="FALSE"/>
+						<UML:TaggedValue tag="xmiver" value="Enterprise Architect XMI/UML 1.3"/>
+						<UML:TaggedValue tag="logxml" value="FALSE"/>
+						<UML:TaggedValue tag="packageFlags" value="Recurse=0;VCCFG=secmov-sipa;CRC=0;"/>
+						<UML:TaggedValue tag="batchsave" value="0"/>
+						<UML:TaggedValue tag="batchload" value="0"/>
+						<UML:TaggedValue tag="phase" value="1.0"/>
+						<UML:TaggedValue tag="status" value="Proposed"/>
+						<UML:TaggedValue tag="author" value="dev"/>
+						<UML:TaggedValue tag="complexity" value="1"/>
+						<UML:TaggedValue tag="ea_stype" value="Public"/>
+						<UML:TaggedValue tag="tpos" value="0"/>
+						<UML:TaggedValue tag="gentype" value="Java"/>
+					</UML:ModelElement.taggedValue>
+					<UML:Namespace.ownedElement>
+						<UML:UseCase name="001-CU095.1 Crear resolución de fallo y constancia ejecutoria de forma automática pasados los términos después de notificación." xmi.id="EAID_5D657697_A739_4770_A936_994486DA8A33" visibility="public" namespace="EAPK_2EF9D7A6_0410_4922_A2CB_53C9E0365951" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="documentation" value="Se genera resolución y constancia ejecutoria automática después de:&#xA;&lt;ul&gt;&#xA;	&lt;li&gt;30 días calendario para comparendos manuales.&lt;/li&gt;&#xA;	&lt;li&gt;34 días calendario para comparendos electrónicos que fueron notificados por correspondencia.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;ul&gt;&#xA;	&lt;li&gt;26 días calendario cuando fueron notificados personalmente en Supercade o por aviso web.&lt;/li&gt;&#xA;&lt;/ul&gt;"/>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="UseCase"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_2EF9D7A6_0410_4922_A2CB_53C9E0365951"/>
+								<UML:TaggedValue tag="date_created" value="2017-02-17 14:45:22"/>
+								<UML:TaggedValue tag="date_modified" value="2017-03-27 23:43:15"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="011-Resolución automática de fallo"/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="dev"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Proposed"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="15200"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:UseCase>
+						<UML:Association xmi.id="EAID_486010FD_A5B2_4b1d_B4AB_329A98EADCC3" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="10964"/>
+								<UML:TaggedValue tag="ea_sourceName" value="Timer"/>
+								<UML:TaggedValue tag="ea_targetName" value="001-CU095.1 Crear resolución de fallo y constancia ejecutoria de forma automática pasados los términos después de notificación."/>
+								<UML:TaggedValue tag="ea_sourceType" value="Actor"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="14424"/>
+								<UML:TaggedValue tag="ea_targetID" value="15200"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_C1BFCF04_964A_4957_9418_BCC89EFC0A67">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_5D657697_A739_4770_A936_994486DA8A33">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:UseCase name="002-CU096.1 Cargar las firmas digitales de las autoridades de tránsito." xmi.id="EAID_7CEBD1FD_9D68_4f7f_96D0_1EE062F28199" visibility="public" namespace="EAPK_2EF9D7A6_0410_4922_A2CB_53C9E0365951" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="documentation" value="La subdirectora de transito también es autoridad de tránsito.&#xA;&#xA;Ya no aplica porque las firmas se encuentran en custodia en el HSM"/>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="UseCase"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_2EF9D7A6_0410_4922_A2CB_53C9E0365951"/>
+								<UML:TaggedValue tag="date_created" value="2017-02-17 14:48:58"/>
+								<UML:TaggedValue tag="date_modified" value="2017-03-27 23:43:18"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="011-Resolución automática de fallo"/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="dev"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Deprecated"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="15201"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:UseCase>
+						<UML:Association xmi.id="EAID_1F8C7B74_B8F1_4cdf_9F6F_6DA1307098C3" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.stereotype>
+								<UML:Stereotype name="trace"/>
+							</UML:ModelElement.stereotype>
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="Abstraction"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="stereotype" value="trace"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="conditional" value=" &#xA;«trace»"/>
+								<UML:TaggedValue tag="ea_localid" value="11933"/>
+								<UML:TaggedValue tag="ea_sourceName" value="002-CU096.1 Cargar las firmas digitales de las autoridades de tránsito."/>
+								<UML:TaggedValue tag="ea_targetName" value="Cargar las firmas digitales de las autoridades de tránsito"/>
+								<UML:TaggedValue tag="ea_sourceType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_targetType" value="Screen"/>
+								<UML:TaggedValue tag="ea_sourceID" value="15201"/>
+								<UML:TaggedValue tag="ea_targetID" value="12555"/>
+								<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={4AC1BC30-EC00-462f-9327-31C45499E129}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=trace;FQName=EAUML::trace;@ENDSTEREO;$DES;$CLT={1F8C7B74-B8F1-4cdf-9F6F-6DA1307098C3}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+								<UML:TaggedValue tag="mb" value=" &#xA;«trace»"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_7CEBD1FD_9D68_4f7f_96D0_1EE062F28199">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_09456E97_A6DB_4fa3_A2C1_3B6C2C67281B">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:UseCase name="003-CU096.2 Configurar los turnos de firma de las autoridades de tránsito." xmi.id="EAID_B3D42683_B2A2_45ad_9E70_209DB2F564A4" visibility="public" namespace="EAPK_2EF9D7A6_0410_4922_A2CB_53C9E0365951" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="UseCase"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_2EF9D7A6_0410_4922_A2CB_53C9E0365951"/>
+								<UML:TaggedValue tag="date_created" value="2017-02-17 14:53:35"/>
+								<UML:TaggedValue tag="date_modified" value="2017-03-27 23:43:21"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="011-Resolución automática de fallo"/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="dev"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Proposed"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="15202"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:UseCase>
+						<UML:Association xmi.id="EAID_84B3B26A_2A4B_49f1_BEE2_62207DF802F8" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="11130"/>
+								<UML:TaggedValue tag="ea_sourceName" value="AT4.1.8 Administrador de contravenciones"/>
+								<UML:TaggedValue tag="ea_targetName" value="003-CU096.2 Configurar los turnos de firma de las autoridades de tránsito."/>
+								<UML:TaggedValue tag="ea_sourceType" value="Actor"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="14468"/>
+								<UML:TaggedValue tag="ea_targetID" value="15202"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_D8E17E6C_24D2_4078_BA7A_15113E33A0BE">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_B3D42683_B2A2_45ad_9E70_209DB2F564A4">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:Association xmi.id="EAID_BB2BB0AF_6BCE_4147_B03D_ED55C70D0B9B" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.stereotype>
+								<UML:Stereotype name="trace"/>
+							</UML:ModelElement.stereotype>
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="Abstraction"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="stereotype" value="trace"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="conditional" value=" &#xA;«trace»"/>
+								<UML:TaggedValue tag="ea_localid" value="11932"/>
+								<UML:TaggedValue tag="ea_sourceName" value="003-CU096.2 Configurar los turnos de firma de las autoridades de tránsito."/>
+								<UML:TaggedValue tag="ea_targetName" value="Configurar los turnos de firma de las autoridades de tránsito"/>
+								<UML:TaggedValue tag="ea_sourceType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_targetType" value="Screen"/>
+								<UML:TaggedValue tag="ea_sourceID" value="15202"/>
+								<UML:TaggedValue tag="ea_targetID" value="12560"/>
+								<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={712E9676-BE86-42a2-8A33-DF3682E84FFA}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=trace;FQName=EAUML::trace;@ENDSTEREO;$DES;$CLT={BB2BB0AF-6BCE-4147-B03D-ED55C70D0B9B}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+								<UML:TaggedValue tag="mb" value=" &#xA;«trace»"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_B3D42683_B2A2_45ad_9E70_209DB2F564A4">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_2C1A11F1_D6CD_4c4b_80E9_F344F044CD6C">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:UseCase name="004-CU096.3 Generar un aviso por correo electrónico o al inicio de sesión de usuario en el que se le indique a la autoridad de transito que está próximo a iniciar turno para firma." xmi.id="EAID_D799CDA1_A427_4b6d_9E55_6FF5420B7657" visibility="public" namespace="EAPK_2EF9D7A6_0410_4922_A2CB_53C9E0365951" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="UseCase"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_2EF9D7A6_0410_4922_A2CB_53C9E0365951"/>
+								<UML:TaggedValue tag="date_created" value="2017-02-17 14:55:15"/>
+								<UML:TaggedValue tag="date_modified" value="2017-03-27 23:43:25"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="011-Resolución automática de fallo"/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="dev"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Proposed"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="15203"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:UseCase>
+						<UML:Association xmi.id="EAID_10C2D292_2142_4fc2_8631_EE840A23F996" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="10987"/>
+								<UML:TaggedValue tag="ea_sourceName" value="Timer"/>
+								<UML:TaggedValue tag="ea_targetName" value="004-CU096.3 Generar un aviso por correo electrónico o al inicio de sesión de usuario en el que se le indique a la autoridad de transito que está próximo a iniciar turno para firma."/>
+								<UML:TaggedValue tag="ea_sourceType" value="Actor"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="14424"/>
+								<UML:TaggedValue tag="ea_targetID" value="15203"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_C1BFCF04_964A_4957_9418_BCC89EFC0A67">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_D799CDA1_A427_4b6d_9E55_6FF5420B7657">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:Association xmi.id="EAID_27C1E93C_FB4E_4b37_9638_3CB17850BFDE" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Unspecified"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="11931"/>
+								<UML:TaggedValue tag="ea_sourceName" value="004-CU096.3 Generar un aviso por correo electrónico o al inicio de sesión de usuario en el que se le indique a la autoridad de transito que está próximo a iniciar turno para firma."/>
+								<UML:TaggedValue tag="ea_targetName" value="SMTP"/>
+								<UML:TaggedValue tag="ea_sourceType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_targetType" value="Actor"/>
+								<UML:TaggedValue tag="ea_sourceID" value="15203"/>
+								<UML:TaggedValue tag="ea_targetID" value="13134"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_D799CDA1_A427_4b6d_9E55_6FF5420B7657">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_D189F577_CA00_4f4b_8EB4_49363A00B8B7">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Unspecified;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:UseCase name="005-CU097.1 Consultar las constancias ejecutoria y resoluciones automáticas de fallo que fueron firmadas digitalmente de forma automática. " xmi.id="EAID_DFB6D0F2_0A08_4796_BC2D_336576AF6DF9" visibility="public" namespace="EAPK_2EF9D7A6_0410_4922_A2CB_53C9E0365951" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="documentation" value="Filtrar por rangos de fechas, autoridad de tránsito o directamente por el número del comparendo"/>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="UseCase"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_2EF9D7A6_0410_4922_A2CB_53C9E0365951"/>
+								<UML:TaggedValue tag="date_created" value="2017-02-17 14:57:22"/>
+								<UML:TaggedValue tag="date_modified" value="2017-03-27 23:43:28"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="011-Resolución automática de fallo"/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="dev"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Proposed"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="15204"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:UseCase>
+						<UML:Association xmi.id="EAID_5E188D95_63F1_45c0_A7F1_468D30B35F08" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="11214"/>
+								<UML:TaggedValue tag="ea_sourceName" value="AT4.1.1 Subdirector de contravenciones"/>
+								<UML:TaggedValue tag="ea_targetName" value="005-CU097.1 Consultar las constancias ejecutoria y resoluciones automáticas de fallo que fueron firmadas digitalmente de forma automática. "/>
+								<UML:TaggedValue tag="ea_sourceType" value="Actor"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="14438"/>
+								<UML:TaggedValue tag="ea_targetID" value="15204"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_521906A2_7546_4894_ABAE_AFA9E034D2BA">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_DFB6D0F2_0A08_4796_BC2D_336576AF6DF9">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:Association xmi.id="EAID_94AB83B6_44DD_4090_897F_2A0F8708E525" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="UseCase"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="11151"/>
+								<UML:TaggedValue tag="ea_sourceName" value="AT4.1.9 Autoridad de tránsito"/>
+								<UML:TaggedValue tag="ea_targetName" value="005-CU097.1 Consultar las constancias ejecutoria y resoluciones automáticas de fallo que fueron firmadas digitalmente de forma automática. "/>
+								<UML:TaggedValue tag="ea_sourceType" value="Actor"/>
+								<UML:TaggedValue tag="ea_targetType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_sourceID" value="14459"/>
+								<UML:TaggedValue tag="ea_targetID" value="15204"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_A480EBFE_3A79_4caa_99EB_A2E9A145EFE9">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_DFB6D0F2_0A08_4796_BC2D_336576AF6DF9">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+						<UML:Association xmi.id="EAID_E4C322A2_694B_4581_9C1A_C9A359EF05C0" visibility="public" isRoot="false" isLeaf="false" isAbstract="false">
+							<UML:ModelElement.stereotype>
+								<UML:Stereotype name="trace"/>
+							</UML:ModelElement.stereotype>
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="style" value="3"/>
+								<UML:TaggedValue tag="ea_type" value="Abstraction"/>
+								<UML:TaggedValue tag="direction" value="Source -&gt; Destination"/>
+								<UML:TaggedValue tag="linemode" value="3"/>
+								<UML:TaggedValue tag="linecolor" value="-1"/>
+								<UML:TaggedValue tag="linewidth" value="0"/>
+								<UML:TaggedValue tag="seqno" value="0"/>
+								<UML:TaggedValue tag="stereotype" value="trace"/>
+								<UML:TaggedValue tag="headStyle" value="0"/>
+								<UML:TaggedValue tag="lineStyle" value="0"/>
+								<UML:TaggedValue tag="conditional" value=" &#xA;«trace»"/>
+								<UML:TaggedValue tag="ea_localid" value="11930"/>
+								<UML:TaggedValue tag="ea_sourceName" value="005-CU097.1 Consultar las constancias ejecutoria y resoluciones automáticas de fallo que fueron firmadas digitalmente de forma automática. "/>
+								<UML:TaggedValue tag="ea_targetName" value="Consultar las constancias ejecutoria y resoluciones automáticas de fallo que fueron firmadas digitalmente de forma automática"/>
+								<UML:TaggedValue tag="ea_sourceType" value="UseCase"/>
+								<UML:TaggedValue tag="ea_targetType" value="Screen"/>
+								<UML:TaggedValue tag="ea_sourceID" value="15204"/>
+								<UML:TaggedValue tag="ea_targetID" value="12557"/>
+								<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={0EB8C4D9-C2FD-4138-A818-B6998CCE4EC1}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=trace;FQName=EAUML::trace;@ENDSTEREO;$DES;$CLT={E4C322A2-694B-4581-9C1A-C9A359EF05C0}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+								<UML:TaggedValue tag="virtualInheritance" value="0"/>
+								<UML:TaggedValue tag="mb" value=" &#xA;«trace»"/>
+							</UML:ModelElement.taggedValue>
+							<UML:Association.connection>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="false" type="EAID_DFB6D0F2_0A08_4796_BC2D_336576AF6DF9">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="sourcestyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="source"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+								<UML:AssociationEnd visibility="public" aggregation="none" isOrdered="false" targetScope="instance" changeable="none" isNavigable="true" type="EAID_0E7E97E9_1749_45d5_A9C2_0A21363295C4">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="containment" value="Unspecified"/>
+										<UML:TaggedValue tag="deststyle" value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+										<UML:TaggedValue tag="ea_end" value="target"/>
+									</UML:ModelElement.taggedValue>
+								</UML:AssociationEnd>
+							</UML:Association.connection>
+						</UML:Association>
+					</UML:Namespace.ownedElement>
+				</UML:Package>
+			</UML:Namespace.ownedElement>
+		</UML:Model>
+		<UML:Diagram name="Resolución automática de fallo" xmi.id="EAID_9F313164_6F6F_4b4f_8954_D545F456D10F" diagramType="UseCaseDiagram" owner="EAPK_2EF9D7A6_0410_4922_A2CB_53C9E0365951" toolName="Enterprise Architect 2.5">
+			<UML:ModelElement.taggedValue>
+				<UML:TaggedValue tag="version" value="1.0"/>
+				<UML:TaggedValue tag="author" value="dev"/>
+				<UML:TaggedValue tag="created_date" value="2017-02-17 14:44:13"/>
+				<UML:TaggedValue tag="modified_date" value="2017-03-27 22:03:23"/>
+				<UML:TaggedValue tag="package" value="EAPK_2EF9D7A6_0410_4922_A2CB_53C9E0365951"/>
+				<UML:TaggedValue tag="type" value="Use Case"/>
+				<UML:TaggedValue tag="swimlanes" value="locked=false;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;cls=0;SwimlaneFont=lfh:-10,lfw:0,lfi:0,lfu:0,lfs:0,lfface:ARIAL,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;"/>
+				<UML:TaggedValue tag="matrixitems" value="locked=false;matrixactive=false;swimlanesactive=true;kanbanactive=false;width=1;clrLine=0;"/>
+				<UML:TaggedValue tag="ea_localid" value="920"/>
+				<UML:TaggedValue tag="EAStyle" value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=1;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=1;PPgs.cy=1;DocSize.cx=850;DocSize.cy=1098;ShowDetails=0;Orientation=P;Zoom=100;ShowTags=0;OpParams=1;VisibleAttributeDetail=0;ShowOpRetType=1;ShowIcons=1;CollabNums=0;HideProps=0;ShowReqs=0;ShowCons=0;PaperSize=1;HideParents=0;UseAlias=0;HideAtts=0;HideOps=0;HideStereo=0;HideElemStereo=0;ShowTests=0;ShowMaint=0;ConnectorNotation=UML 2.1;ExplicitNavigability=0;ShowShape=1;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;ShowNotes=0;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;"/>
+				<UML:TaggedValue tag="styleex" value="SaveTag=4395DE88;ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=1;MatrixActive=0;SwimlanesActive=1;KanbanActive=0;MatrixLineWidth=1;MatrixLineClr=0;MatrixLocked=0;TConnectorNotation=UML 2.1;TExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;ProfileData=;MDGDgm=;STBLDgm=;ShowNotes=0;VisibleAttributeDetail=0;ShowOpRetType=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;SuppressedCompartments=;Theme=:119;"/>
+			</UML:ModelElement.taggedValue>
+			<UML:Diagram.element>
+				<UML:DiagramElement geometry="Left=61;Top=249;Right=106;Bottom=339;" subject="EAID_D189F577_CA00_4f4b_8EB4_49363A00B8B7" seqno="1" style="DUID=DD187B3D;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;"/>
+				<UML:DiagramElement geometry="Left=705;Top=186;Right=750;Bottom=276;" subject="EAID_521906A2_7546_4894_ABAE_AFA9E034D2BA" seqno="2" style="DUID=67941C87;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;"/>
+				<UML:DiagramElement geometry="Left=415;Top=25;Right=460;Bottom=115;" subject="EAID_D8E17E6C_24D2_4078_BA7A_15113E33A0BE" seqno="3" style="DUID=48407277;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;"/>
+				<UML:DiagramElement geometry="Left=393;Top=188;Right=438;Bottom=278;" subject="EAID_A480EBFE_3A79_4caa_99EB_A2E9A145EFE9" seqno="4" style="DUID=CA9B294E;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;"/>
+				<UML:DiagramElement geometry="Left=65;Top=70;Right=110;Bottom=160;" subject="EAID_C1BFCF04_964A_4957_9418_BCC89EFC0A67" seqno="5" style="DUID=9A6CE1E8;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;"/>
+				<UML:DiagramElement geometry="Left=505;Top=199;Right=649;Bottom=295;" subject="EAID_DFB6D0F2_0A08_4796_BC2D_336576AF6DF9" seqno="6" style="DUID=0C5EDC49;"/>
+				<UML:DiagramElement geometry="Left=164;Top=151;Right=347;Bottom=273;" subject="EAID_D799CDA1_A427_4b6d_9E55_6FF5420B7657" seqno="7" style="DUID=7CAA1FCD;"/>
+				<UML:DiagramElement geometry="Left=531;Top=44;Right=663;Bottom=132;" subject="EAID_B3D42683_B2A2_45ad_9E70_209DB2F564A4" seqno="8" style="DUID=3CA0A5BD;"/>
+				<UML:DiagramElement geometry="Left=708;Top=27;Right=825;Bottom=105;" subject="EAID_7CEBD1FD_9D68_4f7f_96D0_1EE062F28199" seqno="9" style="DUID=E9D0CBCC;BCol=6008319;"/>
+				<UML:DiagramElement geometry="Left=180;Top=21;Right=348;Bottom=133;" subject="EAID_5D657697_A739_4770_A936_994486DA8A33" seqno="10" style="DUID=E54DDD8B;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=4;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_27C1E93C_FB4E_4b37_9638_3CB17850BFDE" style="Mode=3;EOID=DD187B3D;SOID=7CAA1FCD;Color=-1;LWidth=0;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_10C2D292_2142_4fc2_8631_EE840A23F996" style="Mode=3;EOID=7CAA1FCD;SOID=9A6CE1E8;Color=-1;LWidth=0;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_486010FD_A5B2_4b1d_B4AB_329A98EADCC3" style="Mode=3;EOID=E54DDD8B;SOID=9A6CE1E8;Color=-1;LWidth=0;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_94AB83B6_44DD_4090_897F_2A0F8708E525" style="Mode=3;EOID=0C5EDC49;SOID=CA9B294E;Color=-1;LWidth=0;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_84B3B26A_2A4B_49f1_BEE2_62207DF802F8" style="Mode=3;EOID=3CA0A5BD;SOID=48407277;Color=-1;LWidth=0;Hidden=0;"/>
+				<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=4;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_5E188D95_63F1_45c0_A7F1_468D30B35F08" style="Mode=3;EOID=0C5EDC49;SOID=67941C87;Color=-1;LWidth=0;Hidden=0;"/>
+			</UML:Diagram.element>
+		</UML:Diagram>
+		<UML:DiagramElement geometry="Left=278;Top=256;Right=395;Bottom=334;" subject="EAID_5D657697_A739_4770_A936_994486DA8A33" seqno="2" style="DUID=3FFEC003;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;">
+			<UML:ModelElement.taggedValue>
+				<UML:TaggedValue tag="diagram_guid" value="EAID_E9D6F922_741C_48e0_A565_53024746F08C"/>
+			</UML:ModelElement.taggedValue>
+		</UML:DiagramElement>
+		<UML:DiagramElement geometry="Left=925;Top=362;Right=1030;Bottom=432;" subject="EAID_7CEBD1FD_9D68_4f7f_96D0_1EE062F28199" seqno="6" style="DUID=B1D4C19E;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;">
+			<UML:ModelElement.taggedValue>
+				<UML:TaggedValue tag="diagram_guid" value="EAID_83D2C42D_8A52_41c4_B7F5_2E46F9A875DA"/>
+			</UML:ModelElement.taggedValue>
+		</UML:DiagramElement>
+		<UML:DiagramElement geometry="Left=907;Top=859;Right=1012;Bottom=929;" subject="EAID_B3D42683_B2A2_45ad_9E70_209DB2F564A4" seqno="5" style="DUID=A6BB31B3;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;">
+			<UML:ModelElement.taggedValue>
+				<UML:TaggedValue tag="diagram_guid" value="EAID_83D2C42D_8A52_41c4_B7F5_2E46F9A875DA"/>
+			</UML:ModelElement.taggedValue>
+		</UML:DiagramElement>
+		<UML:DiagramElement geometry="Left=907;Top=1458;Right=1093;Bottom=1582;" subject="EAID_DFB6D0F2_0A08_4796_BC2D_336576AF6DF9" seqno="4" style="DUID=58D77FEC;NSL=0;BCol=-1;BFol=-1;LCol=-1;LWth=-1;fontsz=0;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;">
+			<UML:ModelElement.taggedValue>
+				<UML:TaggedValue tag="diagram_guid" value="EAID_83D2C42D_8A52_41c4_B7F5_2E46F9A875DA"/>
+			</UML:ModelElement.taggedValue>
+		</UML:DiagramElement>
+		<UML:DiagramElement geometry="EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;" subject="EAID_486010FD_A5B2_4b1d_B4AB_329A98EADCC3" style="Mode=3;EOID=3FFEC003;SOID=971EAF39;Color=-1;LWidth=0;">
+			<UML:ModelElement.taggedValue>
+				<UML:TaggedValue tag="diagram_guid" value="EAID_E9D6F922_741C_48e0_A565_53024746F08C"/>
+				<UML:TaggedValue tag="hidden" value="0"/>
+			</UML:ModelElement.taggedValue>
+		</UML:DiagramElement>
+		<UML:DiagramElement geometry="EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;" subject="EAID_486010FD_A5B2_4b1d_B4AB_329A98EADCC3" style="Mode=3;EOID=3FFEC003;SOID=971EAF39;Color=-1;LWidth=0;">
+			<UML:ModelElement.taggedValue>
+				<UML:TaggedValue tag="diagram_guid" value="EAID_E9D6F922_741C_48e0_A565_53024746F08C"/>
+				<UML:TaggedValue tag="hidden" value="0"/>
+			</UML:ModelElement.taggedValue>
+		</UML:DiagramElement>
+		<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=4;$LLB=;LLT=;LMT=;LMB=CX=35:CY=13:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LRT=;LRB=;IRHS=;ILHS=;" subject="EAID_1F8C7B74_B8F1_4cdf_9F6F_6DA1307098C3" style="Mode=3;EOID=C7D33897;SOID=B1D4C19E;Color=-1;LWidth=0;">
+			<UML:ModelElement.taggedValue>
+				<UML:TaggedValue tag="diagram_guid" value="EAID_83D2C42D_8A52_41c4_B7F5_2E46F9A875DA"/>
+				<UML:TaggedValue tag="hidden" value="0"/>
+			</UML:ModelElement.taggedValue>
+		</UML:DiagramElement>
+		<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=4;$LLB=;LLT=;LMT=;LMB=CX=35:CY=13:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LRT=;LRB=;IRHS=;ILHS=;" subject="EAID_1F8C7B74_B8F1_4cdf_9F6F_6DA1307098C3" style="Mode=3;EOID=C7D33897;SOID=B1D4C19E;Color=-1;LWidth=0;">
+			<UML:ModelElement.taggedValue>
+				<UML:TaggedValue tag="diagram_guid" value="EAID_83D2C42D_8A52_41c4_B7F5_2E46F9A875DA"/>
+				<UML:TaggedValue tag="hidden" value="0"/>
+			</UML:ModelElement.taggedValue>
+		</UML:DiagramElement>
+		<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=4;$LLB=;LLT=;LMT=;LMB=CX=35:CY=13:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LRT=;LRB=;IRHS=;ILHS=;" subject="EAID_BB2BB0AF_6BCE_4147_B03D_ED55C70D0B9B" style="Mode=3;EOID=F4A72E2B;SOID=A6BB31B3;Color=-1;LWidth=0;">
+			<UML:ModelElement.taggedValue>
+				<UML:TaggedValue tag="diagram_guid" value="EAID_83D2C42D_8A52_41c4_B7F5_2E46F9A875DA"/>
+				<UML:TaggedValue tag="hidden" value="0"/>
+			</UML:ModelElement.taggedValue>
+		</UML:DiagramElement>
+		<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=4;$LLB=;LLT=;LMT=;LMB=CX=35:CY=13:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LRT=;LRB=;IRHS=;ILHS=;" subject="EAID_BB2BB0AF_6BCE_4147_B03D_ED55C70D0B9B" style="Mode=3;EOID=F4A72E2B;SOID=A6BB31B3;Color=-1;LWidth=0;">
+			<UML:ModelElement.taggedValue>
+				<UML:TaggedValue tag="diagram_guid" value="EAID_83D2C42D_8A52_41c4_B7F5_2E46F9A875DA"/>
+				<UML:TaggedValue tag="hidden" value="0"/>
+			</UML:ModelElement.taggedValue>
+		</UML:DiagramElement>
+		<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=4;$LLB=;LLT=;LMT=;LMB=CX=35:CY=13:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LRT=;LRB=;IRHS=;ILHS=;" subject="EAID_E4C322A2_694B_4581_9C1A_C9A359EF05C0" style="Mode=3;EOID=0E3D6DE3;SOID=58D77FEC;Color=-1;LWidth=0;">
+			<UML:ModelElement.taggedValue>
+				<UML:TaggedValue tag="diagram_guid" value="EAID_83D2C42D_8A52_41c4_B7F5_2E46F9A875DA"/>
+				<UML:TaggedValue tag="hidden" value="0"/>
+			</UML:ModelElement.taggedValue>
+		</UML:DiagramElement>
+		<UML:DiagramElement geometry="SX=0;SY=0;EX=0;EY=0;EDGE=4;$LLB=;LLT=;LMT=;LMB=CX=35:CY=13:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LRT=;LRB=;IRHS=;ILHS=;" subject="EAID_E4C322A2_694B_4581_9C1A_C9A359EF05C0" style="Mode=3;EOID=0E3D6DE3;SOID=58D77FEC;Color=-1;LWidth=0;">
+			<UML:ModelElement.taggedValue>
+				<UML:TaggedValue tag="diagram_guid" value="EAID_83D2C42D_8A52_41c4_B7F5_2E46F9A875DA"/>
+				<UML:TaggedValue tag="hidden" value="0"/>
+			</UML:ModelElement.taggedValue>
+		</UML:DiagramElement>
+	</XMI.content>
+	<XMI.difference/>
+	<XMI.extensions xmi.extender="Enterprise Architect 2.5">
+		<EAModel.scenario>
+			<EAScenario name="Basic Path" type="Basic Path" weight="0,00" subject="EAID_5D657697_A739_4770_A936_994486DA8A33" xmi.id="EAID_4934C134_BA59_407c_81B3_2EC455FEFF59">
+				<EAScenarioContent>
+					<path>
+						<step name="El sistema verifica que no exista impugnación o pago del proceso contravencional." guid="{0305C8CC-DF59-45a4-BA34-40FC0EE971FF}" level="1" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="El sistema carga la plantilla de resolución automática de fallo." guid="{DC859673-84B2-40ff-A344-948E5F809C57}" level="2" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="El usuario genera la resolución de fallo, la firma digitalmente y la carga en el sistema." guid="{624D3AA0-845A-47ab-9EA5-09CEF491470D}" level="3" uses="" useslist="" result="Cargar documento de resolución de fallo dentro del expediente del proceso." state="" trigger="1" link=""/>
+						<step name="El sistema carga la plantilla de constancia de ejecutoria." guid="{C7A56510-01FC-43ad-ADA9-C6A1D7019A2F}" level="4" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="El usuario genera la constancia ejecutoria con base en las decisiones de primera y segunda instancia, la firma digitalmente y la carga en el sistema." guid="{0D7BDF78-0CDC-451d-81CB-5803F7B4C6D3}" level="5" uses="" useslist="" result="Cargar documento de constancia ejecutoria dentro del expediente del proceso." state="" trigger="1" link=""/>
+						<step name="El sistema registra en financiera el monto de la sanción en caso de ser fallado contraventor. " guid="{A6EC01AA-3D69-4625-B190-1810F956BD9E}" level="6" uses="" useslist="" result="Verificar en el módulo financiero el registro del monto de la sanción." state="" trigger="0" link=""/>
+						<step name="El sistema inicia el proceso de cobro coactivo en caso de ser fallado contraventor." guid="{66ECBA10-A4D1-4e82-B7D2-F64CA0DD78FB}" level="7" uses="" useslist="" result="Verificar que se ha iniciado el proceso coactivo." state="" trigger="0" link=""/>
+						<context/>
+					</path>
+				</EAScenarioContent>
+			</EAScenario>
+			<EAScenario name="Basic Path" type="Basic Path" weight="0,00" subject="EAID_7CEBD1FD_9D68_4f7f_96D0_1EE062F28199" xmi.id="EAID_A694A038_CF7E_4913_B7AA_376EF2F6352B">
+				<EAScenarioContent>
+					<path>
+						<step name="El usuario ingresa a la opción  Cargar las firma digital" guid="{1BADC155-BE0E-44ab-BDCA-AF1416FC284F}" level="1" uses="" useslist="" result="" state="" trigger="1" link=""/>
+						<step name="El sistema muestra en pantalla un resumen de los datos de la autoridad, un recurso para adjutar la firma y un botón de terminar." guid="{C4D1CD94-4DA8-4b85-906A-22F5ADD10240}" level="2" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="El usuario usa el recurso y sube la firma digital." guid="{6BD9D054-95E3-4778-A69E-8CB8D3E3245C}" level="3" uses="" useslist="" result="" state="" trigger="1" link=""/>
+						<step name="El sistema informa al usuario que la firma se ha subido al sistema con éxito." guid="{5FCC9085-BDAE-40ff-BC95-600D97968FDE}" level="4" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="Para finalizar pulsa el botón terminar" guid="{9E72B2AA-022C-4bcf-BC50-BFCD3D6187DA}" level="5" uses="" useslist="" result="" state="" trigger="1" link=""/>
+						<context>
+							<item oldname="Cargar las firmas digitales de las autoridades de tránsito" guid="{09456E97-A6DB-4fa3-A2C1-3B6C2C67281B}"/>
+							<item oldname="AT4.1.9 Autoridad de tránsito" guid="{A480EBFE-3A79-4caa-99EB-A2E9A145EFE9}"/>
+						</context>
+					</path>
+				</EAScenarioContent>
+			</EAScenario>
+			<EAScenario name="Basic Path" type="Basic Path" weight="0,00" subject="EAID_B3D42683_B2A2_45ad_9E70_209DB2F564A4" xmi.id="EAID_C05E5469_67CB_47d3_8DDB_256F856EFD7D">
+				<EAScenarioContent>
+					<path>
+						<step name="El usuario entra en la opción &quot;Configurar los turnos de firma de las autoridades de tránsito.&quot;" guid="{7F03494D-162F-45bc-8746-D196ADB72A42}" level="1" uses="" useslist="" result="" state="" trigger="1" link=""/>
+						<step name="El sistema despliega los nombres de las autoridades de transito con los campos desde y hasta." guid="{F5A13A93-7CEE-4f12-8ECA-D2C86A3704A6}" level="2" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<step name="El usuario selecciona las fechas desde y hasta para el(los) usuario(s) que quiera modificar y pulsa el botón guardar." guid="{D43CCEC3-A68A-4f46-986C-CF2ABBDE0DFB}" level="3" uses="" useslist="" result="" state="" trigger="1" link=""/>
+						<context>
+							<item oldname="Configurar los turnos de firma de las autoridades de tránsito" guid="{2C1A11F1-D6CD-4c4b-80E9-F344F044CD6C}"/>
+							<item oldname="AT4.1.8 Administrador de contravenciones" guid="{D8E17E6C-24D2-4078-BA7A-15113E33A0BE}"/>
+						</context>
+					</path>
+				</EAScenarioContent>
+			</EAScenario>
+			<EAScenario name="Autentificacion del sistema" type="Alternate" weight="1,00" subject="EAID_D799CDA1_A427_4b6d_9E55_6FF5420B7657" xmi.id="EAID_7D12D855_685C_407b_91D1_FC11F41A1714">
+				<EAScenarioContent>
+					<path>
+						<step name="El sistema avisa a la autoridad de tránsito cuando se loguea al sistema que está próximo a entrar a turno de firma digital." guid="{872F3D19-34B2-4227-9E46-F83DF0F15655}" level="1" uses="" useslist="" result="" state="" trigger="0" link=""/>
+						<context/>
+					</path>
+				</EAScenarioContent>
+			</EAScenario>
+			<EAScenario name="Basic Path" type="Basic Path" weight="0,00" subject="EAID_D799CDA1_A427_4b6d_9E55_6FF5420B7657" xmi.id="EAID_D86CD902_5725_4a86_9B8F_265374F38561">
+				<EAScenarioContent>
+					<path>
+						<step name="El sistema avisa a la autoridad de tránsito por medio de un correo electrónico que está próximo a entrar a turno de firma digital." guid="{89091F37-4EEE-4c5c-B5AF-CC087E0BC729}" level="1" uses="" useslist="" result="Identificar que una autoridad de tránsito está próximo a entrar a turno de firma digital." state="" trigger="0" link="">
+							<extension level="1a" guid="{7D12D855-685C-407b-91D1-FC11F41A1714}" join="End"/>
+						</step>
+						<context/>
+					</path>
+				</EAScenarioContent>
+			</EAScenario>
+			<EAScenario name="Basic Path" type="Basic Path" weight="0,00" subject="EAID_DFB6D0F2_0A08_4796_BC2D_336576AF6DF9" xmi.id="EAID_7E72F00A_EDC3_46a3_ACF1_C6401A83F121">
+				<EAScenarioContent>
+					<path>
+						<step name="El usuario selecciona la lista de las constancias ejecutorias o resoluciones de fallo que fueron firmadas digitalmente dentro de un rango de fechas, indicando la autoridad de tránsito firmante o por el número de comparendo." guid="{EAD2CEF9-34E0-4549-82C9-463E884F7678}" level="1" uses="" useslist="" result="Listar constancias ejecutorias o resoluciones de fallo por rango de fechas.&#xA;&#xA;Listar constancias ejecutorias o resoluciones de fallo por autoridad de tránsito firmante.&#xA;&#xA;Listar constancias ejecutorias o resoluciones de fallo por número de comparendo." state="" trigger="1" link=""/>
+						<context>
+							<item oldname="AT4.1.1 Subdirector de contravenciones" guid="{521906A2-7546-4894-ABAE-AFA9E034D2BA}"/>
+							<item oldname="Consultar las constancias ejecutoria y resoluciones automáticas de fallo que fueron firmadas digitalmente de forma automática" guid="{0E7E97E9-1749-45d5-A9C2-0A21363295C4}"/>
+							<item oldname="AT4.1.9 Autoridad de tránsito" guid="{A480EBFE-3A79-4caa-99EB-A2E9A145EFE9}"/>
+						</context>
+					</path>
+				</EAScenarioContent>
+			</EAScenario>
+		</EAModel.scenario>
+		<EAStub xmi.id="EAID_C1BFCF04_964A_4957_9418_BCC89EFC0A67" name="Timer" UMLType="Actor"/>
+		<EAStub xmi.id="EAID_09456E97_A6DB_4fa3_A2C1_3B6C2C67281B" name="Cargar las firmas digitales de las autoridades de tránsito" UMLType="Screen"/>
+		<EAStub xmi.id="EAID_D8E17E6C_24D2_4078_BA7A_15113E33A0BE" name="AT4.1.8 Administrador de contravenciones" UMLType="Actor"/>
+		<EAStub xmi.id="EAID_2C1A11F1_D6CD_4c4b_80E9_F344F044CD6C" name="Configurar los turnos de firma de las autoridades de tránsito" UMLType="Screen"/>
+		<EAStub xmi.id="EAID_D189F577_CA00_4f4b_8EB4_49363A00B8B7" name="SMTP" UMLType="Actor"/>
+		<EAStub xmi.id="EAID_521906A2_7546_4894_ABAE_AFA9E034D2BA" name="AT4.1.1 Subdirector de contravenciones" UMLType="Actor"/>
+		<EAStub xmi.id="EAID_A480EBFE_3A79_4caa_99EB_A2E9A145EFE9" name="AT4.1.9 Autoridad de tránsito" UMLType="Actor"/>
+		<EAStub xmi.id="EAID_0E7E97E9_1749_45d5_A9C2_0A21363295C4" name="Consultar las constancias ejecutoria y resoluciones automáticas de fallo que fueron firmadas digitalmente de forma automática" UMLType="Screen"/>
+	</XMI.extensions>
+</XMI>

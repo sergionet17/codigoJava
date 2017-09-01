@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:ssbp="www.sparxsystems.com.au/bpmn20" id="EAPK_80F68CAC_0DC5_4259_9BA2_74E2740DF710" name="Reporte centrales riesgo" targetNamespace="www.sparxsystems.com.au/bpmn20" exporter="Camunda Modeler" exporterVersion="1.8.0">
+  <bpmn:collaboration id="Collaboration_1mnuogj">
+    <bpmn:participant id="Participant_199dhvo" name="SDM" processRef="Process_1dq1iai" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_1dq1iai" name="Reporte centrales riesgo" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1wtklvr" name="Inicio">
+      <bpmn:outgoing>SequenceFlow_0nsn86x</bpmn:outgoing>
+      <bpmn:messageEventDefinition messageRef="Message_0mgfp30" />
+    </bpmn:startEvent>
+    <bpmn:serviceTask id="Task_0hiwpsh" name="Identificar terceros marcados para reporte" camunda:class="co.gov.movilidadbogota.sipa.bpm.DummyTask">
+      <bpmn:incoming>SequenceFlow_0nsn86x</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1dsw95h</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:serviceTask id="Task_0h72l01" name="Identificar terceros con acuerdos de pago al dia" camunda:class="co.gov.movilidadbogota.sipa.bpm.DummyTask">
+      <bpmn:incoming>SequenceFlow_1dsw95h</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1i996l0</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:serviceTask id="Task_1c5d0wr" name="Identificar terceros con acuerdos de pago incumplidos" camunda:class="co.gov.movilidadbogota.sipa.bpm.DummyTask">
+      <bpmn:incoming>SequenceFlow_1i996l0</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1meeuo2</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:callActivity id="Task_1x93yz9" name="Oficio automatico de reporte a centrales de riesgo" calledElement="Oficio memorando automatico">
+      <bpmn:incoming>SequenceFlow_1meeuo2</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_17nyj65</bpmn:outgoing>
+    </bpmn:callActivity>
+    <bpmn:endEvent id="EndEvent_0z4jlai">
+      <bpmn:incoming>SequenceFlow_17nyj65</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_0nsn86x" sourceRef="StartEvent_1wtklvr" targetRef="Task_0hiwpsh" />
+    <bpmn:sequenceFlow id="SequenceFlow_1dsw95h" sourceRef="Task_0hiwpsh" targetRef="Task_0h72l01" />
+    <bpmn:sequenceFlow id="SequenceFlow_1i996l0" sourceRef="Task_0h72l01" targetRef="Task_1c5d0wr" />
+    <bpmn:sequenceFlow id="SequenceFlow_1meeuo2" sourceRef="Task_1c5d0wr" targetRef="Task_1x93yz9" />
+    <bpmn:sequenceFlow id="SequenceFlow_17nyj65" sourceRef="Task_1x93yz9" targetRef="EndEvent_0z4jlai" />
+    <bpmn:textAnnotation id="EAID_77511D64_5C4F_45c9_80CE_0AD30BC24C33">    <bpmn:text>Este reporte se lanza mensualmente</bpmn:text>
+</bpmn:textAnnotation>
+    <bpmn:textAnnotation id="EAID_DF2E95D3_8A7B_4f57_9EE2_C0ADF344824F">    <bpmn:text>Se reporta a centrales de riesgo los acuerdos de pago que llevan 60 dias en mora y que ademas han pasado 20 dias desde el aviso de reporte al implicado</bpmn:text>
+</bpmn:textAnnotation>
+    <bpmn:textAnnotation id="EAID_B83E65F8_4B1E_4ae0_B301_18D4D3AECDC4">    <bpmn:text>Leer manual del usuario de cifin y de datacredito</bpmn:text>
+</bpmn:textAnnotation>
+    <bpmn:textAnnotation id="EAID_C52588DB_970D_4f57_A567_25172C6E8CBD">    <bpmn:text>Se debe verificar que no exista pago de las obligaciones de los terceros que fueron marcados para reporte a central de riesgos</bpmn:text>
+</bpmn:textAnnotation>
+    <bpmn:textAnnotation id="EAID_E1E45258_C712_443a_A1AC_A3B6C66F3900">    <bpmn:text>Se deben reportar novedades para sacar los terceros de datacredito</bpmn:text>
+</bpmn:textAnnotation>
+  </bpmn:process>
+  <bpmn:message id="Message_0mgfp30" name="Message_3ik4skt" />
+  <bpmndi:BPMNDiagram id="EAID_0463AE1F_AC02_4dff_A51D_C9C08C57A3B2" name="Reporte centrales riesgo">
+    <bpmndi:BPMNPlane id="EAID_PL000000_AC02_4dff_A51D_C9C08C57A3B2" bpmnElement="Collaboration_1mnuogj">
+      <bpmndi:BPMNShape id="EAID_DO000007_AC02_4dff_A51D_C9C08C57A3B2" bpmnElement="EAID_DF2E95D3_8A7B_4f57_9EE2_C0ADF344824F">
+        <dc:Bounds x="164" y="18" width="245" height="65" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000006_AC02_4dff_A51D_C9C08C57A3B2" bpmnElement="EAID_77511D64_5C4F_45c9_80CE_0AD30BC24C33">
+        <dc:Bounds x="46" y="14" width="100" height="51" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000009_AC02_4dff_A51D_C9C08C57A3B2" bpmnElement="EAID_E1E45258_C712_443a_A1AC_A3B6C66F3900">
+        <dc:Bounds x="373" y="187" width="190" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000008_AC02_4dff_A51D_C9C08C57A3B2" bpmnElement="EAID_C52588DB_970D_4f57_A567_25172C6E8CBD">
+        <dc:Bounds x="169" y="182" width="197" height="60" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000010_AC02_4dff_A51D_C9C08C57A3B2" bpmnElement="EAID_B83E65F8_4B1E_4ae0_B301_18D4D3AECDC4">
+        <dc:Bounds x="423" y="24" width="109" height="53" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Participant_199dhvo_di" bpmnElement="Participant_199dhvo">
+        <dc:Bounds x="0" y="0" width="721" height="253" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="StartEvent_0iehayd_di" bpmnElement="StartEvent_1wtklvr">
+        <dc:Bounds x="71" y="116" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="76" y="155" width="26" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0nsn86x_di" bpmnElement="SequenceFlow_0nsn86x">
+        <di:waypoint xsi:type="dc:Point" x="107" y="134" />
+        <di:waypoint xsi:type="dc:Point" x="137" y="134" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="122" y="112.5" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="ServiceTask_0trpklt_di" bpmnElement="Task_0hiwpsh">
+        <dc:Bounds x="137" y="94" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_1dsw95h_di" bpmnElement="SequenceFlow_1dsw95h">
+        <di:waypoint xsi:type="dc:Point" x="237" y="134" />
+        <di:waypoint xsi:type="dc:Point" x="268" y="134" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="252.5" y="112.5" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="ServiceTask_022pb2s_di" bpmnElement="Task_0h72l01">
+        <dc:Bounds x="268" y="94" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_1i996l0_di" bpmnElement="SequenceFlow_1i996l0">
+        <di:waypoint xsi:type="dc:Point" x="368" y="134" />
+        <di:waypoint xsi:type="dc:Point" x="396" y="134" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="382" y="112.5" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="ServiceTask_0j9at0o_di" bpmnElement="Task_1c5d0wr">
+        <dc:Bounds x="396" y="94" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_1meeuo2_di" bpmnElement="SequenceFlow_1meeuo2">
+        <di:waypoint xsi:type="dc:Point" x="496" y="134" />
+        <di:waypoint xsi:type="dc:Point" x="530" y="134" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="513" y="112.5" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="CallActivity_1py068m_di" bpmnElement="Task_1x93yz9">
+        <dc:Bounds x="530" y="94" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_0z4jlai_di" bpmnElement="EndEvent_0z4jlai">
+        <dc:Bounds x="665.255" y="116" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="683.255" y="155" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_17nyj65_di" bpmnElement="SequenceFlow_17nyj65">
+        <di:waypoint xsi:type="dc:Point" x="630" y="134" />
+        <di:waypoint xsi:type="dc:Point" x="665" y="134" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="647.5" y="112" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+    <bpmndi:BPMNLabelStyle id="EAID_LS000000_AC02_4dff_A51D_C9C08C57A3B2">
+      <dc:Font name="Calibri" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+    </bpmndi:BPMNLabelStyle>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

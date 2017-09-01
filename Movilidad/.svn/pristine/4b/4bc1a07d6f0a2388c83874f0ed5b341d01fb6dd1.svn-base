@@ -1,0 +1,261 @@
+-
+  clave: PORCENTAJE_DESCUENTO
+  nombre: Porcentajes para descuento
+  descripcion: Porcentaje de descuento en el saldo de un comparendo
+  parametros:
+    -
+      clave: PORCENTAJE_DESCUENTO_25
+      nombre: Porcentaje de descuento del 25
+      descripcion: Descuento del 25%
+      tipo: Decimal
+      valores:
+        -
+          valor: 0.25
+    -
+      clave: PORCENTAJE_DESCUENTO_50
+      nombre: Porcentaje de descuento del 50
+      descripcion: Descuento del 50%
+      tipo: Decimal
+      valores:
+        -
+          valor: 0.50
+    -
+      clave: PORCENTAJE_INTERES
+      nombre: Porcentaje de intereses
+      descripcion: Porcentaje de interes apartir de la resolución de fallo
+      tipo: Integer
+      valores:
+        -
+          valor: 1
+-
+  clave: DIAS_DESCUENTO
+  nombre: Días de descuento
+  descripcion: Maximo de dias limite para realizacion de un descuento en el saldo de un comparendo
+  parametros:
+    -
+      clave: DIAS_DESCUENTO_25_LAPIZ_OPTICO
+      nombre: Días para el descuento del 25%
+      descripcion: Dias de descuento del 25% tipo comparendo lapiz optico
+      tipo: Integer
+      valores:
+        -
+          valor: 20
+    -
+      clave: DIAS_DESCUENTO_50_LAPIZ_OPTICO
+      nombre: Días para el descuento del 50%
+      descripcion: Dias de descuento del 50% tipo comparendo lapiz optico
+      tipo: Integer
+      valores:
+        -
+          valor: 5
+    -
+      clave: DIAS_DESCUENTO_25_ELECTRONICO
+      nombre: Días para el descuento del 25% electronico
+      descripcion: Dias de descuento del 25% tipo comparendo lapiz optico
+      tipo: Integer
+      valores:
+        -
+          valor: 15
+    -
+      clave: DIAS_DESCUENTO_50_ELECTRONICO
+      nombre: Días para el descuento del 50% electronico
+      descripcion: Dias de descuento del 50% tipo comparendo lapiz optico
+      tipo: Integer
+      valores:
+        -
+          valor: 10
+    -
+      clave: MAXIMO_DIAS_SIN_INTERES
+      nombre: Máximo de días sin interés
+      descripcion: Maximo de días para generacion de intereses
+      tipo: Integer
+      valores:
+        -
+          valor: 30
+-
+  clave: VALIDACION_PASSWORD
+  nombre: Validaciones de password
+  descripcion: Categoria para los parametros utilizados en las validaciones del password
+  parametros:
+    -
+      clave: LOGITUD_MINIMA_PASSWORD
+      nombre: Longitud mínima de password
+      descripcion: Longitud mínima de la contraseña
+      tipo: Integer
+      valores:
+        -
+          valor: 10
+    -
+      clave: CANTIDAD_MINIMA_MAYUSCULAS_PASSWORD
+      nombre: Cantidad mínima de mayúsculas
+      descripcion: Cantidad mínima de mayúsculas que debe tener la contraseña
+      tipo: Integer
+      valores:
+        -
+          valor: 3
+    -
+      clave: CANTIDAD_MINIMA_MINUSCULAS_PASSWORD
+      nombre: Cantidad mínima de minúsculas
+      descripcion: Cantidad mínima de minúsculas que debe tener la contraseña
+      tipo: Integer
+      valores:
+        -
+          valor: 3
+    -
+      clave: CANTIDAD_MINIMA_NUMEROS_PASSWORD
+      nombre: Cantidad mínima de caracteres numéricos
+      descripcion: Cantidad mínima de números que debe tener la contraseña
+      tipo: Integer
+      valores:
+        -
+          valor: 3
+    -
+      clave: CANTIDAD_MINIMA_ESPECIALES_PASSWORD
+      nombre: Cantidad mínima de caracteres especiales
+      descripcion: Cantidad mínima de caracteres especiales que debe tener la contraseña
+      tipo: Integer
+      valores:
+        -
+          valor: 3
+    -
+      clave: CANTIDAD_PASSWORDS_ANTERIOR
+      nombre: Cantidad de contraseñas anteriores
+      descripcion: Cantidad de contraseñas anteriores diferentes
+      tipo: Integer
+      valores:
+        -
+          valor: 3
+    -
+      clave: CANTIDAD_DIAS_VENCIMIENTO_PASSWORD
+      nombre: Tiempo de vencimiento de contraseña (días)
+      descripcion: Tiempo de vencimiento de contraseña (días)
+      tipo: Integer
+      valores:
+        -
+          valor: 120
+-
+  clave: COMPARENDOS
+  nombre: Comparendo
+  descripcion: Categoria para los parametros de un comparendo
+  parametros:
+    -
+      clave: CANTIDAD_DIAS_VENCIMIENTO_IMPOSICION_COMPARENDO
+      nombre: Tiempo de vencimiento para imposición comparendo en (días)
+      descripcion: Tiempo de vencimiento para imposición comparendo en (días)
+      tipo: Integer
+      valores:
+        -
+          valor: 2
+-
+  clave: DIAS_MAXIMO_AUDIENCIA
+  nombre: Máximos de días para realizar la audiencia
+  descripcion: Cantidad de días máximos para realizar audiencia
+  parametros:
+    -
+      clave: DIAS_MAXIMO_AUDIENCIA
+      nombre: Maximo de días de audiencia
+      descripcion: Maximo de días de audiencia
+      tipo: Integer
+      valores:
+        -
+          valor: 15
+-
+  clave: PORCENTAJE_ALERTA_RANGO_NUMERACION_CONTRAVENCIONES
+  nombre: Maximos porcentajes para generar las alertas de Contravenciones
+  descripcion: Maximos porcentajes para generar las alertas de Contravenciones
+  parametros:
+    -
+      clave: PORCENTAJE_ASIGNACION_RANGOS_CONTRAVENCIONES_PENULTIMA_ASIGNACION
+      nombre: Porcentaje penultima Asignación de Rangos comparendo transito
+      descripcion: Porcentaje penultima Asignación de Rangos comparendo transito
+      tipo: Integer
+      valores:
+        -
+          valor: 100
+    -
+      clave: PORCENTAJE_ASIGNACION_RANGOS_CONTRAVENCIONES_ALERTA_TEMPRANA
+      nombre: Porcentaje asignacion rangos contravenciones alerta temprana
+      descripcion: Porcentaje asignacion rangos contravenciones alerta temprana
+      tipo: Integer
+      valores:
+        -
+          valor: 70
+    -
+      clave: PORCENTAJE_ASIGNACION_RANGOS_CONTRAVENCIONES_ALERTA_NORMAL
+      nombre: Porcentaje asignacion rangos contravenciones alerta normal
+      descripcion: Porcentaje asignacion rangos contravenciones alerta normal
+      tipo: Integer
+      valores:
+        -
+          valor: 80
+    -
+      clave: PORCENTAJE_ASIGNACION_RANGOS_CONTRAVENCIONES_ALERTA_URGENTE
+      nombre: Porcentaje asignacion rangos CONTRAVENCIONES alerta urgente
+      descripcion: Porcentaje asignacion rangos CONTRAVENCIONES alerta urgente
+      tipo: Integer
+      valores:
+        -
+          valor: 90
+-
+  clave: PORCENTAJE_ALERTA_RANGO_NUMERACION_TRANSPORTE_PUBLICO
+  nombre: Maximos porcentajes para generar las alertas de Transporte público
+  descripcion: Maximos porcentajes para generar las alertas de Transporte público
+  parametros:
+    -
+      clave: PORCENTAJE_ASIGNACION_RANGOS_TRANSPORTE_PUBLICO_PENULTIMA_ASIGNACION
+      nombre: Porcentaje penultima Asignacion de Rangos Transporte Público
+      descripcion: Porcentaje penultima Asignacion de Rangos Transporte Público
+      tipo: Integer
+      valores:
+        -
+          valor: 100
+    -
+      clave: PORCENTAJE_ASIGNACION_RANGOS_TRANSPORTE_PUBLICO_ALERTA_TEMPRANA
+      nombre: Porcentaje asignacion rangos transporte publico alerta temprana
+      descripcion: Porcentaje asignacion rangos transporte publico alerta temprana
+      tipo: Integer
+      valores:
+        -
+          valor: 70
+    -
+      clave: PORCENTAJE_ASIGNACION_RANGOS_TRANSPORTE_PUBLICO_ALERTA_NORMAL
+      nombre: Porcentaje asignacion rangos transporte publico alerta normal
+      descripcion: Porcentaje asignacion rangos transporte publico alerta normal
+      tipo: Integer
+      valores:
+        -
+          valor: 80
+    -
+      clave: PORCENTAJE_ASIGNACION_RANGOS_TRANSPORTE_PUBLICO_ALERTA_URGENTE
+      nombre: Porcentaje asignacion rangos transporte publico alerta urgente
+      descripcion: Porcentaje asignacion rangos transporte publico alerta urgente
+      tipo: Integer
+      valores:
+        -
+          valor: 90
+-
+  clave: MAX_HORAS_PERMITIDAS_CURSO_PEDAGOGICO
+  nombre: Maximo de horas permitidas del curso pedagogico
+  descripcion: Maximo de horas permitidas del curso pedagogico
+  parametros:
+    -
+      clave: MAX_HORAS_PERMITIDAS_CURSO_PEDAGOGICO
+      nombre: Maximo de horas permitidas del curso pedagogico
+      descripcion: Maximo de horas permitidas del curso pedagogico
+      tipo: Integer
+      valores:
+        -
+          valor: 2
+-
+  clave: SALARIOS
+  nombre: Salarios
+  descripcion: Los valores de los diferentes salarios
+  parametros:
+    -
+      clave: SMMLV
+      nombre: Salario mínimo mensual vigente
+      descripcion: Salario mínimo mensual vigente
+      tipo: BigDecimal
+      valores:
+        -
+          valor: 24590.566666667

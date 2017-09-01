@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:ssbp="www.sparxsystems.com.au/bpmn20" id="EAPK_CFCD64F1_D415_4665_878C_B7E98A840D97" name="Segunda instancia" targetNamespace="www.sparxsystems.com.au/bpmn20" exporter="Camunda Modeler" exporterVersion="1.8.0">
+  <bpmn:collaboration id="Collaboration_0z4e5mt">
+    <bpmn:participant id="Participant_04y7tv6" name="SDM" processRef="Process_1j897pi" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_1j897pi" name="Segunda instancia" isExecutable="true">
+    <bpmn:laneSet>
+      <bpmn:lane id="Lane_0pwzign" name="AT4.6.4 (Enrutador de dependencia)">
+        <bpmn:flowNodeRef>Task_0vrlxqx</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>StartEvent_0smrw1a</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_0svd73t" name="AT.1 (Abogado de dependencia)">
+        <bpmn:flowNodeRef>Task_0whfr9d</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_0i968sh</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EndEvent_1m449ng</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="StartEvent_0smrw1a" name="Inicio">
+      <bpmn:outgoing>SequenceFlow_0yieazf</bpmn:outgoing>
+      <bpmn:messageEventDefinition messageRef="Message_1q8yfwy" />
+    </bpmn:startEvent>
+    <bpmn:userTask id="Task_0vrlxqx" name="Enrutar proceso">
+      <bpmn:incoming>SequenceFlow_0yieazf</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1uwigir</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:callActivity id="Task_0whfr9d" name="Pruebas y alegatos" calledElement="Pruebas y alegatos">
+      <bpmn:incoming>SequenceFlow_1uwigir</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1dvcyth</bpmn:outgoing>
+    </bpmn:callActivity>
+    <bpmn:callActivity id="Task_0i968sh" name="Acto resolver recurso apelacion" calledElement="Acto administrativo">
+      <bpmn:incoming>SequenceFlow_1dvcyth</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0rmwp4l</bpmn:outgoing>
+    </bpmn:callActivity>
+    <bpmn:endEvent id="EndEvent_1m449ng">
+      <bpmn:incoming>SequenceFlow_0rmwp4l</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_0yieazf" sourceRef="StartEvent_0smrw1a" targetRef="Task_0vrlxqx" />
+    <bpmn:sequenceFlow id="SequenceFlow_1uwigir" sourceRef="Task_0vrlxqx" targetRef="Task_0whfr9d" />
+    <bpmn:sequenceFlow id="SequenceFlow_1dvcyth" sourceRef="Task_0whfr9d" targetRef="Task_0i968sh" />
+    <bpmn:sequenceFlow id="SequenceFlow_0rmwp4l" sourceRef="Task_0i968sh" targetRef="EndEvent_1m449ng" />
+  </bpmn:process>
+  <bpmn:message id="Message_1q8yfwy" name="Message_38u7gf9" />
+  <bpmndi:BPMNDiagram id="EAID_1FA8F2A8_3650_4e74_8EF3_028A716F4982" name=" Segunda Instancia">
+    <bpmndi:BPMNPlane id="EAID_PL000000_3650_4e74_8EF3_028A716F4982" bpmnElement="Collaboration_0z4e5mt">
+      <bpmndi:BPMNShape id="Participant_04y7tv6_di" bpmnElement="Participant_04y7tv6">
+        <dc:Bounds x="0" y="0" width="498" height="248.42499999999995" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_0pwzign_di" bpmnElement="Lane_0pwzign">
+        <dc:Bounds x="30" y="0" width="468" height="123" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_0svd73t_di" bpmnElement="Lane_0svd73t">
+        <dc:Bounds x="30" y="123" width="468" height="125.42500000000001" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="StartEvent_14crl7f_di" bpmnElement="StartEvent_0smrw1a">
+        <dc:Bounds x="79" y="42" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="83" y="80" width="26" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0yieazf_di" bpmnElement="SequenceFlow_0yieazf">
+        <di:waypoint xsi:type="dc:Point" x="115" y="60" />
+        <di:waypoint xsi:type="dc:Point" x="146" y="60" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="130.5" y="38.5" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="UserTask_1ga9lmk_di" bpmnElement="Task_0vrlxqx">
+        <dc:Bounds x="146" y="20" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_1uwigir_di" bpmnElement="SequenceFlow_1uwigir">
+        <di:waypoint xsi:type="dc:Point" x="196" y="100" />
+        <di:waypoint xsi:type="dc:Point" x="196" y="141" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="211" y="114" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="CallActivity_0ng33sq_di" bpmnElement="Task_0whfr9d">
+        <dc:Bounds x="146" y="141" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_1dvcyth_di" bpmnElement="SequenceFlow_1dvcyth">
+        <di:waypoint xsi:type="dc:Point" x="246" y="181" />
+        <di:waypoint xsi:type="dc:Point" x="283" y="181" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="264.5" y="159.5" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="CallActivity_0vki2wo_di" bpmnElement="Task_0i968sh">
+        <dc:Bounds x="283" y="141" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_1m449ng_di" bpmnElement="EndEvent_1m449ng">
+        <dc:Bounds x="430.15" y="163" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="448.15" y="202" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0rmwp4l_di" bpmnElement="SequenceFlow_0rmwp4l">
+        <di:waypoint xsi:type="dc:Point" x="383" y="181" />
+        <di:waypoint xsi:type="dc:Point" x="430" y="181" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="406.5" y="159" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+    <bpmndi:BPMNLabelStyle id="EAID_LS000000_3650_4e74_8EF3_028A716F4982">
+      <dc:Font name="Calibri" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+    </bpmndi:BPMNLabelStyle>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

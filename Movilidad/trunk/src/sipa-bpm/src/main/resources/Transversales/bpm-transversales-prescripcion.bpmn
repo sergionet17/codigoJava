@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:ssbp="www.sparxsystems.com.au/bpmn20" id="EAPK_41C7B50F_2535_45cd_81C5_0E396B33BE2E" name="Prescripcion" targetNamespace="www.sparxsystems.com.au/bpmn20" exporter="Camunda Modeler" exporterVersion="1.8.0">
+  <bpmn:collaboration id="Collaboration_0b69a7j">
+    <bpmn:participant id="Participant_00lukae" name="SDM" processRef="Process_0bt6wv6" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_0bt6wv6" name="Prescripcion" isExecutable="true">
+    <bpmn:laneSet>
+      <bpmn:lane id="Lane_0eycn9f" name="AT4.3.1 (Abogado de dependencia)">
+        <bpmn:flowNodeRef>Task_18qxlx0</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_0300lad</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>StartEvent_197qkhj</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EndEvent_1wurz4g</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="StartEvent_197qkhj" name="Inicio">
+      <bpmn:outgoing>SequenceFlow_1712znp</bpmn:outgoing>
+      <bpmn:messageEventDefinition messageRef="Message_0qd51dy" />
+    </bpmn:startEvent>
+    <bpmn:callActivity id="Task_18qxlx0" name="Acto decretar prescripcion" calledElement="Acto administrativo">
+      <bpmn:incoming>SequenceFlow_1712znp</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_015kkf6</bpmn:outgoing>
+    </bpmn:callActivity>
+    <bpmn:serviceTask id="Task_0300lad" name="Registrar financiera" camunda:class="co.gov.movilidadbogota.sipa.bpm.DummyTask">
+      <bpmn:incoming>SequenceFlow_015kkf6</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0eev7bk</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:endEvent id="EndEvent_1wurz4g">
+      <bpmn:incoming>SequenceFlow_0eev7bk</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_1712znp" sourceRef="StartEvent_197qkhj" targetRef="Task_18qxlx0" />
+    <bpmn:sequenceFlow id="SequenceFlow_015kkf6" sourceRef="Task_18qxlx0" targetRef="Task_0300lad" />
+    <bpmn:sequenceFlow id="SequenceFlow_0eev7bk" sourceRef="Task_0300lad" targetRef="EndEvent_1wurz4g" />
+  </bpmn:process>
+  <bpmn:message id="Message_1url6cg" name="Message_070i000" />
+  <bpmn:message id="Message_1ul74ro" />
+  <bpmn:message id="Message_0qd51dy" name="Message_34r6l7t" />
+  <bpmndi:BPMNDiagram id="EAID_779A8B55_B2EA_4a75_91DD_6D4D2028861A" name="Prescripcion">
+    <bpmndi:BPMNPlane id="EAID_PL000000_B2EA_4a75_91DD_6D4D2028861A" bpmnElement="Collaboration_0b69a7j">
+      <bpmndi:BPMNShape id="Participant_00lukae_di" bpmnElement="Participant_00lukae">
+        <dc:Bounds x="0" y="0" width="583" height="174" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_0eycn9f_di" bpmnElement="Lane_0eycn9f">
+        <dc:Bounds x="30" y="0" width="553" height="174" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="StartEvent_0u4geu0_di" bpmnElement="StartEvent_197qkhj">
+        <dc:Bounds x="83" y="77" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="88" y="116" width="26" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_1712znp_di" bpmnElement="SequenceFlow_1712znp">
+        <di:waypoint xsi:type="dc:Point" x="119" y="95" />
+        <di:waypoint xsi:type="dc:Point" x="162" y="95" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="140.5" y="73.5" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="CallActivity_14jj26y_di" bpmnElement="Task_18qxlx0">
+        <dc:Bounds x="162" y="55" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_015kkf6_di" bpmnElement="SequenceFlow_015kkf6">
+        <di:waypoint xsi:type="dc:Point" x="262" y="95" />
+        <di:waypoint xsi:type="dc:Point" x="314" y="95" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="288" y="73.5" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="ServiceTask_17esq45_di" bpmnElement="Task_0300lad">
+        <dc:Bounds x="314" y="55" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_1wurz4g_di" bpmnElement="EndEvent_1wurz4g">
+        <dc:Bounds x="460.9936788874842" y="77" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="478.9936788874842" y="116" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0eev7bk_di" bpmnElement="SequenceFlow_0eev7bk">
+        <di:waypoint xsi:type="dc:Point" x="414" y="95" />
+        <di:waypoint xsi:type="dc:Point" x="461" y="95" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="437.5" y="73" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+    <bpmndi:BPMNLabelStyle id="EAID_LS000000_B2EA_4a75_91DD_6D4D2028861A">
+      <dc:Font name="Calibri" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+    </bpmndi:BPMNLabelStyle>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

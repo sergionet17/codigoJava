@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:ssbp="www.sparxsystems.com.au/bpmn20" id="EAPK_2FBAF8D7_C5CD_416e_BDFD_21D56BE6A3FC" name="Terceros en coactiva" targetNamespace="www.sparxsystems.com.au/bpmn20" exporter="Camunda Modeler" exporterVersion="1.7.2">
+  <bpmn:collaboration id="Collaboration_1dxa3mv">
+    <bpmn:participant id="Participant_0er75ez" name="SDM" processRef="EAID_F9E46CEE_C8B2_49f3_9AC2_FCF38E310006" />
+  </bpmn:collaboration>
+  <bpmn:process id="EAID_F9E46CEE_C8B2_49f3_9AC2_FCF38E310006" name="Terceros en coactiva" processType="None" isClosed="false" isExecutable="false">
+    <bpmn:startEvent id="EAID_DCA6828C_72DB_46b3_9E73_5AA72884D349" name="Inicio">
+      <bpmn:outgoing>EAID_AFFFBEEC_B8A0_46d9_9DD0_8B6A40D89098</bpmn:outgoing>
+      <bpmn:messageEventDefinition />
+    </bpmn:startEvent>
+    <bpmn:endEvent id="EAID_A0389ECE_0432_46dd_8D4E_30AA31C3EA6B" name="EndEvent1">
+      <bpmn:incoming>EAID_DBD27725_4A14_41a1_851C_4A6C07FA4CA8</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:serviceTask id="EAID_D6A02027_AE58_4294_AE9A_0B1DD72C73BB" name="Clasificar obligaciones de tercero" implementation="##unspecified">
+      <bpmn:incoming>EAID_AFFFBEEC_B8A0_46d9_9DD0_8B6A40D89098</bpmn:incoming>
+      <bpmn:outgoing>EAID_DBD27725_4A14_41a1_851C_4A6C07FA4CA8</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="EAID_AFFFBEEC_B8A0_46d9_9DD0_8B6A40D89098" sourceRef="EAID_DCA6828C_72DB_46b3_9E73_5AA72884D349" targetRef="EAID_D6A02027_AE58_4294_AE9A_0B1DD72C73BB" />
+    <bpmn:sequenceFlow id="EAID_DBD27725_4A14_41a1_851C_4A6C07FA4CA8" sourceRef="EAID_D6A02027_AE58_4294_AE9A_0B1DD72C73BB" targetRef="EAID_A0389ECE_0432_46dd_8D4E_30AA31C3EA6B" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="EAID_8D8A15D3_2E5E_4875_9464_0CA536DEE3B4" name="Terceros en coactiva">
+    <bpmndi:BPMNPlane id="EAID_PL000000_2E5E_4875_9464_0CA536DEE3B4" bpmnElement="Collaboration_1dxa3mv">
+      <bpmndi:BPMNShape id="Participant_0er75ez_di" bpmnElement="Participant_0er75ez">
+        <dc:Bounds x="84" y="21" width="398" height="170" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000000_2E5E_4875_9464_0CA536DEE3B4" bpmnElement="EAID_DCA6828C_72DB_46b3_9E73_5AA72884D349">
+        <dc:Bounds x="140" y="85" width="30" height="30" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_72DB_46b3_9E73_5AA72884D349" labelStyle="EAID_LS000000_2E5E_4875_9464_0CA536DEE3B4">
+          <dc:Bounds x="140" y="125" width="25" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000002_2E5E_4875_9464_0CA536DEE3B4" bpmnElement="EAID_A0389ECE_0432_46dd_8D4E_30AA31C3EA6B">
+        <dc:Bounds x="412" y="85" width="30" height="30" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_0432_46dd_8D4E_30AA31C3EA6B" labelStyle="EAID_LS000000_2E5E_4875_9464_0CA536DEE3B4">
+          <dc:Bounds x="409" y="125" width="53" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000001_2E5E_4875_9464_0CA536DEE3B4" bpmnElement="EAID_D6A02027_AE58_4294_AE9A_0B1DD72C73BB">
+        <dc:Bounds x="236" y="70" width="110" height="60" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_AE58_4294_AE9A_0B1DD72C73BB" labelStyle="EAID_LS000000_2E5E_4875_9464_0CA536DEE3B4" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="EAID_DL000000_2E5E_4875_9464_0CA536DEE3B4" bpmnElement="EAID_AFFFBEEC_B8A0_46d9_9DD0_8B6A40D89098">
+        <di:waypoint xsi:type="dc:Point" x="170" y="100" />
+        <di:waypoint xsi:type="dc:Point" x="236" y="100" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="158" y="75" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="EAID_DL000001_2E5E_4875_9464_0CA536DEE3B4" bpmnElement="EAID_DBD27725_4A14_41a1_851C_4A6C07FA4CA8">
+        <di:waypoint xsi:type="dc:Point" x="346" y="100" />
+        <di:waypoint xsi:type="dc:Point" x="412" y="100" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="334" y="75" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+    <bpmndi:BPMNLabelStyle id="EAID_LS000000_2E5E_4875_9464_0CA536DEE3B4">
+      <dc:Font name="Calibri" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+    </bpmndi:BPMNLabelStyle>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:ssbp="www.sparxsystems.com.au/bpmn20" id="EAPK_E4E3D579_387E_45af_9EE1_F3BA3F633C66" name="Liquidar creditos" targetNamespace="www.sparxsystems.com.au/bpmn20" exporter="Camunda Modeler" exporterVersion="1.7.2">
+  <bpmn:collaboration id="Collaboration_05twm6f">
+    <bpmn:participant id="Participant_0nufwwb" name="SDM+" processRef="EAID_388F0949_87A9_4b15_88EC_3EC816F36A65" />
+  </bpmn:collaboration>
+  <bpmn:process id="EAID_388F0949_87A9_4b15_88EC_3EC816F36A65" name="Liquidar creditos" processType="None" isClosed="false" isExecutable="false">
+    <bpmn:laneSet>
+      <bpmn:lane id="Lane_1ykzafn" name="AT.1 (Abogado de dependencia)">
+        <bpmn:flowNodeRef>EAID_420431B7_7FB3_46a9_BB4C_14DB3DAF1893</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EAID_244E631D_2513_4452_B0AF_05C58C21D1AB</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EAID_1EA001ED_4FBB_495e_9829_918854FBE728</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="EAID_244E631D_2513_4452_B0AF_05C58C21D1AB" name="Inicio">
+      <bpmn:outgoing>EAID_F52FE3CD_733E_44c9_9403_60D02778FA3D</bpmn:outgoing>
+      <bpmn:messageEventDefinition />
+    </bpmn:startEvent>
+    <bpmn:endEvent id="EAID_1EA001ED_4FBB_495e_9829_918854FBE728" name="EndEvent6">
+      <bpmn:incoming>EAID_37F975D1_7906_4703_89DC_20F360D6C39F</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:callActivity id="EAID_420431B7_7FB3_46a9_BB4C_14DB3DAF1893" name="Liquidar credito">
+      <bpmn:incoming>EAID_F52FE3CD_733E_44c9_9403_60D02778FA3D</bpmn:incoming>
+      <bpmn:outgoing>EAID_37F975D1_7906_4703_89DC_20F360D6C39F</bpmn:outgoing>
+    </bpmn:callActivity>
+    <bpmn:sequenceFlow id="EAID_F52FE3CD_733E_44c9_9403_60D02778FA3D" sourceRef="EAID_244E631D_2513_4452_B0AF_05C58C21D1AB" targetRef="EAID_420431B7_7FB3_46a9_BB4C_14DB3DAF1893" />
+    <bpmn:sequenceFlow id="EAID_37F975D1_7906_4703_89DC_20F360D6C39F" sourceRef="EAID_420431B7_7FB3_46a9_BB4C_14DB3DAF1893" targetRef="EAID_1EA001ED_4FBB_495e_9829_918854FBE728" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="EAID_D1BFAE6A_D983_451f_B7E5_7C2CDEBD624A" name="Liquidar creditos">
+    <bpmndi:BPMNPlane id="EAID_PL000000_D983_451f_B7E5_7C2CDEBD624A" bpmnElement="Collaboration_05twm6f">
+      <bpmndi:BPMNShape id="Participant_0nufwwb_di" bpmnElement="Participant_0nufwwb">
+        <dc:Bounds x="13" y="11" width="405" height="186" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000000_D983_451f_B7E5_7C2CDEBD624A" bpmnElement="EAID_244E631D_2513_4452_B0AF_05C58C21D1AB">
+        <dc:Bounds x="107" y="74" width="30" height="30" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_2513_4452_B0AF_05C58C21D1AB" labelStyle="EAID_LS000000_D983_451f_B7E5_7C2CDEBD624A">
+          <dc:Bounds x="107" y="114" width="25" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000002_D983_451f_B7E5_7C2CDEBD624A" bpmnElement="EAID_1EA001ED_4FBB_495e_9829_918854FBE728">
+        <dc:Bounds x="348" y="74" width="30" height="30" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_4FBB_495e_9829_918854FBE728" labelStyle="EAID_LS000000_D983_451f_B7E5_7C2CDEBD624A">
+          <dc:Bounds x="345" y="114" width="53" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000001_D983_451f_B7E5_7C2CDEBD624A" bpmnElement="EAID_420431B7_7FB3_46a9_BB4C_14DB3DAF1893" isExpanded="false">
+        <dc:Bounds x="187" y="59" width="110" height="60" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_7FB3_46a9_BB4C_14DB3DAF1893" labelStyle="EAID_LS000000_D983_451f_B7E5_7C2CDEBD624A" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="EAID_DL000000_D983_451f_B7E5_7C2CDEBD624A" bpmnElement="EAID_F52FE3CD_733E_44c9_9403_60D02778FA3D">
+        <di:waypoint xsi:type="dc:Point" x="137" y="89" />
+        <di:waypoint xsi:type="dc:Point" x="187" y="89" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="117" y="64" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="EAID_DL000001_D983_451f_B7E5_7C2CDEBD624A" bpmnElement="EAID_37F975D1_7906_4703_89DC_20F360D6C39F">
+        <di:waypoint xsi:type="dc:Point" x="297" y="89" />
+        <di:waypoint xsi:type="dc:Point" x="348" y="89" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="278" y="64" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Lane_1ykzafn_di" bpmnElement="Lane_1ykzafn">
+        <dc:Bounds x="43" y="11" width="375" height="186" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+    <bpmndi:BPMNLabelStyle id="EAID_LS000000_D983_451f_B7E5_7C2CDEBD624A">
+      <dc:Font name="Calibri" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+    </bpmndi:BPMNLabelStyle>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

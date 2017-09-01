@@ -1,0 +1,100 @@
+@font-face{
+  font-family: "xuifont";
+  src: url('iconfont.eot?t=1467528113'); /* IE9*/
+  src: url('iconfont.eot?t=1467528113#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1467528113') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1467528113') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1467528113#xuifont') format('svg'); /* iOS 4.1- */
+}
+.xuifont, .xuicon{
+  font-family:"xuifont";
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+  vertical-align:-15%;
+}
+.xui-icon-error:before { content: "\e674"  !important; }
+.xui-load-error:before { content: "\e682"  !important; }
+
+.xui-icon-placeholder:before{
+	content: "\e62c";
+}
+.xui-icon-empty:before{
+	content: "\e62c" !important;
+}
+
+
+@keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@-webkit-keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@-moz-keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@-o-keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@-ms-keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+.xui-icon-loading{
+    width: 1em;
+    height: 1em;
+}
+.xui-icon-loading:before{
+  position:absolute;
+	content: "\e68d" !important;
+  -webkit-animation: fa-spin 1.5s infinite linear;
+  animation: fa-spin 1.5s infinite linear;
+}
+
+/*special for IE8*/
+.xui-css-ie6  :before,
+.xui-css-ie7  :before,
+.xui-css-ie8  :before{
+    content: none !important;
+}
+.xui-css-ie6  .xuicon,
+.xui-css-ie7  .xuicon,
+.xui-css-ie8  .xuicon{
+    width: 1em;
+    height: 1em;
+}

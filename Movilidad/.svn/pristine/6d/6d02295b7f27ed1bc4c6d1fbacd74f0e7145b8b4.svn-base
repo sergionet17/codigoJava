@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:ssbp="www.sparxsystems.com.au/bpmn20" id="EAPK_C047457B_9734_4cbd_A5FD_61CD1F6E128B" name="Inmovilizacion masiva" targetNamespace="www.sparxsystems.com.au/bpmn20" exporter="Camunda Modeler" exporterVersion="1.8.0">
+  <bpmn:collaboration id="Collaboration_1irgetz">
+    <bpmn:participant id="Participant_1hvcjuj" name="SDM" processRef="Process_12rl5i7" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_12rl5i7" name="Inmovilizacion masiva" isExecutable="true">
+    <bpmn:laneSet>
+      <bpmn:lane id="Lane_14h81aw" name="AT.1 (Abogado de dependencia)">
+        <bpmn:flowNodeRef>Task_1okl471</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_0tvkewl</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_1awtjk3</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_0jhf5vt</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>StartEvent_03zmth6</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EndEvent_1ttfubi</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="StartEvent_03zmth6" name="Inicio">
+      <bpmn:outgoing>SequenceFlow_0nriqyp</bpmn:outgoing>
+      <bpmn:messageEventDefinition messageRef="Message_0sorytg" />
+    </bpmn:startEvent>
+    <bpmn:serviceTask id="Task_1okl471" name="Cargar vehiculos disponibles para inmovilizar" camunda:class="co.gov.movilidadbogota.sipa.bpm.DummyTask">
+      <bpmn:incoming>SequenceFlow_0nriqyp</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1i8gq4y</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:userTask id="Task_0tvkewl" name="Seleccionar vehiculos a inmovilizar" camunda:assignee="Abogado">
+      <bpmn:incoming>SequenceFlow_1i8gq4y</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0jwotcq</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:callActivity id="Task_1awtjk3" name="Acto automatico inmovilizacion vehiculo" calledElement="Acto administrativo automatico">
+      <bpmn:incoming>SequenceFlow_0jwotcq</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0aspfw4</bpmn:outgoing>
+    </bpmn:callActivity>
+    <bpmn:serviceTask id="Task_0jhf5vt" name="Registrar vehiculos en proceso de inmovilizacion" camunda:class="co.gov.movilidadbogota.sipa.bpm.DummyTask">
+      <bpmn:incoming>SequenceFlow_0aspfw4</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_02cdsxv</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:endEvent id="EndEvent_1ttfubi">
+      <bpmn:incoming>SequenceFlow_02cdsxv</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_0nriqyp" sourceRef="StartEvent_03zmth6" targetRef="Task_1okl471" />
+    <bpmn:sequenceFlow id="SequenceFlow_1i8gq4y" sourceRef="Task_1okl471" targetRef="Task_0tvkewl" />
+    <bpmn:sequenceFlow id="SequenceFlow_0jwotcq" sourceRef="Task_0tvkewl" targetRef="Task_1awtjk3" />
+    <bpmn:sequenceFlow id="SequenceFlow_0aspfw4" sourceRef="Task_1awtjk3" targetRef="Task_0jhf5vt" />
+    <bpmn:sequenceFlow id="SequenceFlow_02cdsxv" sourceRef="Task_0jhf5vt" targetRef="EndEvent_1ttfubi" />
+    <bpmn:textAnnotation id="EAID_1885192F_11BE_4f6e_B776_9C71F19E8944">    <bpmn:text>Debe cargar tambien los vehiculos que fueron reportados para inmovilizacion y que ya no deben ser inmovilizados</bpmn:text>
+</bpmn:textAnnotation>
+  </bpmn:process>
+  <bpmn:message id="Message_0sorytg" name="Message_3jffrf9" />
+  <bpmndi:BPMNDiagram id="EAID_103FEEEF_F156_481a_B496_96ECDD192EF0" name="Inmovilizacion masiva">
+    <bpmndi:BPMNPlane id="EAID_PL000000_F156_481a_B496_96ECDD192EF0" bpmnElement="Collaboration_1irgetz">
+      <bpmndi:BPMNShape id="EAID_DO000006_F156_481a_B496_96ECDD192EF0" bpmnElement="EAID_1885192F_11BE_4f6e_B776_9C71F19E8944">
+        <dc:Bounds x="99" y="122" width="211" height="60" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Participant_1hvcjuj_di" bpmnElement="Participant_1hvcjuj">
+        <dc:Bounds x="0" y="0" width="695" height="202" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_14h81aw_di" bpmnElement="Lane_14h81aw">
+        <dc:Bounds x="30" y="0" width="665" height="202" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="StartEvent_04gemkb_di" bpmnElement="StartEvent_03zmth6">
+        <dc:Bounds x="70" y="53" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="75" y="92" width="26" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0nriqyp_di" bpmnElement="SequenceFlow_0nriqyp">
+        <di:waypoint xsi:type="dc:Point" x="106" y="71" />
+        <di:waypoint xsi:type="dc:Point" x="130" y="71" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="118" y="49.5" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="ServiceTask_1v3k2dk_di" bpmnElement="Task_1okl471">
+        <dc:Bounds x="130" y="31" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_1i8gq4y_di" bpmnElement="SequenceFlow_1i8gq4y">
+        <di:waypoint xsi:type="dc:Point" x="230" y="71" />
+        <di:waypoint xsi:type="dc:Point" x="261" y="71" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="245.5" y="49.5" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="UserTask_1fsz31i_di" bpmnElement="Task_0tvkewl">
+        <dc:Bounds x="261" y="31" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0jwotcq_di" bpmnElement="SequenceFlow_0jwotcq">
+        <di:waypoint xsi:type="dc:Point" x="361" y="71" />
+        <di:waypoint xsi:type="dc:Point" x="390" y="71" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="375.5" y="49.5" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="CallActivity_1jv1goc_di" bpmnElement="Task_1awtjk3">
+        <dc:Bounds x="390" y="31" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0aspfw4_di" bpmnElement="SequenceFlow_0aspfw4">
+        <di:waypoint xsi:type="dc:Point" x="490" y="71" />
+        <di:waypoint xsi:type="dc:Point" x="515" y="71" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="502.5" y="49.5" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="ServiceTask_06gebke_di" bpmnElement="Task_0jhf5vt">
+        <dc:Bounds x="515" y="31" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_1ttfubi_di" bpmnElement="EndEvent_1ttfubi">
+        <dc:Bounds x="639.392" y="53" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="657.392" y="92" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_02cdsxv_di" bpmnElement="SequenceFlow_02cdsxv">
+        <di:waypoint xsi:type="dc:Point" x="615" y="71" />
+        <di:waypoint xsi:type="dc:Point" x="639" y="71" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="627" y="49" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+    <bpmndi:BPMNLabelStyle id="EAID_LS000000_F156_481a_B496_96ECDD192EF0">
+      <dc:Font name="Calibri" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+    </bpmndi:BPMNLabelStyle>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

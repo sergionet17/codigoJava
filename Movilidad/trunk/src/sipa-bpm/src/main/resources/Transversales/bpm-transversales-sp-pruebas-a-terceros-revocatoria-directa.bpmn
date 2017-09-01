@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:ssbp="www.sparxsystems.com.au/bpmn20" id="EAPK_5FA13285_5073_4e11_AC40_ABC7E11D0A46" name="Pruebas a terceros RVD" targetNamespace="www.sparxsystems.com.au/bpmn20" exporter="Camunda Modeler" exporterVersion="1.8.0">
+  <bpmn:collaboration id="Collaboration_0iokbhm">
+    <bpmn:participant id="Participant_1cq0sve" name="SDM" processRef="Process_1mwe7ey" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_1mwe7ey" name="SP-Pruebas a terceros revocatoria" isExecutable="true">
+    <bpmn:laneSet>
+      <bpmn:lane id="Lane_1m02u2n" name="AT4.3.1 (Abogado de dependencia)">
+        <bpmn:flowNodeRef>Task_09xci7q</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_1ne9067</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>StartEvent_0lsjrkw</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EndEvent_0ekexl4</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="StartEvent_0lsjrkw" name="Inicio">
+      <bpmn:outgoing>SequenceFlow_1m2u24l</bpmn:outgoing>
+      <bpmn:messageEventDefinition messageRef="Message_0m9c7oe" />
+    </bpmn:startEvent>
+    <bpmn:callActivity id="Task_09xci7q" name="Oficio automatcio solicitar prubeas" calledElement="Oficio automatico">
+      <bpmn:incoming>SequenceFlow_1m2u24l</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0v51381</bpmn:outgoing>
+    </bpmn:callActivity>
+    <bpmn:userTask id="Task_1ne9067" name="Recibir pruebas">
+      <bpmn:incoming>SequenceFlow_0v51381</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0zpe3n4</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:endEvent id="EndEvent_0ekexl4">
+      <bpmn:incoming>SequenceFlow_0zpe3n4</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_1m2u24l" sourceRef="StartEvent_0lsjrkw" targetRef="Task_09xci7q" />
+    <bpmn:sequenceFlow id="SequenceFlow_0v51381" sourceRef="Task_09xci7q" targetRef="Task_1ne9067" />
+    <bpmn:sequenceFlow id="SequenceFlow_0zpe3n4" sourceRef="Task_1ne9067" targetRef="EndEvent_0ekexl4" />
+  </bpmn:process>
+  <bpmn:message id="Message_0m9c7oe" name="Message_0diq8r3" />
+  <bpmndi:BPMNDiagram id="EAID_B19C138B_A3FB_47b7_AD8F_1C71D9414197" name="Pruebas a terceros">
+    <bpmndi:BPMNPlane id="EAID_PL000000_A3FB_47b7_AD8F_1C71D9414197" bpmnElement="Collaboration_0iokbhm">
+      <bpmndi:BPMNShape id="Participant_1cq0sve_di" bpmnElement="Participant_1cq0sve">
+        <dc:Bounds x="0" y="0" width="555" height="181" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_1m02u2n_di" bpmnElement="Lane_1m02u2n">
+        <dc:Bounds x="30" y="0" width="525" height="181" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="StartEvent_0etgh82_di" bpmnElement="StartEvent_0lsjrkw">
+        <dc:Bounds x="94" y="83" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="99" y="121" width="26" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_1m2u24l_di" bpmnElement="SequenceFlow_1m2u24l">
+        <di:waypoint xsi:type="dc:Point" x="130" y="101" />
+        <di:waypoint xsi:type="dc:Point" x="177" y="101" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="153.5" y="79.5" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="CallActivity_01ujcnl_di" bpmnElement="Task_09xci7q">
+        <dc:Bounds x="177" y="61" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0v51381_di" bpmnElement="SequenceFlow_0v51381">
+        <di:waypoint xsi:type="dc:Point" x="277" y="101" />
+        <di:waypoint xsi:type="dc:Point" x="330" y="101" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="303.5" y="79.5" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="UserTask_1nw0t31_di" bpmnElement="Task_1ne9067">
+        <dc:Bounds x="330" y="61" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_0ekexl4_di" bpmnElement="EndEvent_0ekexl4">
+        <dc:Bounds x="468.86699999999996" y="83" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="486.86699999999996" y="122" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0zpe3n4_di" bpmnElement="SequenceFlow_0zpe3n4">
+        <di:waypoint xsi:type="dc:Point" x="430" y="101" />
+        <di:waypoint xsi:type="dc:Point" x="469" y="101" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="449.5" y="79" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+    <bpmndi:BPMNLabelStyle id="EAID_LS000000_A3FB_47b7_AD8F_1C71D9414197">
+      <dc:Font name="Calibri" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+    </bpmndi:BPMNLabelStyle>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

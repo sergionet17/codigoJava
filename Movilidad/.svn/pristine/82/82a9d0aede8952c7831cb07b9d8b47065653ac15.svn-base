@@ -1,0 +1,74 @@
+server:
+  port: 8082
+
+spring:
+
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521:orcl
+    username: sipa
+    password: sipa
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+
+auth-server: http://66.175.219.84/sipa-cas
+security:
+  basic:
+    enabled: false
+  oauth2:
+    client:
+      client-id: sipaweb
+      client-secret: sipawebsecret
+      access-token-uri: ${auth-server}/oauth/token
+      user-authorization-uri: ${auth-server}/oauth/authorize
+      scope: read, write
+    resource:
+      token-info-uri: ${auth-server}/oauth/check_token
+
+app:
+  cmis:
+    username: admin
+    password: Ingenian2017$$$
+    serviceRoot: http://66.175.219.84/alfresco/api/-default-/public/cmis/versions/1.1/browser
+    repositoryId:
+  comparendos:
+    validator:
+      fechaImposicion: false
+  services:
+    bpm: http://66.175.219.84/forestxp-rest
+
+sipa:
+  loadInitialData: true
+
+logging:
+  level:
+    co.gov.movilidadbogota: DEBUG
+
+---
+
+spring:
+  profiles: development
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/sipa
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+sipa:
+  loadInitialData: true
+
+app:
+  cmis:
+    serviceRoot: http://192.168.3.121:18080/alfresco/api/-default-/public/cmis/versions/1.1/browser
+  services:
+    bpm: http://localhost:8082/engine-rest
+
+liquibase:
+  enabled: true
+  change-log: classpath:/db/changelog/db.changelog-master-postgresql.yaml
+
+logging:
+  level:
+    co.gov.movilidadbogota: DEBUG

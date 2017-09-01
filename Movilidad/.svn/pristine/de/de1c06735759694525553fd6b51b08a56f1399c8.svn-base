@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:ssbp="www.sparxsystems.com.au/bpmn20" id="EAPK_02860DE4_B748_4eae_BAA4_BD5B24DDC749" name="Pago total acuerdo pago" targetNamespace="www.sparxsystems.com.au/bpmn20" exporter="Camunda Modeler" exporterVersion="1.8.0">
+  <bpmn:collaboration id="Collaboration_0el9m7y">
+    <bpmn:participant id="Participant_0ougtp5" name="SDM" processRef="Process_0w7833k" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_0w7833k" name="Pago total acuerdo pago" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1skx0fw" name="Inicio">
+      <bpmn:outgoing>SequenceFlow_1ol0zyt</bpmn:outgoing>
+      <bpmn:messageEventDefinition messageRef="Message_0t1zlkw" />
+    </bpmn:startEvent>
+    <bpmn:serviceTask id="Task_0vjyfhs" name="Registrar cambio de estado en acuerdo de pago apagado" camunda:class="co.gov.movilidadbogota.sipa.bpm.DummyTask">
+      <bpmn:incoming>SequenceFlow_1ol0zyt</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_170ngy8</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:serviceTask id="Task_1e61od6" name="Terminar procesos asociados a obligaciones del acuerdo de pago" camunda:class="co.gov.movilidadbogota.sipa.bpm.DummyTask">
+      <bpmn:incoming>SequenceFlow_170ngy8</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0gybzck</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:endEvent id="EndEvent_0ztnygx">
+      <bpmn:incoming>SequenceFlow_0gybzck</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_1ol0zyt" sourceRef="StartEvent_1skx0fw" targetRef="Task_0vjyfhs" />
+    <bpmn:sequenceFlow id="SequenceFlow_170ngy8" sourceRef="Task_0vjyfhs" targetRef="Task_1e61od6" />
+    <bpmn:sequenceFlow id="SequenceFlow_0gybzck" sourceRef="Task_1e61od6" targetRef="EndEvent_0ztnygx" />
+  </bpmn:process>
+  <bpmn:message id="Message_0t1zlkw" name="Message_2m4e307" />
+  <bpmndi:BPMNDiagram id="EAID_8CAF2A3F_0324_46a5_8064_66F443E99E0D" name="Pago total acuerdo pago">
+    <bpmndi:BPMNPlane id="EAID_PL000000_0324_46a5_8064_66F443E99E0D" bpmnElement="Collaboration_0el9m7y">
+      <bpmndi:BPMNShape id="Participant_0ougtp5_di" bpmnElement="Participant_0ougtp5">
+        <dc:Bounds x="0" y="0" width="436" height="131" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="StartEvent_0czsp6c_di" bpmnElement="StartEvent_1skx0fw">
+        <dc:Bounds x="46" y="47" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="50" y="86" width="26" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_1ol0zyt_di" bpmnElement="SequenceFlow_1ol0zyt">
+        <di:waypoint xsi:type="dc:Point" x="82" y="65" />
+        <di:waypoint xsi:type="dc:Point" x="107" y="65" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="94.5" y="43.5" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="ServiceTask_0xii9lk_di" bpmnElement="Task_0vjyfhs">
+        <dc:Bounds x="107" y="25" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_170ngy8_di" bpmnElement="SequenceFlow_170ngy8">
+        <di:waypoint xsi:type="dc:Point" x="207" y="65" />
+        <di:waypoint xsi:type="dc:Point" x="251" y="65" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="229" y="43.5" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="ServiceTask_169bt0l_di" bpmnElement="Task_1e61od6">
+        <dc:Bounds x="251" y="25" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_0ztnygx_di" bpmnElement="EndEvent_0ztnygx">
+        <dc:Bounds x="382.106" y="47" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="400.106" y="86" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0gybzck_di" bpmnElement="SequenceFlow_0gybzck">
+        <di:waypoint xsi:type="dc:Point" x="351" y="65" />
+        <di:waypoint xsi:type="dc:Point" x="382" y="65" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="366.5" y="43" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+    <bpmndi:BPMNLabelStyle id="EAID_LS000000_0324_46a5_8064_66F443E99E0D">
+      <dc:Font name="Calibri" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+    </bpmndi:BPMNLabelStyle>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

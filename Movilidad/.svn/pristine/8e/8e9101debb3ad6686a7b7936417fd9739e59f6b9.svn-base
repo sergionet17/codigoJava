@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:ssbp="www.sparxsystems.com.au/bpmn20" id="EAPK_9470CD1B_B7C2_4fd3_8782_B2197D264FCA" name="Resolucion archivo de inhibitorios" targetNamespace="www.sparxsystems.com.au/bpmn20" exporter="Camunda Modeler" exporterVersion="1.7.2">
+  <bpmn:collaboration id="Collaboration_1oc2ep7">
+    <bpmn:participant id="Participant_1dlw1wt" name="SDM" processRef="EAID_3DDBA1C6_5300_429d_ADE0_4195FE096690" />
+    <bpmn:participant id="Participant_1w9v745" name="SIPA WEB" processRef="Process_0kx97ny" />
+    <bpmn:messageFlow id="MessageFlow_1unru0e" sourceRef="Participant_1w9v745" targetRef="EAID_A3331CFC_DC07_4ca2_8FE9_A156870C0478" />
+  </bpmn:collaboration>
+  <bpmn:process id="EAID_3DDBA1C6_5300_429d_ADE0_4195FE096690" name="Resolucion archivo de inhibitorios" processType="None" isClosed="false" isExecutable="false">
+    <bpmn:startEvent id="EAID_A3331CFC_DC07_4ca2_8FE9_A156870C0478" name="StartEvent1">
+      <bpmn:outgoing>EAID_DCEE590A_5F40_4f16_B58E_781F2161D5B6</bpmn:outgoing>
+      <bpmn:messageEventDefinition />
+    </bpmn:startEvent>
+    <bpmn:endEvent id="EAID_9999A206_45A3_4b0f_9109_22FC482F5704" name="EndEvent1">
+      <bpmn:incoming>EAID_13D1DC48_2DC2_41ca_B0DE_BFF0E9FFF84E</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:serviceTask id="EAID_3B5852A6_77F9_4e71_B6E8_4D366EEEC8A0" name="Indentificar procesos C02 que llevan mas de 3 anhos y un dia en estado inhibitorio" implementation="##unspecified">
+      <bpmn:incoming>EAID_DCEE590A_5F40_4f16_B58E_781F2161D5B6</bpmn:incoming>
+      <bpmn:outgoing>EAID_E0AE73C5_601B_4d5e_9607_08A1900AAFE1</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:serviceTask id="EAID_7A38B123_3C1C_48a9_B77A_8827A28A0AAD" name="Generar resoluci�n autom�tica de archivo de procesos inhibitorios" implementation="##unspecified">
+      <bpmn:incoming>EAID_E0AE73C5_601B_4d5e_9607_08A1900AAFE1</bpmn:incoming>
+      <bpmn:outgoing>EAID_4D5A8499_CF98_49f6_AEDA_506C74319C84</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:serviceTask id="EAID_B6AF7762_32F7_489d_A08E_BEC8355ABB9F" name="Cambiar estado de los procesos inhibitorios a archivado." implementation="##unspecified">
+      <bpmn:incoming>EAID_4D5A8499_CF98_49f6_AEDA_506C74319C84</bpmn:incoming>
+      <bpmn:outgoing>EAID_13D1DC48_2DC2_41ca_B0DE_BFF0E9FFF84E</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="EAID_DCEE590A_5F40_4f16_B58E_781F2161D5B6" sourceRef="EAID_A3331CFC_DC07_4ca2_8FE9_A156870C0478" targetRef="EAID_3B5852A6_77F9_4e71_B6E8_4D366EEEC8A0" />
+    <bpmn:sequenceFlow id="EAID_13D1DC48_2DC2_41ca_B0DE_BFF0E9FFF84E" sourceRef="EAID_B6AF7762_32F7_489d_A08E_BEC8355ABB9F" targetRef="EAID_9999A206_45A3_4b0f_9109_22FC482F5704" />
+    <bpmn:sequenceFlow id="EAID_E0AE73C5_601B_4d5e_9607_08A1900AAFE1" sourceRef="EAID_3B5852A6_77F9_4e71_B6E8_4D366EEEC8A0" targetRef="EAID_7A38B123_3C1C_48a9_B77A_8827A28A0AAD" />
+    <bpmn:sequenceFlow id="EAID_4D5A8499_CF98_49f6_AEDA_506C74319C84" sourceRef="EAID_7A38B123_3C1C_48a9_B77A_8827A28A0AAD" targetRef="EAID_B6AF7762_32F7_489d_A08E_BEC8355ABB9F" />
+  </bpmn:process>
+  <bpmn:process id="Process_0kx97ny" isExecutable="false" />
+  <bpmndi:BPMNDiagram id="EAID_E1802457_F277_4081_B961_31338379A1D0" name="Resolucion archivo de inhibitorios">
+    <bpmndi:BPMNPlane id="EAID_PL000000_F277_4081_B961_31338379A1D0" bpmnElement="Collaboration_1oc2ep7">
+      <bpmndi:BPMNShape id="Participant_1dlw1wt_di" bpmnElement="Participant_1dlw1wt">
+        <dc:Bounds x="6" y="70" width="696" height="154" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000000_F277_4081_B961_31338379A1D0" bpmnElement="EAID_A3331CFC_DC07_4ca2_8FE9_A156870C0478">
+        <dc:Bounds x="56" y="118" width="30" height="30" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_DC07_4ca2_8FE9_A156870C0478" labelStyle="EAID_LS000000_F277_4081_B961_31338379A1D0">
+          <dc:Bounds x="53" y="158" width="57" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000004_F277_4081_B961_31338379A1D0" bpmnElement="EAID_9999A206_45A3_4b0f_9109_22FC482F5704">
+        <dc:Bounds x="632" y="119" width="30" height="30" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_45A3_4b0f_9109_22FC482F5704" labelStyle="EAID_LS000000_F277_4081_B961_31338379A1D0">
+          <dc:Bounds x="629" y="159" width="53" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000001_F277_4081_B961_31338379A1D0" bpmnElement="EAID_3B5852A6_77F9_4e71_B6E8_4D366EEEC8A0">
+        <dc:Bounds x="138" y="94" width="110" height="83" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_77F9_4e71_B6E8_4D366EEEC8A0" labelStyle="EAID_LS000000_F277_4081_B961_31338379A1D0" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000002_F277_4081_B961_31338379A1D0" bpmnElement="EAID_7A38B123_3C1C_48a9_B77A_8827A28A0AAD">
+        <dc:Bounds x="308" y="98" width="110" height="81" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_3C1C_48a9_B77A_8827A28A0AAD" labelStyle="EAID_LS000000_F277_4081_B961_31338379A1D0" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EAID_DO000003_F277_4081_B961_31338379A1D0" bpmnElement="EAID_B6AF7762_32F7_489d_A08E_BEC8355ABB9F">
+        <dc:Bounds x="479" y="99" width="110" height="81" />
+        <bpmndi:BPMNLabel id="EAID_LBL000000_32F7_489d_A08E_BEC8355ABB9F" labelStyle="EAID_LS000000_F277_4081_B961_31338379A1D0" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="EAID_DL000000_F277_4081_B961_31338379A1D0" bpmnElement="EAID_DCEE590A_5F40_4f16_B58E_781F2161D5B6">
+        <di:waypoint xsi:type="dc:Point" x="86" y="133" />
+        <di:waypoint xsi:type="dc:Point" x="138" y="133" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="67" y="108" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="EAID_DL000003_F277_4081_B961_31338379A1D0" bpmnElement="EAID_13D1DC48_2DC2_41ca_B0DE_BFF0E9FFF84E">
+        <di:waypoint xsi:type="dc:Point" x="589" y="134" />
+        <di:waypoint xsi:type="dc:Point" x="632" y="134" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="566" y="109" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="EAID_DL000001_F277_4081_B961_31338379A1D0" bpmnElement="EAID_E0AE73C5_601B_4d5e_9607_08A1900AAFE1">
+        <di:waypoint xsi:type="dc:Point" x="248" y="137" />
+        <di:waypoint xsi:type="dc:Point" x="308" y="137" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="233" y="112" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="EAID_DL000002_F277_4081_B961_31338379A1D0" bpmnElement="EAID_4D5A8499_CF98_49f6_AEDA_506C74319C84">
+        <di:waypoint xsi:type="dc:Point" x="418" y="138" />
+        <di:waypoint xsi:type="dc:Point" x="479" y="138" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="404" y="113" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Participant_1w9v745_di" bpmnElement="Participant_1w9v745">
+        <dc:Bounds x="6" y="10" width="560" height="60" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="MessageFlow_1unru0e_di" bpmnElement="MessageFlow_1unru0e">
+        <di:waypoint xsi:type="dc:Point" x="74" y="70" />
+        <di:waypoint xsi:type="dc:Point" x="74" y="94" />
+        <di:waypoint xsi:type="dc:Point" x="74" y="119" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="89" y="76" width="0" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+    <bpmndi:BPMNLabelStyle id="EAID_LS000000_F277_4081_B961_31338379A1D0">
+      <dc:Font name="Calibri" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+    </bpmndi:BPMNLabelStyle>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

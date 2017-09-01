@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:ssbp="www.sparxsystems.com.au/bpmn20" id="EAPK_31CEE1AA_00FA_4257_98CB_012F21684115" name="Generar planilla distribucion urgente" targetNamespace="www.sparxsystems.com.au/bpmn20" exporter="Camunda Modeler" exporterVersion="1.8.0">
+  <bpmn:collaboration id="Collaboration_1be9mv5">
+    <bpmn:participant id="Participant_1afxhws" name="SDM" processRef="Process_0hxi065" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_0hxi065" name="Generar plantilla distribucion urgente" isExecutable="true">
+    <bpmn:laneSet>
+      <bpmn:lane id="Lane_1if5hr9" name="AT4.6.3 (Corredor de correspondencia), AT4.6.1 (Radicador de correspondencia&#10;">
+        <bpmn:flowNodeRef>Task_0huoehr</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_1bpgwlk</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_1pkrwf5</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>StartEvent_076kclg</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EndEvent_0e5sp9s</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="StartEvent_076kclg" name="Inicio">
+      <bpmn:outgoing>SequenceFlow_112sszy</bpmn:outgoing>
+      <bpmn:messageEventDefinition messageRef="Message_11zxy7u" />
+    </bpmn:startEvent>
+    <bpmn:userTask id="Task_0huoehr" name="Recibir radicados de entrada" camunda:assignee="Abogado">
+      <bpmn:incoming>SequenceFlow_112sszy</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_19yj6vz</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:serviceTask id="Task_1bpgwlk" name="Cerrar plantilla" camunda:class="co.gov.movilidadbogota.sipa.bpm.DummyTask">
+      <bpmn:incoming>SequenceFlow_19yj6vz</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0x3zo9c</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:userTask id="Task_1pkrwf5" name="Imprimir planilla para distribucion" camunda:assignee="Abogado">
+      <bpmn:incoming>SequenceFlow_0x3zo9c</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0nn9lei</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:endEvent id="EndEvent_0e5sp9s">
+      <bpmn:incoming>SequenceFlow_0nn9lei</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_112sszy" sourceRef="StartEvent_076kclg" targetRef="Task_0huoehr" />
+    <bpmn:sequenceFlow id="SequenceFlow_19yj6vz" sourceRef="Task_0huoehr" targetRef="Task_1bpgwlk" />
+    <bpmn:sequenceFlow id="SequenceFlow_0x3zo9c" sourceRef="Task_1bpgwlk" targetRef="Task_1pkrwf5" />
+    <bpmn:sequenceFlow id="SequenceFlow_0nn9lei" sourceRef="Task_1pkrwf5" targetRef="EndEvent_0e5sp9s" />
+  </bpmn:process>
+  <bpmn:message id="Message_11zxy7u" name="Message_0a4c511" />
+  <bpmndi:BPMNDiagram id="EAID_EC020DDD_F32B_4785_A424_22E88C7CEE54" name="Generar planilla distribucion urgente">
+    <bpmndi:BPMNPlane id="EAID_PL000000_F32B_4785_A424_22E88C7CEE54" bpmnElement="Collaboration_1be9mv5">
+      <bpmndi:BPMNShape id="Participant_1afxhws_di" bpmnElement="Participant_1afxhws">
+        <dc:Bounds x="0" y="0" width="673" height="223" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_1if5hr9_di" bpmnElement="Lane_1if5hr9">
+        <dc:Bounds x="30" y="0" width="643" height="223" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="StartEvent_0xciqkk_di" bpmnElement="StartEvent_076kclg">
+        <dc:Bounds x="76" y="95" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="81" y="133" width="26" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_112sszy_di" bpmnElement="SequenceFlow_112sszy">
+        <di:waypoint xsi:type="dc:Point" x="112" y="113" />
+        <di:waypoint xsi:type="dc:Point" x="151" y="113" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="131.5" y="91.5" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="UserTask_1q8a16p_di" bpmnElement="Task_0huoehr">
+        <dc:Bounds x="151" y="73" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_19yj6vz_di" bpmnElement="SequenceFlow_19yj6vz">
+        <di:waypoint xsi:type="dc:Point" x="251" y="113" />
+        <di:waypoint xsi:type="dc:Point" x="303" y="113" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="277" y="91.5" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="ServiceTask_0sw0mkr_di" bpmnElement="Task_1bpgwlk">
+        <dc:Bounds x="303" y="73" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0x3zo9c_di" bpmnElement="SequenceFlow_0x3zo9c">
+        <di:waypoint xsi:type="dc:Point" x="403" y="113" />
+        <di:waypoint xsi:type="dc:Point" x="453" y="113" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="428" y="91.5" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="UserTask_1bjvwtg_di" bpmnElement="Task_1pkrwf5">
+        <dc:Bounds x="453" y="73" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_0e5sp9s_di" bpmnElement="EndEvent_0e5sp9s">
+        <dc:Bounds x="603.815" y="95" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="621.815" y="134" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0nn9lei_di" bpmnElement="SequenceFlow_0nn9lei">
+        <di:waypoint xsi:type="dc:Point" x="553" y="113" />
+        <di:waypoint xsi:type="dc:Point" x="604" y="113" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="578.5" y="91" width="0" height="13" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+    <bpmndi:BPMNLabelStyle id="EAID_LS000000_F32B_4785_A424_22E88C7CEE54">
+      <dc:Font name="Calibri" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+    </bpmndi:BPMNLabelStyle>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

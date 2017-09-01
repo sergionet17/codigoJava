@@ -1,0 +1,52 @@
+server:
+  port: 8083
+  contextPath: /sipa-cas
+
+spring:
+  mvc:
+    static-path-pattern: /static/**
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/sipa
+    username: sipa
+    password: sipa
+
+security:
+  oauth2:
+    resource:
+      token-info-uri: http://66.175.219.84/sipa-cas/oauth/check_token
+
+ldap:
+  server: ldap://173.230.153.65:10389/
+  base-dn: dc=movilidadbogota,dc=gov,dc=co
+  user-dn-Patterns: uid={0},ou=users
+  password-attribute: userPassword
+  validar: true
+  user-connection: uid=admin,ou=system
+  password-user-connection: secret
+  user-base: ou=users
+
+---
+spring:
+  profiles: development
+
+  freemarker:
+    cache: false
+    templateLoaderPath:
+    - file://${sipa.dev.rootPath}/sipa-sso/src/main/resources/templates
+
+  resources:
+    static-locations: file://${sipa.dev.rootPath}/sipa-sso/src/main/resources/static/
+
+  messages:
+    cache-seconds: 0
+
+sipa:
+  dev:
+    rootPath: ${HOME}/projects/sipa
+
+security:
+  oauth2:
+    resource:
+      token-info-uri: http://localhost:8083/sipa-cas/oauth/check_token
+
