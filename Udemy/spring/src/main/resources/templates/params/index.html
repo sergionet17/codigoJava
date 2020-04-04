@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmls:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Insert title here</title>
+</head>
+<body>
+
+	<title>ENviar todo bien todo bello</title>
+	<ul>
+		<li>
+			<a th:href="@{/params/string(texto='todo bien todo bello desde el index adentro')}"> 
+			primer link
+			</a>
+			</li>
+			<li>
+			<a th:href="@{/params/string(texto='segundo texto')}">
+			Segundo link
+			</a>
+			</li>
+			<li>
+			<a th:href="@{/params/mix-params(saludo='segundo texto', saludoEntero='12' )}">
+			tercera ruta
+			</a>
+			</li>
+	</ul>
+
+</body>
+</html>
